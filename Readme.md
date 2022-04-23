@@ -14,7 +14,7 @@ This includes introducing concepts to ensure the student is able to:
 
 - Understand the underlying physical architecture of FPGAs
 - Understand the concept of timing constraints, clock domains and other timing-related issues
-- Use the Altera tool-set, including Qsys, JTAG debugging and the general Verilog-based compilation process
+- Use the tool-set, including JTAG debugging and the general Verilog-based compilation process
 
 _Presented on campus, venue TBC_<br/>
 _Presenters: John-Philip Taylor_<br/>

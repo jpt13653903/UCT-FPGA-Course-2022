@@ -1,6 +1,13 @@
 # FPGA Master Course &ndash; 2022
 
-This repo contains the course material for the 2022 FPGA course.  The course has been broken into two parts: "FPGA Basics" and "Advanced FPGA Technologies".
+This repo contains the course material for the 2022 FPGA course.  The course
+has been broken into two parts: "FPGA Basics" and "Advanced FPGA Technologies".
+
+## Participation
+
+Students are encouraged to fork the repository and push their work to the
+GitHub server.  If a private repository is desired, please add the presenter
+as a collaborator on your repository.
 
 ## FPGA Basics
 

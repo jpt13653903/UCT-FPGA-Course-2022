@@ -24,31 +24,31 @@ This includes introducing concepts to ensure the student is able to:
 - Use the tool-set, including JTAG debugging and the general Verilog-based compilation process
 
 _Presented on campus, venue TBC_<br/>
-_Presenters: John-Philip Taylor_<br/>
+_Presenter: John-Philip Taylor_<br/>
 _3 CPD points, ECSA course code: UCTREDFBS22_
 
 ## Advanced FPGA Technologies
 
 EEE5118Z: 02 to 04 May 2022
 
-This is a very practical course that provides students with hands on approach 
+This is a practical course that provides students with a hands on approach 
 to FPGAs. This course is part 2 of a two part course that presents the 
 principles and techniques fundamental to low-level FPGA firmware
 development.  It is biased towards digital signal processing typically
 found in Radar, Radio-astronomy and Communication systems.
 
-The course covers a variety of very practical topics, including:
+The course covers a variety of practical topics, including:
 
 - Design FPGA firmware systems on a high level
 - Design FPGA firmware blocks on a low level (i.e. RTL representations of finite state machines and pipelines)
-- Implementing FPGA firmware systems
+- Implement FPGA firmware systems
 - Debug an FPGA firmware implementation
 - Analise timing closure issues and solve the problem such that the final design meets all timing requirements.
 
 It is recommended that EEE5117Z is taken before this course.
 
 _Presented on campus, venue TBC_<br/>
-_Presenters: John-Philip Taylor_<br/>
+_Presenter: John-Philip Taylor_<br/>
 _3 CPD points, ECSA course code: UCTREDAFT22_
 
 ## External Links

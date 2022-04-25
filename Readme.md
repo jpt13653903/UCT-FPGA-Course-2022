@@ -23,7 +23,7 @@ This includes introducing concepts to ensure the student is able to:
 - Understand the concept of timing constraints, clock domains and other timing-related issues
 - Use the tool-set, including JTAG debugging and the general Verilog-based compilation process
 
-_Presented on campus, venue TBC_<br/>
+_Presented on campus, Room 6.08, 6th Floor, Menzies Building_<br/>
 _Presenter: John-Philip Taylor_<br/>
 _3 CPD points, ECSA course code: UCTREDFBS22_
 
@@ -47,7 +47,7 @@ The course covers a variety of practical topics, including:
 
 It is recommended that EEE5117Z is taken before this course.
 
-_Presented on campus, venue TBC_<br/>
+_Presented on campus, Room 6.08, 6th Floor, Menzies Building_<br/>
 _Presenter: John-Philip Taylor_<br/>
 _3 CPD points, ECSA course code: UCTREDAFT22_
 

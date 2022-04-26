@@ -19,9 +19,9 @@
 //==============================================================================
 
 module ADXL345 #(
-  parameter Clock_Div = 5 // 5 MHz SClk on a 50 MHz Clk
+  parameter Clock_Div = 5 // 5 MHz SClk on a 50 MHz ipClk
 )(
-  input Clk, Reset,
+  input ipClk, ipReset,
 
   // 2's Compliment Output
   output reg [15:0]X,
@@ -34,34 +34,32 @@ module ADXL345 #(
 );
 //------------------------------------------------------------------------------
 
-  reg      Local_Reset;
+  reg      Reset;
   reg [3:0]Clock_Count  = 0;
   wire     Clock_Enable = (Clock_Count == Clock_Div);
 //------------------------------------------------------------------------------
 
   reg [ 4:0]Count;
-  reg [15:0]WriteData; // R/W, MB, Address, Byte
-  reg [15:0]ReadData;  // 2 Bytes
+  reg [15:0]Data; // (R/W, MB, Address, Byte) or (2 Bytes)
 //------------------------------------------------------------------------------
 
- typedef enum {
-   Setup,
-   ReadX, ReadY, ReadZ,
-   Transaction
- } STATE;
+  typedef enum {
+    Setup,
+    ReadX, ReadY, ReadZ,
+    Transaction
+  } STATE;
 
- STATE State;
- STATE RetState; // Used for function calls
-
+  STATE State;
+  STATE RetState; // Used for function calls
 //------------------------------------------------------------------------------
 
-  always @(posedge Clk) begin
-    Local_Reset <= Reset;
+  always @(posedge ipClk) begin
+    Reset <= ipReset;
 
     if(Clock_Enable) Clock_Count <= 4'd1;
     else             Clock_Count <= Clock_Count + 1'b1;
 
-    if(Local_Reset) begin
+    if(Reset) begin
       nCS   <= 1'b1;
       SClk  <= 1'b1;
       SDI   <= 1'b1;
@@ -72,37 +70,37 @@ module ADXL345 #(
       case(State)
         Setup: begin
           // SPI 4-wire; Full-res; Right-justify; 4g Range
-          WriteData <= {2'b00, 6'h31, 8'b0000_1001};
-          Count     <= 5'd16;
-          State     <= Transaction;
-          RetState  <= ReadX;
+          Data     <= {2'b00, 6'h31, 8'b0000_1001};
+          Count    <= 5'd16;
+          State    <= Transaction;
+          RetState <= ReadX;
         end
 //------------------------------------------------------------------------------
 
         ReadX: begin
-          Z         <= {ReadData[7:0], ReadData[15:8]};
-          WriteData <= {2'b11, 6'h32, 8'd0};
-          Count     <= 5'd24;
-          State     <= Transaction;
-          RetState  <= ReadY;
+          Z        <= {Data[7:0], Data[15:8]};
+          Data     <= {2'b11, 6'h32, 8'd0};
+          Count    <= 5'd24;
+          State    <= Transaction;
+          RetState <= ReadY;
         end
 //------------------------------------------------------------------------------
 
         ReadY: begin
-          X         <= {ReadData[7:0], ReadData[15:8]};
-          WriteData <= {2'b11, 6'h34, 8'd0};
-          Count     <= 5'd24;
-          State     <= Transaction;
-          RetState  <= ReadZ;
+          X        <= {Data[7:0], Data[15:8]};
+          Data     <= {2'b11, 6'h34, 8'd0};
+          Count    <= 5'd24;
+          State    <= Transaction;
+          RetState <= ReadZ;
         end
 //------------------------------------------------------------------------------
 
         ReadZ: begin
-          Y         <= {ReadData[7:0], ReadData[15:8]};
-          WriteData <= {2'b11, 6'h36, 8'd0};
-          Count     <= 5'd24;
-          State     <= Transaction;
-          RetState  <= ReadX;
+          Y        <= {Data[7:0], Data[15:8]};
+          Data     <= {2'b11, 6'h36, 8'd0};
+          Count    <= 5'd24;
+          State    <= Transaction;
+          RetState <= ReadX;
         end
 //------------------------------------------------------------------------------
 
@@ -113,13 +111,13 @@ module ADXL345 #(
           end else begin
             if(SClk) begin
               if(Count == 0) begin
-                nCS <= 1'b1; State <= RetState;
+                nCS   <= 1'b1;
+                State <= RetState;
               end else begin
-                SClk <= 1'b0;
-                {SDI, WriteData[15:1]} <= WriteData;
+                SClk  <= 1'b0;
               end
-              Count    <= Count - 1'b1;
-              ReadData <= {ReadData[14:0], SDO};
+              Count <= Count - 1'b1;
+              {SDI, Data} <= {Data, SDO};
 
             end else begin
               SClk <= 1'b1;

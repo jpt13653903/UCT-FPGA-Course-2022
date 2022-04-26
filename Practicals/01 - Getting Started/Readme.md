@@ -239,7 +239,7 @@ Plug the development board into your computer's USB and open `Device Manager`.
 
 ![Open Device Manager](06_UART_Setup/02_OpenDeviceManager.png)
 
-Edit the properties of port&nbsp;B of the `USB Serial Converter`.
+Edit the properties of port&nbsp;B of the `USB Serial Converter`.  If `Device Manager` does not show the `USB Serial Converter`, you need to install the [FTDI Driver](https://ftdichip.com/drivers/).
 
 ![Port B Properties](06_UART_Setup/03_PortB_Properties.png)
 

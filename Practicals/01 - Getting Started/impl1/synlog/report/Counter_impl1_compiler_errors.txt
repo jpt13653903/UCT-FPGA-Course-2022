@@ -1,0 +1,3 @@
+@E: CG342 :"C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\01 - Getting Started\Counter.v":7:6:7:10|Expecting target variable, found Count -- possible misspelling
+@E: CS187 :"C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\01 - Getting Started\Counter.v":9:0:9:8|Expecting endmodule
+

@@ -1,0 +1,8 @@
+i ipClk
+m 0 0
+u 1 31
+p {p:ipClk}{t:counter[30:0].C}
+e ckid0_0 {t:counter[30:0].C} dff
+c ckid0_0 {p:ipClk} port Unsupported/too complex instance on clock path
+l 0 0 0 0 0
+r 0 0 0 0 0 0 0 0

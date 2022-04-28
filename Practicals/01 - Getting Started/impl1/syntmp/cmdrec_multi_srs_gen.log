@@ -1,0 +1,7 @@
+C:\lscc\diamond\3.12\synpbase\bin64\syn_nfilter.exe  -link  -multisrs  "C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\01 - Getting Started\impl1\synwork\Counter_impl1_comp.srs"  -osyn  "C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\01 - Getting Started\impl1\synwork\Counter_impl1_mult.srs"  -log  "C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\01 - Getting Started\impl1\synlog\Counter_impl1_multi_srs_gen.srr" 
+relcom:..\..\..\..\..\..\..\..\lscc\diamond\3.12\synpbase\bin64\syn_nfilter.exe -link -multisrs "C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\01 - Getting Started\impl1\synwork\Counter_impl1_comp.srs" -osyn "C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\01 - Getting Started\impl1\synwork\Counter_impl1_mult.srs" -log "C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\01 - Getting Started\impl1\synlog\Counter_impl1_multi_srs_gen.srr"
+rc:0 success:1 runtime:1
+file:..\synwork\Counter_impl1_comp.srs|io:i|time:1651159051|size:1523|exec:0|csum:652B396F0E95B49ABC6597BFB5EC91FA
+file:..\synwork\Counter_impl1_mult.srs|io:o|time:1651159053|size:1276|exec:0|csum:
+file:..\synlog\Counter_impl1_multi_srs_gen.srr|io:o|time:1651159053|size:1523|exec:0|csum:
+file:..\..\..\..\..\..\..\..\lscc\diamond\3.12\synpbase\bin64\syn_nfilter.exe|io:i|time:1603991922|size:8875008|exec:1|csum:43373AFF0ED6BCEB26CB4B4947B972DD

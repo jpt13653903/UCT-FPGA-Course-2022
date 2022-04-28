@@ -1,0 +1,1311 @@
+
+synpwrap -msg -prj "Counter_impl1_synplify.tcl" -log "Counter_impl1.srf"
+Copyright (C) 1992-2020 Lattice Semiconductor Corporation. All rights reserved.
+Lattice Diamond Version 3.12.0.240.2
+    <postMsg mid="2011000" type="Info"    dynamic="0" navigation="0"  />
+
+==contents of Counter_impl1.srf
+#Build: Synplify Pro (R) Q-2020.03L-SP1, Build 182R, Oct 29 2020
+#install: C:\lscc\diamond\3.12\synpbase
+#OS: Windows 8 6.2
+#Hostname: DESKTOP-MU9CKUT
+
+# Thu Apr 28 08:17:30 2022
+
+#Implementation: impl1
+
+
+Copyright (C) 1994-2020 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: Q-2020.03L-SP1
+Install: C:\lscc\diamond\3.12\synpbase
+OS: Windows 6.2
+
+Hostname: DESKTOP-MU9CKUT
+
+Implementation : impl1
+Synopsys HDL Compiler, Version comp202003synp2, Build 182R, Built Oct 29 2020 10:49:53, @
+
+@N|Running in 64-bit mode
+###########################################################[
+
+Copyright (C) 1994-2020 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: Q-2020.03L-SP1
+Install: C:\lscc\diamond\3.12\synpbase
+OS: Windows 6.2
+
+Hostname: DESKTOP-MU9CKUT
+
+Implementation : impl1
+Synopsys Verilog Compiler, Version comp202003synp2, Build 182R, Built Oct 29 2020 10:49:53, @
+
+@N|Running in 64-bit mode
+@N: CG1349 :	| Running Verilog Compiler in System Verilog mode
+
+@N: CG1350 :	| Running Verilog Compiler in Multiple File Compilation Unit mode
+
+@I::"C:\lscc\diamond\3.12\synpbase\lib\lucent\xp2.v" (library work)
+@I::"C:\lscc\diamond\3.12\synpbase\lib\lucent\pmi_def.v" (library work)
+@I::"C:\lscc\diamond\3.12\synpbase\lib\vlog\hypermods.v" (library __hyper__lib__)
+@I::"C:\lscc\diamond\3.12\synpbase\lib\vlog\umr_capim.v" (library snps_haps)
+@I::"C:\lscc\diamond\3.12\synpbase\lib\vlog\scemi_objects.v" (library snps_haps)
+@I::"C:\lscc\diamond\3.12\synpbase\lib\vlog\scemi_pipes.svh" (library snps_haps)
+@I::"C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\01 - Getting Started\Counter.v" (library work)
+Verilog syntax check successful!
+
+Compiler output is up to date.  No re-compile necessary
+
+Selecting top level module Counter
+@N: CG364 :"C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\01 - Getting Started\Counter.v":1:7:1:13|Synthesizing module Counter in library work.
+Running optimization stage 1 on Counter .......
+Running optimization stage 2 on Counter .......
+
+For a summary of runtime and memory usage per design unit, please see file:
+==========================================================
+@L: C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\01 - Getting Started\impl1\synwork\layer0.rt.csv
+
+
+At c_ver Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 90MB peak: 91MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+
+Process completed successfully.
+# Thu Apr 28 08:17:31 2022
+
+###########################################################]
+###########################################################[
+
+Copyright (C) 1994-2020 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: Q-2020.03L-SP1
+Install: C:\lscc\diamond\3.12\synpbase
+OS: Windows 6.2
+
+Hostname: DESKTOP-MU9CKUT
+
+Implementation : impl1
+Synopsys Synopsys Netlist Linker, Version comp202003synp2, Build 182R, Built Oct 29 2020 10:49:53, @
+
+@N|Running in 64-bit mode
+@N: NF107 :"c:\users\user\desktop\uct-fpga-course-2022\practicals\01 - getting started\counter.v":1:7:1:13|Selected library: work cell: Counter view verilog as top level
+@N: NF107 :"c:\users\user\desktop\uct-fpga-course-2022\practicals\01 - getting started\counter.v":1:7:1:13|Selected library: work cell: Counter view verilog as top level
+
+At syn_nfilter Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 89MB peak: 90MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+
+Process completed successfully.
+# Thu Apr 28 08:17:31 2022
+
+###########################################################]
+
+For a summary of runtime and memory usage for all design units, please see file:
+==========================================================
+@L: C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\01 - Getting Started\impl1\synwork\Counter_impl1_comp.rt.csv
+
+@END
+
+At c_hdl Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 22MB peak: 22MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+
+Process completed successfully.
+# Thu Apr 28 08:17:31 2022
+
+###########################################################]
+###########################################################[
+
+Copyright (C) 1994-2020 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: Q-2020.03L-SP1
+Install: C:\lscc\diamond\3.12\synpbase
+OS: Windows 6.2
+
+Hostname: DESKTOP-MU9CKUT
+
+Implementation : impl1
+Synopsys Synopsys Netlist Linker, Version comp202003synp2, Build 182R, Built Oct 29 2020 10:49:53, @
+
+@N|Running in 64-bit mode
+File C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\01 - Getting Started\impl1\synwork\Counter_impl1_comp.srs changed - recompiling
+@N: NF107 :"c:\users\user\desktop\uct-fpga-course-2022\practicals\01 - getting started\counter.v":1:7:1:13|Selected library: work cell: Counter view verilog as top level
+@N: NF107 :"c:\users\user\desktop\uct-fpga-course-2022\practicals\01 - getting started\counter.v":1:7:1:13|Selected library: work cell: Counter view verilog as top level
+
+At syn_nfilter Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 89MB peak: 90MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+
+Process completed successfully.
+# Thu Apr 28 08:17:33 2022
+
+###########################################################]
+# Thu Apr 28 08:17:33 2022
+
+
+Copyright (C) 1994-2020 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: Q-2020.03L-SP1
+Install: C:\lscc\diamond\3.12\synpbase
+OS: Windows 6.2
+
+Hostname: DESKTOP-MU9CKUT
+
+Implementation : impl1
+Synopsys Lattice Technology Pre-mapping, Version map202003lat, Build 172R, Built Nov  2 2020 09:31:45, @
+
+
+Mapper Startup Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 117MB peak: 117MB)
+
+@A: MF827 |No constraint file specified.
+@L: C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\01 - Getting Started\impl1\Counter_impl1_scck.rpt 
+See clock summary report "C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\01 - Getting Started\impl1\Counter_impl1_scck.rpt"
+@N: MF916 |Option synthesis_strategy=base is enabled. 
+@N: MF248 |Running in 64-bit mode.
+@N: MF666 |Clock conversion enabled. (Command "set_option -fix_gated_and_generated_clocks 1" in the project file.)
+
+Design Input Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 125MB peak: 128MB)
+
+
+Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 125MB peak: 128MB)
+
+
+Start loading timing files (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:00s; Memory used current: 137MB peak: 137MB)
+
+
+Finished loading timing files (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 137MB peak: 139MB)
+
+
+Starting clock optimization phase (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 169MB peak: 169MB)
+
+
+Finished clock optimization phase (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 169MB peak: 169MB)
+
+
+Starting clock optimization report phase (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 169MB peak: 169MB)
+
+
+Finished clock optimization report phase (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 169MB peak: 169MB)
+
+@N: FX1184 |Applying syn_allowed_resources blockrams=9 on top level netlist Counter 
+
+Finished netlist restructuring (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 169MB peak: 169MB)
+
+
+
+Clock Summary
+******************
+
+          Start             Requested     Requested     Clock        Clock                   Clock
+Level     Clock             Frequency     Period        Type         Group                   Load 
+--------------------------------------------------------------------------------------------------
+0 -       Counter|ipClk     200.0 MHz     5.000         inferred     Inferred_clkgroup_0     31   
+==================================================================================================
+
+
+
+Clock Load Summary
+***********************
+
+                  Clock     Source          Clock Pin           Non-clock Pin     Non-clock Pin
+Clock             Load      Pin             Seq Example         Seq Example       Comb Example 
+-----------------------------------------------------------------------------------------------
+Counter|ipClk     31        ipClk(port)     counter[30:0].C     -                 -            
+===============================================================================================
+
+@W: MT529 :"c:\users\user\desktop\uct-fpga-course-2022\practicals\01 - getting started\counter.v":6:2:6:7|Found inferred clock Counter|ipClk which controls 31 sequential elements including counter[30:0]. This clock has no specified timing constraint which may prevent conversion of gated or generated clocks and may adversely impact design performance. 
+
+ICG Latch Removal Summary:
+Number of ICG latches removed: 0
+Number of ICG latches not removed:	0
+
+
+@S |Clock Optimization Summary
+
+
+
+#### START OF PREMAP CLOCK OPTIMIZATION REPORT #####[
+
+1 non-gated/non-generated clock tree(s) driving 31 clock pin(s) of sequential element(s)
+0 gated/generated clock tree(s) driving 0 clock pin(s) of sequential element(s)
+0 instances converted, 0 sequential instances remain driven by gated/generated clocks
+
+=========================== Non-Gated/Non-Generated Clocks ============================
+Clock Tree ID     Driving Element     Drive Element Type     Fanout     Sample Instance
+---------------------------------------------------------------------------------------
+@KP:ckid0_0       ipClk               port                   31         counter[30:0]  
+=======================================================================================
+
+
+##### END OF CLOCK OPTIMIZATION REPORT ######
+
+@N: FX1143 |Skipping assigning INTERNAL_VREF to iobanks, because the table of mapping from pin to iobank is not initialized.
+Finished Pre Mapping Phase.
+
+Starting constraint checker (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 169MB peak: 169MB)
+
+
+Finished constraint checker preprocessing (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:02s; Memory used current: 170MB peak: 170MB)
+
+
+Finished constraint checker (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:02s; Memory used current: 170MB peak: 170MB)
+
+Pre-mapping successful!
+
+At Mapper Exit (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:02s; Memory used current: 86MB peak: 172MB)
+
+Process took 0h:00m:03s realtime, 0h:00m:02s cputime
+# Thu Apr 28 08:17:37 2022
+
+###########################################################]
+# Thu Apr 28 08:17:37 2022
+
+
+Copyright (C) 1994-2020 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: Q-2020.03L-SP1
+Install: C:\lscc\diamond\3.12\synpbase
+OS: Windows 6.2
+
+Hostname: DESKTOP-MU9CKUT
+
+Implementation : impl1
+Synopsys Lattice Technology Mapper, Version map202003lat, Build 172R, Built Nov  2 2020 09:31:45, @
+
+
+Mapper Startup Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 117MB peak: 117MB)
+
+@N: MF916 |Option synthesis_strategy=base is enabled. 
+@N: MF248 |Running in 64-bit mode.
+@N: MF666 |Clock conversion enabled. (Command "set_option -fix_gated_and_generated_clocks 1" in the project file.)
+
+Design Input Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 119MB peak: 128MB)
+
+
+Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 119MB peak: 128MB)
+
+
+Start loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 133MB peak: 133MB)
+
+
+Finished loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 134MB peak: 136MB)
+
+
+
+Starting Optimization and Mapping (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 166MB peak: 166MB)
+
+
+Available hyper_sources - for debug and ip models
+	None Found
+
+
+Finished RTL optimizations (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 169MB peak: 169MB)
+
+@N: MO231 :"c:\users\user\desktop\uct-fpga-course-2022\practicals\01 - getting started\counter.v":6:2:6:7|Found counter in view:work.Counter(verilog) instance counter[30:0] 
+
+Starting factoring (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 170MB peak: 170MB)
+
+
+Finished factoring (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 170MB peak: 170MB)
+
+
+Finished generic timing optimizations - Pass 1 (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 170MB peak: 170MB)
+
+
+Starting Early Timing Optimization (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:01s; Memory used current: 171MB peak: 171MB)
+
+
+Finished Early Timing Optimization (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 171MB peak: 171MB)
+
+
+Finished generic timing optimizations - Pass 2 (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 171MB peak: 171MB)
+
+
+Finished preparing to map (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 171MB peak: 171MB)
+
+
+Finished technology mapping (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 171MB peak: 171MB)
+
+Pass		 CPU time		Worst Slack		Luts / Registers
+------------------------------------------------------------
+
+Finished technology timing optimizations and critical path resynthesis (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 172MB peak: 172MB)
+
+@N: FX164 |The option to pack registers in the IOB has not been specified. Please set syn_useioff attribute.  
+
+Finished restoring hierarchy (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 172MB peak: 172MB)
+
+
+Start Writing Netlists (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:02s; Memory used current: 137MB peak: 173MB)
+
+Writing Analyst data base C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\01 - Getting Started\impl1\synwork\Counter_impl1_m.srm
+
+Finished Writing Netlist Databases (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:03s; Memory used current: 173MB peak: 173MB)
+
+Writing EDIF Netlist and constraint files
+@N: FX1056 |Writing EDF file: C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\01 - Getting Started\impl1\Counter_impl1.edi
+@N: BW106 |Synplicity Constraint File capacitance units using default value of 1pF 
+
+Finished Writing EDIF Netlist and constraint files (Real Time elapsed 0h:00m:04s; CPU Time elapsed 0h:00m:04s; Memory used current: 178MB peak: 178MB)
+
+
+Start final timing analysis (Real Time elapsed 0h:00m:05s; CPU Time elapsed 0h:00m:04s; Memory used current: 178MB peak: 178MB)
+
+@W: MT420 |Found inferred clock Counter|ipClk with period 5.00ns. Please declare a user-defined clock on port ipClk.
+
+
+##### START OF TIMING REPORT #####[
+# Timing report written on Thu Apr 28 08:17:43 2022
+#
+
+
+Top view:               Counter
+Requested Frequency:    200.0 MHz
+Wire load mode:         top
+Paths requested:        5
+Constraint File(s):    
+@N: MT320 |This timing report is an estimate of place and route data. For final timing results, use the FPGA vendor place and route report.
+
+@N: MT322 |Clock constraints include only register-to-register paths associated with each individual clock.
+
+
+
+Performance Summary
+*******************
+
+
+Worst slack in design: 0.901
+
+                   Requested     Estimated     Requested     Estimated               Clock        Clock              
+Starting Clock     Frequency     Frequency     Period        Period        Slack     Type         Group              
+---------------------------------------------------------------------------------------------------------------------
+Counter|ipClk      200.0 MHz     243.9 MHz     5.000         4.099         0.901     inferred     Inferred_clkgroup_0
+=====================================================================================================================
+
+
+
+
+
+Clock Relationships
+*******************
+
+Clocks                        |    rise  to  rise   |    fall  to  fall   |    rise  to  fall   |    fall  to  rise 
+--------------------------------------------------------------------------------------------------------------------
+Starting       Ending         |  constraint  slack  |  constraint  slack  |  constraint  slack  |  constraint  slack
+--------------------------------------------------------------------------------------------------------------------
+Counter|ipClk  Counter|ipClk  |  5.000       0.901  |  No paths    -      |  No paths    -      |  No paths    -    
+====================================================================================================================
+ Note: 'No paths' indicates there are no paths in the design for that pair of clock edges.
+       'Diff grp' indicates that paths exist but the starting clock and ending clock are in different clock groups.
+
+
+
+Interface Information 
+*********************
+
+No IO constraint found
+
+
+
+====================================
+Detailed Report for Clock: Counter|ipClk
+====================================
+
+
+
+Starting Points with Worst Slack
+********************************
+
+               Starting                                             Arrival          
+Instance       Reference         Type        Pin     Net            Time        Slack
+               Clock                                                                 
+-------------------------------------------------------------------------------------
+counter[0]     Counter|ipClk     FD1S3AX     Q       counter[0]     0.857       0.901
+counter[1]     Counter|ipClk     FD1S3AX     Q       counter[1]     0.857       0.974
+counter[2]     Counter|ipClk     FD1S3AX     Q       counter[2]     0.857       0.974
+counter[3]     Counter|ipClk     FD1S3AX     Q       counter[3]     0.857       1.047
+counter[4]     Counter|ipClk     FD1S3AX     Q       counter[4]     0.857       1.047
+counter[5]     Counter|ipClk     FD1S3AX     Q       counter[5]     0.857       1.120
+counter[6]     Counter|ipClk     FD1S3AX     Q       counter[6]     0.857       1.120
+counter[7]     Counter|ipClk     FD1S3AX     Q       counter[7]     0.857       1.193
+counter[8]     Counter|ipClk     FD1S3AX     Q       counter[8]     0.857       1.193
+counter[9]     Counter|ipClk     FD1S3AX     Q       counter[9]     0.857       1.266
+=====================================================================================
+
+
+Ending Points with Worst Slack
+******************************
+
+                Starting                                                Required          
+Instance        Reference         Type        Pin     Net               Time         Slack
+                Clock                                                                     
+------------------------------------------------------------------------------------------
+counter[29]     Counter|ipClk     FD1S3AX     D       counter_s[29]     5.069        0.901
+counter[30]     Counter|ipClk     FD1S3AX     D       counter_s[30]     5.069        0.901
+counter[27]     Counter|ipClk     FD1S3AX     D       counter_s[27]     5.069        0.974
+counter[28]     Counter|ipClk     FD1S3AX     D       counter_s[28]     5.069        0.974
+counter[25]     Counter|ipClk     FD1S3AX     D       counter_s[25]     5.069        1.047
+counter[26]     Counter|ipClk     FD1S3AX     D       counter_s[26]     5.069        1.047
+counter[23]     Counter|ipClk     FD1S3AX     D       counter_s[23]     5.069        1.120
+counter[24]     Counter|ipClk     FD1S3AX     D       counter_s[24]     5.069        1.120
+counter[21]     Counter|ipClk     FD1S3AX     D       counter_s[21]     5.069        1.193
+counter[22]     Counter|ipClk     FD1S3AX     D       counter_s[22]     5.069        1.193
+==========================================================================================
+
+
+
+Worst Path Information
+***********************
+
+
+Path information for path number 1: 
+      Requested Period:                      5.000
+    - Setup time:                            -0.069
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         5.069
+
+    - Propagation time:                      4.168
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (critical) :                     0.901
+
+    Number of logic level(s):                16
+    Starting point:                          counter[0] / Q
+    Ending point:                            counter[30] / D
+    The start point is clocked by            Counter|ipClk [rising] (rise=0.000 fall=2.500 period=5.000) on pin CK
+    The end   point is clocked by            Counter|ipClk [rising] (rise=0.000 fall=2.500 period=5.000) on pin CK
+
+Instance / Net                    Pin      Pin               Arrival     No. of    
+Name                  Type        Name     Dir     Delay     Time        Fan Out(s)
+-----------------------------------------------------------------------------------
+counter[0]            FD1S3AX     Q        Out     0.857     0.857 r     -         
+counter[0]            Net         -        -       -         -           1         
+counter_cry_0[0]      CCU2B       A1       In      0.000     0.857 r     -         
+counter_cry_0[0]      CCU2B       COUT     Out     1.056     1.912 r     -         
+counter_cry[0]        Net         -        -       -         -           1         
+counter_cry_0[1]      CCU2B       CIN      In      0.000     1.912 r     -         
+counter_cry_0[1]      CCU2B       COUT     Out     0.073     1.985 r     -         
+counter_cry[2]        Net         -        -       -         -           1         
+counter_cry_0[3]      CCU2B       CIN      In      0.000     1.985 r     -         
+counter_cry_0[3]      CCU2B       COUT     Out     0.073     2.058 r     -         
+counter_cry[4]        Net         -        -       -         -           1         
+counter_cry_0[5]      CCU2B       CIN      In      0.000     2.058 r     -         
+counter_cry_0[5]      CCU2B       COUT     Out     0.073     2.131 r     -         
+counter_cry[6]        Net         -        -       -         -           1         
+counter_cry_0[7]      CCU2B       CIN      In      0.000     2.131 r     -         
+counter_cry_0[7]      CCU2B       COUT     Out     0.073     2.204 r     -         
+counter_cry[8]        Net         -        -       -         -           1         
+counter_cry_0[9]      CCU2B       CIN      In      0.000     2.204 r     -         
+counter_cry_0[9]      CCU2B       COUT     Out     0.073     2.277 r     -         
+counter_cry[10]       Net         -        -       -         -           1         
+counter_cry_0[11]     CCU2B       CIN      In      0.000     2.277 r     -         
+counter_cry_0[11]     CCU2B       COUT     Out     0.073     2.350 r     -         
+counter_cry[12]       Net         -        -       -         -           1         
+counter_cry_0[13]     CCU2B       CIN      In      0.000     2.350 r     -         
+counter_cry_0[13]     CCU2B       COUT     Out     0.073     2.423 r     -         
+counter_cry[14]       Net         -        -       -         -           1         
+counter_cry_0[15]     CCU2B       CIN      In      0.000     2.423 r     -         
+counter_cry_0[15]     CCU2B       COUT     Out     0.073     2.496 r     -         
+counter_cry[16]       Net         -        -       -         -           1         
+counter_cry_0[17]     CCU2B       CIN      In      0.000     2.496 r     -         
+counter_cry_0[17]     CCU2B       COUT     Out     0.073     2.569 r     -         
+counter_cry[18]       Net         -        -       -         -           1         
+counter_cry_0[19]     CCU2B       CIN      In      0.000     2.569 r     -         
+counter_cry_0[19]     CCU2B       COUT     Out     0.073     2.642 r     -         
+counter_cry[20]       Net         -        -       -         -           1         
+counter_cry_0[21]     CCU2B       CIN      In      0.000     2.642 r     -         
+counter_cry_0[21]     CCU2B       COUT     Out     0.073     2.715 r     -         
+counter_cry[22]       Net         -        -       -         -           1         
+counter_cry_0[23]     CCU2B       CIN      In      0.000     2.715 r     -         
+counter_cry_0[23]     CCU2B       COUT     Out     0.073     2.788 r     -         
+counter_cry[24]       Net         -        -       -         -           1         
+counter_cry_0[25]     CCU2B       CIN      In      0.000     2.788 r     -         
+counter_cry_0[25]     CCU2B       COUT     Out     0.073     2.861 r     -         
+counter_cry[26]       Net         -        -       -         -           1         
+counter_cry_0[27]     CCU2B       CIN      In      0.000     2.861 r     -         
+counter_cry_0[27]     CCU2B       COUT     Out     0.073     2.934 r     -         
+counter_cry[28]       Net         -        -       -         -           1         
+counter_cry_0[29]     CCU2B       CIN      In      0.000     2.934 r     -         
+counter_cry_0[29]     CCU2B       S1       Out     1.234     4.168 r     -         
+counter_s[30]         Net         -        -       -         -           1         
+counter[30]           FD1S3AX     D        In      0.000     4.168 r     -         
+===================================================================================
+
+
+
+##### END OF TIMING REPORT #####]
+
+Timing exceptions that could not be applied
+
+Finished final timing analysis (Real Time elapsed 0h:00m:05s; CPU Time elapsed 0h:00m:05s; Memory used current: 178MB peak: 178MB)
+
+
+Finished timing report (Real Time elapsed 0h:00m:05s; CPU Time elapsed 0h:00m:05s; Memory used current: 178MB peak: 179MB)
+
+---------------------------------------
+Resource Usage Report
+Part: lfxp2_5e-6
+
+Register bits: 31 of 4752 (1%)
+PIC Latch:       0
+I/O cells:       9
+
+
+Details:
+CCU2B:          16
+FD1S3AX:        31
+GSR:            1
+IB:             1
+OB:             8
+PUR:            1
+VHI:            1
+VLO:            1
+Mapper successful!
+
+At Mapper Exit (Real Time elapsed 0h:00m:05s; CPU Time elapsed 0h:00m:05s; Memory used current: 63MB peak: 179MB)
+
+Process took 0h:00m:05s realtime, 0h:00m:05s cputime
+# Thu Apr 28 08:17:43 2022
+
+###########################################################]
+
+
+Synthesis exit by 0.
+
+edif2ngd  -l "LatticeXP2" -d LFXP2-5E -path "C:/Users/user/Desktop/UCT-FPGA-Course-2022/Practicals/01 - Getting Started/impl1" -path "C:/Users/user/Desktop/UCT-FPGA-Course-2022/Practicals/01 - Getting Started"   "C:/Users/user/Desktop/UCT-FPGA-Course-2022/Practicals/01 - Getting Started/impl1/Counter_impl1.edi" "Counter_impl1.ngo"   
+edif2ngd:  version Diamond (64-bit) 3.12.0.240.2
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
+Writing the design to Counter_impl1.ngo...
+
+Total CPU Time: 0 secs  
+Total REAL Time: 0 secs  
+Peak Memory Usage: 10 MB
+
+
+ngdbuild  -a "LatticeXP2" -d LFXP2-5E  -p "C:/lscc/diamond/3.12/ispfpga/mg5a00/data"  -p "C:/Users/user/Desktop/UCT-FPGA-Course-2022/Practicals/01 - Getting Started/impl1" -p "C:/Users/user/Desktop/UCT-FPGA-Course-2022/Practicals/01 - Getting Started"  "Counter_impl1.ngo" "Counter_impl1.ngd"  	
+ngdbuild:  version Diamond (64-bit) 3.12.0.240.2
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
+Reading 'Counter_impl1.ngo' ...
+Loading NGL library 'C:/lscc/diamond/3.12/ispfpga/mg5a00/data/mg5alib.ngl'...
+Loading NGL library 'C:/lscc/diamond/3.12/ispfpga/ep5a00/data/ep5alib.ngl'...
+Loading NGL library 'C:/lscc/diamond/3.12/ispfpga/ep5g00/data/ep5glib.ngl'...
+Loading NGL library 'C:/lscc/diamond/3.12/ispfpga/or5g00/data/orc5glib.ngl'...
+
+
+Running DRC...
+
+DRC complete with no errors or warnings
+
+Design Results:
+     59 blocks expanded
+Complete the first expansion.
+Writing 'Counter_impl1.ngd' ...
+Total CPU Time: 0 secs 
+Total REAL Time: 0 secs 
+Peak Memory Usage: 17 MB
+
+
+map -a "LatticeXP2" -p LFXP2-5E -t TQFP144 -s 6 -oc Industrial   "Counter_impl1.ngd" -o "Counter_impl1_map.ncd" -pr "Counter_impl1.prf" -mp "Counter_impl1.mrp" -lpf "C:/Users/user/Desktop/UCT-FPGA-Course-2022/Practicals/01 - Getting Started/impl1/Counter_impl1_synplify.lpf" -lpf "C:/Users/user/Desktop/UCT-FPGA-Course-2022/Practicals/01 - Getting Started/Counter.lpf"             
+map:  version Diamond (64-bit) 3.12.0.240.2
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
+   Process the file: Counter_impl1.ngd
+   Picdevice="LFXP2-5E"
+
+   Pictype="TQFP144"
+
+   Picspeed=6
+
+   Remove unused logic
+
+   Do not produce over sized NCDs.
+
+Part used: LFXP2-5ETQFP144, Performance used: 6.
+
+Loading device for application map from file 'mg5a26x29.nph' in environment: C:/lscc/diamond/3.12/ispfpga.
+Package Status:                     Final          Version 1.42.
+
+Running general design DRC...
+
+Removing unused logic...
+
+Optimizing...
+
+66 CCU2 constant inputs absorbed.
+
+
+
+
+Design Summary:
+   Number of registers:     31 out of  3864 (1%)
+      PFU registers:           31 out of  3564 (1%)
+      PIO registers:            0 out of   300 (0%)
+   Number of SLICEs:        17 out of  2376 (1%)
+      SLICEs as Logic/ROM:     17 out of  2376 (1%)
+      SLICEs as RAM:            0 out of   405 (0%)
+      SLICEs as Carry:         16 out of  2376 (1%)
+   Number of LUT4s:         33 out of  4752 (1%)
+      Number used as logic LUTs:          1
+      Number used as distributed RAM:     0
+      Number used as ripple logic:       32
+      Number used as shift registers:     0
+   Number of PIO sites used: 9 out of 100 (9%)
+   Number of PIO FIXEDDELAY:    0
+   Number of DQSDLLs:  0 out of 2 (0%)
+   Number of PLLs:  0 out of 2 (0%)
+   Number of block RAMs:  0 out of 9 (0%)
+   Number of CLKDIVs:  0 out of 2 (0%)
+   Number of GSRs:  0 out of 1 (0%)
+   JTAG used :      No
+   Readback used :  No
+   Oscillator used :  No
+   Startup used :   No
+   Notes:-
+      1. Total number of LUT4s = (Number of logic LUT4s) + 2*(Number of distributed RAMs) + 2*(Number of ripple logic)
+      2. Number of logic LUT4s does not include count of distributed RAM and ripple logic.
+
+   Number Of Mapped DSP Components:
+   --------------------------------
+   MULT36X36B          0
+   MULT18X18B          0
+   MULT18X18MACB       0
+   MULT18X18ADDSUBB    0
+   MULT18X18ADDSUBSUMB 0
+   MULT9X9B            0
+   MULT9X9ADDSUBB      0
+   MULT9X9ADDSUBSUMB   0
+   --------------------------------
+   Number of Used DSP Sites:  0 out of 24 (0 %)
+   Number of clocks:  1
+     Net ipClk_c: 16 loads, 16 rising, 0 falling (Driver: PIO ipClk )
+   Number of Clock Enables:  0
+   Number of LSRs:  0
+   Number of nets driven by tri-state buffers:  0
+   Top 10 highest fanout non-clock nets:
+     Net VCC: 31 loads
+     Net opLed_c[0]: 2 loads
+     Net opLed_c[1]: 2 loads
+     Net opLed_c[2]: 2 loads
+     Net opLed_c[3]: 2 loads
+     Net opLed_c[4]: 2 loads
+     Net opLed_c[5]: 2 loads
+     Net opLed_c[6]: 2 loads
+     Net opLed_c[7]: 2 loads
+     Net counter[0]: 1 loads
+ 
+
+   Number of warnings:  0
+   Number of errors:    0
+
+
+
+Total CPU Time: 0 secs  
+Total REAL Time: 0 secs  
+Peak Memory Usage: 58 MB
+
+Dumping design to file Counter_impl1_map.ncd.
+
+trce -f "Counter_impl1.mt" -o "Counter_impl1.tw1" "Counter_impl1_map.ncd" "Counter_impl1.prf"
+trce:  version Diamond (64-bit) 3.12.0.240.2
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
+
+Loading design for application trce from file counter_impl1_map.ncd.
+Design name: Counter
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LFXP2-5E
+Package:     TQFP144
+Performance: 6
+Loading device for application trce from file 'mg5a26x29.nph' in environment: C:/lscc/diamond/3.12/ispfpga.
+Package Status:                     Final          Version 1.42.
+Performance Hardware Data Status:   Final          Version 11.5.
+Setup and Hold Report
+
+--------------------------------------------------------------------------------
+Lattice TRACE Report - Setup, Version Diamond (64-bit) 3.12.0.240.2
+Thu Apr 28 08:17:50 2022
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
+
+Report Information
+------------------
+Command line:    trce -v 1 -u 0 -gt -mapchkpnt 0 -sethld -o Counter_impl1.tw1 -gui Counter_impl1_map.ncd Counter_impl1.prf 
+Design file:     counter_impl1_map.ncd
+Preference file: counter_impl1.prf
+Device,speed:    LFXP2-5E,6
+Report level:    verbose report, limited to 1 item per preference
+--------------------------------------------------------------------------------
+
+Report Type:     based on TRACE automatically generated preferences
+BLOCK ASYNCPATHS
+BLOCK RESETPATHS
+--------------------------------------------------------------------------------
+
+
+
+Timing summary (Setup):
+---------------
+
+Timing errors: 0  Score: 0
+Cumulative negative slack: 0
+
+Constraints cover 496 paths, 1 nets, and 124 connections (93.94% coverage)
+
+--------------------------------------------------------------------------------
+Lattice TRACE Report - Hold, Version Diamond (64-bit) 3.12.0.240.2
+Thu Apr 28 08:17:50 2022
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
+
+Report Information
+------------------
+Command line:    trce -v 1 -u 0 -gt -mapchkpnt 0 -sethld -o Counter_impl1.tw1 -gui Counter_impl1_map.ncd Counter_impl1.prf 
+Design file:     counter_impl1_map.ncd
+Preference file: counter_impl1.prf
+Device,speed:    LFXP2-5E,M
+Report level:    verbose report, limited to 1 item per preference
+--------------------------------------------------------------------------------
+
+BLOCK ASYNCPATHS
+BLOCK RESETPATHS
+--------------------------------------------------------------------------------
+
+
+
+Timing summary (Hold):
+---------------
+
+Timing errors: 0  Score: 0
+Cumulative negative slack: 0
+
+Constraints cover 496 paths, 1 nets, and 124 connections (93.94% coverage)
+
+
+
+Timing summary (Setup and Hold):
+---------------
+
+Timing errors: 0 (setup), 0 (hold)
+Score: 0 (setup), 0 (hold)
+Cumulative negative slack: 0 (0+0)
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+
+Total CPU Time: 2 secs 
+Total REAL Time: 3 secs 
+Peak Memory Usage: 155 MB
+
+
+mpartrce -p "Counter_impl1.p2t" -f "Counter_impl1.p3t" -tf "Counter_impl1.pt" "Counter_impl1_map.ncd" "Counter_impl1.ncd"
+
+---- MParTrce Tool ----
+Removing old design directory at request of -rem command line option to this program.
+Running par. Please wait . . .
+
+Lattice Place and Route Report for Design "Counter_impl1_map.ncd"
+Thu Apr 28 08:17:51 2022
+
+PAR: Place And Route Diamond (64-bit) 3.12.0.240.2.
+Command Line: par -w -l 5 -i 6 -t 1 -c 0 -e 0 -gui -exp parUseNBR=1:parCDP=auto:parCDR=1:parPathBased=OFF:parASE=1 Counter_impl1_map.ncd Counter_impl1.dir/5_1.ncd Counter_impl1.prf
+Preference file: Counter_impl1.prf.
+Placement level-cost: 5-1.
+Routing Iterations: 6
+
+Loading design for application par from file Counter_impl1_map.ncd.
+Design name: Counter
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LFXP2-5E
+Package:     TQFP144
+Performance: 6
+Loading device for application par from file 'mg5a26x29.nph' in environment: C:/lscc/diamond/3.12/ispfpga.
+Package Status:                     Final          Version 1.42.
+Performance Hardware Data Status:   Final          Version 11.5.
+License checked out.
+
+
+Ignore Preference Error(s):  True
+Device utilization summary:
+
+   PIO (prelim)       9/174           5% used
+                      9/100           9% bonded
+   SLICE             17/2376         <1% used
+
+
+
+Number of Signals: 79
+Number of Connections: 132
+
+Pin Constraint Summary:
+   9 out of 9 pins locked (100% locked).
+
+The following 1 signal is selected to use the primary clock routing resources:
+    ipClk_c (driver: ipClk, clk load #: 16)
+
+No signal is selected as DCS clock.
+
+No signal is selected as secondary clock.
+
+No signal is selected as Global Set/Reset.
+Starting Placer Phase 0.
+
+Finished Placer Phase 0.  REAL time: 3 secs 
+
+Starting Placer Phase 1.
+...............
+Placer score = 2726.
+Finished Placer Phase 1.  REAL time: 26 secs 
+
+Starting Placer Phase 2.
+.
+Placer score =  2726
+Finished Placer Phase 2.  REAL time: 26 secs 
+
+
+------------------ Clock Report ------------------
+
+Global Clock Resources:
+  CLK_PIN    : 1 out of 8 (12%)
+  PLL        : 0 out of 2 (0%)
+  CLKDIV     : 0 out of 2 (0%)
+
+Global Clocks:
+  PRIMARY "ipClk_c" from comp "ipClk" on CLK_PIN site "21 (PL12A)", clk load = 16
+
+  PRIMARY  : 1 out of 8 (12%)
+     DCS   : 0 out of 2 (0%)
+  SECONDARY: 0 out of 4 (0%)
+
+Edge Clocks:
+  No edge clock selected
+
+--------------- End of Clock Report ---------------
+
+
+I/O Usage Summary (final):
+   9 out of 174 (5.2%) PIO sites used.
+   9 out of 100 (9.0%) bonded PIO sites used.
+   Number of PIO comps: 9; differential: 0.
+   Number of Vref pins used: 0.
+
+I/O Bank Usage Summary:
++----------+---------------+------------+------------+------------+
+| I/O Bank | Usage         | Bank Vccio | Bank Vref1 | Bank Vref2 |
++----------+---------------+------------+------------+------------+
+| 0        | 0 / 20 (  0%) | -          | -          | -          |
+| 1        | 0 / 6 (  0%)  | -          | -          | -          |
+| 2        | 0 / 18 (  0%) | -          | -          | -          |
+| 3        | 0 / 4 (  0%)  | -          | -          | -          |
+| 4        | 0 / 8 (  0%)  | -          | -          | -          |
+| 5        | 8 / 18 ( 44%) | 3.3V       | -          | -          |
+| 6        | 0 / 8 (  0%)  | -          | -          | -          |
+| 7        | 1 / 18 (  5%) | -          | -          | -          |
++----------+---------------+------------+------------+------------+
+
+
+DSP Utilization Summary:
+-------------------------------------
+DSP Block #:              1 2 3
+# of MULT36X36B                
+# of MULT18X18B                
+# of MULT18X18MACB             
+# of MULT18X18ADDSUBB          
+# of MULT18X18ADDSUBSUMB       
+# of MULT9X9B                  
+# of MULT9X9ADDSUBB            
+# of MULT9X9ADDSUBSUMB         
+
+Total placer CPU time: 25 secs 
+
+Dumping design to file Counter_impl1.dir/5_1.ncd.
+
+0 connections routed; 132 unrouted.
+Starting router resource preassignment
+
+Completed router resource preassignment. Real time: 27 secs 
+
+Start NBR router at 08:18:18 04/28/22
+
+*****************************************************************
+Info: NBR allows conflicts(one node used by more than one signal)
+      in the earlier iterations. In each iteration, it tries to  
+      solve the conflicts while keeping the critical connections 
+      routed as short as possible. The routing process is said to
+      be completed when no conflicts exist and all connections   
+      are routed.                                                
+Note: NBR uses a different method to calculate timing slacks. The
+      worst slack and total negative slack may not be the same as
+      that in TRCE report. You should always run TRCE to verify  
+      your design.                                               
+*****************************************************************
+
+Start NBR special constraint process at 08:18:18 04/28/22
+
+Start NBR section for initial routing at 08:18:18 04/28/22
+Level 1, iteration 1
+0(0.00%) conflict; 69(52.27%) untouched conns; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 0.703ns/0.000ns; real time: 28 secs 
+Level 2, iteration 1
+0(0.00%) conflict; 69(52.27%) untouched conns; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 0.703ns/0.000ns; real time: 28 secs 
+Level 3, iteration 1
+0(0.00%) conflict; 39(29.55%) untouched conns; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 0.703ns/0.000ns; real time: 28 secs 
+Level 4, iteration 1
+0(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 0.703ns/0.000ns; real time: 28 secs 
+
+Info: Initial congestion level at 75% usage is 0
+Info: Initial congestion area  at 75% usage is 0 (0.00%)
+
+Start NBR section for normal routing at 08:18:19 04/28/22
+Level 1, iteration 1
+0(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 0.703ns/0.000ns; real time: 28 secs 
+Level 2, iteration 1
+0(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 0.703ns/0.000ns; real time: 28 secs 
+Level 3, iteration 1
+0(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 0.703ns/0.000ns; real time: 28 secs 
+Level 4, iteration 1
+0(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 0.703ns/0.000ns; real time: 28 secs 
+
+Start NBR section for setup/hold timing optimization with effort level 3 at 08:18:19 04/28/22
+
+Start NBR section for re-routing at 08:18:20 04/28/22
+Level 4, iteration 1
+0(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 0.703ns/0.000ns; real time: 29 secs 
+
+Start NBR section for post-routing at 08:18:20 04/28/22
+
+End NBR router with 0 unrouted connection
+
+NBR Summary
+-----------
+  Number of unrouted connections : 0 (0.00%)
+  Number of connections with timing violations : 0 (0.00%)
+  Estimated worst slack<setup> : 0.703ns
+  Timing score<setup> : 0
+-----------
+Notes: The timing info is calculated for SETUP only and all PAR_ADJs are ignored.
+
+
+
+Total CPU time 28 secs 
+Total REAL time: 29 secs 
+Completely routed.
+End of route.  132 routed (100.00%); 0 unrouted.
+
+Hold time timing score: 0, hold timing errors: 0
+
+Timing score: 0 
+
+Dumping design to file Counter_impl1.dir/5_1.ncd.
+
+
+PAR_SUMMARY::Run status = Completed
+PAR_SUMMARY::Number of unrouted conns = 0
+PAR_SUMMARY::Worst  slack<setup/<ns>> = 0.703
+PAR_SUMMARY::Timing score<setup/<ns>> = 0.000
+PAR_SUMMARY::Worst  slack<hold /<ns>> = 0.328
+PAR_SUMMARY::Timing score<hold /<ns>> = 0.000
+PAR_SUMMARY::Number of errors = 0
+
+Total CPU  time to completion: 28 secs 
+Total REAL time to completion: 30 secs 
+
+par done!
+
+Note: user must run 'Trace' for timing closure signoff.
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
+Exiting par with exit code 0
+Exiting mpartrce with exit code 0
+
+trce -f "Counter_impl1.pt" -o "Counter_impl1.twr" "Counter_impl1.ncd" "Counter_impl1.prf"
+trce:  version Diamond (64-bit) 3.12.0.240.2
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
+
+Loading design for application trce from file counter_impl1.ncd.
+Design name: Counter
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LFXP2-5E
+Package:     TQFP144
+Performance: 6
+Loading device for application trce from file 'mg5a26x29.nph' in environment: C:/lscc/diamond/3.12/ispfpga.
+Package Status:                     Final          Version 1.42.
+Performance Hardware Data Status:   Final          Version 11.5.
+Setup and Hold Report
+
+--------------------------------------------------------------------------------
+Lattice TRACE Report - Setup, Version Diamond (64-bit) 3.12.0.240.2
+Thu Apr 28 08:18:23 2022
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
+
+Report Information
+------------------
+Command line:    trce -v 10 -gt -sethld -sp 6 -sphld m -o Counter_impl1.twr -gui Counter_impl1.ncd Counter_impl1.prf 
+Design file:     counter_impl1.ncd
+Preference file: counter_impl1.prf
+Device,speed:    LFXP2-5E,6
+Report level:    verbose report, limited to 10 items per preference
+--------------------------------------------------------------------------------
+
+Report Type:     based on TRACE automatically generated preferences
+BLOCK ASYNCPATHS
+BLOCK RESETPATHS
+--------------------------------------------------------------------------------
+
+
+
+Timing summary (Setup):
+---------------
+
+Timing errors: 0  Score: 0
+Cumulative negative slack: 0
+
+Constraints cover 496 paths, 1 nets, and 124 connections (93.94% coverage)
+
+--------------------------------------------------------------------------------
+Lattice TRACE Report - Hold, Version Diamond (64-bit) 3.12.0.240.2
+Thu Apr 28 08:18:23 2022
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
+
+Report Information
+------------------
+Command line:    trce -v 10 -gt -sethld -sp 6 -sphld m -o Counter_impl1.twr -gui Counter_impl1.ncd Counter_impl1.prf 
+Design file:     counter_impl1.ncd
+Preference file: counter_impl1.prf
+Device,speed:    LFXP2-5E,m
+Report level:    verbose report, limited to 10 items per preference
+--------------------------------------------------------------------------------
+
+BLOCK ASYNCPATHS
+BLOCK RESETPATHS
+--------------------------------------------------------------------------------
+
+
+
+Timing summary (Hold):
+---------------
+
+Timing errors: 0  Score: 0
+Cumulative negative slack: 0
+
+Constraints cover 496 paths, 1 nets, and 124 connections (93.94% coverage)
+
+
+
+Timing summary (Setup and Hold):
+---------------
+
+Timing errors: 0 (setup), 0 (hold)
+Score: 0 (setup), 0 (hold)
+Cumulative negative slack: 0 (0+0)
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+
+Total CPU Time: 2 secs 
+Total REAL Time: 3 secs 
+Peak Memory Usage: 152 MB
+
+
+iotiming  "Counter_impl1.ncd" "Counter_impl1.prf"
+I/O Timing Report:
+:  version Diamond (64-bit) 3.12.0.240.2
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
+
+Loading design for application iotiming from file counter_impl1.ncd.
+Design name: Counter
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LFXP2-5E
+Package:     TQFP144
+Performance: 6
+Loading device for application iotiming from file 'mg5a26x29.nph' in environment: C:/lscc/diamond/3.12/ispfpga.
+Package Status:                     Final          Version 1.42.
+Performance Hardware Data Status:   Final          Version 11.5.
+Running Performance Grade: 6
+Computing Setup Time ...
+Computing Max Clock to Output Delay ...
+Computing Hold Time ...
+Computing Min Clock to Output Delay ...
+
+Loading design for application iotiming from file counter_impl1.ncd.
+Design name: Counter
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LFXP2-5E
+Package:     TQFP144
+Performance: 7
+Package Status:                     Final          Version 1.42.
+Performance Hardware Data Status:   Final          Version 11.5.
+Running Performance Grade: 7
+Computing Setup Time ...
+Computing Max Clock to Output Delay ...
+Computing Hold Time ...
+Computing Min Clock to Output Delay ...
+
+Loading design for application iotiming from file counter_impl1.ncd.
+Design name: Counter
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LFXP2-5E
+Package:     TQFP144
+Performance: M
+Package Status:                     Final          Version 1.42.
+Performance Hardware Data Status:   Final          Version 11.5.
+Running Performance Grade: M
+Computing Setup Time ...
+Computing Max Clock to Output Delay ...
+Computing Hold Time ...
+Computing Min Clock to Output Delay ...
+Done.
+
+tmcheck -par "Counter_impl1.par" 
+
+bitgen -f "Counter_impl1.t2b" -w "Counter_impl1.ncd" -jedec -e -s "C:/Users/user/Desktop/UCT-FPGA-Course-2022/Practicals/01 - Getting Started/Counter.sec" -k "C:/Users/user/Desktop/UCT-FPGA-Course-2022/Practicals/01 - Getting Started/Counter.bek" "Counter_impl1.prf"
+
+
+BITGEN: Bitstream Generator Diamond (64-bit) 3.12.0.240.2
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
+
+
+Loading design for application Bitgen from file Counter_impl1.ncd.
+Design name: Counter
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LFXP2-5E
+Package:     TQFP144
+Performance: 6
+Loading device for application Bitgen from file 'mg5a26x29.nph' in environment: C:/lscc/diamond/3.12/ispfpga.
+Package Status:                     Final          Version 1.42.
+Performance Hardware Data Status:   Final          Version 11.5.
+
+Running DRC.
+DRC detected 0 errors and 0 warnings.
+Reading Preference File from Counter_impl1.prf.
+
+Preference Summary:
++---------------------------------+---------------------------------+
+|  Preference                     |  Current Setting                |
++---------------------------------+---------------------------------+
+|                         RamCfg  |                        Reset**  |
++---------------------------------+---------------------------------+
+|                        DONE_EX  |                          OFF**  |
++---------------------------------+---------------------------------+
+|                        DONE_OD  |                           ON**  |
++---------------------------------+---------------------------------+
+|                  CONFIG_SECURE  |                          OFF**  |
++---------------------------------+---------------------------------+
+|                        WAKE_UP  |                           21**  |
++---------------------------------+---------------------------------+
+|                   WAKE_ON_LOCK  |                          OFF**  |
++---------------------------------+---------------------------------+
+|                          INBUF  |                           ON**  |
++---------------------------------+---------------------------------+
+|                     TAG_MEMORY  |                       NORMAL**  |
++---------------------------------+---------------------------------+
+|                        MY_ASSP  |                          OFF**  |
++---------------------------------+---------------------------------+
+|               ONE_TIME_PROGRAM  |                          OFF**  |
++---------------------------------+---------------------------------+
+|                 SLAVE_SPI_PORT  |                      DISABLE**  |
++---------------------------------+---------------------------------+
+|                MASTER_SPI_PORT  |                      DISABLE**  |
++---------------------------------+---------------------------------+
+|                     DisableUES  |                        FALSE**  |
++---------------------------------+---------------------------------+
+ *  Default setting.
+ ** The specified setting matches the default setting.
+
+
+Creating bit map...
+Saving bit stream in "Counter_impl1.jed".
+Total CPU Time: 4 secs 
+Total REAL Time: 5 secs 
+Peak Memory Usage: 276 MB

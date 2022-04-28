@@ -1,0 +1,4 @@
+@W: CG360 :"C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\01 - Getting Started\Counter.v":3:17:3:21|Removing wire opLed, as there is no assignment to it.
+@W: CL318 :"C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\01 - Getting Started\Counter.v":3:17:3:21|*Output opLed has undriven bits; assigning undriven bits to 'Z'.  Simulation mismatch possible. Assign all bits of the output.
+@W: CL169 :"C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\01 - Getting Started\Counter.v":6:2:6:7|Pruning unused register counter[30:0]. Make sure that there are no unused intermediate registers.
+

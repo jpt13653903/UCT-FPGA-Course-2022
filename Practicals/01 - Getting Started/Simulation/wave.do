@@ -1,3 +1,8 @@
+vlib work
+vlog -work work {../Counter.v}
+vlog -work work {../Counter_TB.v}
+vsim work.Counter_TB
+
 onerror {resume}
 quietly WaveActivateNextPane {} 0
 add wave -noupdate -radix hexadecimal /Counter_TB/ipClk
@@ -21,3 +26,6 @@ configure wave -timeline 0
 configure wave -timelineunits ms
 update
 WaveRestoreZoom {168936800 ns} {199045861 ns}
+
+run {1 sec}
+wave zoom full

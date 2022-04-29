@@ -2,7 +2,7 @@ module Counter (
     input ipClk,
     output [7:0] opLed 
 );
-    reg [30:0] counter;
+    reg [30:0] counter = 0;
   always @(posedge ipClk) begin
       counter++;
   end

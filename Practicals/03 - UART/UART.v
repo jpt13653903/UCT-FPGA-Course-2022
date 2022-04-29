@@ -48,61 +48,74 @@ module (
 	RxState rxState;
 	// localise the data to send and reset
 	
-	reg [2:0] txCounter = WIDTH + 1;
-	reg [2:0] rxCounter = WIDTH + 1;
+	reg [3:0] txCounter = WIDTH + 1; // extra bits for start and stop bits
+	reg [3:0] rxCounter = WIDTH + 1;
 	reg clockEnable = 0;
 	reg rxClockEnable = 0;
-	reg [WIDTH - 1:0] localTxData;
-	reg [WIDTH - 1:0] localTxData;
-	reg [WIDTH - 1:0] localRxData;
+	reg reset;
+	reg [WIDTH + 1:0] localTxData;
+	reg [WIDTH + 1:0] localTxData;
+	reg 
 	//------------------------------------------------------------------------------
 	// TODO: Put the transmitter here
 	//------------------------------------------------------------------------------
 	always @(posedge ipClk) begin
 		localTxData <= ipTxData;
-		reg reset <= ipReset;
+		reset <= ipReset;
 		txCounter <= txCounter - 1;
+		rxCounter <= rxCounter - 1;
 		clockEnable = (txCounter == (CLOCK_DIV >> 1));
-		rxClockEnable = (rxCounter == (CLOCK_DIV >> 1))
+		rxClockEnable = (rxCounter == (CLOCK_DIV >> 1));
+
 
 		if (reset) begin
 			txCounter <= WIDTH - 1;
 			clockEnable <= 0;
 			txState <= IDLE;
-		end else if(clockEnable == 1) begin
-			case(txState)
-				IDLE:begin
-					localTxData <=  {0, ipTxData, 1};
-					if(ipTxSend == 1)begin
-						txCounter	 <= WIDTH - 1;
-						txState <= SENDING;
+		end else begin	
+			if(clockEnable == 1) begin
+				case(txState)
+					IDLE:begin
+						localTxData <=  {1, ipTxData, 0};
+						if(ipTxSend == 1)begin
+							txCounter	 <= WIDTH + 1;
+							txState <= SENDING;
+						end
 					end
-				end
-				SENDING:begin
-						{localTxData, opTx} <= localTxData;
-						if(txCounter == 0){
-							txState <= IDLE;
-						}
-				end
-			endcase
-		end else if(rxClockEnable)begin
+					SENDING:begin
+							{localTxData, opTx} <= localTxData;
+							if(txCounter == 0){
+								txState <= IDLE;
+							}
+					end
+				endcase
+			end
+
 			//------------------------------------------------------------------------------
 			// TODO: Put the receiver here
 			//------------------------------------------------------------------------------
-			case (rXState)
-				RECEIVING: begin
-					opRxData == localRxData
-				end
-				IDLE: begin
-					localRxData <= opRxData
-					if(localRxData[0] == 0 && localRxData[9] == 1)begin
-						opRxValid <= 1
-						rxState <= RECEIVING
+			
+				case (rXState)
+					RECEIVING: begin
+						if(rxCounter ==  CLOCK_DIV + (CLOCK_DIV >> 1))begin
+							opRxData <= localRxData[8:1];
+							rxState <= IDLE;
+							opRxValid <= 1;
+						end
 					end
-				end
-			endcase
-		end
-
+					IDLE: begin
+						if(rxClockEnable)begin
+							localRxData <= {ipRx, localRxData};
+							opRxValid <= 0;
+							if(localRxData[0] == 0 && localRxData[9] == 1)begin
+								rxCounter <= WIDTH + 1;
+								rxState <= RECEIVING;
+							end
+						end
+					end
+				endcase
+			end
+		 
 		
 	end
 

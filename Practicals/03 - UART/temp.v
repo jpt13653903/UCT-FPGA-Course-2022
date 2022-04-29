@@ -58,10 +58,10 @@ module #(parameter Clock_Div = 10, parameter WIDTH = 8) UART(
 			// TODO: Put the transmitter here
 			//--------------- ---------------------------------------------------------------
 			if (opTxBusy == 0) begin
-				ipTxSend <= 1
-				state <= SENDING
+				ipTxSend <= 1;
+				state <= SENDING;
 			end	else if(opTxBusy == 1) begin
-				ipTxSend <= 0
+				ipTxSend <= 0;
 				state <= BUSY
 			end else {
 				state <= IDLE

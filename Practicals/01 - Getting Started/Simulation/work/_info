@@ -10,29 +10,56 @@ z2
 cModel Technology
 Z0 dC:/Users/user/Desktop/UCT-FPGA-Course-2022/Practicals/01 - Getting Started/Simulation
 vCounter
-DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
-!s110 1651228017
+Z1 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
+Z2 !s110 1651228075
 !i10b 1
 !s100 IDh:?W@H?ked:TG8e[?>`3
-!s11b Dg1SIo80bB@j0V0VzS_@n1
+Z3 !s11b Dg1SIo80bB@j0V0VzS_@n1
 IkLOJ^1EoMSH<6Ig`jG5eg0
 S1
 R0
 w1651158639
 8C:/Users/user/Desktop/UCT-FPGA-Course-2022/Practicals/01 - Getting Started/Counter.v
 FC:/Users/user/Desktop/UCT-FPGA-Course-2022/Practicals/01 - Getting Started/Counter.v
-!i122 5
+!i122 8
 L0 1 10
-VDg1SIo80bB@j0V0VzS_@n1
-OT;L;2020.3;71
+Z4 VDg1SIo80bB@j0V0VzS_@n1
+Z5 OT;L;2020.3;71
 r1
 !s85 0
 31
-!s108 1651228017.000000
+Z6 !s108 1651228075.000000
 !s107 C:/Users/user/Desktop/UCT-FPGA-Course-2022/Practicals/01 - Getting Started/Counter.v|
 !s90 -F=C:/Users/user/Desktop/UCT-FPGA-Course-2022/Practicals/01 - Getting Started/vlog.opt|-F=|-reportprogress|300|-work|work|C:/Users/user/Desktop/UCT-FPGA-Course-2022/Practicals/01 - Getting Started/Counter.v|
 !s101 -O0
 !i113 1
-o-work work -O0
-tSvlog 1 CvgOpt 0
+Z7 o-work work -O0
+Z8 tSvlog 1 CvgOpt 0
 n@counter
+vCounter_TB
+R1
+R2
+!i10b 1
+!s100 g1^;5f?RCTkoAL[5eTji:2
+R3
+I4SJIYK7RI08UfQRofQX281
+S1
+R0
+w1651228031
+8C:/Users/user/Desktop/UCT-FPGA-Course-2022/Practicals/01 - Getting Started/Counter_TB.v
+FC:/Users/user/Desktop/UCT-FPGA-Course-2022/Practicals/01 - Getting Started/Counter_TB.v
+!i122 9
+L0 3 22
+R4
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/user/Desktop/UCT-FPGA-Course-2022/Practicals/01 - Getting Started/Counter_TB.v|
+!s90 -F=C:/Users/user/Desktop/UCT-FPGA-Course-2022/Practicals/01 - Getting Started/vlog.opt|-F=|-reportprogress|300|-work|work|C:/Users/user/Desktop/UCT-FPGA-Course-2022/Practicals/01 - Getting Started/Counter_TB.v|
+!s101 -O0
+!i113 1
+R7
+R8
+n@counter_@t@b

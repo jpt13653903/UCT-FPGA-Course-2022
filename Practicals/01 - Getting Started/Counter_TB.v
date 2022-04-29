@@ -19,6 +19,6 @@ module Counter_TB;
 
 	Counter DUT(
 		.ipClk(ipClk),
-		.ipReset(ipReset)
+		.opLed(opLed)
 	);
 endmodule //Counter_TB

@@ -6,7 +6,7 @@ module Counter_TB;
 			ipClk <= ~ipClk;
 	end
 
-	reg ipReset = 1
+	reg ipReset = 1;
 
 	initial begin
 			@(posedge ipClk);
@@ -18,7 +18,7 @@ module Counter_TB;
 	wire [7:0] opLed;
 
 	Counter DUT(
-		.ipClk(ipClk)
+		.ipClk(ipClk),
 		.ipReset(ipReset)
 	)
 endmodule //Counter_TB

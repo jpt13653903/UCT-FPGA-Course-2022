@@ -2,7 +2,7 @@
 
 module Counter_TB;
 	reg ipClk = 0;
-	@always #10 begin
+	always #10 begin
 			ipClk <= ~ipClk;
 	end
 

@@ -29,7 +29,7 @@ module (
   output reg      opTx,
 
   input           ipRx,
-  output reg [WIDTH - 1:0]opRxData,
+  output reg [WIDTH - 1:0] opRxData,
   output reg      opRxValid
 );
 
@@ -48,19 +48,22 @@ module (
 	RxState rxState;
 	// localise the data to send and reset
 	
-	reg [2:0] txCounter = WIDTH - 1;
-	reg [2:0] rxCounter = WIDTH -1;
+	reg [2:0] txCounter = WIDTH + 1;
+	reg [2:0] rxCounter = WIDTH + 1;
 	reg clockEnable = 0;
+	reg rxClockEnable = 0;
 	reg [WIDTH - 1:0] localTxData;
-
+	reg [WIDTH - 1:0] localTxData;
+	reg [WIDTH - 1:0] localRxData;
 	//------------------------------------------------------------------------------
 	// TODO: Put the transmitter here
 	//------------------------------------------------------------------------------
 	always @(posedge ipClk) begin
-		reg [WIDTH - 1:0] localTxData <= ipTxData;
+		localTxData <= ipTxData;
 		reg reset <= ipReset;
 		txCounter <= txCounter - 1;
-		clockEnable = txCounter == CLOCK_DIV/2;
+		clockEnable = (txCounter == (CLOCK_DIV >> 1));
+		rxClockEnable = (rxCounter == (CLOCK_DIV >> 1))
 
 		if (reset) begin
 			txCounter <= WIDTH - 1;
@@ -69,35 +72,38 @@ module (
 		end else if(clockEnable == 1) begin
 			case(txState)
 				IDLE:begin
-					temp <= ipTxData;
+					localTxData <=  {0, ipTxData, 1};
 					if(ipTxSend == 1)begin
 						txCounter	 <= WIDTH - 1;
 						txState <= SENDING;
 					end
 				end
 				SENDING:begin
-						{localTxData, opTx} <=  localTxData;
+						{localTxData, opTx} <= localTxData;
 						if(txCounter == 0){
 							txState <= IDLE;
 						}
 				end
 			endcase
+		end else if(rxClockEnable)begin
+			//------------------------------------------------------------------------------
+			// TODO: Put the receiver here
+			//------------------------------------------------------------------------------
+			case (rXState)
+				RECEIVING: begin
+					opRxData == localRxData
+				end
+				IDLE: begin
+					localRxData <= opRxData
+					if(localRxData[0] == 0 && localRxData[9] == 1)begin
+						opRxValid <= 1
+						rxState <= RECEIVING
+					end
+				end
+			endcase
 		end
 
-
-		case (rXState)
-			RECEIVING: begin
-				
-			end
-			IDLE: begin
-				
-				if(opRxValid)begin
-					
-				end
-			end
-		endcase
+		
 	end
-	//------------------------------------------------------------------------------
-	// TODO: Put the receiver here
-	//------------------------------------------------------------------------------
+
 endmodule

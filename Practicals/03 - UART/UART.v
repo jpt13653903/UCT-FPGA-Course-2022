@@ -16,22 +16,21 @@ To receive data:
 - opRxData is valid during the same clock cycle
 ------------------------------------------------------------------------------*/
 
-module (
-	parameter WIDTH = 8,
-	parameter CLOCK_DIV = 434
-) UART(
+module UART(
   input           ipClk,
   input           ipReset,
 
-  input      [WIDTH - 1:0] ipTxData,
+  input      [7:0] ipTxData,
   input           ipTxSend,
   output reg      opTxBusy,
   output reg      opTx,
 
   input           ipRx,
-  output reg [WIDTH - 1:0] opRxData,
+  output reg [7:0] opRxData,
   output reg      opRxValid
 );
+	localparam WIDTH = 8;
+	localparam CLOCK_DIV = 434;
 
 	typedef enum {
 		SENDING,
@@ -41,8 +40,8 @@ module (
 
 	typedef enum {
 		RECEIVING,
-		IDLE
-	} RxState
+		RECEIVER_IDLE
+	} RxState;
 
 	TxState txState;
 	RxState rxState;
@@ -54,8 +53,7 @@ module (
 	reg rxClockEnable = 0;
 	reg reset;
 	reg [WIDTH + 1:0] localTxData;
-	reg [WIDTH + 1:0] localTxData;
-	reg 
+	reg [WIDTH + 1:0] localRxData;
 
 	always @(posedge ipClk) begin
 		localTxData <= ipTxData;
@@ -86,9 +84,9 @@ module (
 					end
 					SENDING:begin
 							{localTxData, opTx} <= localTxData;
-							if(txCounter == 0){
+							if(txCounter == 0)begin
 								txState <= IDLE;
-							}
+							end
 					end
 				endcase
 			end
@@ -97,11 +95,11 @@ module (
 			// TODO: Put the receiver here
 			//------------------------------------------------------------------------------
 			
-				case (rXState)
+				case (rxState)
 					RECEIVING: begin
 						if(rxCounter ==  CLOCK_DIV + (CLOCK_DIV >> 1)) begin
 							opRxData <= localRxData[8:1];
-							rxState <= IDLE;
+							rxState <= 	RECEIVER_IDLE;
 							opRxValid <= 1;
 						end
 					end

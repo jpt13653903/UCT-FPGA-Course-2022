@@ -56,9 +56,7 @@ module (
 	reg [WIDTH + 1:0] localTxData;
 	reg [WIDTH + 1:0] localTxData;
 	reg 
-	//------------------------------------------------------------------------------
-	// TODO: Put the transmitter here
-	//------------------------------------------------------------------------------
+
 	always @(posedge ipClk) begin
 		localTxData <= ipTxData;
 		reset <= ipReset;
@@ -69,10 +67,14 @@ module (
 
 
 		if (reset) begin
-			txCounter <= WIDTH - 1;
+			txCounter <= WIDTH + 1;
 			clockEnable <= 0;
 			txState <= IDLE;
 		end else begin	
+
+			//------------------------------------------------------------------------------
+			// TODO: Put the transmitter here
+			//------------------------------------------------------------------------------
 			if(clockEnable == 1) begin
 				case(txState)
 					IDLE:begin
@@ -97,7 +99,7 @@ module (
 			
 				case (rXState)
 					RECEIVING: begin
-						if(rxCounter ==  CLOCK_DIV + (CLOCK_DIV >> 1))begin
+						if(rxCounter ==  CLOCK_DIV + (CLOCK_DIV >> 1)) begin
 							opRxData <= localRxData[8:1];
 							rxState <= IDLE;
 							opRxValid <= 1;
@@ -115,8 +117,6 @@ module (
 					end
 				endcase
 			end
-		 
-		
 	end
 
 endmodule

@@ -56,7 +56,6 @@ module UART #(parameter WIDTH =8, parameter CLOCK_DIV = 434) (
 	
 	always @(posedge ipClk) begin
 		
-		rxCounter <= rxCounter - 1;
 		reset <= ipReset;
 
 		if (reset) begin
@@ -66,6 +65,7 @@ module UART #(parameter WIDTH =8, parameter CLOCK_DIV = 434) (
 			rxState <= RECEIVER_IDLE;
 			txState <= IDLE;
 			opTx <=1;
+			localRxData <= 10'h3FF;
 		end else begin	
 			if(txCounter == 0)begin
 				txCounter <= CLOCK_DIV - 1;
@@ -102,28 +102,19 @@ module UART #(parameter WIDTH =8, parameter CLOCK_DIV = 434) (
 			//------------------------------------------------------------------------------
 			// TODO: Put the receiver here
 			//------------------------------------------------------------------------------		
-				case (rxState)
-					RECEIVING: begin
-						if(rxCounter ==  0) begin
-							opRxData <= localRxData[8:1];
-							rxState <= 	RECEIVER_IDLE;
-							rxCounter <= CLOCK_DIV - 1;
-							opRxValid <= 1;
-						end
-					end
-					RECEIVER_IDLE: begin
-						if(rxClockEnable)begin
-							localRxData <= {ipRx, localRxData};
-							opRxValid <= 0;
-							if(localRxData[0] == 0 && localRxData[9] == 1)begin
-								// synchronize
-								rxCounter <= CLOCK_DIV + (CLOCK_DIV >> 1);
-								rxState <= RECEIVING;
-							end
-						end
-					end
-				endcase
-			end
+			if (rxCounter == 0) begin
+					rxCounter <= CLOCK_DIV - 1;
+					localRxData <= {ipRx, localRxData[9:1]};
+			end else begin
+				if (localRxData[0] == 0 && localRxData[9] == 1) begin
+					opRxValid <= 1;
+					opRxData <= localRxData[8:1];
+				end else begin
+					opRxValid <= 0;
+					rxCounter <= rxCounter - 1;
+				end
+			end 
+		end
 	end
 
 endmodule

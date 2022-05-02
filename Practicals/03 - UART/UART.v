@@ -16,7 +16,7 @@ To receive data:
 - opRxData is valid during the same clock cycle
 ------------------------------------------------------------------------------*/
 
-module UART(
+module UART #(parameter WIDTH =8, parameter CLOCK_DIV = 434) (
   input           ipClk,
   input           ipReset,
 
@@ -29,9 +29,6 @@ module UART(
   output reg [7:0] opRxData,
   output reg      opRxValid
 );
-	localparam WIDTH = 8;
-	localparam CLOCK_DIV = 434;
-
 	typedef enum {
 		SENDING,
 		IDLE,
@@ -47,8 +44,8 @@ module UART(
 	RxState rxState;
 	// localise the data to send and reset
 	
-	reg [3:0] txCounter = WIDTH + 1; // extra bits for start and stop bits
-	reg [3:0] rxCounter = WIDTH + 1;
+	reg [8:0] txCounter = CLOCK_DIV - 1; // extra bits for start and stop bits
+	reg [8:0] rxCounter =  CLOCK_DIV - 1;
 	reg clockEnable = 0;
 	reg rxClockEnable = 0;
 	reg reset;
@@ -58,27 +55,23 @@ module UART(
 	always @(posedge ipClk) begin
 		localTxData <= ipTxData;
 		reset <= ipReset;
-		txCounter <= txCounter - 1;
-		rxCounter <= rxCounter - 1;
-		clockEnable = (txCounter == (CLOCK_DIV >> 1));
-		rxClockEnable = (rxCounter == (CLOCK_DIV >> 1));
-
-
+	
 		if (reset) begin
-			txCounter <= WIDTH + 1;
+			txCounter <= CLOCK_DIV - 1;
+			rxCounter <= CLOCK_DIV - 1;
 			clockEnable <= 0;
 			txState <= IDLE;
 		end else begin	
-
+			clockEnable = (txCounter == 0);
 			//------------------------------------------------------------------------------
 			// TODO: Put the transmitter here
 			//------------------------------------------------------------------------------
 			if(clockEnable == 1) begin
 				case(txState)
 					IDLE:begin
-						localTxData <=  {1, ipTxData, 0};
+						localTxData <=  {1'b1, ipTxData,1'b0};
 						if(ipTxSend == 1)begin
-							txCounter	 <= WIDTH + 1;
+							txCounter	 <= CLOCK_DIV - 1;
 							txState <= SENDING;
 						end
 					end
@@ -86,6 +79,7 @@ module UART(
 							{localTxData, opTx} <= localTxData;
 							if(txCounter == 0)begin
 								txState <= IDLE;
+								txCounter	 <= CLOCK_DIV - 1;
 							end
 					end
 				endcase
@@ -93,13 +87,13 @@ module UART(
 
 			//------------------------------------------------------------------------------
 			// TODO: Put the receiver here
-			//------------------------------------------------------------------------------
-			
+			//------------------------------------------------------------------------------		
 				case (rxState)
 					RECEIVING: begin
-						if(rxCounter ==  CLOCK_DIV + (CLOCK_DIV >> 1)) begin
+						if(rxCounter ==  0) begin
 							opRxData <= localRxData[8:1];
 							rxState <= 	RECEIVER_IDLE;
+							rxCounter <= CLOCK_DIV - 1;
 							opRxValid <= 1;
 						end
 					end
@@ -108,7 +102,8 @@ module UART(
 							localRxData <= {ipRx, localRxData};
 							opRxValid <= 0;
 							if(localRxData[0] == 0 && localRxData[9] == 1)begin
-								rxCounter <= WIDTH + 1;
+								// synchronize
+								rxCounter <= CLOCK_DIV + (CLOCK_DIV >> 1);
 								rxState <= RECEIVING;
 							end
 						end

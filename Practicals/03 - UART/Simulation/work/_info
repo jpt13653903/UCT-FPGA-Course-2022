@@ -11,55 +11,55 @@ cModel Technology
 Z0 dC:/Users/user/Desktop/UCT-FPGA-Course-2022/Practicals/03 - UART/Simulation
 vUART
 Z1 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
-!s110 1651426157
+!s110 1651489779
 !i10b 1
-!s100 RYLLP0S[4[?gF[cOdZH2Z1
+!s100 CaE9>bJdYLaaVimCX46Ib0
 Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
-IK5c>2lF=PC1T0QAn1Tmfi2
+Ibo>C9Q:NED^HYK]J?9j4<2
 S1
 R0
-w1651426151
+w1651489713
 8C:/Users/user/Desktop/UCT-FPGA-Course-2022/Practicals/03 - UART/UART.v
 FC:/Users/user/Desktop/UCT-FPGA-Course-2022/Practicals/03 - UART/UART.v
-!i122 3
-L0 19 102
+!i122 12
+L0 19 96
 Z3 VDg1SIo80bB@j0V0VzS_@n1
 Z4 OT;L;2020.3;71
 r1
 !s85 0
 31
-!s108 1651426157.000000
+Z5 !s108 1651489779.000000
 !s107 C:/Users/user/Desktop/UCT-FPGA-Course-2022/Practicals/03 - UART/UART.v|
-!s90 -F=C:/Users/user/Desktop/UCT-FPGA-Course-2022/Practicals/01 - Getting Started/vlog.opt|-F=|-reportprogress|300|-work|work|C:/Users/user/Desktop/UCT-FPGA-Course-2022/Practicals/03 - UART/UART.v|
+!s90 -F=C:/Users/user/Desktop/UCT-FPGA-Course-2022/Practicals/01 - Getting Started/vlog.opt|-F=|-reportprogress|300|-work|work|-O0|C:/Users/user/Desktop/UCT-FPGA-Course-2022/Practicals/03 - UART/UART.v|
 !s101 -O0
 !i113 1
-Z5 o-work work -O0
-Z6 tSvlog 1 CvgOpt 0
+Z6 o-work work -O0
+Z7 tSvlog 1 CvgOpt 0
 n@u@a@r@t
 vUART_TB
 R1
-!s110 1651424489
+!s110 1651489780
 !i10b 1
 !s100 bLi:mVOJd275WABTKX0i82
 R2
-Ie0KmZLZTHIOYE00eX4We[0
+IW[bB:TC1NDT`=jUi76_ZV1
 S1
 R0
-w1651410492
+w1651489332
 8C:/Users/user/Desktop/UCT-FPGA-Course-2022/Practicals/03 - UART/UART_TB.v
 FC:/Users/user/Desktop/UCT-FPGA-Course-2022/Practicals/03 - UART/UART_TB.v
-!i122 2
+!i122 13
 L0 2 110
 R3
 R4
 r1
 !s85 0
 31
-!s108 1651424489.000000
+R5
 !s107 C:/Users/user/Desktop/UCT-FPGA-Course-2022/Practicals/03 - UART/UART_TB.v|
-!s90 -F=C:/Users/user/Desktop/UCT-FPGA-Course-2022/Practicals/01 - Getting Started/vlog.opt|-F=|-reportprogress|300|-work|work|C:/Users/user/Desktop/UCT-FPGA-Course-2022/Practicals/03 - UART/UART_TB.v|
+!s90 -F=C:/Users/user/Desktop/UCT-FPGA-Course-2022/Practicals/01 - Getting Started/vlog.opt|-F=|-reportprogress|300|-work|work|-O0|C:/Users/user/Desktop/UCT-FPGA-Course-2022/Practicals/03 - UART/UART_TB.v|
 !s101 -O0
 !i113 1
-R5
 R6
+R7
 n@u@a@r@t_@t@b

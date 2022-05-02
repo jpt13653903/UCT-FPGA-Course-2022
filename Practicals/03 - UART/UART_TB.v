@@ -101,7 +101,7 @@ UART DUT(
   .ipTxSend (ipTxSend ),
   .opTxBusy (opTxBusy ),
   .opTx     (opTx     ),
-                      
+                 
   .ipRx     (ipRx     ),
   .opRxData (opRxData ),
   .opRxValid(opRxValid)

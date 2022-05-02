@@ -60,12 +60,12 @@ module UART #(parameter WIDTH =8, parameter CLOCK_DIV = 434) (
 		reset <= ipReset;
 
 		if (reset) begin
-			$display("I AM RESETTING");
 			txCounter <= CLOCK_DIV - 1;
 			rxCounter <= CLOCK_DIV - 1;
 			clockEnable <= 0;
 			rxState <= RECEIVER_IDLE;
 			txState <= IDLE;
+			opTx <=1;
 		end else begin	
 			if(txCounter == 0)begin
 				txCounter <= CLOCK_DIV - 1;

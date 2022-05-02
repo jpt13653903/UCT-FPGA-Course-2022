@@ -42,6 +42,8 @@ initial begin
     @(posedge ipClk);
     ipTxSend = 0;
 
+    @(negedge opTx);
+
     #4340;
     assert(opTx == 0) else
       $error("Expecting start bit");

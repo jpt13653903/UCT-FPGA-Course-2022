@@ -52,34 +52,46 @@ module UART #(parameter WIDTH =8, parameter CLOCK_DIV = 434) (
 	reg [WIDTH + 1:0] localTxData;
 	reg [WIDTH + 1:0] localRxData;
 
+	
 	always @(posedge ipClk) begin
 		localTxData <= ipTxData;
+		
+		rxCounter <= rxCounter - 1;
 		reset <= ipReset;
-	
+
 		if (reset) begin
+			$display("I AM RESETTING");
 			txCounter <= CLOCK_DIV - 1;
 			rxCounter <= CLOCK_DIV - 1;
 			clockEnable <= 0;
+			rxState <= RECEIVER_IDLE;
 			txState <= IDLE;
 		end else begin	
-			clockEnable = (txCounter == 0);
+			if(txCounter == 0)begin
+				txCounter <= CLOCK_DIV - 1;
+			end else begin
+				txCounter <= txCounter - 1;
+			end
+			clockEnable = txCounter == 0 ? 1 : 0;
 			//------------------------------------------------------------------------------
 			// TODO: Put the transmitter here
 			//------------------------------------------------------------------------------
 			if(clockEnable == 1) begin
 				case(txState)
 					IDLE:begin
-						localTxData <=  {1'b1, ipTxData,1'b0};
+						$display("I AM IDLE");
+						localTxData <=  {1'b1, ipTxData, 1'b0};
 						if(ipTxSend == 1)begin
-							txCounter	 <= CLOCK_DIV - 1;
 							txState <= SENDING;
+							opTxBusy <= 1;
 						end
 					end
 					SENDING:begin
+							$display("I AM SENDING %b", localTxData);
 							{localTxData, opTx} <= localTxData;
 							if(txCounter == 0)begin
 								txState <= IDLE;
-								txCounter	 <= CLOCK_DIV - 1;
+								opTxBusy <= 0;
 							end
 					end
 				endcase
@@ -97,7 +109,7 @@ module UART #(parameter WIDTH =8, parameter CLOCK_DIV = 434) (
 							opRxValid <= 1;
 						end
 					end
-					IDLE: begin
+					RECEIVER_IDLE: begin
 						if(rxClockEnable)begin
 							localRxData <= {ipRx, localRxData};
 							opRxValid <= 0;

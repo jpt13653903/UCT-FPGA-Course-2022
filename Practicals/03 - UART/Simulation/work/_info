@@ -11,24 +11,24 @@ cModel Technology
 Z0 dC:/Users/user/Desktop/UCT-FPGA-Course-2022/Practicals/03 - UART/Simulation
 vUART
 Z1 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
-Z2 !s110 1651499528
+Z2 !s110 1651505174
 !i10b 1
-!s100 J<[aRNb2ElG2]z:8F]Z_T3
+!s100 5]l0eTfC_JaSDQ8;hJBQ;0
 Z3 !s11b Dg1SIo80bB@j0V0VzS_@n1
-IMF`ZW;8@_cY5[LO;Mb^A;0
+I`KB8I_?Y5DYOIo44G;26c2
 S1
 R0
-w1651499510
+w1651505167
 8C:/Users/user/Desktop/UCT-FPGA-Course-2022/Practicals/03 - UART/UART.v
 FC:/Users/user/Desktop/UCT-FPGA-Course-2022/Practicals/03 - UART/UART.v
-!i122 66
-L0 19 112
+!i122 72
+L0 19 104
 Z4 VDg1SIo80bB@j0V0VzS_@n1
 Z5 OT;L;2020.3;71
 r1
 !s85 0
 31
-Z6 !s108 1651499528.000000
+Z6 !s108 1651505174.000000
 !s107 C:/Users/user/Desktop/UCT-FPGA-Course-2022/Practicals/03 - UART/UART.v|
 !s90 -F=C:/Users/user/Desktop/UCT-FPGA-Course-2022/Practicals/01 - Getting Started/vlog.opt|-F=|-reportprogress|300|-work|work|-O0|C:/Users/user/Desktop/UCT-FPGA-Course-2022/Practicals/03 - UART/UART.v|
 !s101 -O0
@@ -48,7 +48,7 @@ R0
 w1651499353
 8C:/Users/user/Desktop/UCT-FPGA-Course-2022/Practicals/03 - UART/UART_TB.v
 FC:/Users/user/Desktop/UCT-FPGA-Course-2022/Practicals/03 - UART/UART_TB.v
-!i122 67
+!i122 73
 L0 2 112
 R4
 R5

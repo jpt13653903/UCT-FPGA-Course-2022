@@ -103,16 +103,18 @@ module UART #(parameter WIDTH =8, parameter CLOCK_DIV = 434) (
 			// TODO: Put the receiver here
 			//------------------------------------------------------------------------------		
 			if (rxCounter == 0) begin
+					opRxValid <= 0;
 					rxCounter <= CLOCK_DIV - 1;
 					localRxData <= {ipRx, localRxData[9:1]};
 			end else begin
 				if (localRxData[0] == 0 && localRxData[9] == 1) begin
 					opRxValid <= 1;
 					opRxData <= localRxData[8:1];
+					localRxData <= 10'h3FF;
 				end else begin
 					opRxValid <= 0;
-					rxCounter <= rxCounter - 1;
 				end
+				rxCounter <= rxCounter - 1;
 			end 
 		end
 	end

@@ -1,0 +1,36 @@
+#-- Lattice Semiconductor Corporation Ltd.
+#-- Bali Reveal project file
+
+#device options
+[Device]
+part = LFXP2-5E-6TN144I
+family = LatticeXP2
+device = LFXP2-5E
+speed = 6
+package = TQFP144
+operation = Industrial
+
+#design options
+[Design]
+title = UART
+path = C:/Users/user/Desktop/UCT-FPGA-Course-2022/Practicals/03 - UART/impl1
+core_generate = C:/Users/user/Desktop/UCT-FPGA-Course-2022/Practicals/03 - UART/impl1
+search_path = C:/Users/user/Desktop/UCT-FPGA-Course-2022/Practicals/03 - UART
+top = top
+lpf = C:/Users/user/Desktop/UCT-FPGA-Course-2022/Practicals/03 - UART/UART.lpf
+synthesis = synplify
+
+#strategy options
+VHDL2008 = true
+
+#HDLs options
+[HDLs]
+C:/Users/user/Desktop/UCT-FPGA-Course-2022/Practicals/03 - UART/UART.v = System Verilog
+C:/Users/user/Desktop/UCT-FPGA-Course-2022/Practicals/03 - UART/top.v = System Verilog
+[HDL_Defines]
+SBP_SYNTHESIS=
+[HDL_Param]
+[Generated]
+C:/Users/user/Desktop/UCT-FPGA-Course-2022/Practicals/03 - UART/impl1/reveal_workspace/tmpreveal/top_la0_trig_gen.v=Verilog
+C:/Users/user/Desktop/UCT-FPGA-Course-2022/Practicals/03 - UART/impl1/reveal_workspace/tmpreveal/top_la0_gen.v=Verilog
+C:/Users/user/Desktop/UCT-FPGA-Course-2022/Practicals/03 - UART/impl1/reveal_workspace/tmpreveal/top_rvl.v=System Verilog,work

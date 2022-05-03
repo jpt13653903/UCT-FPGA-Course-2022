@@ -1,0 +1,842 @@
+
+Copyright (C) 1994-2021 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: R-2021.03L-SP1
+Install: C:\lscc\diamond\3.12\synpbase
+OS: Windows 6.2
+
+Hostname: DESKTOP-MU9CKUT
+
+Implementation : impl1
+
+# Written on Tue May  3 16:20:53 2022
+
+##### DESIGN INFO #######################################################
+
+Top View:                "top"
+Constraint File(s):      "C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\UART.fdc"
+
+
+
+
+##### SUMMARY ############################################################
+
+Found 4 issues in 2 out of 6 constraints
+
+
+##### DETAILS ############################################################
+
+
+
+Clock Relationships
+*******************
+
+Starting                                  Ending                                    |     rise to rise     |     fall to fall     |     rise to fall     |     fall to rise                     
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+System                                    System                                    |     5.000            |     No paths         |     No paths         |     No paths                         
+System                                    ipClk                                     |     20.000           |     No paths         |     No paths         |     No paths                         
+System                                    reveal_coretop|jtck_inferred_clock[0]     |     No paths         |     No paths         |     5.000            |     No paths                         
+ipClk                                     System                                    |     20.000           |     No paths         |     No paths         |     No paths                         
+ipClk                                     ipClk                                     |     20.000           |     No paths         |     No paths         |     No paths                         
+ipClk                                     reveal_coretop|jtck_inferred_clock[0]     |     No paths         |     No paths         |     Diff grp         |     No paths                         
+reveal_coretop|jtck_inferred_clock[0]     System                                    |     No paths         |     No paths         |     No paths         |     5.000                            
+reveal_coretop|jtck_inferred_clock[0]     ipClk                                     |     No paths         |     No paths         |     No paths         |     Diff grp                         
+reveal_coretop|jtck_inferred_clock[0]     reveal_coretop|jtck_inferred_clock[0]     |     No paths         |     5.000            |     No paths         |     No paths                         
+===============================================================================================================================================================================================
+ Note: 'No paths' indicates there are no paths in the design for that pair of clock edges.
+       'Diff grp' indicates that paths exist but the starting clock and ending clock are in different clock groups.
+
+
+Unconstrained Start/End Points
+******************************
+
+p:ipUART_Rx
+p:ipnReset
+p:opLed[0]
+p:opLed[1]
+p:opLed[2]
+p:opLed[3]
+p:opLed[4]
+p:opLed[5]
+p:opLed[6]
+p:opLed[7]
+p:opUART_Tx
+
+
+Inapplicable constraints
+************************
+
+set_false_path -from [get_registers *] -to [get_ports bp*]
+	@E::"c:/users/user/desktop/uct-fpga-course-2022/practicals/03 - uart/uart.fdc":10:0:10:0|Timing constraint (from [get_registers *] to [get_ports bp*]) (false path) was not applied to the design because none of the '-to' objects specified by the constraint exist in the design
+	@E:MF1039:"c:/users/user/desktop/uct-fpga-course-2022/practicals/03 - uart/uart.fdc":10:0:10:0|collection "[get_ports bp*]" is empty
+set_false_path -to [get_registers *] -from [get_ports bp*]
+	@E::"c:/users/user/desktop/uct-fpga-course-2022/practicals/03 - uart/uart.fdc":11:0:11:0|Timing constraint (from [get_ports bp*] to [get_registers *]) (false path) was not applied to the design because none of the '-from' objects specified by the constraint exist in the design
+	@E:MF1039:"c:/users/user/desktop/uct-fpga-course-2022/practicals/03 - uart/uart.fdc":11:0:11:0|collection "[get_ports bp*]" is empty
+
+Applicable constraints with issues
+**********************************
+
+(none)
+
+
+Constraints with matching wildcard expressions
+**********************************************
+
+set_false_path -from [get_ports ip*] -to [get_registers *]
+	@N:MF891:"c:/users/user/desktop/uct-fpga-course-2022/practicals/03 - uart/uart.fdc":6:0:6:0|expression "[get_ports ip*]" applies to objects:
+		ipClk
+		ipUART_Rx
+		ipnReset
+	@N:MF891:"c:/users/user/desktop/uct-fpga-course-2022/practicals/03 - uart/uart.fdc":6:0:6:0|expression "[get_registers *]" applies to objects:
+		UART_Inst.clockEnable
+		UART_Inst.edgeDetector[0]
+		UART_Inst.edgeDetector[1]
+		UART_Inst.localRxData[0]
+		UART_Inst.localRxData[1]
+		UART_Inst.localRxData[2]
+		UART_Inst.localRxData[3]
+		UART_Inst.localRxData[4]
+		UART_Inst.localRxData[5]
+		UART_Inst.localRxData[6]
+		UART_Inst.localRxData[7]
+		UART_Inst.localRxData[8]
+		UART_Inst.localRxData[9]
+		UART_Inst.localTxData[0]
+		UART_Inst.localTxData[1]
+		UART_Inst.localTxData[2]
+		UART_Inst.localTxData[3]
+		UART_Inst.localTxData[4]
+		UART_Inst.localTxData[5]
+		UART_Inst.localTxData[6]
+		UART_Inst.localTxData[7]
+		UART_Inst.localTxData[8]
+		UART_Inst.localTxData[9]
+		UART_Inst.opRxData[0]
+		UART_Inst.opRxData[1]
+		UART_Inst.opRxData[2]
+		UART_Inst.opRxData[3]
+		UART_Inst.opRxData[4]
+		UART_Inst.opRxData[5]
+		UART_Inst.opRxData[6]
+		UART_Inst.opRxData[7]
+		UART_Inst.opRxValid
+		UART_Inst.opTx
+		UART_Inst.opTxBusy
+		UART_Inst.reset
+		UART_Inst.rxCounter[0]
+		UART_Inst.rxCounter[1]
+		UART_Inst.rxCounter[2]
+		UART_Inst.rxCounter[3]
+		UART_Inst.rxCounter[4]
+		UART_Inst.rxCounter[5]
+		UART_Inst.rxCounter[6]
+		UART_Inst.rxCounter[7]
+		UART_Inst.rxCounter[8]
+		UART_Inst.txBitCounter[0]
+		UART_Inst.txBitCounter[1]
+		UART_Inst.txBitCounter[2]
+		UART_Inst.txBitCounter[3]
+		UART_Inst.txBitCounter[4]
+		UART_Inst.txCounter[0]
+		UART_Inst.txCounter[1]
+		UART_Inst.txCounter[2]
+		UART_Inst.txCounter[3]
+		UART_Inst.txCounter[4]
+		UART_Inst.txCounter[5]
+		UART_Inst.txCounter[6]
+		UART_Inst.txCounter[7]
+		UART_Inst.txCounter[8]
+		UART_Inst.txState[0]
+		UART_TxData[0]
+		UART_TxData[1]
+		UART_TxData[2]
+		UART_TxData[3]
+		UART_TxData[4]
+		UART_TxData[5]
+		UART_TxData[6]
+		UART_TxData[7]
+		UART_TxSend
+		opLed[0]
+		opLed[1]
+		opLed[2]
+		opLed[3]
+		opLed[4]
+		opLed[5]
+		opLed[6]
+		opLed[7]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.addr_15
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.addr_15_d1
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.bit_cnt[0]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.bit_cnt[1]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.bit_cnt[2]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.bit_cnt[3]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.bit_cnt[4]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.bit_cnt[5]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.capture_dr_d1
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.capture_dr_d2
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.capture_dr_d3
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.capture_dr_d4
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.capture_dr_d5
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.capture_reclk[0]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.capture_reclk[1]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.capture_reclk[2]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.capture_reclk[3]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.cmd_block_extend
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.jce2_d1
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.jce2_d2
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.jce2_d3
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.jshift_d1
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.jshift_d2
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.jupdate_d1
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.jupdate_d2
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.jupdate_d3
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.jupdate_d4
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.jupdate_d5
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.jupdate_d6
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.jupdate_reclk[0]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.jupdate_reclk[1]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.jupdate_reclk[2]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.jupdate_reclk[3]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.parity_calc
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.parity_checker
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.parity_err
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.parity_err_lat
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.r_w
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.shift_reg[0]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.shift_reg[1]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.shift_reg[2]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.shift_reg[3]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.shift_reg[4]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.shift_reg[5]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.shift_reg[6]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.shift_reg[7]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.shift_reg[8]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.shift_reg[9]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.shift_reg[10]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.shift_reg[11]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.shift_reg[12]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.shift_reg[13]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.shift_reg[14]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.shift_reg[15]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.shift_reg[16]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.shift_reg[17]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.shift_reg[18]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.shift_reg[19]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.shift_reg[20]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.shift_reg[21]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.shift_reg[22]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.shift_reg[23]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.shift_reg[24]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.shift_reg[25]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.shift_reg[26]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.shift_reg[27]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.shift_reg[28]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.shift_reg[29]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.shift_reg[30]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.shift_reg[31]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.shift_reg[32]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.shift_reg[33]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.shift_reg[34]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.shift_reg[35]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.shift_reg_tr_dout[0]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.shift_reg_tr_dout[1]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.shift_reg_tr_dout[2]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.shift_reg_tr_dout[3]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.shift_reg_tr_dout[4]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.shift_reg_tr_dout[5]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.shift_reg_tr_dout[6]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.shift_reg_tr_dout[7]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.te_block
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.te_prog_din[0]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.te_prog_din[1]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.te_prog_din[2]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.te_prog_din[3]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.te_prog_din[4]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.te_prog_din[5]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.te_prog_din[6]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.te_prog_din[7]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.te_prog_din[8]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.te_prog_din[9]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.te_prog_din[10]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.te_prog_din[11]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.te_prog_din[12]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.te_prog_din[13]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.te_prog_din[14]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.te_prog_din[15]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.tm_crc[0]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.tm_crc[1]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.tm_crc[2]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.tm_crc[3]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.tm_crc[4]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.tm_crc[5]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.tm_crc[6]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.tm_crc[7]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.tm_crc[8]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.tm_crc[9]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.tm_crc[10]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.tm_crc[11]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.tm_crc[12]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.tm_crc[13]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.tm_crc[14]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.tm_crc[15]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.tm_shift_en
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.tr_dout_bit_cnt[0]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.tr_dout_bit_cnt[1]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.tr_dout_bit_cnt[2]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.tt_crc[0]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.tt_crc[1]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.tt_crc[2]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.tt_crc[3]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.tt_crc[4]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.tt_crc[5]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.tt_crc[6]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.tt_crc[7]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.tt_crc[8]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.tt_crc[9]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.tt_crc[10]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.tt_crc[11]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.tt_crc[12]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.tt_crc[13]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.tt_crc[14]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.tt_crc[15]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.tt_crc_clr
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.tt_crc_en
+		top_reveal_coretop_instance.top_la0_inst_0.tm_u.armed
+		top_reveal_coretop_instance.top_la0_inst_0.tm_u.armed_p1
+		top_reveal_coretop_instance.top_la0_inst_0.tm_u.capture
+		top_reveal_coretop_instance.top_la0_inst_0.tm_u.clear
+		top_reveal_coretop_instance.top_la0_inst_0.tm_u.force_trig
+		top_reveal_coretop_instance.top_la0_inst_0.tm_u.full
+		top_reveal_coretop_instance.top_la0_inst_0.tm_u.full_reg
+		top_reveal_coretop_instance.top_la0_inst_0.tm_u.last_addr_written[0]
+		top_reveal_coretop_instance.top_la0_inst_0.tm_u.last_addr_written[1]
+		top_reveal_coretop_instance.top_la0_inst_0.tm_u.last_addr_written[2]
+		top_reveal_coretop_instance.top_la0_inst_0.tm_u.last_addr_written[3]
+		top_reveal_coretop_instance.top_la0_inst_0.tm_u.last_addr_written[4]
+		top_reveal_coretop_instance.top_la0_inst_0.tm_u.mem_full_cntr[0]
+		top_reveal_coretop_instance.top_la0_inst_0.tm_u.num_post_trig_frm[0]
+		top_reveal_coretop_instance.top_la0_inst_0.tm_u.num_post_trig_frm[1]
+		top_reveal_coretop_instance.top_la0_inst_0.tm_u.num_post_trig_frm[2]
+		top_reveal_coretop_instance.top_la0_inst_0.tm_u.num_post_trig_frm[3]
+		top_reveal_coretop_instance.top_la0_inst_0.tm_u.num_post_trig_frm[4]
+		top_reveal_coretop_instance.top_la0_inst_0.tm_u.num_pre_trig_frm[0]
+		top_reveal_coretop_instance.top_la0_inst_0.tm_u.num_pre_trig_frm[1]
+		top_reveal_coretop_instance.top_la0_inst_0.tm_u.num_pre_trig_frm[2]
+		top_reveal_coretop_instance.top_la0_inst_0.tm_u.num_pre_trig_frm[3]
+		top_reveal_coretop_instance.top_la0_inst_0.tm_u.num_pre_trig_frm[4]
+		top_reveal_coretop_instance.top_la0_inst_0.tm_u.post_trig_cntr[0]
+		top_reveal_coretop_instance.top_la0_inst_0.tm_u.post_trig_cntr[1]
+		top_reveal_coretop_instance.top_la0_inst_0.tm_u.post_trig_cntr[2]
+		top_reveal_coretop_instance.top_la0_inst_0.tm_u.post_trig_cntr[3]
+		top_reveal_coretop_instance.top_la0_inst_0.tm_u.post_trig_cntr[4]
+		top_reveal_coretop_instance.top_la0_inst_0.tm_u.pre_trig_cap_reg[0]
+		top_reveal_coretop_instance.top_la0_inst_0.tm_u.pre_trig_cntr[0]
+		top_reveal_coretop_instance.top_la0_inst_0.tm_u.pre_trig_cntr[1]
+		top_reveal_coretop_instance.top_la0_inst_0.tm_u.pre_trig_cntr[2]
+		top_reveal_coretop_instance.top_la0_inst_0.tm_u.pre_trig_cntr[3]
+		top_reveal_coretop_instance.top_la0_inst_0.tm_u.pre_trig_cntr[4]
+		top_reveal_coretop_instance.top_la0_inst_0.tm_u.rd_dout_tm_1[0]
+		top_reveal_coretop_instance.top_la0_inst_0.tm_u.rd_dout_tm_1[1]
+		top_reveal_coretop_instance.top_la0_inst_0.tm_u.rd_dout_tm_1[2]
+		top_reveal_coretop_instance.top_la0_inst_0.tm_u.rd_dout_tm_1[3]
+		top_reveal_coretop_instance.top_la0_inst_0.tm_u.rd_dout_tm_1[4]
+		top_reveal_coretop_instance.top_la0_inst_0.tm_u.rd_dout_tm_1[5]
+		top_reveal_coretop_instance.top_la0_inst_0.tm_u.rd_dout_tm_1[6]
+		top_reveal_coretop_instance.top_la0_inst_0.tm_u.rd_dout_tm_1[7]
+		top_reveal_coretop_instance.top_la0_inst_0.tm_u.rd_dout_tm_1[8]
+		top_reveal_coretop_instance.top_la0_inst_0.tm_u.rd_dout_tm_1[9]
+		top_reveal_coretop_instance.top_la0_inst_0.tm_u.rd_dout_tm_1[11]
+		top_reveal_coretop_instance.top_la0_inst_0.tm_u.sample_en_d
+		top_reveal_coretop_instance.top_la0_inst_0.tm_u.start_bit
+		top_reveal_coretop_instance.top_la0_inst_0.tm_u.start_d
+		top_reveal_coretop_instance.top_la0_inst_0.tm_u.tm_first_rd
+		top_reveal_coretop_instance.top_la0_inst_0.tm_u.tm_first_rd_d1
+		top_reveal_coretop_instance.top_la0_inst_0.tm_u.tm_first_rd_d2
+		top_reveal_coretop_instance.top_la0_inst_0.tm_u.tm_rd_addr_cntr[0]
+		top_reveal_coretop_instance.top_la0_inst_0.tm_u.tm_rd_addr_cntr[1]
+		top_reveal_coretop_instance.top_la0_inst_0.tm_u.tm_rd_addr_cntr[2]
+		top_reveal_coretop_instance.top_la0_inst_0.tm_u.tm_rd_addr_cntr[3]
+		top_reveal_coretop_instance.top_la0_inst_0.tm_u.tm_rd_addr_cntr[4]
+		top_reveal_coretop_instance.top_la0_inst_0.tm_u.tm_wr_addr_cntr[0]
+		top_reveal_coretop_instance.top_la0_inst_0.tm_u.tm_wr_addr_cntr[1]
+		top_reveal_coretop_instance.top_la0_inst_0.tm_u.tm_wr_addr_cntr[2]
+		top_reveal_coretop_instance.top_la0_inst_0.tm_u.tm_wr_addr_cntr[3]
+		top_reveal_coretop_instance.top_la0_inst_0.tm_u.tm_wr_addr_cntr[4]
+		top_reveal_coretop_instance.top_la0_inst_0.tm_u.trace_din_d[0]
+		top_reveal_coretop_instance.top_la0_inst_0.tm_u.trace_din_d[1]
+		top_reveal_coretop_instance.top_la0_inst_0.tm_u.trace_din_d[2]
+		top_reveal_coretop_instance.top_la0_inst_0.tm_u.trace_din_d[3]
+		top_reveal_coretop_instance.top_la0_inst_0.tm_u.trace_din_d[4]
+		top_reveal_coretop_instance.top_la0_inst_0.tm_u.trace_din_d[5]
+		top_reveal_coretop_instance.top_la0_inst_0.tm_u.trace_din_d[6]
+		top_reveal_coretop_instance.top_la0_inst_0.tm_u.trace_din_d[7]
+		top_reveal_coretop_instance.top_la0_inst_0.tm_u.trace_dout[0]
+		top_reveal_coretop_instance.top_la0_inst_0.tm_u.trace_dout[1]
+		top_reveal_coretop_instance.top_la0_inst_0.tm_u.trace_dout[2]
+		top_reveal_coretop_instance.top_la0_inst_0.tm_u.trace_dout[3]
+		top_reveal_coretop_instance.top_la0_inst_0.tm_u.trace_dout[4]
+		top_reveal_coretop_instance.top_la0_inst_0.tm_u.trace_dout[5]
+		top_reveal_coretop_instance.top_la0_inst_0.tm_u.trace_dout[6]
+		top_reveal_coretop_instance.top_la0_inst_0.tm_u.trace_dout[7]
+		top_reveal_coretop_instance.top_la0_inst_0.tm_u.trig_cntr[0]
+		top_reveal_coretop_instance.top_la0_inst_0.tm_u.trig_det_cntr[0]
+		top_reveal_coretop_instance.top_la0_inst_0.tm_u.trig_enbl[0]
+		top_reveal_coretop_instance.top_la0_inst_0.tm_u.trig_enbl[1]
+		top_reveal_coretop_instance.top_la0_inst_0.tm_u.trig_ptr_reg[0]
+		top_reveal_coretop_instance.top_la0_inst_0.tm_u.trig_ptr_reg[1]
+		top_reveal_coretop_instance.top_la0_inst_0.tm_u.trig_ptr_reg[2]
+		top_reveal_coretop_instance.top_la0_inst_0.tm_u.trig_ptr_reg[3]
+		top_reveal_coretop_instance.top_la0_inst_0.tm_u.trig_ptr_reg[4]
+		top_reveal_coretop_instance.top_la0_inst_0.tm_u.trig_stretch
+		top_reveal_coretop_instance.top_la0_inst_0.trig_u.tcnt_0.reg0[0]
+		top_reveal_coretop_instance.top_la0_inst_0.trig_u.tcnt_0.reg0[2]
+		top_reveal_coretop_instance.top_la0_inst_0.trig_u.tcnt_0.reg0[3]
+		top_reveal_coretop_instance.top_la0_inst_0.trig_u.tcnt_0.reg0_read
+		top_reveal_coretop_instance.top_la0_inst_0.trig_u.tcnt_0.reg1[0]
+		top_reveal_coretop_instance.top_la0_inst_0.trig_u.tcnt_0.reg1[1]
+		top_reveal_coretop_instance.top_la0_inst_0.trig_u.tcnt_0.reg1[2]
+		top_reveal_coretop_instance.top_la0_inst_0.trig_u.tcnt_0.reg2[0]
+		top_reveal_coretop_instance.top_la0_inst_0.trig_u.tcnt_0.trig_cnt[0]
+		top_reveal_coretop_instance.top_la0_inst_0.trig_u.tcnt_0.trig_cnt[1]
+		top_reveal_coretop_instance.top_la0_inst_0.trig_u.tcnt_0.trig_cnt[2]
+		top_reveal_coretop_instance.top_la0_inst_0.trig_u.tcnt_0.trigger_reg
+		top_reveal_coretop_instance.top_la0_inst_0.trig_u.te_0.jshift_d2
+		top_reveal_coretop_instance.top_la0_inst_0.trig_u.te_0.next_then_reg[0]
+		top_reveal_coretop_instance.top_la0_inst_0.trig_u.te_0.num_then_reg[0]
+		top_reveal_coretop_instance.top_la0_inst_0.trig_u.te_0.state_cntr[0]
+		top_reveal_coretop_instance.top_la0_inst_0.trig_u.te_0.te_event_cnt_cntg_reg[0]
+		top_reveal_coretop_instance.top_la0_inst_0.trig_u.te_0.te_out_reg
+		top_reveal_coretop_instance.top_la0_inst_0.trig_u.te_0.te_precnt[0]
+		top_reveal_coretop_instance.top_la0_inst_0.trig_u.te_0.te_precnt[1]
+		top_reveal_coretop_instance.top_la0_inst_0.trig_u.te_0.te_precnt[2]
+		top_reveal_coretop_instance.top_la0_inst_0.trig_u.te_0.te_precnt[3]
+		top_reveal_coretop_instance.top_la0_inst_0.trig_u.te_0.te_precnt[4]
+		top_reveal_coretop_instance.top_la0_inst_0.trig_u.te_0.te_precnt[5]
+		top_reveal_coretop_instance.top_la0_inst_0.trig_u.te_0.te_precnt[6]
+		top_reveal_coretop_instance.top_la0_inst_0.trig_u.te_0.te_precnt[7]
+		top_reveal_coretop_instance.top_la0_inst_0.trig_u.te_0.te_precnt[8]
+		top_reveal_coretop_instance.top_la0_inst_0.trig_u.te_0.te_precnt[9]
+		top_reveal_coretop_instance.top_la0_inst_0.trig_u.te_0.te_precnt[10]
+		top_reveal_coretop_instance.top_la0_inst_0.trig_u.te_0.te_precnt[11]
+		top_reveal_coretop_instance.top_la0_inst_0.trig_u.te_0.te_precnt[12]
+		top_reveal_coretop_instance.top_la0_inst_0.trig_u.te_0.te_precnt[13]
+		top_reveal_coretop_instance.top_la0_inst_0.trig_u.te_0.te_precnt[14]
+		top_reveal_coretop_instance.top_la0_inst_0.trig_u.te_0.te_precnt[15]
+		top_reveal_coretop_instance.top_la0_inst_0.trig_u.te_0.te_precnt_val[0]
+		top_reveal_coretop_instance.top_la0_inst_0.trig_u.te_0.te_precnt_val[1]
+		top_reveal_coretop_instance.top_la0_inst_0.trig_u.te_0.te_precnt_val[2]
+		top_reveal_coretop_instance.top_la0_inst_0.trig_u.te_0.te_precnt_val[3]
+		top_reveal_coretop_instance.top_la0_inst_0.trig_u.te_0.te_precnt_val[4]
+		top_reveal_coretop_instance.top_la0_inst_0.trig_u.te_0.te_precnt_val[5]
+		top_reveal_coretop_instance.top_la0_inst_0.trig_u.te_0.te_precnt_val[6]
+		top_reveal_coretop_instance.top_la0_inst_0.trig_u.te_0.te_precnt_val[7]
+		top_reveal_coretop_instance.top_la0_inst_0.trig_u.te_0.te_precnt_val[8]
+		top_reveal_coretop_instance.top_la0_inst_0.trig_u.te_0.te_precnt_val[9]
+		top_reveal_coretop_instance.top_la0_inst_0.trig_u.te_0.te_precnt_val[10]
+		top_reveal_coretop_instance.top_la0_inst_0.trig_u.te_0.te_precnt_val[11]
+		top_reveal_coretop_instance.top_la0_inst_0.trig_u.te_0.te_precnt_val[12]
+		top_reveal_coretop_instance.top_la0_inst_0.trig_u.te_0.te_precnt_val[13]
+		top_reveal_coretop_instance.top_la0_inst_0.trig_u.te_0.te_precnt_val[14]
+		top_reveal_coretop_instance.top_la0_inst_0.trig_u.te_0.te_precnt_val[15]
+		top_reveal_coretop_instance.top_la0_inst_0.trig_u.te_0.trig_start_mask_cnt[0]
+		top_reveal_coretop_instance.top_la0_inst_0.trig_u.te_0.trig_start_mask_cnt[1]
+		top_reveal_coretop_instance.top_la0_inst_0.trig_u.te_0.trig_start_mask_cnt[2]
+		top_reveal_coretop_instance.top_la0_inst_0.trig_u.te_0.tt_prog_active
+		top_reveal_coretop_instance.top_la0_inst_0.trig_u.te_0.tt_prog_en
+		top_reveal_coretop_instance.top_la0_inst_0.trig_u.te_0.tt_start_d1
+		top_reveal_coretop_instance.top_la0_inst_0.trig_u.te_0.tt_wr_addr_cntr[0]
+		top_reveal_coretop_instance.top_la0_inst_0.trig_u.tu_0.compare_reg\[0\]
+		top_reveal_coretop_instance.top_la0_inst_0.trig_u.tu_0.input_a_d1[0]
+		top_reveal_coretop_instance.top_la0_inst_0.trig_u.tu_0.input_a_d2[0]
+		top_reveal_coretop_instance.top_la0_inst_0.trig_u.tu_0.mask_reg\[0\]
+		top_reveal_coretop_instance.top_la0_inst_0.trig_u.tu_0.op_code[0]
+		top_reveal_coretop_instance.top_la0_inst_0.trig_u.tu_0.op_code[1]
+		top_reveal_coretop_instance.top_la0_inst_0.trig_u.tu_0.op_code[2]
+		top_reveal_coretop_instance.top_la0_inst_0.trig_u.tu_0.tu_out
+set_false_path -from [get_registers *] -to [get_ports op*]
+	@N:MF891:"c:/users/user/desktop/uct-fpga-course-2022/practicals/03 - uart/uart.fdc":7:0:7:0|expression "[get_registers *]" applies to objects:
+		UART_Inst.clockEnable
+		UART_Inst.edgeDetector[0]
+		UART_Inst.edgeDetector[1]
+		UART_Inst.localRxData[0]
+		UART_Inst.localRxData[1]
+		UART_Inst.localRxData[2]
+		UART_Inst.localRxData[3]
+		UART_Inst.localRxData[4]
+		UART_Inst.localRxData[5]
+		UART_Inst.localRxData[6]
+		UART_Inst.localRxData[7]
+		UART_Inst.localRxData[8]
+		UART_Inst.localRxData[9]
+		UART_Inst.localTxData[0]
+		UART_Inst.localTxData[1]
+		UART_Inst.localTxData[2]
+		UART_Inst.localTxData[3]
+		UART_Inst.localTxData[4]
+		UART_Inst.localTxData[5]
+		UART_Inst.localTxData[6]
+		UART_Inst.localTxData[7]
+		UART_Inst.localTxData[8]
+		UART_Inst.localTxData[9]
+		UART_Inst.opRxData[0]
+		UART_Inst.opRxData[1]
+		UART_Inst.opRxData[2]
+		UART_Inst.opRxData[3]
+		UART_Inst.opRxData[4]
+		UART_Inst.opRxData[5]
+		UART_Inst.opRxData[6]
+		UART_Inst.opRxData[7]
+		UART_Inst.opRxValid
+		UART_Inst.opTx
+		UART_Inst.opTxBusy
+		UART_Inst.reset
+		UART_Inst.rxCounter[0]
+		UART_Inst.rxCounter[1]
+		UART_Inst.rxCounter[2]
+		UART_Inst.rxCounter[3]
+		UART_Inst.rxCounter[4]
+		UART_Inst.rxCounter[5]
+		UART_Inst.rxCounter[6]
+		UART_Inst.rxCounter[7]
+		UART_Inst.rxCounter[8]
+		UART_Inst.txBitCounter[0]
+		UART_Inst.txBitCounter[1]
+		UART_Inst.txBitCounter[2]
+		UART_Inst.txBitCounter[3]
+		UART_Inst.txBitCounter[4]
+		UART_Inst.txCounter[0]
+		UART_Inst.txCounter[1]
+		UART_Inst.txCounter[2]
+		UART_Inst.txCounter[3]
+		UART_Inst.txCounter[4]
+		UART_Inst.txCounter[5]
+		UART_Inst.txCounter[6]
+		UART_Inst.txCounter[7]
+		UART_Inst.txCounter[8]
+		UART_Inst.txState[0]
+		UART_TxData[0]
+		UART_TxData[1]
+		UART_TxData[2]
+		UART_TxData[3]
+		UART_TxData[4]
+		UART_TxData[5]
+		UART_TxData[6]
+		UART_TxData[7]
+		UART_TxSend
+		opLed[0]
+		opLed[1]
+		opLed[2]
+		opLed[3]
+		opLed[4]
+		opLed[5]
+		opLed[6]
+		opLed[7]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.addr_15
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.addr_15_d1
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.bit_cnt[0]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.bit_cnt[1]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.bit_cnt[2]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.bit_cnt[3]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.bit_cnt[4]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.bit_cnt[5]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.capture_dr_d1
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.capture_dr_d2
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.capture_dr_d3
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.capture_dr_d4
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.capture_dr_d5
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.capture_reclk[0]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.capture_reclk[1]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.capture_reclk[2]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.capture_reclk[3]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.cmd_block_extend
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.jce2_d1
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.jce2_d2
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.jce2_d3
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.jshift_d1
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.jshift_d2
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.jupdate_d1
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.jupdate_d2
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.jupdate_d3
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.jupdate_d4
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.jupdate_d5
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.jupdate_d6
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.jupdate_reclk[0]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.jupdate_reclk[1]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.jupdate_reclk[2]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.jupdate_reclk[3]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.parity_calc
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.parity_checker
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.parity_err
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.parity_err_lat
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.r_w
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.shift_reg[0]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.shift_reg[1]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.shift_reg[2]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.shift_reg[3]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.shift_reg[4]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.shift_reg[5]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.shift_reg[6]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.shift_reg[7]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.shift_reg[8]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.shift_reg[9]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.shift_reg[10]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.shift_reg[11]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.shift_reg[12]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.shift_reg[13]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.shift_reg[14]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.shift_reg[15]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.shift_reg[16]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.shift_reg[17]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.shift_reg[18]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.shift_reg[19]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.shift_reg[20]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.shift_reg[21]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.shift_reg[22]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.shift_reg[23]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.shift_reg[24]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.shift_reg[25]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.shift_reg[26]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.shift_reg[27]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.shift_reg[28]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.shift_reg[29]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.shift_reg[30]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.shift_reg[31]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.shift_reg[32]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.shift_reg[33]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.shift_reg[34]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.shift_reg[35]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.shift_reg_tr_dout[0]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.shift_reg_tr_dout[1]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.shift_reg_tr_dout[2]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.shift_reg_tr_dout[3]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.shift_reg_tr_dout[4]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.shift_reg_tr_dout[5]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.shift_reg_tr_dout[6]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.shift_reg_tr_dout[7]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.te_block
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.te_prog_din[0]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.te_prog_din[1]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.te_prog_din[2]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.te_prog_din[3]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.te_prog_din[4]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.te_prog_din[5]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.te_prog_din[6]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.te_prog_din[7]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.te_prog_din[8]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.te_prog_din[9]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.te_prog_din[10]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.te_prog_din[11]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.te_prog_din[12]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.te_prog_din[13]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.te_prog_din[14]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.te_prog_din[15]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.tm_crc[0]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.tm_crc[1]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.tm_crc[2]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.tm_crc[3]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.tm_crc[4]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.tm_crc[5]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.tm_crc[6]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.tm_crc[7]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.tm_crc[8]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.tm_crc[9]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.tm_crc[10]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.tm_crc[11]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.tm_crc[12]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.tm_crc[13]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.tm_crc[14]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.tm_crc[15]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.tm_shift_en
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.tr_dout_bit_cnt[0]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.tr_dout_bit_cnt[1]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.tr_dout_bit_cnt[2]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.tt_crc[0]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.tt_crc[1]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.tt_crc[2]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.tt_crc[3]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.tt_crc[4]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.tt_crc[5]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.tt_crc[6]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.tt_crc[7]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.tt_crc[8]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.tt_crc[9]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.tt_crc[10]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.tt_crc[11]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.tt_crc[12]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.tt_crc[13]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.tt_crc[14]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.tt_crc[15]
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.tt_crc_clr
+		top_reveal_coretop_instance.top_la0_inst_0.jtag_int_u.tt_crc_en
+		top_reveal_coretop_instance.top_la0_inst_0.tm_u.armed
+		top_reveal_coretop_instance.top_la0_inst_0.tm_u.armed_p1
+		top_reveal_coretop_instance.top_la0_inst_0.tm_u.capture
+		top_reveal_coretop_instance.top_la0_inst_0.tm_u.clear
+		top_reveal_coretop_instance.top_la0_inst_0.tm_u.force_trig
+		top_reveal_coretop_instance.top_la0_inst_0.tm_u.full
+		top_reveal_coretop_instance.top_la0_inst_0.tm_u.full_reg
+		top_reveal_coretop_instance.top_la0_inst_0.tm_u.last_addr_written[0]
+		top_reveal_coretop_instance.top_la0_inst_0.tm_u.last_addr_written[1]
+		top_reveal_coretop_instance.top_la0_inst_0.tm_u.last_addr_written[2]
+		top_reveal_coretop_instance.top_la0_inst_0.tm_u.last_addr_written[3]
+		top_reveal_coretop_instance.top_la0_inst_0.tm_u.last_addr_written[4]
+		top_reveal_coretop_instance.top_la0_inst_0.tm_u.mem_full_cntr[0]
+		top_reveal_coretop_instance.top_la0_inst_0.tm_u.num_post_trig_frm[0]
+		top_reveal_coretop_instance.top_la0_inst_0.tm_u.num_post_trig_frm[1]
+		top_reveal_coretop_instance.top_la0_inst_0.tm_u.num_post_trig_frm[2]
+		top_reveal_coretop_instance.top_la0_inst_0.tm_u.num_post_trig_frm[3]
+		top_reveal_coretop_instance.top_la0_inst_0.tm_u.num_post_trig_frm[4]
+		top_reveal_coretop_instance.top_la0_inst_0.tm_u.num_pre_trig_frm[0]
+		top_reveal_coretop_instance.top_la0_inst_0.tm_u.num_pre_trig_frm[1]
+		top_reveal_coretop_instance.top_la0_inst_0.tm_u.num_pre_trig_frm[2]
+		top_reveal_coretop_instance.top_la0_inst_0.tm_u.num_pre_trig_frm[3]
+		top_reveal_coretop_instance.top_la0_inst_0.tm_u.num_pre_trig_frm[4]
+		top_reveal_coretop_instance.top_la0_inst_0.tm_u.post_trig_cntr[0]
+		top_reveal_coretop_instance.top_la0_inst_0.tm_u.post_trig_cntr[1]
+		top_reveal_coretop_instance.top_la0_inst_0.tm_u.post_trig_cntr[2]
+		top_reveal_coretop_instance.top_la0_inst_0.tm_u.post_trig_cntr[3]
+		top_reveal_coretop_instance.top_la0_inst_0.tm_u.post_trig_cntr[4]
+		top_reveal_coretop_instance.top_la0_inst_0.tm_u.pre_trig_cap_reg[0]
+		top_reveal_coretop_instance.top_la0_inst_0.tm_u.pre_trig_cntr[0]
+		top_reveal_coretop_instance.top_la0_inst_0.tm_u.pre_trig_cntr[1]
+		top_reveal_coretop_instance.top_la0_inst_0.tm_u.pre_trig_cntr[2]
+		top_reveal_coretop_instance.top_la0_inst_0.tm_u.pre_trig_cntr[3]
+		top_reveal_coretop_instance.top_la0_inst_0.tm_u.pre_trig_cntr[4]
+		top_reveal_coretop_instance.top_la0_inst_0.tm_u.rd_dout_tm_1[0]
+		top_reveal_coretop_instance.top_la0_inst_0.tm_u.rd_dout_tm_1[1]
+		top_reveal_coretop_instance.top_la0_inst_0.tm_u.rd_dout_tm_1[2]
+		top_reveal_coretop_instance.top_la0_inst_0.tm_u.rd_dout_tm_1[3]
+		top_reveal_coretop_instance.top_la0_inst_0.tm_u.rd_dout_tm_1[4]
+		top_reveal_coretop_instance.top_la0_inst_0.tm_u.rd_dout_tm_1[5]
+		top_reveal_coretop_instance.top_la0_inst_0.tm_u.rd_dout_tm_1[6]
+		top_reveal_coretop_instance.top_la0_inst_0.tm_u.rd_dout_tm_1[7]
+		top_reveal_coretop_instance.top_la0_inst_0.tm_u.rd_dout_tm_1[8]
+		top_reveal_coretop_instance.top_la0_inst_0.tm_u.rd_dout_tm_1[9]
+		top_reveal_coretop_instance.top_la0_inst_0.tm_u.rd_dout_tm_1[11]
+		top_reveal_coretop_instance.top_la0_inst_0.tm_u.sample_en_d
+		top_reveal_coretop_instance.top_la0_inst_0.tm_u.start_bit
+		top_reveal_coretop_instance.top_la0_inst_0.tm_u.start_d
+		top_reveal_coretop_instance.top_la0_inst_0.tm_u.tm_first_rd
+		top_reveal_coretop_instance.top_la0_inst_0.tm_u.tm_first_rd_d1
+		top_reveal_coretop_instance.top_la0_inst_0.tm_u.tm_first_rd_d2
+		top_reveal_coretop_instance.top_la0_inst_0.tm_u.tm_rd_addr_cntr[0]
+		top_reveal_coretop_instance.top_la0_inst_0.tm_u.tm_rd_addr_cntr[1]
+		top_reveal_coretop_instance.top_la0_inst_0.tm_u.tm_rd_addr_cntr[2]
+		top_reveal_coretop_instance.top_la0_inst_0.tm_u.tm_rd_addr_cntr[3]
+		top_reveal_coretop_instance.top_la0_inst_0.tm_u.tm_rd_addr_cntr[4]
+		top_reveal_coretop_instance.top_la0_inst_0.tm_u.tm_wr_addr_cntr[0]
+		top_reveal_coretop_instance.top_la0_inst_0.tm_u.tm_wr_addr_cntr[1]
+		top_reveal_coretop_instance.top_la0_inst_0.tm_u.tm_wr_addr_cntr[2]
+		top_reveal_coretop_instance.top_la0_inst_0.tm_u.tm_wr_addr_cntr[3]
+		top_reveal_coretop_instance.top_la0_inst_0.tm_u.tm_wr_addr_cntr[4]
+		top_reveal_coretop_instance.top_la0_inst_0.tm_u.trace_din_d[0]
+		top_reveal_coretop_instance.top_la0_inst_0.tm_u.trace_din_d[1]
+		top_reveal_coretop_instance.top_la0_inst_0.tm_u.trace_din_d[2]
+		top_reveal_coretop_instance.top_la0_inst_0.tm_u.trace_din_d[3]
+		top_reveal_coretop_instance.top_la0_inst_0.tm_u.trace_din_d[4]
+		top_reveal_coretop_instance.top_la0_inst_0.tm_u.trace_din_d[5]
+		top_reveal_coretop_instance.top_la0_inst_0.tm_u.trace_din_d[6]
+		top_reveal_coretop_instance.top_la0_inst_0.tm_u.trace_din_d[7]
+		top_reveal_coretop_instance.top_la0_inst_0.tm_u.trace_dout[0]
+		top_reveal_coretop_instance.top_la0_inst_0.tm_u.trace_dout[1]
+		top_reveal_coretop_instance.top_la0_inst_0.tm_u.trace_dout[2]
+		top_reveal_coretop_instance.top_la0_inst_0.tm_u.trace_dout[3]
+		top_reveal_coretop_instance.top_la0_inst_0.tm_u.trace_dout[4]
+		top_reveal_coretop_instance.top_la0_inst_0.tm_u.trace_dout[5]
+		top_reveal_coretop_instance.top_la0_inst_0.tm_u.trace_dout[6]
+		top_reveal_coretop_instance.top_la0_inst_0.tm_u.trace_dout[7]
+		top_reveal_coretop_instance.top_la0_inst_0.tm_u.trig_cntr[0]
+		top_reveal_coretop_instance.top_la0_inst_0.tm_u.trig_det_cntr[0]
+		top_reveal_coretop_instance.top_la0_inst_0.tm_u.trig_enbl[0]
+		top_reveal_coretop_instance.top_la0_inst_0.tm_u.trig_enbl[1]
+		top_reveal_coretop_instance.top_la0_inst_0.tm_u.trig_ptr_reg[0]
+		top_reveal_coretop_instance.top_la0_inst_0.tm_u.trig_ptr_reg[1]
+		top_reveal_coretop_instance.top_la0_inst_0.tm_u.trig_ptr_reg[2]
+		top_reveal_coretop_instance.top_la0_inst_0.tm_u.trig_ptr_reg[3]
+		top_reveal_coretop_instance.top_la0_inst_0.tm_u.trig_ptr_reg[4]
+		top_reveal_coretop_instance.top_la0_inst_0.tm_u.trig_stretch
+		top_reveal_coretop_instance.top_la0_inst_0.trig_u.tcnt_0.reg0[0]
+		top_reveal_coretop_instance.top_la0_inst_0.trig_u.tcnt_0.reg0[2]
+		top_reveal_coretop_instance.top_la0_inst_0.trig_u.tcnt_0.reg0[3]
+		top_reveal_coretop_instance.top_la0_inst_0.trig_u.tcnt_0.reg0_read
+		top_reveal_coretop_instance.top_la0_inst_0.trig_u.tcnt_0.reg1[0]
+		top_reveal_coretop_instance.top_la0_inst_0.trig_u.tcnt_0.reg1[1]
+		top_reveal_coretop_instance.top_la0_inst_0.trig_u.tcnt_0.reg1[2]
+		top_reveal_coretop_instance.top_la0_inst_0.trig_u.tcnt_0.reg2[0]
+		top_reveal_coretop_instance.top_la0_inst_0.trig_u.tcnt_0.trig_cnt[0]
+		top_reveal_coretop_instance.top_la0_inst_0.trig_u.tcnt_0.trig_cnt[1]
+		top_reveal_coretop_instance.top_la0_inst_0.trig_u.tcnt_0.trig_cnt[2]
+		top_reveal_coretop_instance.top_la0_inst_0.trig_u.tcnt_0.trigger_reg
+		top_reveal_coretop_instance.top_la0_inst_0.trig_u.te_0.jshift_d2
+		top_reveal_coretop_instance.top_la0_inst_0.trig_u.te_0.next_then_reg[0]
+		top_reveal_coretop_instance.top_la0_inst_0.trig_u.te_0.num_then_reg[0]
+		top_reveal_coretop_instance.top_la0_inst_0.trig_u.te_0.state_cntr[0]
+		top_reveal_coretop_instance.top_la0_inst_0.trig_u.te_0.te_event_cnt_cntg_reg[0]
+		top_reveal_coretop_instance.top_la0_inst_0.trig_u.te_0.te_out_reg
+		top_reveal_coretop_instance.top_la0_inst_0.trig_u.te_0.te_precnt[0]
+		top_reveal_coretop_instance.top_la0_inst_0.trig_u.te_0.te_precnt[1]
+		top_reveal_coretop_instance.top_la0_inst_0.trig_u.te_0.te_precnt[2]
+		top_reveal_coretop_instance.top_la0_inst_0.trig_u.te_0.te_precnt[3]
+		top_reveal_coretop_instance.top_la0_inst_0.trig_u.te_0.te_precnt[4]
+		top_reveal_coretop_instance.top_la0_inst_0.trig_u.te_0.te_precnt[5]
+		top_reveal_coretop_instance.top_la0_inst_0.trig_u.te_0.te_precnt[6]
+		top_reveal_coretop_instance.top_la0_inst_0.trig_u.te_0.te_precnt[7]
+		top_reveal_coretop_instance.top_la0_inst_0.trig_u.te_0.te_precnt[8]
+		top_reveal_coretop_instance.top_la0_inst_0.trig_u.te_0.te_precnt[9]
+		top_reveal_coretop_instance.top_la0_inst_0.trig_u.te_0.te_precnt[10]
+		top_reveal_coretop_instance.top_la0_inst_0.trig_u.te_0.te_precnt[11]
+		top_reveal_coretop_instance.top_la0_inst_0.trig_u.te_0.te_precnt[12]
+		top_reveal_coretop_instance.top_la0_inst_0.trig_u.te_0.te_precnt[13]
+		top_reveal_coretop_instance.top_la0_inst_0.trig_u.te_0.te_precnt[14]
+		top_reveal_coretop_instance.top_la0_inst_0.trig_u.te_0.te_precnt[15]
+		top_reveal_coretop_instance.top_la0_inst_0.trig_u.te_0.te_precnt_val[0]
+		top_reveal_coretop_instance.top_la0_inst_0.trig_u.te_0.te_precnt_val[1]
+		top_reveal_coretop_instance.top_la0_inst_0.trig_u.te_0.te_precnt_val[2]
+		top_reveal_coretop_instance.top_la0_inst_0.trig_u.te_0.te_precnt_val[3]
+		top_reveal_coretop_instance.top_la0_inst_0.trig_u.te_0.te_precnt_val[4]
+		top_reveal_coretop_instance.top_la0_inst_0.trig_u.te_0.te_precnt_val[5]
+		top_reveal_coretop_instance.top_la0_inst_0.trig_u.te_0.te_precnt_val[6]
+		top_reveal_coretop_instance.top_la0_inst_0.trig_u.te_0.te_precnt_val[7]
+		top_reveal_coretop_instance.top_la0_inst_0.trig_u.te_0.te_precnt_val[8]
+		top_reveal_coretop_instance.top_la0_inst_0.trig_u.te_0.te_precnt_val[9]
+		top_reveal_coretop_instance.top_la0_inst_0.trig_u.te_0.te_precnt_val[10]
+		top_reveal_coretop_instance.top_la0_inst_0.trig_u.te_0.te_precnt_val[11]
+		top_reveal_coretop_instance.top_la0_inst_0.trig_u.te_0.te_precnt_val[12]
+		top_reveal_coretop_instance.top_la0_inst_0.trig_u.te_0.te_precnt_val[13]
+		top_reveal_coretop_instance.top_la0_inst_0.trig_u.te_0.te_precnt_val[14]
+		top_reveal_coretop_instance.top_la0_inst_0.trig_u.te_0.te_precnt_val[15]
+		top_reveal_coretop_instance.top_la0_inst_0.trig_u.te_0.trig_start_mask_cnt[0]
+		top_reveal_coretop_instance.top_la0_inst_0.trig_u.te_0.trig_start_mask_cnt[1]
+		top_reveal_coretop_instance.top_la0_inst_0.trig_u.te_0.trig_start_mask_cnt[2]
+		top_reveal_coretop_instance.top_la0_inst_0.trig_u.te_0.tt_prog_active
+		top_reveal_coretop_instance.top_la0_inst_0.trig_u.te_0.tt_prog_en
+		top_reveal_coretop_instance.top_la0_inst_0.trig_u.te_0.tt_start_d1
+		top_reveal_coretop_instance.top_la0_inst_0.trig_u.te_0.tt_wr_addr_cntr[0]
+		top_reveal_coretop_instance.top_la0_inst_0.trig_u.tu_0.compare_reg\[0\]
+		top_reveal_coretop_instance.top_la0_inst_0.trig_u.tu_0.input_a_d1[0]
+		top_reveal_coretop_instance.top_la0_inst_0.trig_u.tu_0.input_a_d2[0]
+		top_reveal_coretop_instance.top_la0_inst_0.trig_u.tu_0.mask_reg\[0\]
+		top_reveal_coretop_instance.top_la0_inst_0.trig_u.tu_0.op_code[0]
+		top_reveal_coretop_instance.top_la0_inst_0.trig_u.tu_0.op_code[1]
+		top_reveal_coretop_instance.top_la0_inst_0.trig_u.tu_0.op_code[2]
+		top_reveal_coretop_instance.top_la0_inst_0.trig_u.tu_0.tu_out
+	@N:MF891:"c:/users/user/desktop/uct-fpga-course-2022/practicals/03 - uart/uart.fdc":7:0:7:0|expression "[get_ports op*]" applies to objects:
+		opLed[0]
+		opLed[1]
+		opLed[2]
+		opLed[3]
+		opLed[4]
+		opLed[5]
+		opLed[6]
+		opLed[7]
+		opUART_Tx
+
+Library Report
+**************
+
+
+# End of Constraint Checker Report

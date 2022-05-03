@@ -1,0 +1,39 @@
+@W: CG100 :"C:\lscc\diamond\3.12\cae_library\synthesis\verilog\pmi_def.v":44:49:44:61|User defined pragma syn_black_box detected
+@W: CG100 :"C:\lscc\diamond\3.12\cae_library\synthesis\verilog\pmi_def.v":62:50:62:62|User defined pragma syn_black_box detected
+@W: CG100 :"C:\lscc\diamond\3.12\cae_library\synthesis\verilog\pmi_def.v":84:50:84:62|User defined pragma syn_black_box detected
+@W: CG100 :"C:\lscc\diamond\3.12\cae_library\synthesis\verilog\pmi_def.v":107:49:107:61|User defined pragma syn_black_box detected
+@W: CG100 :"C:\lscc\diamond\3.12\cae_library\synthesis\verilog\pmi_def.v":124:87:124:99|User defined pragma syn_black_box detected
+@W: CG100 :"C:\lscc\diamond\3.12\cae_library\synthesis\verilog\pmi_def.v":141:80:141:92|User defined pragma syn_black_box detected
+@W: CG100 :"C:\lscc\diamond\3.12\cae_library\synthesis\verilog\pmi_def.v":159:62:159:74|User defined pragma syn_black_box detected
+@W: CG100 :"C:\lscc\diamond\3.12\cae_library\synthesis\verilog\pmi_def.v":179:76:179:88|User defined pragma syn_black_box detected
+@W: CG100 :"C:\lscc\diamond\3.12\cae_library\synthesis\verilog\pmi_def.v":204:80:204:92|User defined pragma syn_black_box detected
+@W: CG100 :"C:\lscc\diamond\3.12\cae_library\synthesis\verilog\pmi_def.v":225:79:225:91|User defined pragma syn_black_box detected
+@W: CG100 :"C:\lscc\diamond\3.12\cae_library\synthesis\verilog\pmi_def.v":243:33:243:45|User defined pragma syn_black_box detected
+@W: CG100 :"C:\lscc\diamond\3.12\cae_library\synthesis\verilog\pmi_def.v":260:33:260:45|User defined pragma syn_black_box detected
+@W: CG100 :"C:\lscc\diamond\3.12\cae_library\synthesis\verilog\pmi_def.v":275:45:275:57|User defined pragma syn_black_box detected
+@W: CG100 :"C:\lscc\diamond\3.12\cae_library\synthesis\verilog\pmi_def.v":292:31:292:43|User defined pragma syn_black_box detected
+@W: CG100 :"C:\lscc\diamond\3.12\cae_library\synthesis\verilog\pmi_def.v":320:54:320:66|User defined pragma syn_black_box detected
+@W: CG100 :"C:\lscc\diamond\3.12\cae_library\synthesis\verilog\pmi_def.v":351:54:351:66|User defined pragma syn_black_box detected
+@W: CG100 :"C:\lscc\diamond\3.12\cae_library\synthesis\verilog\pmi_def.v":387:53:387:65|User defined pragma syn_black_box detected
+@W: CG100 :"C:\lscc\diamond\3.12\cae_library\synthesis\verilog\pmi_def.v":426:53:426:65|User defined pragma syn_black_box detected
+@W: CG100 :"C:\lscc\diamond\3.12\cae_library\synthesis\verilog\pmi_def.v":450:50:450:62|User defined pragma syn_black_box detected
+@W: CG100 :"C:\lscc\diamond\3.12\cae_library\synthesis\verilog\pmi_def.v":476:50:476:62|User defined pragma syn_black_box detected
+@W: CG100 :"C:\lscc\diamond\3.12\cae_library\synthesis\verilog\pmi_def.v":497:49:497:61|User defined pragma syn_black_box detected
+@W: CG100 :"C:\lscc\diamond\3.12\cae_library\synthesis\verilog\pmi_def.v":528:33:528:45|User defined pragma syn_black_box detected
+@W: CG100 :"C:\lscc\diamond\3.12\cae_library\synthesis\verilog\pmi_def.v":553:33:553:45|User defined pragma syn_black_box detected
+@W: CG100 :"C:\lscc\diamond\3.12\cae_library\synthesis\verilog\pmi_def.v":630:35:630:47|User defined pragma syn_black_box detected
+@W: CG100 :"C:\lscc\diamond\3.12\cae_library\synthesis\verilog\pmi_def.v":687:35:687:47|User defined pragma syn_black_box detected
+@W: CG100 :"C:\lscc\diamond\3.12\cae_library\synthesis\verilog\pmi_def.v":770:35:770:47|User defined pragma syn_black_box detected
+@W: CG100 :"C:\lscc\diamond\3.12\cae_library\synthesis\verilog\pmi_def.v":853:35:853:47|User defined pragma syn_black_box detected
+@W: CG100 :"C:\lscc\diamond\3.12\cae_library\synthesis\verilog\pmi_def.v":969:35:969:47|User defined pragma syn_black_box detected
+@W: CG100 :"C:\lscc\diamond\3.12\cae_library\synthesis\verilog\pmi_def.v":1073:40:1073:52|User defined pragma syn_black_box detected
+@W: CG100 :"C:\lscc\diamond\3.12\cae_library\synthesis\verilog\pmi_def.v":1098:32:1098:44|User defined pragma syn_black_box detected
+@W: CG100 :"C:\lscc\diamond\3.12\cae_library\synthesis\verilog\pmi_def.v":1122:32:1122:44|User defined pragma syn_black_box detected
+@W: CG100 :"C:\lscc\diamond\3.12\cae_library\synthesis\verilog\pmi_def.v":1159:15:1159:27|User defined pragma syn_black_box detected
+@W: CG100 :"C:\lscc\diamond\3.12\cae_library\synthesis\verilog\pmi_def.v":1162:94:1162:106|User defined pragma syn_black_box detected
+@W: CG360 :"C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\reveal_workspace\tmpreveal\top_rvl.v":16:29:16:39|Removing wire trigger_out, as there is no assignment to it.
+@W: CL260 :"C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\reveal_workspace\tmpreveal\top_rvl.v":306:4:306:9|Pruning register bit 10 of txCounter[10:0]. If this is not the intended behavior, drive the input with valid values, or an input from the top level.
+@W: CL260 :"C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\reveal_workspace\tmpreveal\top_rvl.v":306:4:306:9|Pruning register bit 10 of rxCounter[10:0]. If this is not the intended behavior, drive the input with valid values, or an input from the top level.
+@W: CL260 :"C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\reveal_workspace\tmpreveal\top_rvl.v":306:4:306:9|Pruning register bit 9 of txCounter[9:0]. If this is not the intended behavior, drive the input with valid values, or an input from the top level.
+@W: CL260 :"C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\reveal_workspace\tmpreveal\top_rvl.v":306:4:306:9|Pruning register bit 9 of rxCounter[9:0]. If this is not the intended behavior, drive the input with valid values, or an input from the top level.
+

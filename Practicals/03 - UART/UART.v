@@ -35,23 +35,19 @@ module UART #(parameter WIDTH =8, parameter CLOCK_DIV = 434) (
 		BUSY
 	} TxState;
 
-	typedef enum {
-		RECEIVING,
-		RECEIVER_IDLE
-	} RxState;
-
 	TxState txState;
-	RxState rxState;
+
 	// localise the data to send and reset
 	
-	reg [8:0] txCounter = CLOCK_DIV - 1; // extra bits for start and stop bits
-	reg [8:0] rxCounter =  CLOCK_DIV - 1;
+	reg [10:0] txCounter = CLOCK_DIV - 1; // extra bits for start and stop bits
+	reg [10:0] rxCounter =  CLOCK_DIV - 1;
 	reg[4:0] txBitCounter = WIDTH + 1;
 	reg clockEnable = 0;
 	reg rxClockEnable = 0;
 	reg reset;
 	reg [WIDTH + 1:0] localTxData;
 	reg [WIDTH + 1:0] localRxData;
+	reg [1:0] edgeDetector = 0;
 
 	
 	always @(posedge ipClk) begin
@@ -62,7 +58,6 @@ module UART #(parameter WIDTH =8, parameter CLOCK_DIV = 434) (
 			txCounter <= CLOCK_DIV - 1;
 			rxCounter <= CLOCK_DIV - 1;
 			clockEnable <= 0;
-			rxState <= RECEIVER_IDLE;
 			txState <= IDLE;
 			opTx <=1;
 			localRxData <= 10'h3FF;
@@ -72,7 +67,7 @@ module UART #(parameter WIDTH =8, parameter CLOCK_DIV = 434) (
 			end else begin
 				txCounter <= txCounter - 1;
 			end
-			clockEnable = txCounter == 0;
+			clockEnable <= txCounter == 0;
 			//------------------------------------------------------------------------------
 			// TODO: Put the transmitter here
 			//------------------------------------------------------------------------------
@@ -102,10 +97,20 @@ module UART #(parameter WIDTH =8, parameter CLOCK_DIV = 434) (
 			//------------------------------------------------------------------------------
 			// TODO: Put the receiver here
 			//------------------------------------------------------------------------------		
+			edgeDetector <= {edgeDetector, ipRx};
+			// synchronize clocks
+			if (edgeDetector[0] != edgeDetector[1]) begin
+				rxCounter <= 100;
+			end else if(rxCounter == 0) begin
+				rxCounter <= CLOCK_DIV - 1;
+			end else begin
+				rxCounter <= rxCounter - 1;
+			end
+
 			if (rxCounter == 0) begin
 					opRxValid <= 0;
-					rxCounter <= CLOCK_DIV - 1;
 					localRxData <= {ipRx, localRxData[9:1]};
+				
 			end else begin
 				if (localRxData[0] == 0 && localRxData[9] == 1) begin
 					opRxValid <= 1;
@@ -114,7 +119,6 @@ module UART #(parameter WIDTH =8, parameter CLOCK_DIV = 434) (
 				end else begin
 					opRxValid <= 0;
 				end
-				rxCounter <= rxCounter - 1;
 			end 
 		end
 	end

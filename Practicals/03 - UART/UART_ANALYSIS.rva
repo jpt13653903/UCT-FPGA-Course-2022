@@ -1,0 +1,49 @@
+<!DOCTYPE ispTLA>
+<ispTLA>
+ <CreationDate>Tue 3. May 15:30:27 2022</CreationDate>
+ <XCFFileName/>
+ <CableSetting>
+  <IsTRSTConnected val="false"/>
+  <TRSTSetting val="0"/>
+  <IsBSCANConnected val="false"/>
+  <BSCANSetting val="0"/>
+  <CableType val="USB2"/>
+  <PortAddress val="0"/>
+  <PortSetting val="0"/>
+  <TCKDelay val="1"/>
+ </CableSetting>
+ <DeviceCount>1</DeviceCount>
+ <Device>
+  <DeviceIndex>0</DeviceIndex>
+  <DeviceName>1. LFXP2-5E</DeviceName>
+  <DeviceID>0x01299043</DeviceID>
+  <HasIspTRACY>true</HasIspTRACY>
+  <HasJTAG2WB>false</HasJTAG2WB>
+  <SERDES/>
+  <IRBypassLen>8</IRBypassLen>
+  <RVLFileName>UART_RVL.rvl</RVLFileName>
+  <RVSFileName>UART_RVL.rvs</RVSFileName>
+  <LACoreCount>1</LACoreCount>
+  <WinUI CoreIndex="0">
+   <TraceSigTreeData>
+    <TraceSignal IsHidden="false" Name="UART_RxData" NodeType="1" PortIndex="0">
+     <BusRadix Radix="0"/>
+     <IsExpanded Expand="false"/>
+    </TraceSignal>
+    <TraceSignal IsHidden="false" Name="UART_RxData:0" NodeType="2" PortIndex="0"/>
+    <TraceSignal IsHidden="false" Name="UART_RxData:1" NodeType="2" PortIndex="1"/>
+    <TraceSignal IsHidden="false" Name="UART_RxData:2" NodeType="2" PortIndex="2"/>
+    <TraceSignal IsHidden="false" Name="UART_RxData:3" NodeType="2" PortIndex="3"/>
+    <TraceSignal IsHidden="false" Name="UART_RxData:4" NodeType="2" PortIndex="4"/>
+    <TraceSignal IsHidden="false" Name="UART_RxData:5" NodeType="2" PortIndex="5"/>
+    <TraceSignal IsHidden="false" Name="UART_RxData:6" NodeType="2" PortIndex="6"/>
+    <TraceSignal IsHidden="false" Name="UART_RxData:7" NodeType="2" PortIndex="7"/>
+   </TraceSigTreeData>
+   <TriggerUI UserSelect="0" PreSelectType="0" PreSelect="1" UserSelectPos="0"/>
+   <CoreRun Run="true"/>
+   <CoreWndUIData>
+    <ClockFrequency Unit="ns" Frequency="-1.0"/>
+   </CoreWndUIData>
+  </WinUI>
+ </Device>
+</ispTLA>

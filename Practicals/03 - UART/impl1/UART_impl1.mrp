@@ -1,0 +1,864 @@
+
+             Lattice Mapping Report File for Design Module 'top'
+
+
+Design Information
+------------------
+
+Command line:   map -a LatticeXP2 -p LFXP2-5E -t TQFP144 -s 6 -oc Industrial
+     UART_impl1.ngd -o UART_impl1_map.ncd -pr UART_impl1.prf -mp UART_impl1.mrp
+     -lpf C:/Users/user/Desktop/UCT-FPGA-Course-2022/Practicals/03 -
+     UART/impl1/UART_impl1_synplify.lpf -lpf
+     C:/Users/user/Desktop/UCT-FPGA-Course-2022/Practicals/03 - UART/UART.lpf
+     -gui -msgset C:/Users/user/Desktop/UCT-FPGA-Course-2022/Practicals/03 -
+     UART/promote.xml 
+Target Vendor:  LATTICE
+Target Device:  LFXP2-5ETQFP144
+Target Performance:   6
+Mapper:  mg5a00,  version:  Diamond (64-bit) 3.12.1.454
+Mapped on:  05/03/22  16:21:09
+
+Design Summary
+--------------
+
+   Number of registers:    399 out of  3864 (10%)
+      PFU registers:          389 out of  3564 (11%)
+      PIO registers:           10 out of   300 (3%)
+   Number of SLICEs:       415 out of  2376 (17%)
+      SLICEs as Logic/ROM:    415 out of  2376 (17%)
+      SLICEs as RAM:            0 out of   405 (0%)
+      SLICEs as Carry:         43 out of  2376 (2%)
+   Number of LUT4s:        596 out of  4752 (13%)
+      Number used as logic LUTs:        510
+      Number used as distributed RAM:     0
+      Number used as ripple logic:       86
+      Number used as shift registers:     0
+   Number of PIO sites used: 12 out of 100 (12%)
+   Number of PIO FIXEDDELAY:    0
+   Number of DQSDLLs:  0 out of 2 (0%)
+   Number of PLLs:  0 out of 2 (0%)
+   Number of block RAMs:  2 out of 9 (22%)
+   Number of CLKDIVs:  0 out of 2 (0%)
+   Number of GSRs:  0 out of 1 (0%)
+   JTAG used :      Yes
+   Readback used :  No
+   Oscillator used :  No
+   Startup used :   No
+   Notes:-
+      1. Total number of LUT4s = (Number of logic LUT4s) + 2*(Number of
+     distributed RAMs) + 2*(Number of ripple logic)
+      2. Number of logic LUT4s does not include count of distributed RAM and
+     ripple logic.
+
+        Number Of Mapped DSP Components:
+   --------------------------------
+   MULT36X36B          0
+   MULT18X18B          0
+   MULT18X18MACB       0
+   MULT18X18ADDSUBB    0
+   MULT18X18ADDSUBSUMB 0
+   MULT9X9B            0
+   MULT9X9ADDSUBB      0
+   MULT9X9ADDSUBSUMB   0
+
+                                    Page 1
+
+
+
+
+Design:  top                                           Date:  05/03/22  16:21:09
+
+Design Summary (cont)
+---------------------
+   --------------------------------
+   Number of Used DSP Sites:  0 out of 24 (0 %)
+   Number of clocks:  2
+     Net ipClk_c: 136 loads, 136 rising, 0 falling (Driver: PIO ipClk )
+     Net jtaghub16_jtck: 122 loads, 0 rising, 122 falling (Driver:
+     mg5ahub/genblk0_genblk5_jtage_u )
+   Number of Clock Enables:  49
+     Net UART_Inst.txBitCounter_2_sqmuxa: 1 loads, 0 LSLICEs
+     Net UART_Inst.reset: 4 loads, 3 LSLICEs
+     Net UART_TxData19: 4 loads, 4 LSLICEs
+     Net UART_Inst/N_34: 6 loads, 6 LSLICEs
+     Net UART_Inst/un1_reset_3_0_a2_0_a2: 6 loads, 6 LSLICEs
+     Net UART_Inst/opRxData_1_sqmuxa: 5 loads, 5 LSLICEs
+     Net N_38_i_i: 1 loads, 1 LSLICEs
+     Net top_reveal_coretop_instance/top_la0_inst_0/trig_u/tu_0/op_code8: 2
+     loads, 2 LSLICEs
+     Net top_reveal_coretop_instance/top_la0_inst_0/trig_u/tu_0/mask_reg[0]_0_sq
+     muxa: 1 loads, 1 LSLICEs
+     Net top_reveal_coretop_instance/top_la0_inst_0/trig_u/tu_0/compare_reg[0]_0
+     _sqmuxa: 1 loads, 1 LSLICEs
+     Net top_reveal_coretop_instance/top_la0_inst_0/trig_u/te_0/tt_wr_addr_cntr_
+     1_sqmuxa_i_0: 1 loads, 1 LSLICEs
+     Net top_reveal_coretop_instance/top_la0_inst_0/trig_u/te_0/un1_tt_end_1_0:
+     1 loads, 1 LSLICEs
+     Net top_reveal_coretop_instance/top_la0_inst_0/trig_u/te_0/tt_prog_active_1
+     _sqmuxa_1_i_0: 1 loads, 1 LSLICEs
+     Net top_reveal_coretop_instance/top_la0_inst_0/trig_u/te_0/te_precnte: 8
+     loads, 8 LSLICEs
+     Net top_reveal_coretop_instance/top_la0_inst_0/trig_u/te_0/te_precnt_val_0_
+     sqmuxa: 8 loads, 8 LSLICEs
+     Net top_reveal_coretop_instance/top_la0_inst_0/trig_u/te_0/cnt_contig_reg_w
+     en_1: 1 loads, 1 LSLICEs
+     Net top_reveal_coretop_instance/top_la0_inst_0/trig_u/te_0/num_then_wen_1:
+     1 loads, 1 LSLICEs
+     Net top_reveal_coretop_instance/top_la0_inst_0/trig_u/te_0/next_then_reg_we
+     n_1: 1 loads, 1 LSLICEs
+     Net jtaghub16_ip_enable0: 26 loads, 26 LSLICEs
+     Net top_reveal_coretop_instance/top_la0_inst_0/trig_u/tcnt_0/reg2_0_sqmuxa:
+     1 loads, 1 LSLICEs
+     Net top_reveal_coretop_instance/top_la0_inst_0/trig_u/tcnt_0/reg1_0_sqmuxa:
+     2 loads, 2 LSLICEs
+     Net top_reveal_coretop_instance/top_la0_inst_0/trig_u/tcnt_0/reg0_read11: 1
+     loads, 1 LSLICEs
+     Net top_reveal_coretop_instance/top_la0_inst_0/trig_u/tcnt_0/reg0_0_sqmuxa:
+     2 loads, 2 LSLICEs
+     Net top_reveal_coretop_instance/top_la0_inst_0/jtag_int_u/un1_jtdo_4_i: 8
+     loads, 8 LSLICEs
+     Net top_reveal_coretop_instance/top_la0_inst_0/jtag_int_u/tr_dout_bit_cnt_0
+     _sqmuxa: 1 loads, 1 LSLICEs
+     Net top_reveal_coretop_instance/top_la0_inst_0/jtag_int_u/addr_15_0_sqmuxa:
+     6 loads, 6 LSLICEs
+     Net top_reveal_coretop_instance/top_la0_inst_0/jtag_int_u/un1_jtdo_1_i: 8
+     loads, 8 LSLICEs
+     Net top_reveal_coretop_instance/top_la0_inst_0/jtag_int_u/bit_cnte: 9
+     loads, 9 LSLICEs
+     Net top_reveal_coretop_instance/top_la0_inst_0/jtag_int_u/shift_regce[15]:
+
+                                    Page 2
+
+
+
+
+Design:  top                                           Date:  05/03/22  16:21:09
+
+Design Summary (cont)
+---------------------
+     12 loads, 12 LSLICEs
+     Net top_reveal_coretop_instance/top_la0_inst_0/jtag_int_u/parity_err_lat_0_
+     sqmuxa: 1 loads, 1 LSLICEs
+     Net top_reveal_coretop_instance/top_la0_inst_0/jtag_int_u/cmd_block_extend_
+     1_sqmuxa_i: 1 loads, 1 LSLICEs
+     Net top_reveal_coretop_instance/top_la0_inst_0/jtag_int_u/capture_dr_d4_0_s
+     qmuxa: 1 loads, 1 LSLICEs
+     Net top_reveal_coretop_instance/top_la0_inst_0/tm_u/sample_en_d: 11 loads,
+     11 LSLICEs
+     Net top_reveal_coretop_instance/top_la0_inst_0/tm_u/N_414_i: 3 loads, 3
+     LSLICEs
+     Net top_reveal_coretop_instance/top_la0_inst_0/tm_u/start_d_RNITT1M: 3
+     loads, 3 LSLICEs
+     Net top_reveal_coretop_instance/top_la0_inst_0/tm_u/N_326_i: 3 loads, 3
+     LSLICEs
+     Net top_reveal_coretop_instance/top_la0_inst_0/tm_u/trig_enbl_0_sqmuxa: 1
+     loads, 1 LSLICEs
+     Net top_reveal_coretop_instance/top_la0_inst_0/tm_u/trace_dout_1_sqmuxa_i:
+     4 loads, 4 LSLICEs
+     Net top_reveal_coretop_instance/top_la0_inst_0/tm_u/N_377_i: 3 loads, 3
+     LSLICEs
+     Net top_reveal_coretop_instance/top_la0_inst_0/tm_u/force_trig_0_sqmuxa_1:
+     1 loads, 1 LSLICEs
+     Net top_reveal_coretop_instance/top_la0_inst_0/tm_u/un1_rd_dout_tm55_i: 6
+     loads, 6 LSLICEs
+     Net top_reveal_coretop_instance/top_la0_inst_0/tm_u/pre_trig_cntre: 3
+     loads, 3 LSLICEs
+     Net top_reveal_coretop_instance/top_la0_inst_0/tm_u/capture_6_f0_i_0_o4_RNI
+     Q65D1: 3 loads, 3 LSLICEs
+     Net
+     top_reveal_coretop_instance/top_la0_inst_0/tm_u/num_pre_trig_frm_0_sqmuxa:
+     3 loads, 3 LSLICEs
+     Net top_reveal_coretop_instance/top_la0_inst_0/tm_u/num_post_trig_frm_0_sqm
+     uxa: 3 loads, 3 LSLICEs
+     Net
+     top_reveal_coretop_instance/top_la0_inst_0/tm_u/force_trig_2_sqmuxa_i_0_0:
+     1 loads, 1 LSLICEs
+     Net jtaghub16_jupdate: 3 loads, 3 LSLICEs
+     Net mg5ahub/id_enable_0_sqmuxa: 1 loads, 1 LSLICEs
+     Net mg5ahub/N_45_i: 10 loads, 10 LSLICEs
+   Number of LSRs:  4
+     Net UART_Inst.reset: 2 loads, 1 LSLICEs
+     Net UART_Inst/localRxData_RNILT6O[0]: 5 loads, 5 LSLICEs
+     Net top_reveal_coretop_instance/top_la0_inst_0/reset_rvl_n: 76 loads, 74
+     LSLICEs
+     Net jtaghub16_jrstn: 119 loads, 119 LSLICEs
+   Number of nets driven by tri-state buffers:  0
+   Top 10 highest fanout non-clock nets:
+     Net jtaghub16_jrstn: 123 loads
+     Net top_reveal_coretop_instance/top_la0_inst_0/reset_rvl_n: 76 loads
+     Net top_reveal_coretop_instance/top_la0_inst_0/addr[0]: 51 loads
+     Net jtaghub16_ip_enable0: 48 loads
+     Net top_reveal_coretop_instance/top_la0_inst_0/capture_dr: 46 loads
+     Net jtaghub16_jshift: 45 loads
+     Net top_reveal_coretop_instance/top_la0_inst_0/addr[1]: 43 loads
+     Net top_reveal_coretop_instance/top_la0_inst_0/addr[2]: 36 loads
+
+                                    Page 3
+
+
+
+
+Design:  top                                           Date:  05/03/22  16:21:09
+
+Design Summary (cont)
+---------------------
+     Net top_reveal_coretop_instance/top_la0_inst_0/tm_u/VCC: 23 loads
+     Net top_reveal_coretop_instance/top_la0_inst_0/jshift_d1: 22 loads
+
+
+
+
+   Number of warnings:  0
+   Number of errors:    0
+     
+
+Design Errors/Warnings
+----------------------
+
+   No errors or warnings present.
+
+IO (PIO) Attributes
+-------------------
+
++---------------------+-----------+-----------+------------+------------+
+| IO Name             | Direction | Levelmode | IO         | FIXEDDELAY |
+|                     |           |  IO_TYPE  | Register   |            |
++---------------------+-----------+-----------+------------+------------+
+| opUART_Tx           | OUTPUT    | LVCMOS33  | OUT        |            |
++---------------------+-----------+-----------+------------+------------+
+| ipUART_Rx           | INPUT     | LVCMOS33  | IN         |            |
++---------------------+-----------+-----------+------------+------------+
+| opLed[7]            | OUTPUT    | LVCMOS33  | OUT        |            |
++---------------------+-----------+-----------+------------+------------+
+| opLed[6]            | OUTPUT    | LVCMOS33  | OUT        |            |
++---------------------+-----------+-----------+------------+------------+
+| opLed[5]            | OUTPUT    | LVCMOS33  | OUT        |            |
++---------------------+-----------+-----------+------------+------------+
+| opLed[4]            | OUTPUT    | LVCMOS33  | OUT        |            |
++---------------------+-----------+-----------+------------+------------+
+| opLed[3]            | OUTPUT    | LVCMOS33  | OUT        |            |
++---------------------+-----------+-----------+------------+------------+
+| opLed[2]            | OUTPUT    | LVCMOS33  | OUT        |            |
++---------------------+-----------+-----------+------------+------------+
+| opLed[1]            | OUTPUT    | LVCMOS33  | OUT        |            |
++---------------------+-----------+-----------+------------+------------+
+| opLed[0]            | OUTPUT    | LVCMOS33  | OUT        |            |
++---------------------+-----------+-----------+------------+------------+
+| ipnReset            | INPUT     | LVCMOS33  |            |            |
++---------------------+-----------+-----------+------------+------------+
+| ipClk               | INPUT     | LVCMOS33  |            |            |
++---------------------+-----------+-----------+------------+------------+
+
+Removed logic
+-------------
+
+Block mg5ahub/jtdo2_int_m9_0_m3_0_a2_2 undriven or does not drive anything -
+     clipped.
+Block mg5ahub/jtdo2_int_m3_0_s undriven or does not drive anything - clipped.
+Block mg5ahub/ip_enable_14 undriven or does not drive anything - clipped.
+Block mg5ahub/ip_enable_13 undriven or does not drive anything - clipped.
+Block mg5ahub/ip_enable_12 undriven or does not drive anything - clipped.
+
+                                    Page 4
+
+
+
+
+Design:  top                                           Date:  05/03/22  16:21:09
+
+Removed logic (cont)
+--------------------
+Block mg5ahub/ip_enable_11 undriven or does not drive anything - clipped.
+Block mg5ahub/ip_enable_10 undriven or does not drive anything - clipped.
+Block mg5ahub/ip_enable_9 undriven or does not drive anything - clipped.
+Block mg5ahub/ip_enable_8 undriven or does not drive anything - clipped.
+Block mg5ahub/ip_enable_7 undriven or does not drive anything - clipped.
+Block mg5ahub/ip_enable_6 undriven or does not drive anything - clipped.
+Block mg5ahub/ip_enable_5 undriven or does not drive anything - clipped.
+Block VCC undriven or does not drive anything - clipped.
+Block mg5ahub/GSR_INST undriven or does not drive anything - clipped.
+Block GSR_INST undriven or does not drive anything - clipped.
+Block mg5ahub/ip_enable_15 undriven or does not drive anything - clipped.
+Block mg5ahub/cdn undriven or does not drive anything - clipped.
+Block GND undriven or does not drive anything - clipped.
+Block top_reveal_coretop_instance/VCC_0 undriven or does not drive anything -
+     clipped.
+Block top_reveal_coretop_instance/GND_0 undriven or does not drive anything -
+     clipped.
+Block top_reveal_coretop_instance/top_la0_inst_0/VCC undriven or does not drive
+     anything - clipped.
+Block top_reveal_coretop_instance/top_la0_inst_0/GND_0 undriven or does not
+     drive anything - clipped.
+Block top_reveal_coretop_instance/top_la0_inst_0/tm_u/genblk4.tr_mem/scuba_vhi_i
+     nst undriven or does not drive anything - clipped.
+Block top_reveal_coretop_instance/top_la0_inst_0/trig_u/VCC_0 undriven or does
+     not drive anything - clipped.
+Block top_reveal_coretop_instance/top_la0_inst_0/trig_u/GND_0 undriven or does
+     not drive anything - clipped.
+Block top_reveal_coretop_instance/top_la0_inst_0/trig_u/tcnt_0/VCC_0 undriven or
+     does not drive anything - clipped.
+Block top_reveal_coretop_instance/top_la0_inst_0/trig_u/tcnt_0/GND_0 undriven or
+     does not drive anything - clipped.
+Block top_reveal_coretop_instance/top_la0_inst_0/trig_u/te_0/genblk1.te_tt_ebr_r
+     am/scuba_vhi_inst undriven or does not drive anything - clipped.
+Block top_reveal_coretop_instance/top_la0_inst_0/trig_u/tu_0/VCC_0 undriven or
+     does not drive anything - clipped.
+Block top_reveal_coretop_instance/top_la0_inst_0/trig_u/tu_0/GND_0 undriven or
+     does not drive anything - clipped.
+Block top_reveal_coretop_instance/top_la0_inst_0/trig_u/decode_u/VCC_0 undriven
+     or does not drive anything - clipped.
+Block top_reveal_coretop_instance/top_la0_inst_0/trig_u/decode_u/GND_0 undriven
+     or does not drive anything - clipped.
+Signal mg5ahub/jrstn_i was merged into signal jtaghub16_jrstn
+Signal mg5ahub/jtck_i_0 was merged into signal jtaghub16_jtck
+Signal top_reveal_coretop_instance/top_la0_inst_0/tm_u/jrstn_i was merged into
+     signal jtaghub16_jrstn
+Signal top_reveal_coretop_instance/top_la0_inst_0/tm_u/jtck_i was merged into
+     signal jtaghub16_jtck
+Signal top_reveal_coretop_instance/top_la0_inst_0/tm_u/reset_n_i was merged into
+     signal top_reveal_coretop_instance/top_la0_inst_0/reset_rvl_n
+Signal top_reveal_coretop_instance/top_la0_inst_0/jtag_int_u/r_w.CN was merged
+     into signal jtaghub16_jtck
+Signal top_reveal_coretop_instance/top_la0_inst_0/jtag_int_u/jrstn_i was merged
+     into signal jtaghub16_jrstn
+Signal top_reveal_coretop_instance/top_la0_inst_0/jtag_int_u/reset_n_i was
+     merged into signal top_reveal_coretop_instance/top_la0_inst_0/reset_rvl_n
+Signal top_reveal_coretop_instance/top_la0_inst_0/trig_u/tcnt_0/reset_n_i was
+
+                                    Page 5
+
+
+
+
+Design:  top                                           Date:  05/03/22  16:21:09
+
+Removed logic (cont)
+--------------------
+     merged into signal top_reveal_coretop_instance/top_la0_inst_0/reset_rvl_n
+Signal top_reveal_coretop_instance/top_la0_inst_0/trig_u/te_0/jshift_d2.CN was
+     merged into signal jtaghub16_jtck
+Signal top_reveal_coretop_instance/top_la0_inst_0/trig_u/te_0/jrstn_i was merged
+     into signal jtaghub16_jrstn
+Signal top_reveal_coretop_instance/top_la0_inst_0/trig_u/te_0/reset_n_i was
+     merged into signal top_reveal_coretop_instance/top_la0_inst_0/reset_rvl_n
+Signal top_reveal_coretop_instance/top_la0_inst_0/trig_u/tu_0/reset_n_i was
+     merged into signal top_reveal_coretop_instance/top_la0_inst_0/reset_rvl_n
+Signal UART_Inst.reset_i was merged into signal UART_Inst.reset
+Signal mg5ahub/ip_enable_13 undriven or does not drive anything - clipped.
+Signal mg5ahub/ip_enable_10 undriven or does not drive anything - clipped.
+Signal mg5ahub/ip_enable_9 undriven or does not drive anything - clipped.
+Signal mg5ahub/ip_enable_8 undriven or does not drive anything - clipped.
+Signal mg5ahub/ip_enable_14 undriven or does not drive anything - clipped.
+Signal mg5ahub/ip_enable_11 undriven or does not drive anything - clipped.
+Signal mg5ahub/jtdo2_int_m9_0_m3_0_a2_2 undriven or does not drive anything -
+     clipped.
+Signal mg5ahub/ip_enable_7 undriven or does not drive anything - clipped.
+Signal mg5ahub/ip_enable_12 undriven or does not drive anything - clipped.
+Signal mg5ahub/jtdo2_int_m3_0_s undriven or does not drive anything - clipped.
+Signal mg5ahub/ip_enable_6 undriven or does not drive anything - clipped.
+Signal mg5ahub/ip_enable_5 undriven or does not drive anything - clipped.
+Signal mg5ahub/jtdo2_int_m9 undriven or does not drive anything - clipped.
+Signal mg5ahub/genblk0_genblk5_jtage_u_RNO_8 undriven or does not drive anything
+     - clipped.
+Signal mg5ahub/jtdo2_int_m3 undriven or does not drive anything - clipped.
+Signal mg5ahub/genblk0_genblk5_jtage_u_RNO_10 undriven or does not drive
+     anything - clipped.
+Signal mg5ahub/genblk0_genblk5_jtage_u_RNO_5 undriven or does not drive anything
+     - clipped.
+Signal mg5ahub/genblk0_genblk5_jtage_u_RNO_9 undriven or does not drive anything
+     - clipped.
+Signal mg5ahub/genblk0_genblk5_jtage_u_RNO_11 undriven or does not drive
+     anything - clipped.
+Signal top_reveal_coretop_instance/top_la0_inst_0/tm_u/genblk4.tr_mem/scuba_vlo
+     undriven or does not drive anything - clipped.
+Signal top_reveal_coretop_instance/top_la0_inst_0/trig_u/te_0/genblk1.te_tt_ebr_
+     ram/scuba_vlo undriven or does not drive anything - clipped.
+Signal VCC undriven or does not drive anything - clipped.
+Signal mg5ahub/rom_rd_addr_s_0_S1_7 undriven or does not drive anything -
+     clipped.
+Signal mg5ahub/rom_rd_addr_s_0_COUT_7 undriven or does not drive anything -
+     clipped.
+Signal mg5ahub/ip_enable_15 undriven or does not drive anything - clipped.
+Signal mg5ahub/er2_tdo_9 undriven or does not drive anything - clipped.
+Signal mg5ahub/er2_tdo_10 undriven or does not drive anything - clipped.
+Signal mg5ahub/er2_tdo_8 undriven or does not drive anything - clipped.
+Signal mg5ahub/er2_tdo_1 undriven or does not drive anything - clipped.
+Signal mg5ahub/er2_tdo_3 undriven or does not drive anything - clipped.
+Signal mg5ahub/er2_tdo_4 undriven or does not drive anything - clipped.
+Signal mg5ahub/er2_tdo_2 undriven or does not drive anything - clipped.
+Signal mg5ahub/er2_tdo_14 undriven or does not drive anything - clipped.
+Signal mg5ahub/er2_tdo_15 undriven or does not drive anything - clipped.
+Signal mg5ahub/er2_tdo_11 undriven or does not drive anything - clipped.
+Signal mg5ahub/er2_tdo_12 undriven or does not drive anything - clipped.
+
+                                    Page 6
+
+
+
+
+Design:  top                                           Date:  05/03/22  16:21:09
+
+Removed logic (cont)
+--------------------
+Signal mg5ahub/er2_tdo_13 undriven or does not drive anything - clipped.
+Signal mg5ahub/genblk0_genblk5_un1_jtage_u undriven or does not drive anything -
+     clipped.
+Signal mg5ahub/genblk0_genblk5_un1_jtage_u_1 undriven or does not drive anything
+     - clipped.
+Signal mg5ahub/tdoa undriven or does not drive anything - clipped.
+Signal mg5ahub/tdia undriven or does not drive anything - clipped.
+Signal mg5ahub/tmsa undriven or does not drive anything - clipped.
+Signal mg5ahub/tcka undriven or does not drive anything - clipped.
+Signal mg5ahub/er2_tdo_6 undriven or does not drive anything - clipped.
+Signal mg5ahub/er2_tdo_7 undriven or does not drive anything - clipped.
+Signal mg5ahub/er2_tdo_5 undriven or does not drive anything - clipped.
+Signal mg5ahub/cdn undriven or does not drive anything - clipped.
+Signal mg5ahub/rom_rd_addr_cry_0_S0_0 undriven or does not drive anything -
+     clipped.
+Signal GND undriven or does not drive anything - clipped.
+Signal top_reveal_coretop_instance/top_la0_inst_0/GND undriven or does not drive
+     anything - clipped.
+Signal top_reveal_coretop_instance/top_la0_inst_0/tm_u/tm_wr_addr_cntr_cry_0_S0[
+     0] undriven or does not drive anything - clipped.
+Signal top_reveal_coretop_instance/top_la0_inst_0/tm_u/N_1 undriven or does not
+     drive anything - clipped.
+Signal top_reveal_coretop_instance/top_la0_inst_0/tm_u/tm_wr_addr_cntr_cry_0_COU
+     T[3] undriven or does not drive anything - clipped.
+Signal top_reveal_coretop_instance/top_la0_inst_0/tm_u/pre_trig_cntr_cry_0_S0[0]
+     undriven or does not drive anything - clipped.
+Signal top_reveal_coretop_instance/top_la0_inst_0/tm_u/N_2 undriven or does not
+     drive anything - clipped.
+Signal top_reveal_coretop_instance/top_la0_inst_0/tm_u/pre_trig_cntr_cry_0_COUT[
+     3] undriven or does not drive anything - clipped.
+Signal
+     top_reveal_coretop_instance/top_la0_inst_0/tm_u/post_trig_cntr_cry_0_S0[0]
+     undriven or does not drive anything - clipped.
+Signal top_reveal_coretop_instance/top_la0_inst_0/tm_u/N_3 undriven or does not
+     drive anything - clipped.
+Signal top_reveal_coretop_instance/top_la0_inst_0/tm_u/post_trig_cntr_cry_0_COUT
+     [3] undriven or does not drive anything - clipped.
+Signal top_reveal_coretop_instance/top_la0_inst_0/tm_u/tm_rd_addr_cntr_cry_0_S0[
+     0] undriven or does not drive anything - clipped.
+Signal top_reveal_coretop_instance/top_la0_inst_0/tm_u/N_4 undriven or does not
+     drive anything - clipped.
+Signal top_reveal_coretop_instance/top_la0_inst_0/tm_u/tm_rd_addr_cntr_cry_0_COU
+     T[3] undriven or does not drive anything - clipped.
+Signal top_reveal_coretop_instance/top_la0_inst_0/tm_u/genblk4.tr_mem/scuba_vhi
+     undriven or does not drive anything - clipped.
+Signal top_reveal_coretop_instance/top_la0_inst_0/tm_u/genblk4.tr_mem/pmi_ram_dp
+     Xbnonesadr85328532p13060cf5_0_0_0/DOB17 undriven or does not drive anything
+     - clipped.
+Signal top_reveal_coretop_instance/top_la0_inst_0/tm_u/genblk4.tr_mem/pmi_ram_dp
+     Xbnonesadr85328532p13060cf5_0_0_0/DOB16 undriven or does not drive anything
+     - clipped.
+Signal top_reveal_coretop_instance/top_la0_inst_0/tm_u/genblk4.tr_mem/pmi_ram_dp
+     Xbnonesadr85328532p13060cf5_0_0_0/DOB15 undriven or does not drive anything
+     - clipped.
+Signal top_reveal_coretop_instance/top_la0_inst_0/tm_u/genblk4.tr_mem/pmi_ram_dp
+     Xbnonesadr85328532p13060cf5_0_0_0/DOB14 undriven or does not drive anything
+
+                                    Page 7
+
+
+
+
+Design:  top                                           Date:  05/03/22  16:21:09
+
+Removed logic (cont)
+--------------------
+     - clipped.
+Signal top_reveal_coretop_instance/top_la0_inst_0/tm_u/genblk4.tr_mem/pmi_ram_dp
+     Xbnonesadr85328532p13060cf5_0_0_0/DOB13 undriven or does not drive anything
+     - clipped.
+Signal top_reveal_coretop_instance/top_la0_inst_0/tm_u/genblk4.tr_mem/pmi_ram_dp
+     Xbnonesadr85328532p13060cf5_0_0_0/DOB12 undriven or does not drive anything
+     - clipped.
+Signal top_reveal_coretop_instance/top_la0_inst_0/tm_u/genblk4.tr_mem/pmi_ram_dp
+     Xbnonesadr85328532p13060cf5_0_0_0/DOB11 undriven or does not drive anything
+     - clipped.
+Signal top_reveal_coretop_instance/top_la0_inst_0/tm_u/genblk4.tr_mem/pmi_ram_dp
+     Xbnonesadr85328532p13060cf5_0_0_0/DOB10 undriven or does not drive anything
+     - clipped.
+Signal top_reveal_coretop_instance/top_la0_inst_0/tm_u/genblk4.tr_mem/pmi_ram_dp
+     Xbnonesadr85328532p13060cf5_0_0_0/DOB9 undriven or does not drive anything
+     - clipped.
+Signal top_reveal_coretop_instance/top_la0_inst_0/tm_u/genblk4.tr_mem/pmi_ram_dp
+     Xbnonesadr85328532p13060cf5_0_0_0/DOB8 undriven or does not drive anything
+     - clipped.
+Signal top_reveal_coretop_instance/top_la0_inst_0/tm_u/genblk4.tr_mem/pmi_ram_dp
+     Xbnonesadr85328532p13060cf5_0_0_0/DOA17 undriven or does not drive anything
+     - clipped.
+Signal top_reveal_coretop_instance/top_la0_inst_0/tm_u/genblk4.tr_mem/pmi_ram_dp
+     Xbnonesadr85328532p13060cf5_0_0_0/DOA16 undriven or does not drive anything
+     - clipped.
+Signal top_reveal_coretop_instance/top_la0_inst_0/tm_u/genblk4.tr_mem/pmi_ram_dp
+     Xbnonesadr85328532p13060cf5_0_0_0/DOA15 undriven or does not drive anything
+     - clipped.
+Signal top_reveal_coretop_instance/top_la0_inst_0/tm_u/genblk4.tr_mem/pmi_ram_dp
+     Xbnonesadr85328532p13060cf5_0_0_0/DOA14 undriven or does not drive anything
+     - clipped.
+Signal top_reveal_coretop_instance/top_la0_inst_0/tm_u/genblk4.tr_mem/pmi_ram_dp
+     Xbnonesadr85328532p13060cf5_0_0_0/DOA13 undriven or does not drive anything
+     - clipped.
+Signal top_reveal_coretop_instance/top_la0_inst_0/tm_u/genblk4.tr_mem/pmi_ram_dp
+     Xbnonesadr85328532p13060cf5_0_0_0/DOA12 undriven or does not drive anything
+     - clipped.
+Signal top_reveal_coretop_instance/top_la0_inst_0/tm_u/genblk4.tr_mem/pmi_ram_dp
+     Xbnonesadr85328532p13060cf5_0_0_0/DOA11 undriven or does not drive anything
+     - clipped.
+Signal top_reveal_coretop_instance/top_la0_inst_0/tm_u/genblk4.tr_mem/pmi_ram_dp
+     Xbnonesadr85328532p13060cf5_0_0_0/DOA10 undriven or does not drive anything
+     - clipped.
+Signal top_reveal_coretop_instance/top_la0_inst_0/tm_u/genblk4.tr_mem/pmi_ram_dp
+     Xbnonesadr85328532p13060cf5_0_0_0/DOA9 undriven or does not drive anything
+     - clipped.
+Signal top_reveal_coretop_instance/top_la0_inst_0/tm_u/genblk4.tr_mem/pmi_ram_dp
+     Xbnonesadr85328532p13060cf5_0_0_0/DOA8 undriven or does not drive anything
+     - clipped.
+Signal top_reveal_coretop_instance/top_la0_inst_0/tm_u/genblk4.tr_mem/pmi_ram_dp
+     Xbnonesadr85328532p13060cf5_0_0_0/DOA7 undriven or does not drive anything
+     - clipped.
+Signal top_reveal_coretop_instance/top_la0_inst_0/tm_u/genblk4.tr_mem/pmi_ram_dp
+     Xbnonesadr85328532p13060cf5_0_0_0/DOA6 undriven or does not drive anything
+     - clipped.
+Signal top_reveal_coretop_instance/top_la0_inst_0/tm_u/genblk4.tr_mem/pmi_ram_dp
+
+                                    Page 8
+
+
+
+
+Design:  top                                           Date:  05/03/22  16:21:09
+
+Removed logic (cont)
+--------------------
+     Xbnonesadr85328532p13060cf5_0_0_0/DOA5 undriven or does not drive anything
+     - clipped.
+Signal top_reveal_coretop_instance/top_la0_inst_0/tm_u/genblk4.tr_mem/pmi_ram_dp
+     Xbnonesadr85328532p13060cf5_0_0_0/DOA4 undriven or does not drive anything
+     - clipped.
+Signal top_reveal_coretop_instance/top_la0_inst_0/tm_u/genblk4.tr_mem/pmi_ram_dp
+     Xbnonesadr85328532p13060cf5_0_0_0/DOA3 undriven or does not drive anything
+     - clipped.
+Signal top_reveal_coretop_instance/top_la0_inst_0/tm_u/genblk4.tr_mem/pmi_ram_dp
+     Xbnonesadr85328532p13060cf5_0_0_0/DOA2 undriven or does not drive anything
+     - clipped.
+Signal top_reveal_coretop_instance/top_la0_inst_0/tm_u/genblk4.tr_mem/pmi_ram_dp
+     Xbnonesadr85328532p13060cf5_0_0_0/DOA1 undriven or does not drive anything
+     - clipped.
+Signal top_reveal_coretop_instance/top_la0_inst_0/tm_u/genblk4.tr_mem/pmi_ram_dp
+     Xbnonesadr85328532p13060cf5_0_0_0/DOA0 undriven or does not drive anything
+     - clipped.
+Signal top_reveal_coretop_instance/top_la0_inst_0/jtag_int_u/bit_cnt_cry_0_S0[0]
+     undriven or does not drive anything - clipped.
+Signal top_reveal_coretop_instance/top_la0_inst_0/jtag_int_u/N_1 undriven or
+     does not drive anything - clipped.
+Signal top_reveal_coretop_instance/top_la0_inst_0/jtag_int_u/bit_cnt_s_0_S1[5]
+     undriven or does not drive anything - clipped.
+Signal top_reveal_coretop_instance/top_la0_inst_0/jtag_int_u/bit_cnt_s_0_COUT[5]
+     undriven or does not drive anything - clipped.
+Signal top_reveal_coretop_instance/top_la0_inst_0/trig_u/VCC undriven or does
+     not drive anything - clipped.
+Signal top_reveal_coretop_instance/top_la0_inst_0/trig_u/GND undriven or does
+     not drive anything - clipped.
+Signal top_reveal_coretop_instance/top_la0_inst_0/trig_u/rd_dout_tcnt[4]
+     undriven or does not drive anything - clipped.
+Signal top_reveal_coretop_instance/top_la0_inst_0/trig_u/te_0/te_precnt_cry_0_S0
+     [0] undriven or does not drive anything - clipped.
+Signal top_reveal_coretop_instance/top_la0_inst_0/trig_u/te_0/N_1 undriven or
+     does not drive anything - clipped.
+Signal top_reveal_coretop_instance/top_la0_inst_0/trig_u/te_0/te_precnt_s_0_S1[1
+     5] undriven or does not drive anything - clipped.
+Signal top_reveal_coretop_instance/top_la0_inst_0/trig_u/te_0/te_precnt_s_0_COUT
+     [15] undriven or does not drive anything - clipped.
+Signal top_reveal_coretop_instance/top_la0_inst_0/trig_u/te_0/genblk1.te_tt_ebr_
+     ram/scuba_vhi undriven or does not drive anything - clipped.
+Signal top_reveal_coretop_instance/top_la0_inst_0/trig_u/te_0/genblk1.te_tt_ebr_
+     ram/pmi_ram_dpXbnonesadr112112p12e1ac7f_0_0_0/DOB17 undriven or does not
+     drive anything - clipped.
+Signal top_reveal_coretop_instance/top_la0_inst_0/trig_u/te_0/genblk1.te_tt_ebr_
+     ram/pmi_ram_dpXbnonesadr112112p12e1ac7f_0_0_0/DOB16 undriven or does not
+     drive anything - clipped.
+Signal top_reveal_coretop_instance/top_la0_inst_0/trig_u/te_0/genblk1.te_tt_ebr_
+     ram/pmi_ram_dpXbnonesadr112112p12e1ac7f_0_0_0/DOB15 undriven or does not
+     drive anything - clipped.
+Signal top_reveal_coretop_instance/top_la0_inst_0/trig_u/te_0/genblk1.te_tt_ebr_
+     ram/pmi_ram_dpXbnonesadr112112p12e1ac7f_0_0_0/DOB14 undriven or does not
+     drive anything - clipped.
+Signal top_reveal_coretop_instance/top_la0_inst_0/trig_u/te_0/genblk1.te_tt_ebr_
+     ram/pmi_ram_dpXbnonesadr112112p12e1ac7f_0_0_0/DOB13 undriven or does not
+     drive anything - clipped.
+
+                                    Page 9
+
+
+
+
+Design:  top                                           Date:  05/03/22  16:21:09
+
+Removed logic (cont)
+--------------------
+Signal top_reveal_coretop_instance/top_la0_inst_0/trig_u/te_0/genblk1.te_tt_ebr_
+     ram/pmi_ram_dpXbnonesadr112112p12e1ac7f_0_0_0/DOB12 undriven or does not
+     drive anything - clipped.
+Signal top_reveal_coretop_instance/top_la0_inst_0/trig_u/te_0/genblk1.te_tt_ebr_
+     ram/pmi_ram_dpXbnonesadr112112p12e1ac7f_0_0_0/DOB11 undriven or does not
+     drive anything - clipped.
+Signal top_reveal_coretop_instance/top_la0_inst_0/trig_u/te_0/genblk1.te_tt_ebr_
+     ram/pmi_ram_dpXbnonesadr112112p12e1ac7f_0_0_0/DOB10 undriven or does not
+     drive anything - clipped.
+Signal top_reveal_coretop_instance/top_la0_inst_0/trig_u/te_0/genblk1.te_tt_ebr_
+     ram/pmi_ram_dpXbnonesadr112112p12e1ac7f_0_0_0/DOB9 undriven or does not
+     drive anything - clipped.
+Signal top_reveal_coretop_instance/top_la0_inst_0/trig_u/te_0/genblk1.te_tt_ebr_
+     ram/pmi_ram_dpXbnonesadr112112p12e1ac7f_0_0_0/DOB8 undriven or does not
+     drive anything - clipped.
+Signal top_reveal_coretop_instance/top_la0_inst_0/trig_u/te_0/genblk1.te_tt_ebr_
+     ram/pmi_ram_dpXbnonesadr112112p12e1ac7f_0_0_0/DOB7 undriven or does not
+     drive anything - clipped.
+Signal top_reveal_coretop_instance/top_la0_inst_0/trig_u/te_0/genblk1.te_tt_ebr_
+     ram/pmi_ram_dpXbnonesadr112112p12e1ac7f_0_0_0/DOB6 undriven or does not
+     drive anything - clipped.
+Signal top_reveal_coretop_instance/top_la0_inst_0/trig_u/te_0/genblk1.te_tt_ebr_
+     ram/pmi_ram_dpXbnonesadr112112p12e1ac7f_0_0_0/DOB5 undriven or does not
+     drive anything - clipped.
+Signal top_reveal_coretop_instance/top_la0_inst_0/trig_u/te_0/genblk1.te_tt_ebr_
+     ram/pmi_ram_dpXbnonesadr112112p12e1ac7f_0_0_0/DOB4 undriven or does not
+     drive anything - clipped.
+Signal top_reveal_coretop_instance/top_la0_inst_0/trig_u/te_0/genblk1.te_tt_ebr_
+     ram/pmi_ram_dpXbnonesadr112112p12e1ac7f_0_0_0/DOB3 undriven or does not
+     drive anything - clipped.
+Signal top_reveal_coretop_instance/top_la0_inst_0/trig_u/te_0/genblk1.te_tt_ebr_
+     ram/pmi_ram_dpXbnonesadr112112p12e1ac7f_0_0_0/DOB2 undriven or does not
+     drive anything - clipped.
+Signal top_reveal_coretop_instance/top_la0_inst_0/trig_u/te_0/genblk1.te_tt_ebr_
+     ram/pmi_ram_dpXbnonesadr112112p12e1ac7f_0_0_0/DOB1 undriven or does not
+     drive anything - clipped.
+Signal top_reveal_coretop_instance/top_la0_inst_0/trig_u/te_0/genblk1.te_tt_ebr_
+     ram/pmi_ram_dpXbnonesadr112112p12e1ac7f_0_0_0/DOA17 undriven or does not
+     drive anything - clipped.
+Signal top_reveal_coretop_instance/top_la0_inst_0/trig_u/te_0/genblk1.te_tt_ebr_
+     ram/pmi_ram_dpXbnonesadr112112p12e1ac7f_0_0_0/DOA16 undriven or does not
+     drive anything - clipped.
+Signal top_reveal_coretop_instance/top_la0_inst_0/trig_u/te_0/genblk1.te_tt_ebr_
+     ram/pmi_ram_dpXbnonesadr112112p12e1ac7f_0_0_0/DOA15 undriven or does not
+     drive anything - clipped.
+Signal top_reveal_coretop_instance/top_la0_inst_0/trig_u/te_0/genblk1.te_tt_ebr_
+     ram/pmi_ram_dpXbnonesadr112112p12e1ac7f_0_0_0/DOA14 undriven or does not
+     drive anything - clipped.
+Signal top_reveal_coretop_instance/top_la0_inst_0/trig_u/te_0/genblk1.te_tt_ebr_
+     ram/pmi_ram_dpXbnonesadr112112p12e1ac7f_0_0_0/DOA13 undriven or does not
+     drive anything - clipped.
+Signal top_reveal_coretop_instance/top_la0_inst_0/trig_u/te_0/genblk1.te_tt_ebr_
+     ram/pmi_ram_dpXbnonesadr112112p12e1ac7f_0_0_0/DOA12 undriven or does not
+     drive anything - clipped.
+Signal top_reveal_coretop_instance/top_la0_inst_0/trig_u/te_0/genblk1.te_tt_ebr_
+     ram/pmi_ram_dpXbnonesadr112112p12e1ac7f_0_0_0/DOA11 undriven or does not
+
+                                   Page 10
+
+
+
+
+Design:  top                                           Date:  05/03/22  16:21:09
+
+Removed logic (cont)
+--------------------
+     drive anything - clipped.
+Signal top_reveal_coretop_instance/top_la0_inst_0/trig_u/te_0/genblk1.te_tt_ebr_
+     ram/pmi_ram_dpXbnonesadr112112p12e1ac7f_0_0_0/DOA10 undriven or does not
+     drive anything - clipped.
+Signal top_reveal_coretop_instance/top_la0_inst_0/trig_u/te_0/genblk1.te_tt_ebr_
+     ram/pmi_ram_dpXbnonesadr112112p12e1ac7f_0_0_0/DOA9 undriven or does not
+     drive anything - clipped.
+Signal top_reveal_coretop_instance/top_la0_inst_0/trig_u/te_0/genblk1.te_tt_ebr_
+     ram/pmi_ram_dpXbnonesadr112112p12e1ac7f_0_0_0/DOA8 undriven or does not
+     drive anything - clipped.
+Signal top_reveal_coretop_instance/top_la0_inst_0/trig_u/te_0/genblk1.te_tt_ebr_
+     ram/pmi_ram_dpXbnonesadr112112p12e1ac7f_0_0_0/DOA7 undriven or does not
+     drive anything - clipped.
+Signal top_reveal_coretop_instance/top_la0_inst_0/trig_u/te_0/genblk1.te_tt_ebr_
+     ram/pmi_ram_dpXbnonesadr112112p12e1ac7f_0_0_0/DOA6 undriven or does not
+     drive anything - clipped.
+Signal top_reveal_coretop_instance/top_la0_inst_0/trig_u/te_0/genblk1.te_tt_ebr_
+     ram/pmi_ram_dpXbnonesadr112112p12e1ac7f_0_0_0/DOA5 undriven or does not
+     drive anything - clipped.
+Signal top_reveal_coretop_instance/top_la0_inst_0/trig_u/te_0/genblk1.te_tt_ebr_
+     ram/pmi_ram_dpXbnonesadr112112p12e1ac7f_0_0_0/DOA4 undriven or does not
+     drive anything - clipped.
+Signal top_reveal_coretop_instance/top_la0_inst_0/trig_u/te_0/genblk1.te_tt_ebr_
+     ram/pmi_ram_dpXbnonesadr112112p12e1ac7f_0_0_0/DOA3 undriven or does not
+     drive anything - clipped.
+Signal top_reveal_coretop_instance/top_la0_inst_0/trig_u/te_0/genblk1.te_tt_ebr_
+     ram/pmi_ram_dpXbnonesadr112112p12e1ac7f_0_0_0/DOA2 undriven or does not
+     drive anything - clipped.
+Signal top_reveal_coretop_instance/top_la0_inst_0/trig_u/te_0/genblk1.te_tt_ebr_
+     ram/pmi_ram_dpXbnonesadr112112p12e1ac7f_0_0_0/DOA1 undriven or does not
+     drive anything - clipped.
+Signal top_reveal_coretop_instance/top_la0_inst_0/trig_u/te_0/genblk1.te_tt_ebr_
+     ram/pmi_ram_dpXbnonesadr112112p12e1ac7f_0_0_0/DOA0 undriven or does not
+     drive anything - clipped.
+Signal top_reveal_coretop_instance/top_la0_inst_0/trig_u/rd_dout_tu[3] undriven
+     or does not drive anything - clipped.
+Signal UART_Inst/un9_rxCounter_cry_7_0_COUT undriven or does not drive anything
+     - clipped.
+Signal UART_Inst/un1_txBitCounter_5_cry_0_0_S1 undriven or does not drive
+     anything - clipped.
+Signal UART_Inst/un1_txBitCounter_5_cry_0_0_S0 undriven or does not drive
+     anything - clipped.
+Signal UART_Inst/N_2 undriven or does not drive anything - clipped.
+Signal UART_Inst/un1_txBitCounter_5_cry_3_0_COUT undriven or does not drive
+     anything - clipped.
+Signal UART_Inst/un6_txCounter_cry_0_0_S1 undriven or does not drive anything -
+     clipped.
+Signal UART_Inst/un6_txCounter_cry_0_0_S0 undriven or does not drive anything -
+     clipped.
+Signal UART_Inst/N_3 undriven or does not drive anything - clipped.
+Signal UART_Inst/un6_txCounter_cry_7_0_COUT undriven or does not drive anything
+     - clipped.
+Signal UART_Inst/un9_rxCounter_cry_0_0_S1 undriven or does not drive anything -
+     clipped.
+Signal UART_Inst/un9_rxCounter_cry_0_0_S0 undriven or does not drive anything -
+     clipped.
+
+                                   Page 11
+
+
+
+
+Design:  top                                           Date:  05/03/22  16:21:09
+
+Removed logic (cont)
+--------------------
+Signal UART_Inst/N_1 undriven or does not drive anything - clipped.
+Block mg5ahub/genblk0_genblk5_jtage_u_RNIO59 was optimized away.
+Block mg5ahub/jtck_inferred_clock_RNINV91 was optimized away.
+Block top_reveal_coretop_instance/top_la0_inst_0/tm_u/jrstn_RNIH98D was
+     optimized away.
+Block top_reveal_coretop_instance/top_la0_inst_0/tm_u/jtck_RNICM68 was optimized
+     away.
+Block top_reveal_coretop_instance/top_la0_inst_0/tm_u/reset_n_RNIGUS4 was
+     optimized away.
+Block top_reveal_coretop_instance/top_la0_inst_0/jtag_int_u/parity_calc.CN was
+     optimized away.
+Block top_reveal_coretop_instance/top_la0_inst_0/jtag_int_u/jrstn_RNIH98D was
+     optimized away.
+Block top_reveal_coretop_instance/top_la0_inst_0/jtag_int_u/reset_n_RNIGUS4 was
+     optimized away.
+Block top_reveal_coretop_instance/top_la0_inst_0/trig_u/tcnt_0/reset_n_RNIGUS4
+     was optimized away.
+Block top_reveal_coretop_instance/top_la0_inst_0/trig_u/te_0/tt_wr_addr_cntr_0_.
+     CN was optimized away.
+Block top_reveal_coretop_instance/top_la0_inst_0/trig_u/te_0/jrstn_RNIH98D was
+     optimized away.
+Block top_reveal_coretop_instance/top_la0_inst_0/trig_u/te_0/reset_n_RNIGUS4 was
+     optimized away.
+Block top_reveal_coretop_instance/top_la0_inst_0/trig_u/tu_0/reset_n_RNIGUS4 was
+     optimized away.
+Block UART_Inst/reset_RNIAFB1 was optimized away.
+Block mg5ahub/genblk0_genblk5_jtage_u_RNO_4 was optimized away.
+Block mg5ahub/genblk0_genblk5_jtage_u_RNO_8 was optimized away.
+Block mg5ahub/genblk0_genblk5_jtage_u_RNO_7 was optimized away.
+Block mg5ahub/genblk0_genblk5_jtage_u_RNO_10 was optimized away.
+Block mg5ahub/genblk0_genblk5_jtage_u_RNO_5 was optimized away.
+Block mg5ahub/genblk0_genblk5_jtage_u_RNO_9 was optimized away.
+Block mg5ahub/genblk0_genblk5_jtage_u_RNO_11 was optimized away.
+Block top_reveal_coretop_instance/top_la0_inst_0/tm_u/genblk4.tr_mem/scuba_vlo_i
+     nst was optimized away.
+Block top_reveal_coretop_instance/top_la0_inst_0/trig_u/te_0/genblk1.te_tt_ebr_r
+     am/scuba_vlo_inst was optimized away.
+
+Memory Usage
+------------
+
+    
+         
+    INFO: Design contains EBR with ASYNC Reset Mode that has a limitation:
+    The use of the EBR block asynchronous reset requires that certain timing
+    be met between the clock and the reset within the memory block. 
+    See the device specific data sheet for additional details.
+
+
+
+
+/top_reveal_coretop_instance/top_la0_inst_0/tm_u/genblk4.tr_mem:
+    EBRs: 1
+    RAM SLICEs: 0
+    Logic SLICEs: 0
+    PFU Registers: 0
+
+                                   Page 12
+
+
+
+
+Design:  top                                           Date:  05/03/22  16:21:09
+
+ (cont)
+-------
+    -Contains EBR pmi_ram_dpXbnonesadr85328532p13060cf5_0_0_0:  TYPE= DP16KB,
+         Width_B= 8,  Depth_A= 32,  Depth_B= 32,  REGMODE_A= OUTREG,  REGMODE_B=
+         OUTREG,  RESETMODE= ASYNC,  WRITEMODE_A= NORMAL,  WRITEMODE_B= NORMAL,
+         GSR= DISABLED,  MEM_LPC_FILE=
+         pmi_ram_dpXbnonesadr85328532p13060cf5__PMIP__32__8__8B
+/top_reveal_coretop_instance/top_la0_inst_0/trig_u/te_0/genblk1.te_tt_ebr_ram:
+    EBRs: 1
+    RAM SLICEs: 0
+    Logic SLICEs: 0
+    PFU Registers: 0
+    -Contains EBR pmi_ram_dpXbnonesadr112112p12e1ac7f_0_0_0:  TYPE= DP16KB,
+         Width_B= 1,  Depth_A= 2,  Depth_B= 2,  REGMODE_A= OUTREG,  REGMODE_B=
+         OUTREG,  RESETMODE= ASYNC,  WRITEMODE_A= NORMAL,  WRITEMODE_B= NORMAL,
+         GSR= DISABLED,  MEM_LPC_FILE=
+         pmi_ram_dpXbnonesadr112112p12e1ac7f__PMIP__2__1__1B
+
+ASIC Components
+---------------
+
+Instance Name: top_reveal_coretop_instance/top_la0_inst_0/trig_u/te_0/genblk1.te
+     _tt_ebr_ram/pmi_ram_dpXbnonesadr112112p12e1ac7f_0_0_0
+         Type: DP16KB
+Instance Name: top_reveal_coretop_instance/top_la0_inst_0/tm_u/genblk4.tr_mem/pm
+     i_ram_dpXbnonesadr85328532p13060cf5_0_0_0
+         Type: DP16KB
+Instance Name: mg5ahub/genblk0_genblk5_jtage_u
+         Type: JTAGE
+
+Run Time and Memory Usage
+-------------------------
+
+   Total CPU Time: 1 secs  
+   Total REAL Time: 2 secs  
+   Peak Memory Usage: 65 MB
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                   Page 13
+
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+     Copyright (c) 1995 AT&T Corp.   All rights reserved.
+     Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+     Copyright (c) 2001 Agere Systems   All rights reserved.
+     Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights
+     reserved.

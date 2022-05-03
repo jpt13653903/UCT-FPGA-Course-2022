@@ -1,0 +1,11 @@
+# period is in nanoseconds
+create_clock -name ipClk -period 20 [get_ports ipClk]
+derive_pll_clocks
+derive_clock_uncertainty
+
+set_false_path -from [get_ports ip*] -to [get_registers *] 	
+set_false_path -from [get_registers *] -to [get_ports op*] 
+
+# for bidirectional ports mark these as false paths
+set_false_path -from [get_registers *] -to [get_ports bp*]
+set_false_path -to [get_registers *] -from [get_ports bp*]

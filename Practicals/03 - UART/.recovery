@@ -3,11 +3,17 @@
     <Options/>
     <Implementation title="impl1" dir="impl1" description="impl1" synthesis="synplify" default_strategy="Strategy1">
         <Options VerilogStandard="System Verilog" def_top="top" top="top"/>
+        <Source name="Structures.v" type="Verilog" type_short="Verilog">
+            <Options VerilogStandard="System Verilog"/>
+        </Source>
         <Source name="UART.v" type="Verilog" type_short="Verilog">
             <Options/>
         </Source>
         <Source name="top.v" type="Verilog" type_short="Verilog">
             <Options top_module="top"/>
+        </Source>
+        <Source name="Registers.v" type="Verilog" type_short="Verilog">
+            <Options/>
         </Source>
         <Source name="impl1/impl1.xcf" type="Programming Project File" type_short="Programming">
             <Options/>

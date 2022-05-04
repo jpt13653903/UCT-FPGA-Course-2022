@@ -110,7 +110,6 @@ module UART #(parameter WIDTH =8, parameter CLOCK_DIV = 434) (
 			if (rxCounter == 0) begin
 					opRxValid <= 0;
 					localRxData <= {ipRx, localRxData[9:1]};
-				
 			end else begin
 				if (localRxData[0] == 0 && localRxData[9] == 1) begin
 					opRxValid <= 1;

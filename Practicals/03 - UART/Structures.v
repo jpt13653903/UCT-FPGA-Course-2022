@@ -17,5 +17,5 @@ package Structures;
 		logic EoP;
 		logic [7:0] Data;
 		logic Valid;
-	} UART_Packet;
+	} UART_PACKET;
 endPackage

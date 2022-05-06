@@ -18,17 +18,29 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>
 ==============================================================================*/
 
-module Counter(
-  input       ipClk,
-  output [7:0]opLED
-);
+`timescale 1ns/1ns // unit/precision
+module Counter_TB;
 //------------------------------------------------------------------------------
 
-reg [30:0]Count = 0;
+reg ipClk = 0;
+always #10 ipClk <= ~ipClk;
+//------------------------------------------------------------------------------
 
-always @(posedge ipClk) Count++;
+reg ipReset = 1;
+initial begin
+  @(posedge ipClk);
+  @(posedge ipClk);
+  @(posedge ipClk);
+  ipReset <= 0;
+end
+//------------------------------------------------------------------------------
 
-assign opLED = Count[30:23];
+wire [7:0]opLED;
+
+Counter DUT(
+  .ipClk(ipClk),
+  .opLED(opLED)
+);
 //------------------------------------------------------------------------------
 
 endmodule

@@ -1,5 +1,8 @@
+rvl_alias "ipClk" "ipClk";
+
 BLOCK RESETPATHS ;
 BLOCK ASYNCPATHS ;
+BLOCK JTAGPATHS ;
 
 LOCATE COMP "ipClk" SITE "21" ;
 LOCATE COMP "ipnReset" SITE "19" ;

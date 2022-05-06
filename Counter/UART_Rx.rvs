@@ -1,0 +1,27 @@
+<Project ModBy="Analyzer" Name="C:/GitHub/UCT FPGA Course 2022 Memo/Counter/UART_Rx.rvs" Date="2022-05-06">
+ <Core Name="Counter_LA0">
+  <Setting>
+   <Capture SamplesPerTrig="32" NumTrigsCap="1"/>
+   <Event EventCnt="0" CntEnableRun="0"/>
+   <TrigSetting PreTrgSamples="" AND_ALL="0" PostTrgSamples="" TURadix="0"/>
+  </Setting>
+  <Dataset Name="Base">
+   <Trace>
+    <Bus Name="UART_RxData" Radix="0">
+     <Sig Name="UART_RxData:0"/>
+     <Sig Name="UART_RxData:1"/>
+     <Sig Name="UART_RxData:2"/>
+     <Sig Name="UART_RxData:3"/>
+     <Sig Name="UART_RxData:4"/>
+     <Sig Name="UART_RxData:5"/>
+     <Sig Name="UART_RxData:6"/>
+     <Sig Name="UART_RxData:7"/>
+    </Bus>
+   </Trace>
+   <Trigger>
+    <TU Operator="6" Name="TU1" ID="1" Value="1" Radix="0"/>
+    <TE Enable="1" Expression="TU1" Name="TE1" ID="1"/>
+   </Trigger>
+  </Dataset>
+ </Core>
+</Project>

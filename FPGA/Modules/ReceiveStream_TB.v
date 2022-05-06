@@ -18,38 +18,74 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>
 ==============================================================================*/
 
-package Structures;
+`timescale 1ns/1ns // unit/precision
 //------------------------------------------------------------------------------
 
-typedef struct{
-  logic [31:0]ClockTicks;
-  logic [ 3:0]Buttons;
-  logic [13:0]FIFO_Space;
-} RD_REGISTERS;
-
-typedef struct{
-  logic [7:0]LEDs;
-} WR_REGISTERS;
+import Structures::*;
 //------------------------------------------------------------------------------
 
-typedef struct{
-  logic [7:0]Source;
-  logic [7:0]Destination;
-  logic [7:0]Length; // 0 => 256
-
-  logic      SoP;
-  logic      EoP;
-  logic [7:0]Data;
-  logic      Valid;
-} UART_PACKET;
+module ReceiveStream_TB;
 //------------------------------------------------------------------------------
 
-typedef struct{
-  logic [15:0]Data;
-  logic       Valid;
-} DATA_STREAM;
+reg ipClk = 0;
+always #10 ipClk <= ~ipClk;
 //------------------------------------------------------------------------------
 
-endpackage
+reg ipReset = 1;
+initial begin
+  @(posedge ipClk);
+  @(posedge ipClk);
+  @(posedge ipClk);
+  ipReset <= 0;
+end
+//------------------------------------------------------------------------------
+
+UART_PACKET ipRxStream;
+
+integer n;
+
+initial begin
+  ipRxStream.Source = 8'hAA;
+  ipRxStream.Valid  = 0;
+
+  @(negedge ipReset);
+  @(posedge ipClk);
+  @(posedge ipClk);
+  @(posedge ipClk);
+
+  forever begin
+    ipRxStream.Destination = 8'h10;
+    ipRxStream.Length      = 8'h00; // 256-length packet
+
+    for(n = 0; n < 256; n++) begin
+      @(posedge ipClk);
+      ipRxStream.SoP   = (n ==   0);
+      ipRxStream.EoP   = (n == 255);
+      ipRxStream.Data  = n;
+      ipRxStream.Valid = 1;
+
+      @(posedge ipClk);
+      ipRxStream.Valid = 0;
+      #15;
+    end
+  end
+end
+//------------------------------------------------------------------------------
+
+wire  [13:0]opFIFO_Space;
+DATA_STREAM opData;
+
+ReceiveStream DUT(
+  .ipClk       (ipClk  ),
+  .ipReset     (ipReset),
+
+  .opFIFO_Space(opFIFO_Space),
+  .ipRxStream  (ipRxStream  ),
+
+  .opData      (opData)
+);
+//------------------------------------------------------------------------------
+
+endmodule
 //------------------------------------------------------------------------------
 

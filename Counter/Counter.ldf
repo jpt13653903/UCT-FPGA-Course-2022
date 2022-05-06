@@ -2,7 +2,10 @@
 <BaliProject version="3.2" title="Counter" device="LFXP2-5E-6TN144I" default_implementation="impl1">
     <Options/>
     <Implementation title="impl1" dir="impl1" description="impl1" synthesis="synplify" default_strategy="Strategy1">
-        <Options VerilogStandard="System Verilog" def_top="Counter"/>
+        <Options VerilogStandard="System Verilog" def_top="Counter" top="Counter"/>
+        <Source name="Modules/UART.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
         <Source name="Counter.v" type="Verilog" type_short="Verilog">
             <Options top_module="Counter"/>
         </Source>

@@ -20,7 +20,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>
 
 /*------------------------------------------------------------------------------
 
-Implements a 115 200 Bd UART.  ipClk is assumed to be 50 MHz
+Implements a 3 MBd UART.  ipClk is assumed to be 50 MHz
 
 To send data:
 
@@ -55,15 +55,15 @@ reg Reset;
 always @(posedge ipClk) Reset <= ipReset;
 //------------------------------------------------------------------------------
 
-reg [8:0]TxBdCount = 0;
+reg [4:0]TxBdCount = 0;
 reg [7:0]TxData;
 reg [2:0]TxCount;
 
 enum {Idle, Sending, Done} TxState;
 
 always @(posedge ipClk) begin
-  if(TxBdCount == 433) TxBdCount <= 0;
-  else                 TxBdCount <= TxBdCount + 1;
+  if(TxBdCount == 16) TxBdCount <= 0;
+  else                TxBdCount <= TxBdCount + 1;
 
   if(Reset) begin
     opTxBusy <= 0;
@@ -113,14 +113,14 @@ end
 //------------------------------------------------------------------------------
 
 reg [1:0]Rx;
-reg [8:0]RxBdCount;
+reg [4:0]RxBdCount;
 reg [9:0]RxData;
 
 always @(posedge ipClk) begin
   Rx <= {Rx[0], ipRx};
 
-  if     (Rx[0] != Rx[1]) RxBdCount <= 100; // Supports half stop bits
-  else if(RxBdCount == 0) RxBdCount <= 433;
+  if     (Rx[0] != Rx[1]) RxBdCount <=  4; // Supports half stop bits
+  else if(RxBdCount == 0) RxBdCount <= 16;
   else                    RxBdCount <= RxBdCount - 1;
   //----------------------------------------------------------------------------
 

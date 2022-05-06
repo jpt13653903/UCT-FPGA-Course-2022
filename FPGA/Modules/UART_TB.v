@@ -62,17 +62,17 @@ initial begin
     @(posedge ipClk);
     ipTxSend = 0;
 
-    #4340;
+    #167;
     assert(opTx == 0) else
       $error("Expecting start bit");
 
     for(TxBit = 0; TxBit < 8; TxBit++) begin
-      #8681;
+      #333;
       assert(opTx == ipTxData[TxBit]) else
         $error("Incorrect data bit");
     end
 
-    #8681;
+    #333;
     assert(opTx == 1) else
       $error("Expecting stop bit");
   end
@@ -93,15 +93,15 @@ initial begin
   @(posedge ipClk);
 
   forever begin
-    #($urandom_range(5000, 50000));
+    #($urandom_range(300, 50000));
 
     RxData = $urandom_range(0, 255);
 
     ipRx = 0;
-    #8681;
+    #333;
     for(RxBit = 0; RxBit < 8; RxBit++) begin
       ipRx = RxData[RxBit];
-      #8681;
+      #333;
     end
     ipRx = 1;
 

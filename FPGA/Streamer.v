@@ -57,6 +57,45 @@ UART_Packets UART_Packets_Inst(
 );
 //------------------------------------------------------------------------------
 
+UART_PACKET Registers_TxStream;
+wire        Registers_TxReady;
+
+UART_PACKET Data_TxStream;
+wire        Data_TxReady;
+
+StreamMerge #(32) StreamMerge_Inst(
+  .ipClk    ( ipClk),
+  .ipReset  ( Reset),
+
+  .ipA_SoP  ( Registers_TxStream.SoP),
+  .ipA_EoP  ( Registers_TxStream.EoP),
+  .ipA_Data ({Registers_TxStream.Source,
+              Registers_TxStream.Destination,
+              Registers_TxStream.Length,
+              Registers_TxStream.Data}),
+  .ipA_Valid( Registers_TxStream.Valid),
+  .opA_Ready( Registers_TxReady),
+
+  .ipB_SoP  ( Data_TxStream.SoP),
+  .ipB_EoP  ( Data_TxStream.EoP),
+  .ipB_Data ({Data_TxStream.Source,
+              Data_TxStream.Destination,
+              Data_TxStream.Length,
+              Data_TxStream.Data}),
+  .ipB_Valid( Data_TxStream.Valid),
+  .opB_Ready( Data_TxReady),
+
+  .opSoP    ( UART_TxStream.SoP),
+  .opEoP    ( UART_TxStream.EoP),
+  .opData   ({UART_TxStream.Source,
+              UART_TxStream.Destination,
+              UART_TxStream.Length,
+              UART_TxStream.Data}),
+  .opValid  ( UART_TxStream.Valid),
+  .ipReady  ( UART_TxReady)
+);
+//------------------------------------------------------------------------------
+
 wire [ 7:0]Registers_Address;
 wire [31:0]Registers_WrData;
 wire       Registers_WrEnable;
@@ -66,8 +105,8 @@ RegistersControl RegistersControl_Inst(
   .ipClk     (ipClk),
   .ipReset   (Reset),
 
-  .opTxStream(UART_TxStream),
-  .ipTxReady (UART_TxReady ),
+  .opTxStream(Registers_TxStream),
+  .ipTxReady (Registers_TxReady ),
 
   .ipRxStream(UART_RxStream),
 
@@ -109,6 +148,9 @@ ReceiveStream ReceiveStream_Inst(
 
   .opFIFO_Space(RdRegisters.FIFO_Space),
   .ipRxStream  (UART_RxStream),
+
+  .opTxStream  (Data_TxStream),
+  .ipTxReady   (Data_TxReady ),
 
   .opData      (DataStream)
 );

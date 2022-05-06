@@ -15,6 +15,9 @@
         <Source name="Modules/UART_Packets.v" type="Verilog" type_short="Verilog">
             <Options/>
         </Source>
+        <Source name="Modules/StreamMerge.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
         <Source name="Modules/Registers.v" type="Verilog" type_short="Verilog">
             <Options/>
         </Source>

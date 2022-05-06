@@ -34,6 +34,9 @@ module ReceiveStream(
   output reg   [12:0]opFIFO_Space, // In bytes
   input  UART_PACKET ipRxStream,
 
+  output UART_PACKET opTxStream,
+  input              ipTxReady,
+
   output DATA_STREAM opData
 );
 //------------------------------------------------------------------------------
@@ -71,6 +74,10 @@ always @(posedge ipClk) begin
   Reset        <= ipReset;
   opFIFO_Space <= {12'hFFF - FIFO_Length, 1'b0};
 end
+//------------------------------------------------------------------------------
+
+// TODO: Use this for better flow control
+assign opTxStream.Valid = 0;
 //------------------------------------------------------------------------------
 
 reg [7:0]RxCount;

@@ -1,4 +1,4 @@
-// Typical run-time = 20 us
+// Typical run-time = 10 us
 //------------------------------------------------------------------------------
 
 module StreamMerge_TB;

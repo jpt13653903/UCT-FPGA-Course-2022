@@ -18,62 +18,50 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>
 ==============================================================================*/
 
+/*------------------------------------------------------------------------------
+
+Defines the registers, and implements a memory-mapped register interface.
+------------------------------------------------------------------------------*/
+
+import Structures::*;
+//------------------------------------------------------------------------------
+
 module Registers(
-  input       ipClk,
-  input       ipnReset,
+  input               ipClk,
+  input               ipReset,
 
-  input       ipUART_Rx,
-  output      opUART_Tx,
+  input  RD_REGISTERS ipRdRegisters,
+  output WR_REGISTERS opWrRegisters,
 
-  output [7:0]opLED
+  input         [ 7:0]ipAddress,
+  input         [31:0]ipWrData,
+  input               ipWrEnable,
+  output reg    [31:0]opRdData
 );
 //------------------------------------------------------------------------------
 
-wire      Reset = ~ipnReset;
-reg [30:0]Count = 0;
+reg Reset;
 
 always @(posedge ipClk) begin
-  if(Reset) Count <= 0;
-  else      Count <= Count + 1;
-end
+  case(ipAddress)
+    8'h00  : opRdData <= ipRdRegisters.ClockTicks;
+    8'h01  : opRdData <= ipRdRegisters.Buttons;
+    8'h02  : opRdData <= opWrRegisters.LEDs;
+    default: opRdData <= 32'hX;
+  endcase
+  //----------------------------------------------------------------------------
 
-assign opLED = ~Count[30:23];
-//------------------------------------------------------------------------------
+  Reset <= ipReset;
 
-reg  [7:0]UART_TxData;
-reg       UART_TxSend;
-wire      UART_TxBusy;
+  if(Reset) begin
+    opWrRegisters.LEDs <= 0;
+  //----------------------------------------------------------------------------
 
-wire [7:0]UART_RxData;
-wire      UART_RxValid;
-
-UART UART_Inst(
-  .ipClk    (ipClk),
-  .ipReset  (Reset),
-
-  .ipTxData (  UART_TxData),
-  .ipTxSend (  UART_TxSend),
-  .opTxBusy (  UART_TxBusy),
-  .opTx     (opUART_Tx    ),
-
-  .ipRx     (ipUART_Rx     ),
-  .opRxData (  UART_RxData ),
-  .opRxValid(  UART_RxValid)
-);
-
-always @(posedge ipClk) begin
-  if(~UART_TxSend && ~UART_TxBusy) begin
-    case(UART_RxData) inside
-      8'h0D    : UART_TxData <= 8'h0A; // Change enter to linefeed
-      "0"      : UART_TxData <= 8'h0D; // Change 0 to carriage return
-      ["A":"Z"]: UART_TxData <= UART_RxData ^ 8'h20;
-      ["a":"z"]: UART_TxData <= UART_RxData ^ 8'h20;
-      default  : UART_TxData <= UART_RxData;
+  end else if(ipWrEnable) begin
+    case(ipAddress)
+      8'h02: opWrRegisters.LEDs <= ipWrData;
+      default:;
     endcase
-    UART_TxSend <= UART_RxValid;
-
-  end else if(UART_TxSend && UART_TxBusy) begin
-    UART_TxSend <= 0;
   end
 end
 //------------------------------------------------------------------------------

@@ -24,7 +24,7 @@ package Structures;
 typedef struct{
   logic [31:0]ClockTicks;
   logic [ 3:0]Buttons;
-  logic [13:0]FIFO_Space;
+  logic [12:0]FIFO_Space;
 } RD_REGISTERS;
 
 typedef struct{

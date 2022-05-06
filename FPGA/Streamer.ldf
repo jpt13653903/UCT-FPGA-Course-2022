@@ -3,6 +3,9 @@
     <Options/>
     <Implementation title="impl1" dir="impl1" description="impl1" synthesis="synplify" default_strategy="Strategy1">
         <Options VerilogStandard="System Verilog" def_top="Streamer" top="Streamer"/>
+        <Source name="IP/FIFO/FIFO.ipx" type="IPX_Module" type_short="IPX">
+            <Options/>
+        </Source>
         <Source name="Packages/Structures.v" type="Verilog" type_short="Verilog">
             <Options/>
         </Source>
@@ -16,6 +19,12 @@
             <Options/>
         </Source>
         <Source name="Modules/RegistersControl.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="Modules/ReceiveStream.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="Modules/PWM.v" type="Verilog" type_short="Verilog">
             <Options/>
         </Source>
         <Source name="Streamer.v" type="Verilog" type_short="Verilog">

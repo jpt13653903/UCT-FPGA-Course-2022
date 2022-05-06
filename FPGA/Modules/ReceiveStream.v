@@ -31,18 +31,18 @@ module ReceiveStream(
   input              ipClk,
   input              ipReset,
 
-  output reg   [13:0]opFIFO_Space, // In bytes
+  output reg   [12:0]opFIFO_Space, // In bytes
   input  UART_PACKET ipRxStream,
 
   output DATA_STREAM opData
 );
 //------------------------------------------------------------------------------
 
-reg  [12:0]WrAddress;
+reg  [11:0]WrAddress;
 reg  [15:0]WrData;
 reg        WrEnable;
 
-reg  [12:0]RdAddress;
+reg  [11:0]RdAddress;
 wire [15:0]RdData;
 
 FIFO FIFO_Inst(
@@ -65,11 +65,11 @@ FIFO FIFO_Inst(
 //------------------------------------------------------------------------------
 
 reg        Reset;
-wire [12:0]FIFO_Length = WrAddress - RdAddress;
+wire [11:0]FIFO_Length = WrAddress - RdAddress;
 
 always @(posedge ipClk) begin
   Reset        <= ipReset;
-  opFIFO_Space <= {13'h1FFF - FIFO_Length, 1'b0};
+  opFIFO_Space <= {12'hFFF - FIFO_Length, 1'b0};
 end
 //------------------------------------------------------------------------------
 

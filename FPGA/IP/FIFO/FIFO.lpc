@@ -16,8 +16,8 @@ CoreRevision=7.5
 ModuleName=FIFO
 SourceFormat=Verilog HDL
 ParameterFileVersion=1.0
-Date=04/10/2022
-Time=20:54:00
+Date=05/06/2022
+Time=16:03:07
 
 [Parameters]
 Verilog=1
@@ -27,8 +27,8 @@ Destination=Synplicity
 Expression=BusA(0 to 7)
 Order=Big Endian [MSB:LSB]
 IO=0
-AAddress=8192
-BAddress=8192
+AAddress=4096
+BAddress=4096
 AData=16
 BData=16
 enByte=0
@@ -60,4 +60,4 @@ Pipeline=0
 =mem
 
 [Command]
-cmd_line= -w -n FIFO -lang verilog -synth synplify -bus_exp 7 -bb -arch mg5a00 -type ramdp -device LFXP2-5E -aaddr_width 13 -widtha 16 -baddr_width 13 -widthb 16 -anum_words 8192 -bnum_words 8192 -writemodeA NORMAL -writemodeB NORMAL -resetmode SYNC -cascade -1
+cmd_line= -w -n FIFO -lang verilog -synth synplify -bus_exp 7 -bb -arch mg5a00 -type ramdp -device LFXP2-5E -aaddr_width 12 -widtha 16 -baddr_width 12 -widthb 16 -anum_words 4096 -bnum_words 4096 -writemodeA NORMAL -writemodeB NORMAL -resetmode SYNC -cascade -1

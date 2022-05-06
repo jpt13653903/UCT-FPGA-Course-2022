@@ -28,6 +28,9 @@ module Streamer(
   input       ipUART_Rx,
   output      opUART_Tx,
 
+  output      opPWM,
+  output      opPWM_2,
+
   input  [3:0]ipButtons,
   output [7:0]opLED
 );
@@ -96,6 +99,27 @@ always @(posedge ipClk) begin
   if(Reset) RdRegisters.ClockTicks <= 0;
   else      RdRegisters.ClockTicks <= RdRegisters.ClockTicks + 1;
 end
+//------------------------------------------------------------------------------
+
+DATA_STREAM DataStream;
+
+ReceiveStream ReceiveStream_Inst(
+  .ipClk       (ipClk),
+  .ipReset     (Reset),
+
+  .opFIFO_Space(RdRegisters.FIFO_Space),
+  .ipRxStream  (UART_RxStream),
+
+  .opData      (DataStream)
+);
+//------------------------------------------------------------------------------
+
+PWM PWM_Inst(
+  .ipClk      (ipClk),
+  .ipDutyCycle({~DataStream.Data[15], DataStream.Data[14:8]}),
+  .opOutput   (opPWM)
+);
+assign opPWM_2 = opPWM;
 //------------------------------------------------------------------------------
 
 assign RdRegisters.Buttons = ~ipButtons;

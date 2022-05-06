@@ -3,8 +3,8 @@
 module tb;
     reg [15:0] DataInA = 16'b0;
     reg [15:0] DataInB = 16'b0;
-    reg [12:0] AddressA = 13'b0;
-    reg [12:0] AddressB = 13'b0;
+    reg [11:0] AddressA = 12'b0;
+    reg [11:0] AddressB = 12'b0;
     reg ClockA = 0;
     reg ClockB = 0;
     reg ClockEnA = 0;
@@ -32,7 +32,7 @@ module tb;
        DataInA <= 0;
       #100;
       @(ResetA == 1'b0);
-      for (i1 = 0; i1 < 8195; i1 = i1 + 1) begin
+      for (i1 = 0; i1 < 4099; i1 = i1 + 1) begin
         @(posedge ClockA);
         #1  DataInA <= DataInA + 1'b1;
       end
@@ -43,7 +43,7 @@ module tb;
       #100;
       @(ResetB == 1'b0);
       @(WrB == 1'b1);
-      for (i2 = 0; i2 < 8195; i2 = i2 + 1) begin
+      for (i2 = 0; i2 < 4099; i2 = i2 + 1) begin
         @(posedge ClockB);
         #1  DataInB <= DataInB + 1'b1;
       end
@@ -53,7 +53,7 @@ module tb;
        AddressA <= 0;
       #100;
       @(ResetA == 1'b0);
-      for (i3 = 0; i3 < 16390; i3 = i3 + 1) begin
+      for (i3 = 0; i3 < 8198; i3 = i3 + 1) begin
         @(posedge ClockA);
         #1  AddressA <= AddressA + 1'b1;
       end
@@ -64,7 +64,7 @@ module tb;
       #100;
       @(ResetB == 1'b0);
       @(WrB == 1'b1);
-      for (i4 = 0; i4 < 16390; i4 = i4 + 1) begin
+      for (i4 = 0; i4 < 8198; i4 = i4 + 1) begin
         @(posedge ClockB);
         #1  AddressB <= AddressB + 1'b1;
       end
@@ -93,7 +93,7 @@ module tb;
     begin
        WrA <= 1'b0;
       @(ResetA == 1'b0);
-      for (i9 = 0; i9 < 8195; i9 = i9 + 1) begin
+      for (i9 = 0; i9 < 4099; i9 = i9 + 1) begin
         @(posedge ClockA);
         #1  WrA <= 1'b1;
       end
@@ -105,10 +105,10 @@ module tb;
       @(ResetB == 1'b0);
       @(WrA == 1'b1);
       @(WrA == 1'b0);
-      for (i10 = 0; i10 < 8195; i10 = i10 + 1) begin
+      for (i10 = 0; i10 < 4099; i10 = i10 + 1) begin
         @(posedge ClockA);
       end
-      for (i10 = 0; i10 < 8195; i10 = i10 + 1) begin
+      for (i10 = 0; i10 < 4099; i10 = i10 + 1) begin
         @(posedge ClockB);
         #1  WrB <= 1'b1;
       end

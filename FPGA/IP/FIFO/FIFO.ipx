@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<DiamondModule name="FIFO" module="RAM_DP_TRUE" VendorName="Lattice Semiconductor Corporation" generator="IPexpress" date="2022 04 10 20:54:05.254" version="7.5" type="Module" synthesis="synplify" source_format="Verilog">
+<DiamondModule name="FIFO" module="FIFO" VendorName="Lattice Semiconductor Corporation" generator="IPexpress" date="2022 05 06 16:03:10.883" version="7.5" type="Module" synthesis="synplify" source_format="Verilog HDL">
   <Package>
-		<File name="" type="" modified="2022 04 10 20:54:05.254"/>
-		<File name="FIFO.lpc" type="lpc" modified="2022 04 10 20:54:00.363"/>
-		<File name="FIFO.v" type="top_level_verilog" modified="2022 04 10 20:54:00.471"/>
-		<File name="FIFO_tmpl.v" type="template_verilog" modified="2022 04 10 20:54:00.472"/>
-		<File name="tb_FIFO_tmpl.v" type="testbench_verilog" modified="2022 04 10 20:54:00.491"/>
+		<File name="" type="" modified="2022 05 06 16:03:10.658"/>
+		<File name="FIFO.lpc" type="lpc" modified="2022 05 06 16:03:07.149"/>
+		<File name="FIFO.v" type="top_level_verilog" modified="2022 05 06 16:03:07.253"/>
+		<File name="FIFO_tmpl.v" type="template_verilog" modified="2022 05 06 16:03:07.253"/>
+		<File name="tb_FIFO_tmpl.v" type="testbench_verilog" modified="2022 05 06 16:03:07.263"/>
   </Package>
 </DiamondModule>

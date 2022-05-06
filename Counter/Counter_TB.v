@@ -38,8 +38,9 @@ end
 wire [7:0]opLED;
 
 Counter DUT(
-  .ipClk(ipClk),
-  .opLED(opLED)
+  .ipClk   ( ipClk  ),
+  .ipnReset(~ipReset),
+  .opLED   ( opLED  )
 );
 //------------------------------------------------------------------------------
 

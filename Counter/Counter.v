@@ -20,15 +20,20 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>
 
 module Counter(
   input       ipClk,
+  input       ipnReset,
   output [7:0]opLED
 );
 //------------------------------------------------------------------------------
 
+wire      Reset = ~ipnReset;
 reg [30:0]Count = 0;
 
-always @(posedge ipClk) Count++;
+always @(posedge ipClk) begin
+  if(Reset) Count <= 0;
+  else      Count <= Count + 1;
+end
 
-assign opLED = Count[30:23];
+assign opLED = ~Count[30:23];
 //------------------------------------------------------------------------------
 
 endmodule

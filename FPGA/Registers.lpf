@@ -1,5 +1,3 @@
-rvl_alias "ipClk" "ipClk";
-
 BLOCK RESETPATHS ;
 BLOCK ASYNCPATHS ;
 BLOCK JTAGPATHS ;

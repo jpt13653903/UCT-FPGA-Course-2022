@@ -23,6 +23,7 @@ import Structures::*;
 
 module Mixer(
   input ipClk,
+  input ipReset,
 
   input  DATA_STREAM    ipInput,
   input  COMPLEX_STREAM ipNCO,
@@ -30,14 +31,53 @@ module Mixer(
 );
 //------------------------------------------------------------------------------
 
-wire [33:0]I = ipInput.Data * ipNCO.I;
-wire [33:0]Q = ipInput.Data * ipNCO.Q;
+reg              Reset;
+reg signed [33:0]Prod;
+
+DATA_STREAM    Input;
+COMPLEX_STREAM NCO;
+
+enum { Idle, Mul_Q, Done } State;
 
 always @(posedge ipClk) begin
-  // ipNCO.Valid is always high
-  opOutput.I     <= I[32:15];
-  opOutput.Q     <= Q[32:15];
-  opOutput.Valid <= ipInput.Valid;
+  Reset <= ipReset;
+
+  if(Reset) begin
+    opOutput.I     <=  'hX;
+    opOutput.Q     <=  'hX;
+    opOutput.Valid <= 1'b0;
+
+    State <= Idle;
+  end else begin
+    case(State)
+      Idle: begin
+        opOutput.Valid <= 0;
+
+        Input <= ipInput;
+        NCO   <= ipNCO;
+        Prod  <= ipInput.Data * ipNCO.I;
+
+        if(ipInput.Valid) State <= Mul_Q;
+      end
+      //------------------------------------------------------------------------
+
+      Mul_Q: begin
+        opOutput.I <= Prod[32:15];
+        Prod       <= Input.Data * NCO.Q;
+        State      <= Done;
+      end
+      //------------------------------------------------------------------------
+
+      Done: begin
+        opOutput.Q     <= Prod[32:15];
+        opOutput.Valid <= 1;
+        State          <= Idle;
+      end
+      //------------------------------------------------------------------------
+
+      default:;
+    endcase
+  end
 end
 //------------------------------------------------------------------------------
 

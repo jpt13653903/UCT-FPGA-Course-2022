@@ -31,35 +31,56 @@ reg ipClk = 0;
 always #10 ipClk <= ~ipClk;
 //------------------------------------------------------------------------------
 
+reg ipReset = 1;
+initial begin
+  @(posedge ipClk);
+  @(posedge ipClk);
+  @(posedge ipClk);
+  ipReset <= 0;
+end
+//------------------------------------------------------------------------------
+
 DATA_STREAM    ipInput;
 COMPLEX_STREAM ipNCO;
 
 real a, b, y;
 
 always begin
-  ipInput.Data  <= $urandom_range(0, 2**16 - 1);
-  ipInput.Valid <= 1;
+  ipInput.Valid <= 0;
 
-  ipNCO.I     <= $urandom_range(0, 2**18 - 1);
-  ipNCO.Q     <= $urandom_range(0, 2**18 - 1);
-  ipNCO.Valid <= 1;
-
+  @(negedge ipReset);
   @(posedge ipClk);
-  #1;
 
-  a = real'(ipInput.Data) / 2**15;
-  b = real'(ipNCO  .I   ) / 2**17;
-  y = a * b;
-  assert(opOutput.I == $floor(y * 2**17)) else
-    $error("Error on Output I: expecting %g, got %g", y, real'(opOutput.I) / 2**17);
+  forever begin
+    @(posedge ipClk);
 
-  a = real'(ipInput.Data) / 2**15;
-  b = real'(ipNCO  .Q   ) / 2**17;
-  y = a * b;
-  assert(opOutput.Q == $floor(y * 2**17)) else
-    $error("Error on Output Q: expecting %g, got %g", y, real'(opOutput.Q) / 2**17);
+    ipInput.Data  <= $urandom_range(0, 2**16 - 1);
+    ipInput.Valid <= 1;
 
-  #1;
+    ipNCO.I     <= $urandom_range(0, 2**18 - 1);
+    ipNCO.Q     <= $urandom_range(0, 2**18 - 1);
+    ipNCO.Valid <= 1;
+
+    @(posedge ipClk);
+    ipInput.Valid <= 0;
+
+    @(posedge opOutput.Valid);
+    #1;
+
+    a = real'(ipInput.Data) / 2**15;
+    b = real'(ipNCO  .I   ) / 2**17;
+    y = a * b;
+    assert(opOutput.I == $floor(y * 2**17)) else
+      $error("Error on Output I: expecting %g, got %g", y, real'(opOutput.I) / 2**17);
+
+    a = real'(ipInput.Data) / 2**15;
+    b = real'(ipNCO  .Q   ) / 2**17;
+    y = a * b;
+    assert(opOutput.Q == $floor(y * 2**17)) else
+      $error("Error on Output Q: expecting %g, got %g", y, real'(opOutput.Q) / 2**17);
+
+    #1;
+  end
 end
 //------------------------------------------------------------------------------
 
@@ -67,6 +88,7 @@ COMPLEX_STREAM opOutput;
 
 Mixer DUT(
   .ipClk   (ipClk   ),
+  .ipReset (ipReset ),
 
   .ipInput (ipInput ),
   .ipNCO   (ipNCO   ),

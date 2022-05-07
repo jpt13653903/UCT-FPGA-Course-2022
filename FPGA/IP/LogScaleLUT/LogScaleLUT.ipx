@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DiamondModule name="LogScaleLUT" module="LogScaleLUT" VendorName="Lattice Semiconductor Corporation" generator="IPexpress" date="2022 05 07 17:40:51.162" version="5.4" type="Module" synthesis="synplify" source_format="Verilog HDL">
+  <Package>
+		<File name="" type="" modified="2022 05 07 17:40:51.000"/>
+		<File name="LogScaleLUT.lpc" type="lpc" modified="2022 05 07 17:40:49.493"/>
+		<File name="LogScaleLUT.v" type="top_level_verilog" modified="2022 05 07 17:40:49.583"/>
+		<File name="LogScaleLUT_tmpl.v" type="template_verilog" modified="2022 05 07 17:40:49.584"/>
+		<File name="c:/github/uct fpga course 2022 memo/fpga/ip/logscalelut/logscalelut.mem" type="mem" modified="2022 05 03 10:43:38.824"/>
+		<File name="tb_LogScaleLUT_tmpl.v" type="testbench_verilog" modified="2022 05 07 17:40:49.593"/>
+  </Package>
+</DiamondModule>

@@ -38,14 +38,35 @@ FrequencySelect = 0x05
 
 def AudioGenerator(AudioFile):
     with audioread.audio_open(AudioFile) as Audio:
-        print(Audio.channels, Audio.samplerate, Audio.duration)
+        print(f'Audio: {Audio.channels} ch, {Audio.samplerate} Sps, {Audio.duration} sec')
         sys.stdout.flush()
-        N = 0
         for Buffer in Audio:
-            Buffer = [127 for n in Buffer] # Near full-scale (used for testing)
             yield Buffer
+#-------------------------------------------------------------------------------
 
-Buffer = AudioGenerator(AudioFile)
+def FullScaleGenerator():
+    print('Full scale output')
+    sys.stdout.flush()
+    N = 1024
+    Buffer = [2**15-1 for n in range(N)]
+    Buffer = struct.pack('<1024h', *Buffer)
+    while(True):
+        yield Buffer
+#-------------------------------------------------------------------------------
+
+def SquareGenerator():
+    print('Square output')
+    sys.stdout.flush()
+    N = 1024
+    Buffer = [2**14 if (n % 16 < 8) else -2**14 for n in range(N)]
+    Buffer = struct.pack('<1024h', *Buffer)
+    while(True):
+        yield Buffer
+#-------------------------------------------------------------------------------
+
+# Buffer = AudioGenerator(AudioFile)
+# Buffer = FullScaleGenerator()
+Buffer = SquareGenerator()
 #-------------------------------------------------------------------------------
 
 def Write(UART, Address, Data):
@@ -115,8 +136,8 @@ def GetPacket(UART):
 #-------------------------------------------------------------------------------
 
 with serial.Serial(port='COM8', baudrate=3000000) as UART:
-    Write(UART, NCO, round(1000 * (2**32/50e6)))
-    Write(UART, FrequencySelect, 3)
+    Write(UART, NCO, round(2756 * (2**32/50e6)))
+    Write(UART, FrequencySelect, 2)
 
     while(GetPacket(UART)): pass
     Write(UART, LEDs, 0)

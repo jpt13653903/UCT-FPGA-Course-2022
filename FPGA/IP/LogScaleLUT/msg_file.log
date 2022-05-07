@@ -1,0 +1,32 @@
+SCUBA, Version Diamond (64-bit) 3.12.1.454
+Sat May 07 17:40:49 2022
+  
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
+  
+BEGIN SCUBA Module Synthesis
+  
+    Issued command   : C:\lscc\diamond\3.12\ispfpga\bin\nt64\scuba.exe -w -n LogScaleLUT -lang verilog -synth synplify -bus_exp 7 -bb -arch mg5a00 -type romblk -device LFXP2-5E -addr_width 11 -data_width 8 -num_words 2048 -resetmode SYNC -memfile c:/github/uct fpga course 2022 memo/fpga/ip/logscalelut/logscalelut.mem -memformat hex -cascade -1 
+    Circuit name     : LogScaleLUT
+    Module type      : EBR_ROM
+    Module Version   : 5.4
+    Ports            : 
+    Inputs       : Address[10:0], OutClock, OutClockEn, Reset
+    Outputs      : Q[7:0]
+    I/O buffer       : not inserted
+    Memory file      : c:/github/uct fpga course 2022 memo/fpga/ip/logscalelut/logscalelut.mem
+    EDIF output      : LogScaleLUT.edn
+    Verilog output   : LogScaleLUT.v
+    Verilog template : LogScaleLUT_tmpl.v
+    Verilog testbench: tb_LogScaleLUT_tmpl.v
+    Verilog purpose  : for synthesis and simulation
+    Bus notation     : big endian
+    Report output    : LogScaleLUT.srp
+    Estimated Resource Usage:
+            EBR : 1
+  
+END   SCUBA Module Synthesis
+

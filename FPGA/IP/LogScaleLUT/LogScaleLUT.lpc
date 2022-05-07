@@ -1,0 +1,51 @@
+[Device]
+Family=latticexp2
+PartType=LFXP2-5E
+PartName=LFXP2-5E-6TN144I
+SpeedGrade=6
+Package=TQFP144
+OperatingCondition=IND
+Status=S
+
+[IP]
+VendorName=Lattice Semiconductor Corporation
+CoreType=LPM
+CoreStatus=Demo
+CoreName=ROM
+CoreRevision=5.4
+ModuleName=LogScaleLUT
+SourceFormat=Verilog HDL
+ParameterFileVersion=1.0
+Date=05/07/2022
+Time=17:40:49
+
+[Parameters]
+Verilog=1
+VHDL=0
+EDIF=1
+Destination=Synplicity
+Expression=BusA(0 to 7)
+Order=Big Endian [MSB:LSB]
+IO=0
+Address=2048
+Data=8
+adPipeline=0
+inPipeline=0
+outPipeline=0
+MOR=0
+InData=Registered
+AdControl=Registered
+MemFile=c:/github/uct fpga course 2022 memo/fpga/ip/logscalelut/logscalelut.mem
+MemFormat=hex
+Reset=Sync
+Pad=0
+GSR=Enabled
+EnECC=0
+Optimization=Speed
+Pipeline=0
+
+[FilesGenerated]
+c:/github/uct fpga course 2022 memo/fpga/ip/logscalelut/logscalelut.mem=mem
+
+[Command]
+cmd_line= -w -n LogScaleLUT -lang verilog -synth synplify -bus_exp 7 -bb -arch mg5a00 -type romblk -device LFXP2-5E -addr_width 11 -data_width 8 -num_words 2048 -resetmode SYNC -memfile {c:/github/uct fpga course 2022 memo/fpga/ip/logscalelut/logscalelut.mem} -memformat hex -cascade -1

@@ -156,9 +156,45 @@ ReceiveStream ReceiveStream_Inst(
 );
 //------------------------------------------------------------------------------
 
+COMPLEX_STREAM NCO_Output;
+
+NCO NCO_Inst(
+  .ipClk      ( ipClk),
+  .ipReset    (~ipnReset),
+
+  .ipFrequency(WrRegisters.NCO),
+  .opOutput   (NCO_Output)
+);
+//------------------------------------------------------------------------------
+
+COMPLEX_STREAM Mixer_Output;
+
+Mixer Mixer_Inst(
+  .ipClk   (ipClk),
+
+  .ipInput (DataStream),  
+  .ipNCO   (NCO_Output),
+  .opOutput(Mixer_Output)
+);
+//------------------------------------------------------------------------------
+
+COMPLEX_STREAM IIR_Filter_Output;
+
+IIR_Filter IIR_Filter_Inst(
+  .ipClk  ( ipClk   ),
+  .ipReset(~ipnReset),
+
+  .ipFrequencySelect(WrRegisters.FrequencySelect),
+
+  .ipInput (Mixer_Output     ),
+  .opOutput(IIR_Filter_Output)
+);
+//------------------------------------------------------------------------------
+
 PWM PWM_Inst(
   .ipClk      (ipClk),
-  .ipDutyCycle({~DataStream.Data[15], DataStream.Data[14:8]}),
+  // .ipDutyCycle({~DataStream.Data[15], DataStream.Data[14:8]}),
+  .ipDutyCycle({~IIR_Filter_Output.I[17], IIR_Filter_Output.I[16:10]}),
   .opOutput   (opPWM)
 );
 assign opPWM_2 = opPWM;

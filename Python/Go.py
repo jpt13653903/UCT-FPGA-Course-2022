@@ -28,10 +28,12 @@ import sys
 AudioFile = 'MyMusicFile.wav'
 #-------------------------------------------------------------------------------
 
-ClockTicks = 0x00
-Buttons    = 0x01
-LEDs       = 0x02
-FIFO_Space = 0x03
+ClockTicks      = 0x00
+Buttons         = 0x01
+LEDs            = 0x02
+FIFO_Space      = 0x03
+NCO             = 0x04
+FrequencySelect = 0x05
 #-------------------------------------------------------------------------------
 
 def AudioGenerator(AudioFile):
@@ -40,6 +42,7 @@ def AudioGenerator(AudioFile):
         sys.stdout.flush()
         N = 0
         for Buffer in Audio:
+            Buffer = [127 for n in Buffer] # Near full-scale (used for testing)
             yield Buffer
 
 Buffer = AudioGenerator(AudioFile)
@@ -112,6 +115,9 @@ def GetPacket(UART):
 #-------------------------------------------------------------------------------
 
 with serial.Serial(port='COM8', baudrate=3000000) as UART:
+    Write(UART, NCO, round(1000 * (2**32/50e6)))
+    Write(UART, FrequencySelect, 3)
+
     while(GetPacket(UART)): pass
     Write(UART, LEDs, 0)
 #-------------------------------------------------------------------------------

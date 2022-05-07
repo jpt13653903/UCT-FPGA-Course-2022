@@ -2,7 +2,7 @@
 <BaliProject version="3.2" title="Streamer" device="LFXP2-5E-6TN144I" default_implementation="impl1">
     <Options/>
     <Implementation title="impl1" dir="impl1" description="impl1" synthesis="synplify" default_strategy="Strategy1">
-        <Options VerilogStandard="System Verilog" def_top="Streamer" top="Streamer"/>
+        <Options VerilogStandard="System Verilog" def_top="IIR_Filter" top="Streamer"/>
         <Source name="IP/FIFO/FIFO.ipx" type="IPX_Module" type_short="IPX">
             <Options/>
         </Source>
@@ -34,6 +34,9 @@
             <Options/>
         </Source>
         <Source name="Modules/Mixer.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="Modules/IIR_Filter.v" type="Verilog" type_short="Verilog">
             <Options/>
         </Source>
         <Source name="Modules/PWM.v" type="Verilog" type_short="Verilog">

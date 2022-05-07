@@ -30,6 +30,7 @@ typedef struct{
 typedef struct{
   logic [ 7:0]LEDs;
   logic [31:0]NCO;
+  logic [ 2:0]FrequencySelect; // 1 -> 4 => 10, 100, 1k and 10k; 0 => bypass
 } WR_REGISTERS;
 //------------------------------------------------------------------------------
 

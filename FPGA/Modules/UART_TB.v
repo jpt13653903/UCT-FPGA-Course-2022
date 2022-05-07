@@ -116,12 +116,12 @@ end
 UART DUT(
   .ipClk    (ipClk    ),
   .ipReset  (ipReset  ),
-                      
+
   .ipTxData (ipTxData ),
   .ipTxSend (ipTxSend ),
   .opTxBusy (opTxBusy ),
   .opTx     (opTx     ),
-                      
+
   .ipRx     (ipRx     ),
   .opRxData (opRxData ),
   .opRxValid(opRxValid)

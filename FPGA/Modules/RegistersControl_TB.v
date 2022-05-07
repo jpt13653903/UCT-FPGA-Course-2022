@@ -109,12 +109,12 @@ always @(posedge ipClk) ipRdData <= {16'h1234, opAddress, 8'hAB};
 RegistersControl DUT(
   .ipClk     (ipClk     ),
   .ipReset   (ipReset   ),
-                        
+
   .opTxStream(opTxStream),
   .ipTxReady (ipTxReady ),
-                        
+
   .ipRxStream(ipRxStream),
-                        
+
   .opAddress (opAddress ),
   .opWrData  (opWrData  ),
   .opWrEnable(opWrEnable),

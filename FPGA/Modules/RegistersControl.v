@@ -20,11 +20,11 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>
 
 /*------------------------------------------------------------------------------
 
-Controls the attached memory (typically control registers) based on the 
-incoming stream.  The stream expects read instructions on destination port 
+Controls the attached memory (typically control registers) based on the
+incoming stream.  The stream expects read instructions on destination port
 0x00 and write instructions on port 0x01.
 
-Write instructions are fire-and-forget, whereas read instructions respond with 
+Write instructions are fire-and-forget, whereas read instructions respond with
 the data read.  The payloads are symmetrical: one byte address followed
 by 4 bytes data, little endian.
 ------------------------------------------------------------------------------*/
@@ -82,7 +82,7 @@ always @(posedge ipClk) begin
     case(State)
       Idle: begin
         opAddress  <= ipRxStream.Data;
-        opWrEnable <= 0; 
+        opWrEnable <= 0;
 
         opTxStream.Source      <= ipRxStream.Destination;
         opTxStream.Destination <= ipRxStream.Source;
@@ -146,7 +146,7 @@ always @(posedge ipClk) begin
         if(ipRxStream.Valid) begin
           opWrData <= {ipRxStream.Data, opWrData[31:8]};
           if(Count == 3) begin
-            opWrEnable <= 1; 
+            opWrEnable <= 1;
             State      <= Idle;
           end
           Count <= Count + 1;

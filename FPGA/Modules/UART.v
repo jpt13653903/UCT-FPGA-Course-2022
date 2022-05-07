@@ -98,14 +98,14 @@ always @(posedge ipClk) begin
 
       Done: begin
         opTx <= 1;
-        
+
         if(~ipTxSend) begin
           opTxBusy <= 0;
           TxState  <= Idle;
         end
       end
       //------------------------------------------------------------------------
-      
+
       default:;
     endcase
   end

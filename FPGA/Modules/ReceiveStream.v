@@ -20,7 +20,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>
 
 /*------------------------------------------------------------------------------
 
-Receives a 16-bit data stream on port 0x10 of the incoming stream.  The 
+Receives a 16-bit data stream on port 0x10 of the incoming stream.  The
 resulting data is played out at 44 100 kSps.
 ------------------------------------------------------------------------------*/
 

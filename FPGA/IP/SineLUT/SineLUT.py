@@ -58,7 +58,7 @@ with open('SineLUT.mem', 'w', newline='\n') as File:
         Emulator.write('always @(posedge ClockA) begin\n')
         Emulator.write('  if(ClockEnA) begin\n')
         Emulator.write('    case(AddressA)\n')
-        
+
         for n in range(0, N):
             x = sin(2.0 * pi * (n/N))
             x = round((2**17-1)*x)
@@ -74,7 +74,7 @@ with open('SineLUT.mem', 'w', newline='\n') as File:
         Emulator.write('always @(posedge ClockB) begin\n')
         Emulator.write('  if(ClockEnB) begin\n')
         Emulator.write('    case(AddressB)\n')
-        
+
         for n in range(0, N):
             x = sin(2.0 * pi * (n/N))
             x = round((2**17-1)*x)

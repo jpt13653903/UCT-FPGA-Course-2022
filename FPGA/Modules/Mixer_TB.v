@@ -18,48 +18,60 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>
 ==============================================================================*/
 
+`timescale 1ns/1ns // unit/precision
+//------------------------------------------------------------------------------
+
 import Structures::*;
 //------------------------------------------------------------------------------
 
-module NCO(
-  input ipClk,
-  input ipReset,
-
-  input [31:0]ipFrequency,
-
-  output COMPLEX_STREAM opOutput
-);
+module Mixer_TB;
 //------------------------------------------------------------------------------
 
-reg       Reset;
-reg [31:0]Phase;
+reg ipClk = 0;
+always #10 ipClk <= ~ipClk;
+//------------------------------------------------------------------------------
 
-always @(posedge ipClk) begin
-  Reset <= ipReset;
+DATA_STREAM    ipInput;
+COMPLEX_STREAM ipNCO;
 
-  if(Reset) Phase <= 0;
-  else      Phase <= Phase + ipFrequency;
+real a, b, y;
+
+always begin
+  ipInput.Data  <= $urandom_range(0, 2**16 - 1);
+  ipInput.Valid <= 1;
+
+  ipNCO.I     <= $urandom_range(0, 2**18 - 1);
+  ipNCO.Q     <= $urandom_range(0, 2**18 - 1);
+  ipNCO.Valid <= 1;
+
+  @(posedge ipClk);
+  #1;
+
+  a = real'(ipInput.Data) / 2**15;
+  b = real'(ipNCO  .I   ) / 2**17;
+  y = a * b;
+  assert(opOutput.I == $floor(y * 2**17)) else
+    $error("Error on Output I: expecting %g, got %g", y, real'(opOutput.I) / 2**17);
+
+  a = real'(ipInput.Data) / 2**15;
+  b = real'(ipNCO  .Q   ) / 2**17;
+  y = a * b;
+  assert(opOutput.Q == $floor(y * 2**17)) else
+    $error("Error on Output Q: expecting %g, got %g", y, real'(opOutput.Q) / 2**17);
+
+  #1;
 end
 //------------------------------------------------------------------------------
 
-SineLUT LUT(
-  .ClockA  (ipClk),
-  .ResetA  (ipReset),
-  .ClockEnA(1'b1),
-  .AddressA(Phase[31:22]),
-  .DataInA (18'h0),
-  .WrA     ( 1'b0),
-  .QA      (opOutput.Q),
+COMPLEX_STREAM opOutput;
 
-  .ClockB  (ipClk),
-  .ResetB  (ipReset),
-  .ClockEnB(1'b1),
-  .AddressB(Phase[31:22] + 10'h100),
-  .DataInB (18'h0),
-  .WrB     ( 1'b0),
-  .QB      (opOutput.I)
+Mixer DUT(
+  .ipClk   (ipClk   ),
+
+  .ipInput (ipInput ),
+  .ipNCO   (ipNCO   ),
+  .opOutput(opOutput)
 );
-assign opOutput.Valid = 1'b1;
 //------------------------------------------------------------------------------
 
 endmodule

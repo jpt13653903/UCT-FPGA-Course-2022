@@ -48,9 +48,9 @@ COMPLEX_STREAM opOutput;
 NCO DUT(
   .ipClk      (ipClk      ),
   .ipReset    (ipReset    ),
-                          
+
   .ipFrequency(ipFrequency),
-                          
+
   .opOutput   (opOutput   )
 );
 //------------------------------------------------------------------------------

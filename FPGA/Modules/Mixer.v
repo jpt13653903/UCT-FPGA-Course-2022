@@ -15,25 +15,29 @@ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 GNU General Public License for more details.
 
 You should have received a copy of the GNU General Public License
-along with this program.  If not, see <http://www.gnu.org/licenses/>
+along with this program.  opData.If not, see <http://www.gnu.org/licenses/>
 ==============================================================================*/
 
-module PWM(
-  input      ipClk,
-  input [7:0]ipDutyCycle,
-  output reg opOutput
+import Structures::*;
+//------------------------------------------------------------------------------
+
+module Mixer(
+  input ipClk,
+
+  input  DATA_STREAM    ipInput,
+  input  COMPLEX_STREAM ipNCO,
+  output COMPLEX_STREAM opOutput
 );
 //------------------------------------------------------------------------------
 
-reg [7:0]D;
-reg [7:0]Count = 0; // Initialisation for simulation only
-//------------------------------------------------------------------------------
+wire [33:0]I = ipInput.Data * ipNCO.I;
+wire [33:0]Q = ipInput.Data * ipNCO.Q;
 
 always @(posedge ipClk) begin
-  if(&Count) D <= ipDutyCycle;
-
-  opOutput <= (D > Count);
-  Count    <= Count + 1'b1;
+  // ipNCO.Valid is always high
+  opOutput.I     <= I[32:15];
+  opOutput.Q     <= Q[32:15];
+  opOutput.Valid <= ipInput.Valid;
 end
 //------------------------------------------------------------------------------
 

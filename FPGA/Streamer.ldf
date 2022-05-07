@@ -6,6 +6,9 @@
         <Source name="IP/FIFO/FIFO.ipx" type="IPX_Module" type_short="IPX">
             <Options/>
         </Source>
+        <Source name="IP/SineLUT/SineLUT.ipx" type="IPX_Module" type_short="IPX">
+            <Options/>
+        </Source>
         <Source name="Packages/Structures.v" type="Verilog" type_short="Verilog">
             <Options/>
         </Source>
@@ -25,6 +28,12 @@
             <Options/>
         </Source>
         <Source name="Modules/ReceiveStream.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="Modules/NCO.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="Modules/Mixer.v" type="Verilog" type_short="Verilog">
             <Options/>
         </Source>
         <Source name="Modules/PWM.v" type="Verilog" type_short="Verilog">

@@ -48,6 +48,7 @@ always @(posedge ipClk) begin
     8'h01  : opRdData <= ipRdRegisters.Buttons;
     8'h02  : opRdData <= opWrRegisters.LEDs;
     8'h03  : opRdData <= ipRdRegisters.FIFO_Space;
+    8'h04  : opRdData <= opWrRegisters.NCO;
     default: opRdData <= 32'hX;
   endcase
   //----------------------------------------------------------------------------
@@ -56,11 +57,13 @@ always @(posedge ipClk) begin
 
   if(Reset) begin
     opWrRegisters.LEDs <= 0;
+    opWrRegisters.NCO  <= 0;
   //----------------------------------------------------------------------------
 
   end else if(ipWrEnable) begin
     case(ipAddress)
       8'h02: opWrRegisters.LEDs <= ipWrData;
+      8'h04: opWrRegisters.NCO  <= ipWrData;
       default:;
     endcase
   end

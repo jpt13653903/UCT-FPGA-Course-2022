@@ -68,7 +68,7 @@ initial begin
 
         @(posedge ipClk);
         ipRxStream.Valid = 0;
-        #3300;
+        #2500; // Slightly fast so that the first ack is not missed
       end
     end
   end

@@ -28,7 +28,8 @@ typedef struct{
 } RD_REGISTERS;
 
 typedef struct{
-  logic [7:0]LEDs;
+  logic [ 7:0]LEDs;
+  logic [31:0]NCO;
 } WR_REGISTERS;
 //------------------------------------------------------------------------------
 
@@ -45,9 +46,16 @@ typedef struct{
 //------------------------------------------------------------------------------
 
 typedef struct{
-  logic [15:0]Data;
-  logic       Valid;
+  logic signed [15:0]Data;
+  logic              Valid;
 } DATA_STREAM;
+//------------------------------------------------------------------------------
+
+typedef struct{
+  logic signed [17:0]I;
+  logic signed [17:0]Q;
+  logic              Valid;
+} COMPLEX_STREAM;
 //------------------------------------------------------------------------------
 
 endpackage

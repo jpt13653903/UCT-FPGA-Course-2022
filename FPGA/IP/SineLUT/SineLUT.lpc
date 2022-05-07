@@ -1,0 +1,63 @@
+[Device]
+Family=latticexp2
+PartType=LFXP2-5E
+PartName=LFXP2-5E-6TN144I
+SpeedGrade=6
+Package=TQFP144
+OperatingCondition=IND
+Status=S
+
+[IP]
+VendorName=Lattice Semiconductor Corporation
+CoreType=LPM
+CoreStatus=Demo
+CoreName=RAM_DP_TRUE
+CoreRevision=7.5
+ModuleName=SineLUT
+SourceFormat=Verilog HDL
+ParameterFileVersion=1.0
+Date=05/07/2022
+Time=14:14:19
+
+[Parameters]
+Verilog=1
+VHDL=0
+EDIF=1
+Destination=Synplicity
+Expression=BusA(0 to 7)
+Order=Big Endian [MSB:LSB]
+IO=0
+AAddress=1024
+BAddress=1024
+AData=18
+BData=18
+enByte=0
+ByteSize=9
+AadPipeline=0
+BadPipeline=0
+AinPipeline=0
+BinPipeline=0
+AoutPipeline=0
+BoutPipeline=0
+AMOR=0
+BMOR=0
+AInData=Registered
+BInData=Registered
+AAdControl=Registered
+BAdControl=Registered
+MemFile=c:/github/uct fpga course 2022 memo/fpga/ip/sinelut/sinelut.mem
+MemFormat=hex
+Reset=Sync
+GSR=Enabled
+WriteA=Normal
+WriteB=Normal
+Pad=0
+EnECC=0
+Optimization=Speed
+Pipeline=0
+
+[FilesGenerated]
+c:/github/uct fpga course 2022 memo/fpga/ip/sinelut/sinelut.mem=mem
+
+[Command]
+cmd_line= -w -n SineLUT -lang verilog -synth synplify -bus_exp 7 -bb -arch mg5a00 -type ramdp -device LFXP2-5E -aaddr_width 10 -widtha 18 -baddr_width 10 -widthb 18 -anum_words 1024 -bnum_words 1024 -writemodeA NORMAL -writemodeB NORMAL -resetmode SYNC -memfile {c:/github/uct fpga course 2022 memo/fpga/ip/sinelut/sinelut.mem} -memformat hex -cascade -1

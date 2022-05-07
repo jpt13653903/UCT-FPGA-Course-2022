@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DiamondModule name="SineLUT" module="SineLUT" VendorName="Lattice Semiconductor Corporation" generator="IPexpress" date="2022 05 07 14:14:21.507" version="7.5" type="Module" synthesis="synplify" source_format="Verilog HDL">
+  <Package>
+		<File name="" type="" modified="2022 05 07 14:14:21.281"/>
+		<File name="SineLUT.lpc" type="lpc" modified="2022 05 07 14:14:19.571"/>
+		<File name="SineLUT.v" type="top_level_verilog" modified="2022 05 07 14:14:19.682"/>
+		<File name="SineLUT_tmpl.v" type="template_verilog" modified="2022 05 07 14:14:19.683"/>
+		<File name="c:/github/uct fpga course 2022 memo/fpga/ip/sinelut/sinelut.mem" type="mem" modified="2022 04 24 17:23:54.000"/>
+		<File name="tb_SineLUT_tmpl.v" type="testbench_verilog" modified="2022 05 07 14:14:19.686"/>
+  </Package>
+</DiamondModule>

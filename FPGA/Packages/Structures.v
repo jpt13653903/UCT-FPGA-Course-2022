@@ -25,12 +25,22 @@ typedef struct{
   logic [31:0]ClockTicks;
   logic [ 3:0]Buttons;
   logic [12:0]FIFO_Space;
+
+  logic [31:0]NCO;
 } RD_REGISTERS;
 
 typedef struct{
   logic [ 7:0]LEDs;
-  logic [31:0]NCO;
-  logic [ 2:0]FrequencySelect; // 1 -> 4 => 10, 100, 1k and 10k; 0 => bypass
+
+  logic [31:0]NCO_Start;
+  logic [31:0]NCO_Stop;
+  logic [31:0]NCO_Step;
+
+  logic [31:0]IIR_A;
+  logic [31:0]IIR_B;
+  logic [31:0]IIR_C;
+
+  logic [ 4:0]WindowSize;
 } WR_REGISTERS;
 //------------------------------------------------------------------------------
 

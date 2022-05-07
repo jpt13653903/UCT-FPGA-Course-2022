@@ -18,6 +18,8 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>
 ============================================================================="""
 
+from math import *
+
 import audioread
 import serial
 import struct
@@ -28,12 +30,21 @@ import sys
 AudioFile = 'MyMusicFile.wav'
 #-------------------------------------------------------------------------------
 
-ClockTicks      = 0x00
-Buttons         = 0x01
-LEDs            = 0x02
-FIFO_Space      = 0x03
-NCO             = 0x04
-FrequencySelect = 0x05
+ClockTicks = 0x00
+Buttons    = 0x01
+LEDs       = 0x02
+FIFO_Space = 0x03
+
+NCO        = 0x10
+NCO_Start  = 0x11
+NCO_Stop   = 0x12
+NCO_Step   = 0x13
+
+IIR_A      = 0x20
+IIR_B      = 0x21
+IIR_C      = 0x22
+
+WindowSize = 0x30
 #-------------------------------------------------------------------------------
 
 def AudioGenerator(AudioFile):
@@ -135,9 +146,51 @@ def GetPacket(UART):
             return True
 #-------------------------------------------------------------------------------
 
+def SetFreqSweep(UART, Start, Stop, Time):
+    f1 = round(Start * (2**32/50e6))
+    f2 = round(Stop  * (2**32/50e6))
+    df = round((f2 - f1) / (44100*Time))
+    if(df <= 0): df = 1
+
+    print(f'SetFreqSweep({Start}, {Stop}, {Time}): {f1}; {f2}; {df}')
+
+    Write(UART, NCO_Start, f1)
+    Write(UART, NCO_Stop , f2)
+    Write(UART, NCO_Step , df)
+#-------------------------------------------------------------------------------
+
+def SetIIR(UART, f0):
+    fs = 44100
+    N  = 30
+    z  = 1/sqrt(2)
+
+    if(f0 >= fs):
+        A = 0x40000000
+        B = 0
+        C = 0
+
+    else:
+        w0 = 2 * pi * f0
+
+        a =   fs**2 + 2*z*w0*fs + w0**2
+        b = 2*fs**2 + 2*z*w0*fs
+        c =   fs**2
+
+        A = round((2**N / a) * w0**2)
+        B = round((2**N / a) * b)
+        C = round((2**N / a) * c)
+
+    print(f'SetIIR({f0}): {A}; {B}; {C}')
+    
+    Write(UART, IIR_A, A)
+    Write(UART, IIR_B, B)
+    Write(UART, IIR_C, C)
+#-------------------------------------------------------------------------------
+
 with serial.Serial(port='COM8', baudrate=3000000) as UART:
-    Write(UART, NCO, round(2756 * (2**32/50e6)))
-    Write(UART, FrequencySelect, 2)
+    SetIIR      (UART, 100)
+    SetFreqSweep(UART, 0, 44100, 10)
+    Write(UART, WindowSize, 4)
 
     while(GetPacket(UART)): pass
     Write(UART, LEDs, 0)

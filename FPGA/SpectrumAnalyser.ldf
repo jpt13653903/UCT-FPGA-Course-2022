@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<BaliProject version="3.2" title="Streamer" device="LFXP2-5E-6TN144I" default_implementation="impl1">
+<BaliProject version="3.2" title="SpectrumAnalyser" device="LFXP2-5E-6TN144I" default_implementation="impl1">
     <Options/>
     <Implementation title="impl1" dir="impl1" description="impl1" synthesis="synplify" default_strategy="Strategy1">
-        <Options VerilogStandard="System Verilog" def_top="LogScale" top="Streamer"/>
+        <Options VerilogStandard="System Verilog" def_top="SpectrumAnalyser" top="SpectrumAnalyser"/>
         <Source name="IP/FIFO/FIFO.ipx" type="IPX_Module" type_short="IPX">
             <Options/>
         </Source>
@@ -33,6 +33,9 @@
         <Source name="Modules/ReceiveStream.v" type="Verilog" type_short="Verilog">
             <Options/>
         </Source>
+        <Source name="Modules/TimingGenerator.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
         <Source name="Modules/NCO.v" type="Verilog" type_short="Verilog">
             <Options/>
         </Source>
@@ -45,21 +48,24 @@
         <Source name="Modules/LogScale.v" type="Verilog" type_short="Verilog">
             <Options/>
         </Source>
+        <Source name="Modules/EnergyCounter.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
         <Source name="Modules/PWM.v" type="Verilog" type_short="Verilog">
             <Options/>
         </Source>
-        <Source name="Streamer.v" type="Verilog" type_short="Verilog">
-            <Options top_module="Streamer"/>
+        <Source name="SpectrumAnalyser.v" type="Verilog" type_short="Verilog">
+            <Options top_module="SpectrumAnalyser"/>
         </Source>
         <Source name="impl1/impl1.xcf" type="Programming Project File" type_short="Programming">
             <Options/>
         </Source>
-        <Source name="Streamer.fdc" type="Synplify Design Constraints File" type_short="SDC">
+        <Source name="SpectrumAnalyser.fdc" type="Synplify Design Constraints File" type_short="SDC">
             <Options/>
         </Source>
-        <Source name="Streamer.lpf" type="Logic Preference" type_short="LPF">
+        <Source name="SpectrumAnalyser.lpf" type="Logic Preference" type_short="LPF">
             <Options/>
         </Source>
     </Implementation>
-    <Strategy name="Strategy1" file="Streamer1.sty"/>
+    <Strategy name="Strategy1" file="SpectrumAnalyser1.sty"/>
 </BaliProject>

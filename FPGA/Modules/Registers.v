@@ -48,8 +48,18 @@ always @(posedge ipClk) begin
     8'h01  : opRdData <= ipRdRegisters.Buttons;
     8'h02  : opRdData <= opWrRegisters.LEDs;
     8'h03  : opRdData <= ipRdRegisters.FIFO_Space;
-    8'h04  : opRdData <= opWrRegisters.NCO;
-    8'h05  : opRdData <= opWrRegisters.FrequencySelect;
+
+    8'h10  : opRdData <= ipRdRegisters.NCO;
+    8'h11  : opRdData <= opWrRegisters.NCO_Start;
+    8'h12  : opRdData <= opWrRegisters.NCO_Stop;
+    8'h13  : opRdData <= opWrRegisters.NCO_Step;
+
+    8'h20  : opRdData <= opWrRegisters.IIR_A;
+    8'h21  : opRdData <= opWrRegisters.IIR_B;
+    8'h22  : opRdData <= opWrRegisters.IIR_C;
+
+    8'h30  : opRdData <= opWrRegisters.WindowSize;
+
     default: opRdData <= 32'hX;
   endcase
   //----------------------------------------------------------------------------
@@ -57,16 +67,33 @@ always @(posedge ipClk) begin
   Reset <= ipReset;
 
   if(Reset) begin
-    opWrRegisters.LEDs            <= 0;
-    opWrRegisters.NCO             <= 0;
-    opWrRegisters.FrequencySelect <= 0;
+    opWrRegisters.LEDs       <= 0;
+
+    opWrRegisters.NCO_Start  <= 0;
+    opWrRegisters.NCO_Stop   <= 0;
+    opWrRegisters.NCO_Step   <= 0;
+
+    opWrRegisters.IIR_A      <= 32'h4000_0000; // Bypass
+    opWrRegisters.IIR_B      <= 0;
+    opWrRegisters.IIR_C      <= 0;
+
+    opWrRegisters.WindowSize <= 0;
   //----------------------------------------------------------------------------
 
   end else if(ipWrEnable) begin
     case(ipAddress)
-      8'h02: opWrRegisters.LEDs            <= ipWrData;
-      8'h04: opWrRegisters.NCO             <= ipWrData;
-      8'h05: opWrRegisters.FrequencySelect <= ipWrData;
+      8'h02  : opWrRegisters.LEDs       <= ipWrData;
+
+      8'h11  : opWrRegisters.NCO_Start  <= ipWrData;
+      8'h12  : opWrRegisters.NCO_Stop   <= ipWrData;
+      8'h13  : opWrRegisters.NCO_Step   <= ipWrData;
+
+      8'h20  : opWrRegisters.IIR_A      <= ipWrData;
+      8'h21  : opWrRegisters.IIR_B      <= ipWrData;
+      8'h22  : opWrRegisters.IIR_C      <= ipWrData;
+
+      8'h30  : opWrRegisters.WindowSize <= ipWrData;
+
       default:;
     endcase
   end

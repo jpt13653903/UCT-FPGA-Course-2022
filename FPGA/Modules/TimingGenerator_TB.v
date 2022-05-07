@@ -49,9 +49,9 @@ end
 //------------------------------------------------------------------------------
 
 WR_REGISTERS ipWrRegisters;
-assign ipWrRegisters.NCO_Frequency_Start = $floor( 1000.0 * (2.0**32/50e6));
-assign ipWrRegisters.NCO_Frequency_Stop  = $floor(10000.0 * (2.0**32/50e6));
-assign ipWrRegisters.NCO_Frequency_Step  = 10;
+assign ipWrRegisters.NCO_Start = $floor( 1000.0 * (2.0**32/50e6));
+assign ipWrRegisters.NCO_Stop  = $floor(10000.0 * (2.0**32/50e6));
+assign ipWrRegisters.NCO_Step  = 10;
 //------------------------------------------------------------------------------
 
 wire [31:0]opNCO_Frequency;

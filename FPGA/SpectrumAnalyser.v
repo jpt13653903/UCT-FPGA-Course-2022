@@ -21,7 +21,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>
 import Structures::*;
 //------------------------------------------------------------------------------
 
-module Streamer(
+module SpectrumAnalyser(
   input       ipClk,
   input       ipnReset,
 
@@ -30,6 +30,7 @@ module Streamer(
 
   output      opPWM,
   output      opPWM_2,
+  output      opTrigger,
 
   input  [3:0]ipButtons,
   output [7:0]opLED
@@ -156,13 +157,25 @@ ReceiveStream ReceiveStream_Inst(
 );
 //------------------------------------------------------------------------------
 
+TimingGenerator TimingGenerator_Inst(
+  .ipClk          (ipClk),
+  .ipClkEnable    (DataStream.Valid),
+  .ipReset        (Reset),
+
+  .ipWrRegisters  (WrRegisters),
+
+  .opNCO_Frequency(RdRegisters.NCO),
+  .opTrigger      (opTrigger)
+);
+//------------------------------------------------------------------------------
+
 COMPLEX_STREAM NCO_Output;
 
 NCO NCO_Inst(
-  .ipClk      ( ipClk),
-  .ipReset    (~ipnReset),
+  .ipClk      (ipClk),
+  .ipReset    (Reset),
 
-  .ipFrequency(WrRegisters.NCO),
+  .ipFrequency(RdRegisters.NCO),
   .opOutput   (NCO_Output)
 );
 //------------------------------------------------------------------------------
@@ -172,7 +185,7 @@ COMPLEX_STREAM Mixer_Output;
 Mixer Mixer_Inst(
   .ipClk   (ipClk),
 
-  .ipInput (DataStream),  
+  .ipInput (DataStream),
   .ipNCO   (NCO_Output),
   .opOutput(Mixer_Output)
 );
@@ -181,19 +194,34 @@ Mixer Mixer_Inst(
 COMPLEX_STREAM IIR_Filter_Output;
 
 IIR_Filter IIR_Filter_Inst(
-  .ipClk  ( ipClk   ),
-  .ipReset(~ipnReset),
+  .ipClk  (ipClk),
+  .ipReset(Reset),
 
-  .ipFrequencySelect(WrRegisters.FrequencySelect),
+  .ipA(WrRegisters.IIR_A),
+  .ipB(WrRegisters.IIR_B),
+  .ipC(WrRegisters.IIR_C),
 
   .ipInput (Mixer_Output     ),
   .opOutput(IIR_Filter_Output)
 );
 //------------------------------------------------------------------------------
 
+wire [7:0]EnergyCounter_Output;
+
+EnergyCounter EnergyCounter_Inst(
+  .ipClk  (ipClk),
+  .ipReset(Reset),
+
+  .ipWindowSize(WrRegisters.WindowSize),
+
+  .ipInput (IIR_Filter_Output),
+  .opOutput(EnergyCounter_Output)
+);
+//------------------------------------------------------------------------------
+
 PWM PWM_Inst(
   .ipClk      (ipClk),
-  // .ipDutyCycle({~DataStream.Data[15], DataStream.Data[14:8]}),
+  // .ipDutyCycle({~EnergyCounter_Output[7], EnergyCounter_Output[6:0]}),
   .ipDutyCycle({~IIR_Filter_Output.I[17], IIR_Filter_Output.I[16:10]}),
   .opOutput   (opPWM)
 );

@@ -43,15 +43,15 @@ always @(posedge ipClk) begin
     opTrigger       <= 1;
 
   end else if(ipClkEnable) begin
-    if(opNCO_Frequency <  ipWrRegisters.NCO_Frequency_Start ||
-       opNCO_Frequency >= ipWrRegisters.NCO_Frequency_Stop  )
+    if(opNCO_Frequency <  ipWrRegisters.NCO_Start ||
+       opNCO_Frequency >= ipWrRegisters.NCO_Stop  )
     begin
       opTrigger       <= 1;
-      opNCO_Frequency <= ipWrRegisters.NCO_Frequency_Start;
+      opNCO_Frequency <= ipWrRegisters.NCO_Start;
 
     end else begin
       opTrigger       <= 0;
-      opNCO_Frequency <= opNCO_Frequency + ipWrRegisters.NCO_Frequency_Step;
+      opNCO_Frequency <= opNCO_Frequency + ipWrRegisters.NCO_Step;
     end
   end
 end

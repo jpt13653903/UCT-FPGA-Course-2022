@@ -25,51 +25,13 @@ module IIR_Filter(
   input ipClk,
   input ipReset,
 
-  input [2:0]ipFrequencySelect, // 1 -> 4 => 10, 100, 1k and 10k
+  input signed [1:-30]ipA, // Full-scale [-2, 2)
+  input signed [1:-30]ipB,
+  input signed [1:-30]ipC,
 
   input  COMPLEX_STREAM ipInput, // Assumed to be at 44100 kSps
   output COMPLEX_STREAM opOutput
 );
-//------------------------------------------------------------------------------
-
-// Make these full-scale [-2, 2), so that the equation becomes y = A x + B y_1 - C y_2
-reg signed [1:-32]A;
-reg signed [1:-32]B;
-reg signed [1:-32]C;
-
-always @(*) begin
-  case(ipFrequencySelect)
-    3'd1: begin // 10 Hz
-      A = 34'd8_701;
-      B = 34'd8_581_280_625;
-      C = 34'd4_286_322_029;
-    end
-
-    3'd2: begin // 100 Hz
-      A = 34'd854_461;
-      B = 34'd8_503_411_959;
-      C = 34'd4_209_299_124;
-    end
-
-    3'd3: begin // 1 kHz
-      A = 34'd71_358_485;
-      B = 34'd7_738_914_205;
-      C = 34'd3_515_305_394;
-    end
-
-    3'd4: begin // 10 kHz
-      A = 34'd1_728_200_677;
-      B = 34'd3_418_123_427;
-      C = 34'd851_356_808;
-    end
-
-    default: begin // Pass-through
-      A = 34'h1_0000_0000;
-      B = 34'h0;
-      C = 34'h0;
-    end
-  endcase
-end
 //------------------------------------------------------------------------------
 
 reg Reset;
@@ -78,16 +40,16 @@ reg signed [0:-17]x  [0:1];
 reg signed [0:-35]y_1[0:1];
 reg signed [0:-35]y_2[0:1];
 
-reg signed [2:-49]A_x  [0:1];
-reg signed [2:-67]B_y_1[0:1];
-reg signed [2:-67]C_y_2[0:1];
+reg signed [2:-47]A_x  [0:1];
+reg signed [2:-65]B_y_1[0:1];
+reg signed [2:-65]C_y_2[0:1];
 
-reg signed [2:-67]y[0:1];
+reg signed [2:-47]y[0:1];
 
 enum{
   Idle,
   Mul1, Mul2, Mul3, Mul4, Mul5, Mul6,
-  Add,
+  Add1, Add2,
   Output
 } State;
 
@@ -120,54 +82,59 @@ always @(posedge ipClk) begin
     case(State)
       Idle: begin
         opOutput.Valid <= 0;
+        x[0] <= ipInput.I;
+        x[1] <= ipInput.Q;
 
-        if(ipInput.Valid) begin
-          x[0]  <= ipInput.I;
-          x[1]  <= ipInput.Q;
-          State <= Mul1;
-        end
+        if(ipInput.Valid) State <= Mul1;
       end
       //------------------------------------------------------------------------
 
       Mul1: begin
-        A_x[0] <= A * x[0];
+        A_x[0] <= ipA * x[0];
         State  <= Mul2;
       end
       //------------------------------------------------------------------------
 
       Mul2: begin
-        A_x[1] <= A * x[1];
-        State <= Mul3;
+        A_x[1] <= ipA * x[1];
+        State  <= Mul3;
       end
       //------------------------------------------------------------------------
 
       Mul3: begin
-        B_y_1[0] <= B * y_1[0];
-        State <= Mul4;
+        B_y_1[0] <= ipB * y_1[0];
+        State    <= Mul4;
       end
       //------------------------------------------------------------------------
 
       Mul4: begin
-        B_y_1[1] <= B * y_1[1];
-        State <= Mul5;
+        B_y_1[1] <= ipB * y_1[1];
+        State    <= Mul5;
       end
       //------------------------------------------------------------------------
 
       Mul5: begin
-        C_y_2[0] <= C * y_2[0];
-        State <= Mul6;
+        C_y_2[0] <= ipC * y_2[0];
+        State    <= Mul6;
       end
       //------------------------------------------------------------------------
 
       Mul6: begin
-        C_y_2[1] <= C * y_2[1];
-        State <= Add;
+        C_y_2[1] <= ipC * y_2[1];
+        State    <= Add1;
       end
       //------------------------------------------------------------------------
 
-      Add: begin
-        y[0] <= {A_x[0], 18'd0} + B_y_1[0] - C_y_2[0];
-        y[1] <= {A_x[1], 18'd0} + B_y_1[1] - C_y_2[1];
+      Add1: begin
+        y[0]  <= A_x[0] + B_y_1[0][2:-47];
+        y[1]  <= A_x[1] + B_y_1[1][2:-47];
+        State <= Add2;
+      end
+      //------------------------------------------------------------------------
+
+      Add2: begin
+        y[0]  <= y[0] - C_y_2[0][2:-47];
+        y[1]  <= y[1] - C_y_2[1][2:-47];
         State <= Output;
       end
       //------------------------------------------------------------------------

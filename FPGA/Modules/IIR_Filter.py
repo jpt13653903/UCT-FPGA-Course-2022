@@ -24,8 +24,8 @@ import numpy as np
 import matplotlib.pyplot as plt
 #-------------------------------------------------------------------------------
 
-# fs = 781.25e3
 fs = 44100
+N  = 30
 
 x = np.ones(10000)
 t = np.arange(len(x)) / fs
@@ -43,7 +43,6 @@ for f0 in [10, 100, 1e3, 10e3]:
     c =   fs**2
     # print(f'{round(f0)}\t{w0**2/a}\t{b/a}\t{c/a}')
 
-    N = round(32)
     A = round((2**N / a) * w0**2)
     B = round((2**N / a) * b)
     C = round((2**N / a) * c)

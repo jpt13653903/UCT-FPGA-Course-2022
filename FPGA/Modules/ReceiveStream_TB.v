@@ -18,6 +18,9 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>
 ==============================================================================*/
 
+// Typical simulation time: 200 ms
+//------------------------------------------------------------------------------
+
 `timescale 1ns/1ns // unit/precision
 //------------------------------------------------------------------------------
 
@@ -42,38 +45,41 @@ end
 
 UART_PACKET ipRxStream;
 
-integer n;
+integer n, p, P;
 
 initial begin
-  ipRxStream.Source = 8'hAA;
-  ipRxStream.Valid  = 0;
-
-  @(negedge ipReset);
-  @(posedge ipClk);
-  @(posedge ipClk);
-  @(posedge ipClk);
+  ipRxStream.Destination = 8'h10;
+  ipRxStream.Length      = 8'h00; // 256-length packet
+  ipRxStream.Source      = 8'hAA;
+  ipRxStream.Valid       = 0;
 
   forever begin
-    ipRxStream.Destination = 8'h10;
-    ipRxStream.Length      = 8'h00; // 256-length packet
+    @(posedge opTxStream.Valid);
 
-    for(n = 0; n < 256; n++) begin
-      @(posedge ipClk);
-      ipRxStream.SoP   = (n ==   0);
-      ipRxStream.EoP   = (n == 255);
-      ipRxStream.Data  = n;
-      ipRxStream.Valid = 1;
+    if(opTxStream.Data == 4) P = 8*4; // Timeout
+    else                     P = 8;   // Normal acknowledgement
+    for(p = 0; p < P; p++) begin
+      for(n = 0; n < 256; n++) begin
+        @(posedge ipClk);
+        ipRxStream.SoP   = (n ==   0);
+        ipRxStream.EoP   = (n == 255);
+        ipRxStream.Data  = n;
+        ipRxStream.Valid = 1;
 
-      @(posedge ipClk);
-      ipRxStream.Valid = 0;
-      #15;
+        @(posedge ipClk);
+        ipRxStream.Valid = 0;
+        #3300;
+      end
     end
   end
 end
 //------------------------------------------------------------------------------
 
-wire  [13:0]opFIFO_Space;
+wire  [12:0]opFIFO_Space;
 DATA_STREAM opData;
+
+UART_PACKET opTxStream;
+wire        ipTxReady = 1;
 
 ReceiveStream DUT(
   .ipClk       (ipClk  ),
@@ -81,6 +87,9 @@ ReceiveStream DUT(
 
   .opFIFO_Space(opFIFO_Space),
   .ipRxStream  (ipRxStream  ),
+
+  .opTxStream  (opTxStream  ),
+  .ipTxReady   (ipTxReady   ),
 
   .opData      (opData)
 );

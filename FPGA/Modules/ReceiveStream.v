@@ -27,7 +27,9 @@ resulting data is played out at 44 100 kSps.
 import Structures::*;
 //------------------------------------------------------------------------------
 
-module ReceiveStream(
+module ReceiveStream #(
+  parameter Port = 8'h10
+)(
   input              ipClk,
   input              ipReset,
 
@@ -72,29 +74,72 @@ wire [11:0]FIFO_Length = WrAddress - RdAddress;
 
 always @(posedge ipClk) begin
   Reset        <= ipReset;
-  opFIFO_Space <= {12'hFFF - FIFO_Length, 1'b0};
+  opFIFO_Space <= {~FIFO_Length, 1'b1};
 end
 //------------------------------------------------------------------------------
 
-// TODO: Use this for better flow control
-assign opTxStream.Valid = 0;
+/* Flow Control:
+ *
+ * When the queue is empty, a timeout is advertised about once every 100 ms.
+ * When data is being received, every 1024 samples are acknowledged when the
+ * queue has played it out.
+ *
+ * The idea is that the source sends the full 4k samples upon receiving a
+ * timeout, and then once every acknowledgement from then onwards.
+ *
+ * The FIFO is 4096 16-bit samples, which implies about 93 ms. Python is
+ * streaming in "packets" of 2048 bytes, meaning that the FIFO is four
+ * Python packets.
+ */
+
+reg [21:0]FlowTimeout;
+reg [11:0]PrevRdAddress;
+
+assign opTxStream.SoP    = 1;
+assign opTxStream.EoP    = 1;
+assign opTxStream.Length = 1;
+assign opTxStream.Source = Port;
+
+always @(posedge ipClk) begin
+  if(Reset) begin
+    opTxStream.Data  <= 'hX;
+    opTxStream.Valid <=   0;
+    FlowTimeout      <=  ~0;
+    PrevRdAddress    <=   0;
+
+  end else if(&FlowTimeout) begin
+    opTxStream.Data  <= 8'd4;
+    opTxStream.Valid <= 1'b1;
+    FlowTimeout      <= 0;
+    PrevRdAddress    <= RdAddress;
+
+  end else if((RdAddress - PrevRdAddress) == 12'd1024) begin
+    opTxStream.Data  <= opFIFO_Space[12:11];
+    opTxStream.Valid <= 1'b1;
+    FlowTimeout      <= 0;
+    PrevRdAddress    <= RdAddress;
+
+  end else begin
+    if(ipTxReady) opTxStream.Valid <= 0;
+    FlowTimeout <= FlowTimeout + 1;
+  end
+end
 //------------------------------------------------------------------------------
 
 reg [7:0]RxCount;
 
-enum {
-  Idle,
-  Receiving
-} State;
+enum { Idle, Receiving } State;
 
 always @(posedge ipClk) begin
   if(Reset) begin
-    WrAddress    <= 0;
-    WrData       <= 'hX;
-    WrEnable     <= 0;
+    opTxStream.Destination <= 0;
 
-    RxCount      <= 8'hX;
-    State        <= Idle;
+    WrAddress <= 0;
+    WrData    <= 'hX;
+    WrEnable  <= 0;
+
+    RxCount   <= 8'hX;
+    State     <= Idle;
   //----------------------------------------------------------------------------
 
   end else begin
@@ -105,7 +150,11 @@ always @(posedge ipClk) begin
           WrEnable  <= 0;
         end
 
-        if(ipRxStream.Valid && ipRxStream.SoP && ipRxStream.Destination == 8'h10) begin
+        if(ipRxStream.Valid &&
+           ipRxStream.SoP   &&
+           ipRxStream.Destination == Port)
+        begin
+          opTxStream.Destination <= ipRxStream.Source;
           WrData[7:0] <= ipRxStream.Data;
           RxCount     <= ipRxStream.Length - 1;
           State       <= Receiving;
@@ -142,7 +191,7 @@ end
 reg [10:0]TxCount = 0; // Initialisation for simulation only
 
 always @(posedge ipClk) begin
-  if(TxCount == 0) TxCount <= 1133;
+  if(TxCount == 0) TxCount <= 1133; // About 44 100 Sps
   else             TxCount <= TxCount - 1;
 
   if(Reset) begin

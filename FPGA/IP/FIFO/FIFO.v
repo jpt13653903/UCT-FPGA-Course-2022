@@ -27,19 +27,18 @@ module FIFO (DataInA, DataInB, AddressA, AddressB, ClockA, ClockB,
 
     VHI scuba_vhi_inst (.Z(scuba_vhi));
 
-    // synopsys translate_off
-    defparam FIFO_0_0_3.CSDECODE_B =  3'b000 ;
-    defparam FIFO_0_0_3.CSDECODE_A =  3'b000 ;
-    defparam FIFO_0_0_3.WRITEMODE_B = "NORMAL" ;
-    defparam FIFO_0_0_3.WRITEMODE_A = "NORMAL" ;
-    defparam FIFO_0_0_3.GSR = "DISABLED" ;
-    defparam FIFO_0_0_3.RESETMODE = "SYNC" ;
-    defparam FIFO_0_0_3.REGMODE_B = "NOREG" ;
-    defparam FIFO_0_0_3.REGMODE_A = "NOREG" ;
-    defparam FIFO_0_0_3.DATA_WIDTH_B = 4 ;
-    defparam FIFO_0_0_3.DATA_WIDTH_A = 4 ;
-    // synopsys translate_on
-    DP16KB FIFO_0_0_3 (.DIA0(DataInA[0]), .DIA1(DataInA[1]), .DIA2(DataInA[2]), 
+    DP16KB #(
+      .CSDECODE_B  ( 3'b000),
+      .CSDECODE_A  ( 3'b000),
+      .WRITEMODE_B ("NORMAL"),
+      .WRITEMODE_A ("NORMAL"),
+      .GSR         ("DISABLED"),
+      .RESETMODE   ("SYNC"),
+      .REGMODE_B   ("NOREG"),
+      .REGMODE_A   ("NOREG"),
+      .DATA_WIDTH_B(4),
+      .DATA_WIDTH_A(4)
+    ) FIFO_0_0_3 (.DIA0(DataInA[0]), .DIA1(DataInA[1]), .DIA2(DataInA[2]), 
         .DIA3(DataInA[3]), .DIA4(scuba_vlo), .DIA5(scuba_vlo), .DIA6(scuba_vlo), 
         .DIA7(scuba_vlo), .DIA8(scuba_vlo), .DIA9(scuba_vlo), .DIA10(scuba_vlo), 
         .DIA11(scuba_vlo), .DIA12(scuba_vlo), .DIA13(scuba_vlo), .DIA14(scuba_vlo), 
@@ -78,19 +77,18 @@ module FIFO (DataInA, DataInB, AddressA, AddressB, ClockA, ClockB,
              /* synthesis DATA_WIDTH_B="4" */
              /* synthesis DATA_WIDTH_A="4" */;
 
-    // synopsys translate_off
-    defparam FIFO_0_1_2.CSDECODE_B =  3'b000 ;
-    defparam FIFO_0_1_2.CSDECODE_A =  3'b000 ;
-    defparam FIFO_0_1_2.WRITEMODE_B = "NORMAL" ;
-    defparam FIFO_0_1_2.WRITEMODE_A = "NORMAL" ;
-    defparam FIFO_0_1_2.GSR = "DISABLED" ;
-    defparam FIFO_0_1_2.RESETMODE = "SYNC" ;
-    defparam FIFO_0_1_2.REGMODE_B = "NOREG" ;
-    defparam FIFO_0_1_2.REGMODE_A = "NOREG" ;
-    defparam FIFO_0_1_2.DATA_WIDTH_B = 4 ;
-    defparam FIFO_0_1_2.DATA_WIDTH_A = 4 ;
-    // synopsys translate_on
-    DP16KB FIFO_0_1_2 (.DIA0(DataInA[4]), .DIA1(DataInA[5]), .DIA2(DataInA[6]), 
+    DP16KB #(
+      .CSDECODE_B  ( 3'b000),
+      .CSDECODE_A  ( 3'b000),
+      .WRITEMODE_B ("NORMAL"),
+      .WRITEMODE_A ("NORMAL"),
+      .GSR         ("DISABLED"),
+      .RESETMODE   ("SYNC"),
+      .REGMODE_B   ("NOREG"),
+      .REGMODE_A   ("NOREG"),
+      .DATA_WIDTH_B(4),
+      .DATA_WIDTH_A(4)
+    ) FIFO_0_1_2 (.DIA0(DataInA[4]), .DIA1(DataInA[5]), .DIA2(DataInA[6]), 
         .DIA3(DataInA[7]), .DIA4(scuba_vlo), .DIA5(scuba_vlo), .DIA6(scuba_vlo), 
         .DIA7(scuba_vlo), .DIA8(scuba_vlo), .DIA9(scuba_vlo), .DIA10(scuba_vlo), 
         .DIA11(scuba_vlo), .DIA12(scuba_vlo), .DIA13(scuba_vlo), .DIA14(scuba_vlo), 
@@ -129,19 +127,18 @@ module FIFO (DataInA, DataInB, AddressA, AddressB, ClockA, ClockB,
              /* synthesis DATA_WIDTH_B="4" */
              /* synthesis DATA_WIDTH_A="4" */;
 
-    // synopsys translate_off
-    defparam FIFO_0_2_1.CSDECODE_B =  3'b000 ;
-    defparam FIFO_0_2_1.CSDECODE_A =  3'b000 ;
-    defparam FIFO_0_2_1.WRITEMODE_B = "NORMAL" ;
-    defparam FIFO_0_2_1.WRITEMODE_A = "NORMAL" ;
-    defparam FIFO_0_2_1.GSR = "DISABLED" ;
-    defparam FIFO_0_2_1.RESETMODE = "SYNC" ;
-    defparam FIFO_0_2_1.REGMODE_B = "NOREG" ;
-    defparam FIFO_0_2_1.REGMODE_A = "NOREG" ;
-    defparam FIFO_0_2_1.DATA_WIDTH_B = 4 ;
-    defparam FIFO_0_2_1.DATA_WIDTH_A = 4 ;
-    // synopsys translate_on
-    DP16KB FIFO_0_2_1 (.DIA0(DataInA[8]), .DIA1(DataInA[9]), .DIA2(DataInA[10]), 
+    DP16KB #(
+      .CSDECODE_B  ( 3'b000),
+      .CSDECODE_A  ( 3'b000),
+      .WRITEMODE_B ("NORMAL"),
+      .WRITEMODE_A ("NORMAL"),
+      .GSR         ("DISABLED"),
+      .RESETMODE   ("SYNC"),
+      .REGMODE_B   ("NOREG"),
+      .REGMODE_A   ("NOREG"),
+      .DATA_WIDTH_B(4),
+      .DATA_WIDTH_A(4)
+    ) FIFO_0_2_1 (.DIA0(DataInA[8]), .DIA1(DataInA[9]), .DIA2(DataInA[10]), 
         .DIA3(DataInA[11]), .DIA4(scuba_vlo), .DIA5(scuba_vlo), .DIA6(scuba_vlo), 
         .DIA7(scuba_vlo), .DIA8(scuba_vlo), .DIA9(scuba_vlo), .DIA10(scuba_vlo), 
         .DIA11(scuba_vlo), .DIA12(scuba_vlo), .DIA13(scuba_vlo), .DIA14(scuba_vlo), 
@@ -182,19 +179,18 @@ module FIFO (DataInA, DataInB, AddressA, AddressB, ClockA, ClockB,
 
     VLO scuba_vlo_inst (.Z(scuba_vlo));
 
-    // synopsys translate_off
-    defparam FIFO_0_3_0.CSDECODE_B =  3'b000 ;
-    defparam FIFO_0_3_0.CSDECODE_A =  3'b000 ;
-    defparam FIFO_0_3_0.WRITEMODE_B = "NORMAL" ;
-    defparam FIFO_0_3_0.WRITEMODE_A = "NORMAL" ;
-    defparam FIFO_0_3_0.GSR = "DISABLED" ;
-    defparam FIFO_0_3_0.RESETMODE = "SYNC" ;
-    defparam FIFO_0_3_0.REGMODE_B = "NOREG" ;
-    defparam FIFO_0_3_0.REGMODE_A = "NOREG" ;
-    defparam FIFO_0_3_0.DATA_WIDTH_B = 4 ;
-    defparam FIFO_0_3_0.DATA_WIDTH_A = 4 ;
-    // synopsys translate_on
-    DP16KB FIFO_0_3_0 (.DIA0(DataInA[12]), .DIA1(DataInA[13]), .DIA2(DataInA[14]), 
+    DP16KB #(
+      .CSDECODE_B  ( 3'b000),
+      .CSDECODE_A  ( 3'b000),
+      .WRITEMODE_B ("NORMAL"),
+      .WRITEMODE_A ("NORMAL"),
+      .GSR         ("DISABLED"),
+      .RESETMODE   ("SYNC"),
+      .REGMODE_B   ("NOREG"),
+      .REGMODE_A   ("NOREG"),
+      .DATA_WIDTH_B(4),
+      .DATA_WIDTH_A(4)
+    ) FIFO_0_3_0 (.DIA0(DataInA[12]), .DIA1(DataInA[13]), .DIA2(DataInA[14]), 
         .DIA3(DataInA[15]), .DIA4(scuba_vlo), .DIA5(scuba_vlo), .DIA6(scuba_vlo), 
         .DIA7(scuba_vlo), .DIA8(scuba_vlo), .DIA9(scuba_vlo), .DIA10(scuba_vlo), 
         .DIA11(scuba_vlo), .DIA12(scuba_vlo), .DIA13(scuba_vlo), .DIA14(scuba_vlo), 

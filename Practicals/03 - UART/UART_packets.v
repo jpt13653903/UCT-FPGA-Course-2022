@@ -84,30 +84,58 @@ module UART_Packets(
 				end
 			end
 			TX_SEND_SYNC: begin
-				if(!UART_TxBusy) begin
+				if(!UART_TxBusy && opTxReady && ipTxStream.Valid) begin
 					UART_TxSend <= 1;
 					UART_TxData <= 8'h55;
+					opTxReady <= 0;
 					txState <= TX_SEND_DESTINATION;
+				end else begin
+					opTxReady <= 1;
 				end
 			end
-
 			TX_SEND_DESTINATION: begin
-				
+				if(!UART_TxBusy && opTxReady && ipTxStream.Valid) begin
+					UART_TxSend <= 1;
+					UART_TxData <= ipTxStream.Destination;
+					opTxReady <= 0;
+					txState <= TX_SEND_SOURCE;
+				end else begin
+					opTxReady <= 1;
+				end
 			end
 			TX_SEND_SOURCE: begin
-				
+				if(!UART_TxBusy && opTxReady && ipTxStream.Valid) begin
+					UART_TxSend <= 1;
+					UART_TxData <= ipTxStream.Source;
+					opTxReady <= 0;
+					txState <= TX_SEND_LENGTH;
+				end else begin
+					opTxReady <= 1;
+				end
 			end
 			TX_SEND_LENGTH: begin
-				
+				if(!UART_TxBusy && opTxReady && ipTxStream.Valid) begin
+					UART_TxSend <= 1;
+					UART_TxData <= ipTxStream.Length;
+					opTxReady <= 0;
+					txState <= TX_SEND_DATA;
+				end else begin
+					opTxReady <= 1;
+				end
 			end
 			TX_SEND_DATA: begin
-				
-			end
-			TX_BUSY: begin
-				
-			end
-			TX_FINISHED: begin
-				
+				if (ipTxStream.EoP && !UART_TxBusy && opTxReady && ipTxStream.Valid) begin
+					txState <= TX_IDLE;
+					opTxReady <= 1;
+					UART_TxData <= ipTxStream.Data;
+					UART_TxSend <= 1;
+				end else if(!UART_TxBusy && opTxReady && ipTxStream.Valid) begin
+					UART_TxSend <= 1;
+					UART_TxData <= ipTxStream.Data;
+					opTxReady <= 0;
+				end else begin
+					opTxReady <= 1;
+				end
 			end
 		endcase
 		

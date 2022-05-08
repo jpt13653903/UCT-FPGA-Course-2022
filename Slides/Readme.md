@@ -12,6 +12,6 @@ https://youtu.be/I6eZ4ZyI1Zg
 
 ## Phase locked loops
 
-https://www.youtube.com/watch?v=asdguxJoW3M
-https://www.youtube.com/watch?v=HUYF20AGSOg
-Phase-Locked Loops Design, Simulation, and Applications (Text book)
+- https://www.youtube.com/watch?v=asdguxJoW3M
+- https://www.youtube.com/watch?v=HUYF20AGSOg
+- Phase-Locked Loops Design, Simulation, and Applications (Text book)

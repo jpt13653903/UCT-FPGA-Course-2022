@@ -221,8 +221,8 @@ EnergyCounter EnergyCounter_Inst(
 
 PWM PWM_Inst(
   .ipClk      (ipClk),
-  // .ipDutyCycle({~EnergyCounter_Output[7], EnergyCounter_Output[6:0]}),
-  .ipDutyCycle({~IIR_Filter_Output.I[17], IIR_Filter_Output.I[16:10]}),
+  .ipDutyCycle({~EnergyCounter_Output[7], EnergyCounter_Output[6:0]}),
+  // .ipDutyCycle({~IIR_Filter_Output.I[17], IIR_Filter_Output.I[16:10]}),
   .opOutput   (opPWM)
 );
 assign opPWM_2 = opPWM;

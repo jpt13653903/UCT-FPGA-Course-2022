@@ -20,8 +20,19 @@ module UART_Packets(
 	wire      UART_TxBusy;
 	wire      UART_RxValid;
 	reg [7:0] UART_RX_DATA;
-	reg 			localTxReady;
-	typedef enum { TX_IDLE, TX_SENDING } txPackeState;
+	reg [7:0]	localTxData;
+
+	typedef enum { 
+		TX_IDLE, 
+		TX_SEND_SYNC,
+		TX_SEND_DESTINATION,
+		TX_SEND_SOURCE,
+		TX_SEND_LENGTH,
+		TX_SEND_DATA, 
+		TX_BUSY, 
+		TX_FINISHED,
+	} TxState;
+	
 	typedef enum { 
 		RX_IDLE, 
 		RX_GET_DESTINATION, 
@@ -31,7 +42,9 @@ module UART_Packets(
 	} RxState;	
 
 	RxState rxState;
+	TxState txState;
 	reg [7:0] receiveDataLength  = 0;
+	reg [8:0] transmitDataLength = 0;
 	UART UART_INST(
 		.ipClk    ( ipClk   ),
 		.ipReset  ( reset ),
@@ -48,13 +61,56 @@ module UART_Packets(
 		//------------------------------------------------------------------------------	
 		// TODO: Implement the Tx stream
 		//------------------------------------------------------------------------------
+
 		reset <= ipReset;
 		
 		if (reset) begin
 			UART_TxBusy <= 1;
-			UART_RxValid <=0;
+			UART_RxValid <= 0;
+			opTxReady <= 0;
 			rxState <= RX_IDLE;
+			txState <= TX_IDLE;
 		end
+
+		
+		case(txState)
+			TX_IDLE: begin
+				localRxData <= ipTxStream.Data;
+				if (ipTxStream.Valid & ipTxStream.SoP & opTxReady) begin
+					opTxReady <= 0;
+					txState <= TX_SEND_SYNC;
+				end else begin
+					opTxReady <= 1;
+				end
+			end
+			TX_SEND_SYNC: begin
+				if(!UART_TxBusy) begin
+					UART_TxSend <= 1;
+					UART_TxData <= 8'h55;
+					txState <= TX_SEND_DESTINATION;
+				end
+			end
+
+			TX_SEND_DESTINATION: begin
+				
+			end
+			TX_SEND_SOURCE: begin
+				
+			end
+			TX_SEND_LENGTH: begin
+				
+			end
+			TX_SEND_DATA: begin
+				
+			end
+			TX_BUSY: begin
+				
+			end
+			TX_FINISHED: begin
+				
+			end
+		endcase
+		
 
 		//------------------------------------------------------------------------------
 		// TODO: Implement the Rx stream
@@ -82,15 +138,13 @@ module UART_Packets(
 					rxState <= RX_GET_DATA;
 				end
 				RX_GET_DATA: begin
-					if (receiveDataLength) begin
-						opRxStream.Data <= UART_RX_DATA;
-						opRxStream.Valid <= 1;
-						receiveDataLength <= receiveDataLength - 1;
-					end else begin
-						opRxStream.Valid <= 0;
-						rxState <= RX_IDLE;
-						opRxStream.Eop <= 1;
+					opRxStream.Data <= UART_RX_DATA;
+					opRxStream.Valid <= 1;
+					if (receiveDataLength == 1) begin
+						opRxStream.EoP <= 1;	
+						rxState <= RX_IDLE;	
 					end
+					receiveDataLength <= receiveDataLength - 1;
 				end
 			endcase
 		end else 

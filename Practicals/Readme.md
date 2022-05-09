@@ -16,3 +16,16 @@ schedule is limited by the lecture content.
     - Day 5: IIR Filter and Spectrum Analyser
     - Day 6: External FIFO and FIR Filter
 
+## Practicals won't fit onto the Brevia2
+
+From practical 10 onwards, you'll find that the circuit won't fit onto the 
+LatticeXP2 Brevia2 Development Kit.  There are sufficient registers, 
+multipliers and RAM blocks, but not enough logic elements for all the required 
+combinational logic.
+
+If / when you get hold of a larger development kit, such as a 
+[DE10-Lite](https://www.terasic.com.tw/cgi-bin/page/archive.pl?Language=English&No=1021),
+you'll be able to relatively easily port the design to that kit.  You can buy a
+[TTL USB UART](https://www.robotics.org.za/W7965) if the board does not have 
+one built-in, and to modify the RAM and ROM blocks to the new vendor is 
+relatively easy.

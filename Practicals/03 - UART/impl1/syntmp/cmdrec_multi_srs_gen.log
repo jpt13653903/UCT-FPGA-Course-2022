@@ -1,0 +1,7 @@
+C:\lscc\diamond\3.12\synpbase\bin64\syn_nfilter.exe  -link  -top  top  -multisrs  "C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\synwork\UART_impl1_comp.srs"  -osyn  "C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\synwork\UART_impl1_mult.srs"  -log  "C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\synlog\UART_impl1_multi_srs_gen.srr" 
+relcom:..\..\..\..\..\..\..\..\lscc\diamond\3.12\synpbase\bin64\syn_nfilter.exe -link -top top -multisrs "C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\synwork\UART_impl1_comp.srs" -osyn "C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\synwork\UART_impl1_mult.srs" -log "C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\synlog\UART_impl1_multi_srs_gen.srr"
+rc:0 success:1 runtime:1
+file:..\synwork\UART_impl1_comp.srs|io:i|time:1651587648|size:121402|exec:0|csum:161A73C7014713D53CFFE35E320C21D9
+file:..\synwork\UART_impl1_mult.srs|io:o|time:1651587649|size:4883|exec:0|csum:
+file:..\synlog\UART_impl1_multi_srs_gen.srr|io:o|time:1651587649|size:1167|exec:0|csum:
+file:..\..\..\..\..\..\..\..\lscc\diamond\3.12\synpbase\bin64\syn_nfilter.exe|io:i|time:1628612558|size:8899584|exec:1|csum:163057E8B8449A642661642A20A2247D

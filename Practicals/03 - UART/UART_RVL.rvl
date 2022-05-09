@@ -1,0 +1,32 @@
+<Project ModBy="Inserter" SigType="0" Name="C:/Users/user/Desktop/UCT-FPGA-Course-2022/Practicals/03 - UART/UART_RVL.rvl" Date="2022-05-03">
+    <IP Version="1_6_042617"/>
+    <Design DesignEntry="Schematic/Verilog HDL" Synthesis="synplify" DeviceFamily="LatticeXP2" DesignName="UART"/>
+    <Core InsertDataset="0" Insert="1" Reveal_sig="424081115" Name="top_LA0" ID="0">
+        <Setting>
+            <Clock SampleClk="ipClk" SampleEnable="1" EnableClk="UART_RxValid" EnableClk_Pri="0"/>
+            <TraceBuffer Implementation="0" BitTimeStamp="0" hasTimeStamp="0" IncTrigSig="0" BufferDepth="32"/>
+            <Capture Mode="0" MinSamplesPerTrig="8"/>
+            <Event CntEnable="0" MaxEventCnt="8"/>
+            <TrigOut Polarity="0" MinPulseWidth="0" TrigOutNetType="1" EnableTrigOut="0" TrigOutNet="reveal_debug_top_LA0_net"/>
+            <DistRAM Disable="0"/>
+        </Setting>
+        <Dataset Name="Base">
+            <Trace>
+                <Bus Name="UART_RxData">
+                    <Sig Type="SIG" Name="UART_RxData:0"/>
+                    <Sig Type="SIG" Name="UART_RxData:1"/>
+                    <Sig Type="SIG" Name="UART_RxData:2"/>
+                    <Sig Type="SIG" Name="UART_RxData:3"/>
+                    <Sig Type="SIG" Name="UART_RxData:4"/>
+                    <Sig Type="SIG" Name="UART_RxData:5"/>
+                    <Sig Type="SIG" Name="UART_RxData:6"/>
+                    <Sig Type="SIG" Name="UART_RxData:7"/>
+                </Bus>
+            </Trace>
+            <Trigger>
+                <TU Serialbits="0" Type="0" ID="1" Sig="UART_RxValid,"/>
+                <TE MaxSequence="1" MaxEvnCnt="1" ID="1" Resource="1"/>
+            </Trigger>
+        </Dataset>
+    </Core>
+</Project>

@@ -1,0 +1,263 @@
+
+Copyright (C) 1994-2021 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: R-2021.03L-SP1
+Install: C:\lscc\diamond\3.12\synpbase
+OS: Windows 6.2
+
+Hostname: DESKTOP-MU9CKUT
+
+Implementation : impl1
+Synopsys HDL Compiler, Version comp202103synp2, Build 093R, Built Aug 10 2021 09:15:36, @
+
+@N|Running in 64-bit mode
+###########################################################[
+
+Copyright (C) 1994-2021 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: R-2021.03L-SP1
+Install: C:\lscc\diamond\3.12\synpbase
+OS: Windows 6.2
+
+Hostname: DESKTOP-MU9CKUT
+
+Implementation : impl1
+Synopsys Verilog Compiler, Version comp202103synp2, Build 093R, Built Aug 10 2021 09:15:36, @
+
+@N|Running in 64-bit mode
+@N: CG1349 :	| Running Verilog Compiler in System Verilog mode
+
+@N: CG1350 :	| Running Verilog Compiler in Multiple File Compilation Unit mode
+
+@I::"C:\lscc\diamond\3.12\synpbase\lib\lucent\xp2.v" (library work)
+@I::"C:\lscc\diamond\3.12\synpbase\lib\lucent\pmi_def.v" (library work)
+@I::"C:\lscc\diamond\3.12\synpbase\lib\vlog\hypermods.v" (library __hyper__lib__)
+@I::"C:\lscc\diamond\3.12\synpbase\lib\vlog\umr_capim.v" (library snps_haps)
+@I::"C:\lscc\diamond\3.12\synpbase\lib\vlog\scemi_objects.v" (library snps_haps)
+@I::"C:\lscc\diamond\3.12\synpbase\lib\vlog\scemi_pipes.svh" (library snps_haps)
+@I::"C:\lscc\diamond\3.12\cae_library\synthesis\verilog\pmi_def.v" (library work)
+@W: CG100 :"C:\lscc\diamond\3.12\cae_library\synthesis\verilog\pmi_def.v":44:49:44:61|User defined pragma syn_black_box detected
+
+@W: CG100 :"C:\lscc\diamond\3.12\cae_library\synthesis\verilog\pmi_def.v":62:50:62:62|User defined pragma syn_black_box detected
+
+@W: CG100 :"C:\lscc\diamond\3.12\cae_library\synthesis\verilog\pmi_def.v":84:50:84:62|User defined pragma syn_black_box detected
+
+@W: CG100 :"C:\lscc\diamond\3.12\cae_library\synthesis\verilog\pmi_def.v":107:49:107:61|User defined pragma syn_black_box detected
+
+@W: CG100 :"C:\lscc\diamond\3.12\cae_library\synthesis\verilog\pmi_def.v":124:87:124:99|User defined pragma syn_black_box detected
+
+@W: CG100 :"C:\lscc\diamond\3.12\cae_library\synthesis\verilog\pmi_def.v":141:80:141:92|User defined pragma syn_black_box detected
+
+@W: CG100 :"C:\lscc\diamond\3.12\cae_library\synthesis\verilog\pmi_def.v":159:62:159:74|User defined pragma syn_black_box detected
+
+@W: CG100 :"C:\lscc\diamond\3.12\cae_library\synthesis\verilog\pmi_def.v":179:76:179:88|User defined pragma syn_black_box detected
+
+@W: CG100 :"C:\lscc\diamond\3.12\cae_library\synthesis\verilog\pmi_def.v":204:80:204:92|User defined pragma syn_black_box detected
+
+@W: CG100 :"C:\lscc\diamond\3.12\cae_library\synthesis\verilog\pmi_def.v":225:79:225:91|User defined pragma syn_black_box detected
+
+@W: CG100 :"C:\lscc\diamond\3.12\cae_library\synthesis\verilog\pmi_def.v":243:33:243:45|User defined pragma syn_black_box detected
+
+@W: CG100 :"C:\lscc\diamond\3.12\cae_library\synthesis\verilog\pmi_def.v":260:33:260:45|User defined pragma syn_black_box detected
+
+@W: CG100 :"C:\lscc\diamond\3.12\cae_library\synthesis\verilog\pmi_def.v":275:45:275:57|User defined pragma syn_black_box detected
+
+@W: CG100 :"C:\lscc\diamond\3.12\cae_library\synthesis\verilog\pmi_def.v":292:31:292:43|User defined pragma syn_black_box detected
+
+@W: CG100 :"C:\lscc\diamond\3.12\cae_library\synthesis\verilog\pmi_def.v":320:54:320:66|User defined pragma syn_black_box detected
+
+@W: CG100 :"C:\lscc\diamond\3.12\cae_library\synthesis\verilog\pmi_def.v":351:54:351:66|User defined pragma syn_black_box detected
+
+@W: CG100 :"C:\lscc\diamond\3.12\cae_library\synthesis\verilog\pmi_def.v":387:53:387:65|User defined pragma syn_black_box detected
+
+@W: CG100 :"C:\lscc\diamond\3.12\cae_library\synthesis\verilog\pmi_def.v":426:53:426:65|User defined pragma syn_black_box detected
+
+@W: CG100 :"C:\lscc\diamond\3.12\cae_library\synthesis\verilog\pmi_def.v":450:50:450:62|User defined pragma syn_black_box detected
+
+@W: CG100 :"C:\lscc\diamond\3.12\cae_library\synthesis\verilog\pmi_def.v":476:50:476:62|User defined pragma syn_black_box detected
+
+@W: CG100 :"C:\lscc\diamond\3.12\cae_library\synthesis\verilog\pmi_def.v":497:49:497:61|User defined pragma syn_black_box detected
+
+@W: CG100 :"C:\lscc\diamond\3.12\cae_library\synthesis\verilog\pmi_def.v":528:33:528:45|User defined pragma syn_black_box detected
+
+@W: CG100 :"C:\lscc\diamond\3.12\cae_library\synthesis\verilog\pmi_def.v":553:33:553:45|User defined pragma syn_black_box detected
+
+@W: CG100 :"C:\lscc\diamond\3.12\cae_library\synthesis\verilog\pmi_def.v":630:35:630:47|User defined pragma syn_black_box detected
+
+@W: CG100 :"C:\lscc\diamond\3.12\cae_library\synthesis\verilog\pmi_def.v":687:35:687:47|User defined pragma syn_black_box detected
+
+@W: CG100 :"C:\lscc\diamond\3.12\cae_library\synthesis\verilog\pmi_def.v":770:35:770:47|User defined pragma syn_black_box detected
+
+@W: CG100 :"C:\lscc\diamond\3.12\cae_library\synthesis\verilog\pmi_def.v":853:35:853:47|User defined pragma syn_black_box detected
+
+@W: CG100 :"C:\lscc\diamond\3.12\cae_library\synthesis\verilog\pmi_def.v":969:35:969:47|User defined pragma syn_black_box detected
+
+@W: CG100 :"C:\lscc\diamond\3.12\cae_library\synthesis\verilog\pmi_def.v":1073:40:1073:52|User defined pragma syn_black_box detected
+
+@W: CG100 :"C:\lscc\diamond\3.12\cae_library\synthesis\verilog\pmi_def.v":1098:32:1098:44|User defined pragma syn_black_box detected
+
+@W: CG100 :"C:\lscc\diamond\3.12\cae_library\synthesis\verilog\pmi_def.v":1122:32:1122:44|User defined pragma syn_black_box detected
+
+@W: CG100 :"C:\lscc\diamond\3.12\cae_library\synthesis\verilog\pmi_def.v":1159:15:1159:27|User defined pragma syn_black_box detected
+
+@W: CG100 :"C:\lscc\diamond\3.12\cae_library\synthesis\verilog\pmi_def.v":1162:94:1162:106|User defined pragma syn_black_box detected
+
+@I::"C:\lscc\diamond\3.12\module\reveal\src\ertl\ertl.v" (library work)
+@I::"C:\lscc\diamond\3.12\module\reveal\src\rvl_j2w_module\rvl_j2w_module.v" (library work)
+@I::"C:\lscc\diamond\3.12\module\reveal\src\rvl_j2w_module\wb2sci.v" (library work)
+@I::"C:\lscc\diamond\3.12\module\reveal\src\ertl\JTAG_SOFT.v" (library work)
+@I::"C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\reveal_workspace\tmpreveal\top_la0_trig_gen.v" (library work)
+@I::"C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\reveal_workspace\tmpreveal\top_la0_gen.v" (library work)
+@I::"C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\reveal_workspace\tmpreveal\top_rvl.v" (library work)
+Verilog syntax check successful!
+File C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\reveal_workspace\tmpreveal\top_la0_trig_gen.v changed - recompiling
+File C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\reveal_workspace\tmpreveal\top_la0_gen.v changed - recompiling
+File C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\reveal_workspace\tmpreveal\top_rvl.v changed - recompiling
+Selecting top level module top
+@N: CG364 :"C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\reveal_workspace\tmpreveal\top_rvl.v":284:7:284:17|Synthesizing module UART_uniq_1 in library work.
+Running optimization stage 1 on UART_uniq_1 .......
+Finished optimization stage 1 on UART_uniq_1 (CPU Time 0h:00m:00s, Memory Used current: 98MB peak: 99MB)
+@N: CG364 :"C:\lscc\diamond\3.12\synpbase\lib\lucent\xp2.v":1269:7:1269:9|Synthesizing module VHI in library work.
+Running optimization stage 1 on VHI .......
+Finished optimization stage 1 on VHI (CPU Time 0h:00m:00s, Memory Used current: 98MB peak: 99MB)
+Running optimization stage 1 on rvl_jtag_int_8s_1s_0s_0s_3s_8s_8s .......
+Finished optimization stage 1 on rvl_jtag_int_8s_1s_0s_0s_3s_8s_8s (CPU Time 0h:00m:00s, Memory Used current: 99MB peak: 100MB)
+Running optimization stage 1 on rvl_decode_1s_1s .......
+Finished optimization stage 1 on rvl_decode_1s_1s (CPU Time 0h:00m:00s, Memory Used current: 99MB peak: 100MB)
+Running optimization stage 1 on rvl_tu_1s_0s_0s_0s_1s .......
+Finished optimization stage 1 on rvl_tu_1s_0s_0s_0s_1s (CPU Time 0h:00m:00s, Memory Used current: 99MB peak: 100MB)
+Running optimization stage 1 on pmi_ram_dp_Z2 .......
+Finished optimization stage 1 on pmi_ram_dp_Z2 (CPU Time 0h:00m:00s, Memory Used current: 99MB peak: 100MB)
+Running optimization stage 1 on rvl_te_Z1 .......
+Finished optimization stage 1 on rvl_te_Z1 (CPU Time 0h:00m:00s, Memory Used current: 100MB peak: 100MB)
+Running optimization stage 1 on rvl_tcnt_1s_3s_1_0s .......
+Finished optimization stage 1 on rvl_tcnt_1s_3s_1_0s (CPU Time 0h:00m:00s, Memory Used current: 100MB peak: 100MB)
+@N: CG364 :"C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\reveal_workspace\tmpreveal\top_la0_trig_gen.v":11:7:11:18|Synthesizing module top_la0_trig in library work.
+Running optimization stage 1 on top_la0_trig .......
+Finished optimization stage 1 on top_la0_trig (CPU Time 0h:00m:00s, Memory Used current: 100MB peak: 100MB)
+Running optimization stage 1 on pmi_ram_dp_Z4 .......
+Finished optimization stage 1 on pmi_ram_dp_Z4 (CPU Time 0h:00m:00s, Memory Used current: 100MB peak: 100MB)
+Running optimization stage 1 on rvl_tm_Z3 .......
+Finished optimization stage 1 on rvl_tm_Z3 (CPU Time 0h:00m:00s, Memory Used current: 99MB peak: 100MB)
+@N: CG364 :"C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\reveal_workspace\tmpreveal\top_la0_gen.v":12:7:12:13|Synthesizing module top_la0 in library work.
+Running optimization stage 1 on top_la0 .......
+Finished optimization stage 1 on top_la0 (CPU Time 0h:00m:00s, Memory Used current: 99MB peak: 100MB)
+@N: CG364 :"C:\lscc\diamond\3.12\cae_library\synthesis\verilog\pmi_def.v":1162:7:1162:16|Synthesizing module jtagconn16 in library work.
+Running optimization stage 1 on jtagconn16 .......
+Finished optimization stage 1 on jtagconn16 (CPU Time 0h:00m:00s, Memory Used current: 99MB peak: 100MB)
+@N: CG364 :"C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\reveal_workspace\tmpreveal\top_rvl.v":2:7:2:20|Synthesizing module reveal_coretop in library work.
+@W: CG360 :"C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\reveal_workspace\tmpreveal\top_rvl.v":16:29:16:39|Removing wire trigger_out, as there is no assignment to it.
+Running optimization stage 1 on reveal_coretop .......
+Finished optimization stage 1 on reveal_coretop (CPU Time 0h:00m:00s, Memory Used current: 99MB peak: 100MB)
+@N: CG364 :"C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\reveal_workspace\tmpreveal\top_rvl.v":202:7:202:9|Synthesizing module top in library work.
+Running optimization stage 1 on top .......
+Finished optimization stage 1 on top (CPU Time 0h:00m:00s, Memory Used current: 100MB peak: 100MB)
+Running optimization stage 2 on top .......
+Finished optimization stage 2 on top (CPU Time 0h:00m:00s, Memory Used current: 99MB peak: 100MB)
+Running optimization stage 2 on reveal_coretop .......
+Finished optimization stage 2 on reveal_coretop (CPU Time 0h:00m:00s, Memory Used current: 99MB peak: 100MB)
+Running optimization stage 2 on jtagconn16 .......
+Finished optimization stage 2 on jtagconn16 (CPU Time 0h:00m:00s, Memory Used current: 99MB peak: 100MB)
+Running optimization stage 2 on top_la0 .......
+@N: CL159 :"C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\reveal_workspace\tmpreveal\top_la0_gen.v":52:7:52:13|Input reset_n is unused.
+@N: CL159 :"C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\reveal_workspace\tmpreveal\top_la0_gen.v":64:7:64:16|Input trigger_en is unused.
+Finished optimization stage 2 on top_la0 (CPU Time 0h:00m:00s, Memory Used current: 99MB peak: 100MB)
+Running optimization stage 2 on pmi_ram_dp_Z4 .......
+Finished optimization stage 2 on pmi_ram_dp_Z4 (CPU Time 0h:00m:00s, Memory Used current: 99MB peak: 100MB)
+Running optimization stage 2 on rvl_tm_Z3 .......
+Finished optimization stage 2 on rvl_tm_Z3 (CPU Time 0h:00m:00s, Memory Used current: 101MB peak: 103MB)
+Running optimization stage 2 on top_la0_trig .......
+Finished optimization stage 2 on top_la0_trig (CPU Time 0h:00m:00s, Memory Used current: 101MB peak: 103MB)
+Running optimization stage 2 on rvl_tcnt_1s_3s_1_0s .......
+Finished optimization stage 2 on rvl_tcnt_1s_3s_1_0s (CPU Time 0h:00m:00s, Memory Used current: 102MB peak: 103MB)
+Running optimization stage 2 on pmi_ram_dp_Z2 .......
+Finished optimization stage 2 on pmi_ram_dp_Z2 (CPU Time 0h:00m:00s, Memory Used current: 102MB peak: 103MB)
+Running optimization stage 2 on rvl_te_Z1 .......
+Finished optimization stage 2 on rvl_te_Z1 (CPU Time 0h:00m:00s, Memory Used current: 102MB peak: 112MB)
+Running optimization stage 2 on rvl_tu_1s_0s_0s_0s_1s .......
+Finished optimization stage 2 on rvl_tu_1s_0s_0s_0s_1s (CPU Time 0h:00m:00s, Memory Used current: 102MB peak: 112MB)
+Running optimization stage 2 on rvl_decode_1s_1s .......
+Finished optimization stage 2 on rvl_decode_1s_1s (CPU Time 0h:00m:00s, Memory Used current: 102MB peak: 112MB)
+Running optimization stage 2 on rvl_jtag_int_8s_1s_0s_0s_3s_8s_8s .......
+Finished optimization stage 2 on rvl_jtag_int_8s_1s_0s_0s_3s_8s_8s (CPU Time 0h:00m:00s, Memory Used current: 103MB peak: 112MB)
+Running optimization stage 2 on VHI .......
+Finished optimization stage 2 on VHI (CPU Time 0h:00m:00s, Memory Used current: 103MB peak: 112MB)
+Running optimization stage 2 on UART_uniq_1 .......
+@N: CL189 :"C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\reveal_workspace\tmpreveal\top_rvl.v":306:4:306:9|Register bit rxCounter[10] is always 0.
+@N: CL189 :"C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\reveal_workspace\tmpreveal\top_rvl.v":306:4:306:9|Register bit txCounter[10] is always 0.
+@W: CL260 :"C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\reveal_workspace\tmpreveal\top_rvl.v":306:4:306:9|Pruning register bit 10 of txCounter[10:0]. If this is not the intended behavior, drive the input with valid values, or an input from the top level.
+@W: CL260 :"C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\reveal_workspace\tmpreveal\top_rvl.v":306:4:306:9|Pruning register bit 10 of rxCounter[10:0]. If this is not the intended behavior, drive the input with valid values, or an input from the top level.
+@N: CL189 :"C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\reveal_workspace\tmpreveal\top_rvl.v":306:4:306:9|Register bit rxCounter[9] is always 0.
+@N: CL189 :"C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\reveal_workspace\tmpreveal\top_rvl.v":306:4:306:9|Register bit txCounter[9] is always 0.
+@W: CL260 :"C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\reveal_workspace\tmpreveal\top_rvl.v":306:4:306:9|Pruning register bit 9 of txCounter[9:0]. If this is not the intended behavior, drive the input with valid values, or an input from the top level.
+@W: CL260 :"C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\reveal_workspace\tmpreveal\top_rvl.v":306:4:306:9|Pruning register bit 9 of rxCounter[9:0]. If this is not the intended behavior, drive the input with valid values, or an input from the top level.
+@N: CL201 :"C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\reveal_workspace\tmpreveal\top_rvl.v":306:4:306:9|Trying to extract state machine for register txState.
+Extracted state machine for register txState
+State machine has 2 reachable states with original encodings of:
+   00000000000000000000000000000000
+   00000000000000000000000000000001
+Finished optimization stage 2 on UART_uniq_1 (CPU Time 0h:00m:00s, Memory Used current: 103MB peak: 112MB)
+
+For a summary of runtime and memory usage per design unit, please see file:
+==========================================================
+@L: C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\synwork\layer0.rt.csv
+
+
+At c_ver Exit (Real Time elapsed 0h:00m:06s; CPU Time elapsed 0h:00m:05s; Memory used current: 104MB peak: 112MB)
+
+Process took 0h:00m:06s realtime, 0h:00m:05s cputime
+
+Process completed successfully.
+# Tue May  3 16:20:47 2022
+
+###########################################################]
+###########################################################[
+
+Copyright (C) 1994-2021 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: R-2021.03L-SP1
+Install: C:\lscc\diamond\3.12\synpbase
+OS: Windows 6.2
+
+Hostname: DESKTOP-MU9CKUT
+
+Implementation : impl1
+Synopsys Synopsys Netlist Linker, Version comp202103synp2, Build 093R, Built Aug 10 2021 09:15:36, @
+
+@N|Running in 64-bit mode
+
+At syn_nfilter Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 92MB peak: 93MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+
+Process completed successfully.
+# Tue May  3 16:20:48 2022
+
+###########################################################]
+
+For a summary of runtime and memory usage for all design units, please see file:
+==========================================================
+@L: C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\synwork\UART_impl1_comp.rt.csv
+
+@END
+
+At c_hdl Exit (Real Time elapsed 0h:00m:07s; CPU Time elapsed 0h:00m:06s; Memory used current: 23MB peak: 23MB)
+
+Process took 0h:00m:07s realtime, 0h:00m:06s cputime
+
+Process completed successfully.
+# Tue May  3 16:20:48 2022
+
+###########################################################]

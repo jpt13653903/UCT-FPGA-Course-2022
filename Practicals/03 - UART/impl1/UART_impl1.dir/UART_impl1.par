@@ -1,0 +1,27 @@
+PAR: Place And Route Diamond (64-bit) 3.12.1.454.
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
+Tue May 03 16:21:16 2022
+
+C:/lscc/diamond/3.12/ispfpga\bin\nt64\par -f UART_impl1.p2t UART_impl1_map.ncd
+UART_impl1.dir UART_impl1.prf -gui -msgset
+C:/Users/user/Desktop/UCT-FPGA-Course-2022/Practicals/03 - UART/promote.xml
+
+
+Preference file: UART_impl1.prf.
+
+Level/       Number       Worst        Timing       Worst        Timing       Run          NCD
+Cost [ncd]   Unrouted     Slack        Score        Slack(hold)  Score(hold)  Time         Status
+----------   --------     -----        ------       -----------  -----------  ----         ------
+5_1   *      0            10.783       0            0.175        0            22           Completed
+
+* : Design saved.
+
+Total (real) run time for 1-seed: 22 secs 
+
+par done!
+
+Note: user must run 'Trace' for timing closure signoff.

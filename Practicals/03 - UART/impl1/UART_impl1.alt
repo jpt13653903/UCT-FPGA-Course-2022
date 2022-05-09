@@ -1,0 +1,20 @@
+NOTE Copyright (C), 1992-2010, Lattice Semiconductor Corporation *
+NOTE All Rights Reserved *
+NOTE DATE CREATED: Tue May 03 16:21:53 2022 *
+NOTE DESIGN NAME: top *
+NOTE DEVICE NAME: LFXP2-5E-6TQFP144 *
+NOTE PIN ASSIGNMENTS *
+NOTE PINS opUART_Tx : 109 : out *
+NOTE PINS ipUART_Rx : 110 : in *
+NOTE PINS opLed[7] : 37 : out *
+NOTE PINS opLed[6] : 38 : out *
+NOTE PINS opLed[5] : 39 : out *
+NOTE PINS opLed[4] : 40 : out *
+NOTE PINS opLed[3] : 43 : out *
+NOTE PINS opLed[2] : 44 : out *
+NOTE PINS opLed[1] : 45 : out *
+NOTE PINS opLed[0] : 46 : out *
+NOTE PINS ipnReset : 19 : in *
+NOTE PINS ipClk : 21 : in *
+NOTE CONFIGURATION MODE: NONE *
+NOTE COMPRESSION: off *

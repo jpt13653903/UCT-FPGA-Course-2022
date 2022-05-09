@@ -1,0 +1,222 @@
+# Tue May  3 16:20:50 2022
+
+
+Copyright (C) 1994-2021 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: R-2021.03L-SP1
+Install: C:\lscc\diamond\3.12\synpbase
+OS: Windows 6.2
+
+Hostname: DESKTOP-MU9CKUT
+
+Implementation : impl1
+Synopsys Lattice Technology Pre-mapping, Version map202103lat, Build 070R, Built Oct  6 2021 11:12:38, @
+
+
+Mapper Startup Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 118MB peak: 118MB)
+
+
+Done reading skeleton netlist (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 123MB peak: 130MB)
+
+Reading constraint file: C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\UART.fdc
+@W: derive_clock_uncertainty  not supported.
+@L: C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\UART_impl1_scck.rpt 
+See clock summary report "C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\UART_impl1_scck.rpt"
+@N: MF916 |Option synthesis_strategy=base is enabled. 
+@N: MF248 |Running in 64-bit mode.
+@N: MF666 |Clock conversion enabled. (Command "set_option -fix_gated_and_generated_clocks 1" in the project file.)
+
+Design Input Complete (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 129MB peak: 130MB)
+
+
+Mapper Initialization Complete (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 129MB peak: 130MB)
+
+
+Start loading timing files (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 141MB peak: 141MB)
+
+
+Finished loading timing files (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 142MB peak: 143MB)
+
+@N: FX493 |Applying initial value "00" on instance edgeDetector[1:0].
+@W: FX474 |User-specified initial value defined for some sequential elements which can prevent optimum synthesis results from being achieved. 
+@N: FX493 |Applying initial value "0" on instance clockEnable.
+@A: FX681 :"c:\users\user\desktop\uct-fpga-course-2022\practicals\03 - uart\impl1\reveal_workspace\tmpreveal\top_rvl.v":306:4:306:9|Initial value on register txBitCounter[4:0] is non-zero which can prevent the register from being packed into a block RAM or DSP.
+@N: FX493 |Applying initial value "01001" on instance txBitCounter[4:0].
+@A: FX681 :"c:\users\user\desktop\uct-fpga-course-2022\practicals\03 - uart\impl1\reveal_workspace\tmpreveal\top_rvl.v":306:4:306:9|Initial value on register txCounter[8:0] is non-zero which can prevent the register from being packed into a block RAM or DSP.
+@N: FX493 |Applying initial value "110110001" on instance txCounter[8:0].
+@A: FX681 :"c:\users\user\desktop\uct-fpga-course-2022\practicals\03 - uart\impl1\reveal_workspace\tmpreveal\top_rvl.v":306:4:306:9|Initial value on register rxCounter[8:0] is non-zero which can prevent the register from being packed into a block RAM or DSP.
+@N: FX493 |Applying initial value "110110001" on instance rxCounter[8:0].
+@W: BN117 :"c:\users\user\desktop\uct-fpga-course-2022\practicals\03 - uart\impl1\reveal_workspace\tmpreveal\top_la0_trig_gen.v":96:0:96:7|Instance decode_u of partition view:work.rvl_decode_1s_1s(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\user\desktop\uct-fpga-course-2022\practicals\03 - uart\impl1\reveal_workspace\tmpreveal\top_la0_trig_gen.v":110:0:110:3|Instance tu_0 of partition view:work.rvl_tu_1s_0s_0s_0s_1s(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\user\desktop\uct-fpga-course-2022\practicals\03 - uart\impl1\reveal_workspace\tmpreveal\top_la0_trig_gen.v":130:0:130:3|Instance te_0 of partition view:work.rvl_te_Z1(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\user\desktop\uct-fpga-course-2022\practicals\03 - uart\impl1\reveal_workspace\tmpreveal\top_la0_trig_gen.v":162:0:162:5|Instance tcnt_0 of partition view:work.rvl_tcnt_1s_3s_1_0s(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\user\desktop\uct-fpga-course-2022\practicals\03 - uart\impl1\reveal_workspace\tmpreveal\top_la0_trig_gen.v":96:0:96:7|Instance decode_u of partition view:work.rvl_decode_1s_1s(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\user\desktop\uct-fpga-course-2022\practicals\03 - uart\impl1\reveal_workspace\tmpreveal\top_la0_trig_gen.v":110:0:110:3|Instance tu_0 of partition view:work.rvl_tu_1s_0s_0s_0s_1s(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\user\desktop\uct-fpga-course-2022\practicals\03 - uart\impl1\reveal_workspace\tmpreveal\top_la0_trig_gen.v":130:0:130:3|Instance te_0 of partition view:work.rvl_te_Z1(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\user\desktop\uct-fpga-course-2022\practicals\03 - uart\impl1\reveal_workspace\tmpreveal\top_la0_trig_gen.v":162:0:162:5|Instance tcnt_0 of partition view:work.rvl_tcnt_1s_3s_1_0s(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\user\desktop\uct-fpga-course-2022\practicals\03 - uart\impl1\reveal_workspace\tmpreveal\top_la0_trig_gen.v":96:0:96:7|Instance decode_u of partition view:work.rvl_decode_1s_1s(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\user\desktop\uct-fpga-course-2022\practicals\03 - uart\impl1\reveal_workspace\tmpreveal\top_la0_trig_gen.v":110:0:110:3|Instance tu_0 of partition view:work.rvl_tu_1s_0s_0s_0s_1s(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\user\desktop\uct-fpga-course-2022\practicals\03 - uart\impl1\reveal_workspace\tmpreveal\top_la0_trig_gen.v":130:0:130:3|Instance te_0 of partition view:work.rvl_te_Z1(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\user\desktop\uct-fpga-course-2022\practicals\03 - uart\impl1\reveal_workspace\tmpreveal\top_la0_trig_gen.v":162:0:162:5|Instance tcnt_0 of partition view:work.rvl_tcnt_1s_3s_1_0s(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\user\desktop\uct-fpga-course-2022\practicals\03 - uart\impl1\reveal_workspace\tmpreveal\top_la0_gen.v":97:0:97:9|Instance jtag_int_u of partition view:work.rvl_jtag_int_8s_1s_0s_0s_3s_8s_8s(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\user\desktop\uct-fpga-course-2022\practicals\03 - uart\impl1\reveal_workspace\tmpreveal\top_la0_gen.v":174:0:174:3|Instance tm_u of partition view:work.rvl_tm_Z3(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\user\desktop\uct-fpga-course-2022\practicals\03 - uart\impl1\reveal_workspace\tmpreveal\top_la0_gen.v":97:0:97:9|Instance jtag_int_u of partition view:work.rvl_jtag_int_8s_1s_0s_0s_3s_8s_8s(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\user\desktop\uct-fpga-course-2022\practicals\03 - uart\impl1\reveal_workspace\tmpreveal\top_la0_gen.v":174:0:174:3|Instance tm_u of partition view:work.rvl_tm_Z3(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\user\desktop\uct-fpga-course-2022\practicals\03 - uart\impl1\reveal_workspace\tmpreveal\top_la0_gen.v":97:0:97:9|Instance jtag_int_u of partition view:work.rvl_jtag_int_8s_1s_0s_0s_3s_8s_8s(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\user\desktop\uct-fpga-course-2022\practicals\03 - uart\impl1\reveal_workspace\tmpreveal\top_la0_gen.v":174:0:174:3|Instance tm_u of partition view:work.rvl_tm_Z3(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\user\desktop\uct-fpga-course-2022\practicals\03 - uart\impl1\reveal_workspace\tmpreveal\top_la0_trig_gen.v":96:0:96:7|Instance decode_u of partition view:work.rvl_decode_1s_1s(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\user\desktop\uct-fpga-course-2022\practicals\03 - uart\impl1\reveal_workspace\tmpreveal\top_la0_trig_gen.v":110:0:110:3|Instance tu_0 of partition view:work.rvl_tu_1s_0s_0s_0s_1s(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\user\desktop\uct-fpga-course-2022\practicals\03 - uart\impl1\reveal_workspace\tmpreveal\top_la0_trig_gen.v":130:0:130:3|Instance te_0 of partition view:work.rvl_te_Z1(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\user\desktop\uct-fpga-course-2022\practicals\03 - uart\impl1\reveal_workspace\tmpreveal\top_la0_trig_gen.v":162:0:162:5|Instance tcnt_0 of partition view:work.rvl_tcnt_1s_3s_1_0s(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\user\desktop\uct-fpga-course-2022\practicals\03 - uart\impl1\reveal_workspace\tmpreveal\top_la0_trig_gen.v":96:0:96:7|Instance decode_u of partition view:work.rvl_decode_1s_1s(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\user\desktop\uct-fpga-course-2022\practicals\03 - uart\impl1\reveal_workspace\tmpreveal\top_la0_trig_gen.v":110:0:110:3|Instance tu_0 of partition view:work.rvl_tu_1s_0s_0s_0s_1s(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\user\desktop\uct-fpga-course-2022\practicals\03 - uart\impl1\reveal_workspace\tmpreveal\top_la0_trig_gen.v":130:0:130:3|Instance te_0 of partition view:work.rvl_te_Z1(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\user\desktop\uct-fpga-course-2022\practicals\03 - uart\impl1\reveal_workspace\tmpreveal\top_la0_trig_gen.v":162:0:162:5|Instance tcnt_0 of partition view:work.rvl_tcnt_1s_3s_1_0s(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\user\desktop\uct-fpga-course-2022\practicals\03 - uart\impl1\reveal_workspace\tmpreveal\top_la0_trig_gen.v":96:0:96:7|Instance decode_u of partition view:work.rvl_decode_1s_1s(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\user\desktop\uct-fpga-course-2022\practicals\03 - uart\impl1\reveal_workspace\tmpreveal\top_la0_trig_gen.v":110:0:110:3|Instance tu_0 of partition view:work.rvl_tu_1s_0s_0s_0s_1s(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\user\desktop\uct-fpga-course-2022\practicals\03 - uart\impl1\reveal_workspace\tmpreveal\top_la0_trig_gen.v":130:0:130:3|Instance te_0 of partition view:work.rvl_te_Z1(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\user\desktop\uct-fpga-course-2022\practicals\03 - uart\impl1\reveal_workspace\tmpreveal\top_la0_trig_gen.v":162:0:162:5|Instance tcnt_0 of partition view:work.rvl_tcnt_1s_3s_1_0s(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\user\desktop\uct-fpga-course-2022\practicals\03 - uart\impl1\reveal_workspace\tmpreveal\top_la0_trig_gen.v":96:0:96:7|Instance decode_u of partition view:work.rvl_decode_1s_1s(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\user\desktop\uct-fpga-course-2022\practicals\03 - uart\impl1\reveal_workspace\tmpreveal\top_la0_trig_gen.v":110:0:110:3|Instance tu_0 of partition view:work.rvl_tu_1s_0s_0s_0s_1s(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\user\desktop\uct-fpga-course-2022\practicals\03 - uart\impl1\reveal_workspace\tmpreveal\top_la0_trig_gen.v":130:0:130:3|Instance te_0 of partition view:work.rvl_te_Z1(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\user\desktop\uct-fpga-course-2022\practicals\03 - uart\impl1\reveal_workspace\tmpreveal\top_la0_trig_gen.v":162:0:162:5|Instance tcnt_0 of partition view:work.rvl_tcnt_1s_3s_1_0s(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\user\desktop\uct-fpga-course-2022\practicals\03 - uart\impl1\reveal_workspace\tmpreveal\top_la0_trig_gen.v":96:0:96:7|Instance decode_u of partition view:work.rvl_decode_1s_1s(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\user\desktop\uct-fpga-course-2022\practicals\03 - uart\impl1\reveal_workspace\tmpreveal\top_la0_trig_gen.v":110:0:110:3|Instance tu_0 of partition view:work.rvl_tu_1s_0s_0s_0s_1s(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\user\desktop\uct-fpga-course-2022\practicals\03 - uart\impl1\reveal_workspace\tmpreveal\top_la0_trig_gen.v":130:0:130:3|Instance te_0 of partition view:work.rvl_te_Z1(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\user\desktop\uct-fpga-course-2022\practicals\03 - uart\impl1\reveal_workspace\tmpreveal\top_la0_trig_gen.v":162:0:162:5|Instance tcnt_0 of partition view:work.rvl_tcnt_1s_3s_1_0s(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\user\desktop\uct-fpga-course-2022\practicals\03 - uart\impl1\reveal_workspace\tmpreveal\top_la0_gen.v":97:0:97:9|Instance jtag_int_u of partition view:work.rvl_jtag_int_8s_1s_0s_0s_3s_8s_8s(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\user\desktop\uct-fpga-course-2022\practicals\03 - uart\impl1\reveal_workspace\tmpreveal\top_la0_gen.v":174:0:174:3|Instance tm_u of partition view:work.rvl_tm_Z3(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\user\desktop\uct-fpga-course-2022\practicals\03 - uart\impl1\reveal_workspace\tmpreveal\top_la0_gen.v":97:0:97:9|Instance jtag_int_u of partition view:work.rvl_jtag_int_8s_1s_0s_0s_3s_8s_8s(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\user\desktop\uct-fpga-course-2022\practicals\03 - uart\impl1\reveal_workspace\tmpreveal\top_la0_gen.v":174:0:174:3|Instance tm_u of partition view:work.rvl_tm_Z3(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\user\desktop\uct-fpga-course-2022\practicals\03 - uart\impl1\reveal_workspace\tmpreveal\top_la0_gen.v":97:0:97:9|Instance jtag_int_u of partition view:work.rvl_jtag_int_8s_1s_0s_0s_3s_8s_8s(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\user\desktop\uct-fpga-course-2022\practicals\03 - uart\impl1\reveal_workspace\tmpreveal\top_la0_gen.v":174:0:174:3|Instance tm_u of partition view:work.rvl_tm_Z3(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\user\desktop\uct-fpga-course-2022\practicals\03 - uart\impl1\reveal_workspace\tmpreveal\top_la0_gen.v":97:0:97:9|Instance jtag_int_u of partition view:work.rvl_jtag_int_8s_1s_0s_0s_3s_8s_8s(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\user\desktop\uct-fpga-course-2022\practicals\03 - uart\impl1\reveal_workspace\tmpreveal\top_la0_gen.v":174:0:174:3|Instance tm_u of partition view:work.rvl_tm_Z3(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\user\desktop\uct-fpga-course-2022\practicals\03 - uart\impl1\reveal_workspace\tmpreveal\top_la0_gen.v":97:0:97:9|Instance jtag_int_u of partition view:work.rvl_jtag_int_8s_1s_0s_0s_3s_8s_8s(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\user\desktop\uct-fpga-course-2022\practicals\03 - uart\impl1\reveal_workspace\tmpreveal\top_la0_gen.v":174:0:174:3|Instance tm_u of partition view:work.rvl_tm_Z3(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\user\desktop\uct-fpga-course-2022\practicals\03 - uart\impl1\reveal_workspace\tmpreveal\top_la0_gen.v":97:0:97:9|Instance jtag_int_u of partition view:work.rvl_jtag_int_8s_1s_0s_0s_3s_8s_8s(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\user\desktop\uct-fpga-course-2022\practicals\03 - uart\impl1\reveal_workspace\tmpreveal\top_la0_gen.v":174:0:174:3|Instance tm_u of partition view:work.rvl_tm_Z3(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\user\desktop\uct-fpga-course-2022\practicals\03 - uart\impl1\reveal_workspace\tmpreveal\top_la0_trig_gen.v":96:0:96:7|Instance decode_u of partition view:work.rvl_decode_1s_1s(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\user\desktop\uct-fpga-course-2022\practicals\03 - uart\impl1\reveal_workspace\tmpreveal\top_la0_trig_gen.v":110:0:110:3|Instance tu_0 of partition view:work.rvl_tu_1s_0s_0s_0s_1s(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\user\desktop\uct-fpga-course-2022\practicals\03 - uart\impl1\reveal_workspace\tmpreveal\top_la0_trig_gen.v":130:0:130:3|Instance te_0 of partition view:work.rvl_te_Z1(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\user\desktop\uct-fpga-course-2022\practicals\03 - uart\impl1\reveal_workspace\tmpreveal\top_la0_trig_gen.v":162:0:162:5|Instance tcnt_0 of partition view:work.rvl_tcnt_1s_3s_1_0s(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\user\desktop\uct-fpga-course-2022\practicals\03 - uart\impl1\reveal_workspace\tmpreveal\top_la0_gen.v":97:0:97:9|Instance jtag_int_u of partition view:work.rvl_jtag_int_8s_1s_0s_0s_3s_8s_8s(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\user\desktop\uct-fpga-course-2022\practicals\03 - uart\impl1\reveal_workspace\tmpreveal\top_la0_gen.v":174:0:174:3|Instance tm_u of partition view:work.rvl_tm_Z3(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\user\desktop\uct-fpga-course-2022\practicals\03 - uart\impl1\reveal_workspace\tmpreveal\top_la0_trig_gen.v":96:0:96:7|Instance decode_u of partition view:work.rvl_decode_1s_1s(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\user\desktop\uct-fpga-course-2022\practicals\03 - uart\impl1\reveal_workspace\tmpreveal\top_la0_trig_gen.v":110:0:110:3|Instance tu_0 of partition view:work.rvl_tu_1s_0s_0s_0s_1s(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\user\desktop\uct-fpga-course-2022\practicals\03 - uart\impl1\reveal_workspace\tmpreveal\top_la0_trig_gen.v":130:0:130:3|Instance te_0 of partition view:work.rvl_te_Z1(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\user\desktop\uct-fpga-course-2022\practicals\03 - uart\impl1\reveal_workspace\tmpreveal\top_la0_trig_gen.v":162:0:162:5|Instance tcnt_0 of partition view:work.rvl_tcnt_1s_3s_1_0s(verilog) has no references to its outputs; instance not removed. 
+Encoding state machine txState[1:0] (in view: work.UART_uniq_1(verilog))
+original code -> new code
+   00000000000000000000000000000000 -> 0
+   00000000000000000000000000000001 -> 1
+@N: MO225 :"c:\users\user\desktop\uct-fpga-course-2022\practicals\03 - uart\impl1\reveal_workspace\tmpreveal\top_rvl.v":306:4:306:9|There are no possible illegal states for state machine txState[1:0] (in view: work.UART_uniq_1(verilog)); safe FSM implementation is not required.
+
+Starting clock optimization phase (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 175MB peak: 175MB)
+
+
+Finished clock optimization phase (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 175MB peak: 175MB)
+
+
+Starting clock optimization report phase (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:01s; Memory used current: 175MB peak: 175MB)
+
+@W: BN117 :"c:\users\user\desktop\uct-fpga-course-2022\practicals\03 - uart\impl1\reveal_workspace\tmpreveal\top_la0_gen.v":97:0:97:9|Instance jtag_int_u of partition view:work.rvl_jtag_int_8s_1s_0s_0s_3s_8s_8s(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\user\desktop\uct-fpga-course-2022\practicals\03 - uart\impl1\reveal_workspace\tmpreveal\top_la0_gen.v":174:0:174:3|Instance tm_u of partition view:work.rvl_tm_Z3(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\user\desktop\uct-fpga-course-2022\practicals\03 - uart\impl1\reveal_workspace\tmpreveal\top_la0_trig_gen.v":96:0:96:7|Instance decode_u of partition view:work.rvl_decode_1s_1s(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\user\desktop\uct-fpga-course-2022\practicals\03 - uart\impl1\reveal_workspace\tmpreveal\top_la0_trig_gen.v":110:0:110:3|Instance tu_0 of partition view:work.rvl_tu_1s_0s_0s_0s_1s(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\user\desktop\uct-fpga-course-2022\practicals\03 - uart\impl1\reveal_workspace\tmpreveal\top_la0_trig_gen.v":130:0:130:3|Instance te_0 of partition view:work.rvl_te_Z1(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\user\desktop\uct-fpga-course-2022\practicals\03 - uart\impl1\reveal_workspace\tmpreveal\top_la0_trig_gen.v":162:0:162:5|Instance tcnt_0 of partition view:work.rvl_tcnt_1s_3s_1_0s(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\user\desktop\uct-fpga-course-2022\practicals\03 - uart\impl1\reveal_workspace\tmpreveal\top_la0_gen.v":97:0:97:9|Instance jtag_int_u of partition view:work.rvl_jtag_int_8s_1s_0s_0s_3s_8s_8s(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\user\desktop\uct-fpga-course-2022\practicals\03 - uart\impl1\reveal_workspace\tmpreveal\top_la0_gen.v":174:0:174:3|Instance tm_u of partition view:work.rvl_tm_Z3(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\user\desktop\uct-fpga-course-2022\practicals\03 - uart\impl1\reveal_workspace\tmpreveal\top_la0_trig_gen.v":96:0:96:7|Instance decode_u of partition view:work.rvl_decode_1s_1s(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\user\desktop\uct-fpga-course-2022\practicals\03 - uart\impl1\reveal_workspace\tmpreveal\top_la0_trig_gen.v":110:0:110:3|Instance tu_0 of partition view:work.rvl_tu_1s_0s_0s_0s_1s(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\user\desktop\uct-fpga-course-2022\practicals\03 - uart\impl1\reveal_workspace\tmpreveal\top_la0_trig_gen.v":130:0:130:3|Instance te_0 of partition view:work.rvl_te_Z1(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\user\desktop\uct-fpga-course-2022\practicals\03 - uart\impl1\reveal_workspace\tmpreveal\top_la0_trig_gen.v":162:0:162:5|Instance tcnt_0 of partition view:work.rvl_tcnt_1s_3s_1_0s(verilog) has no references to its outputs; instance not removed. 
+
+Finished clock optimization report phase (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:01s; Memory used current: 175MB peak: 176MB)
+
+@N: FX1184 |Applying syn_allowed_resources blockrams=9 on top level netlist top 
+
+Finished netlist restructuring (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 175MB peak: 176MB)
+
+
+
+Clock Summary
+******************
+
+          Start                                     Requested     Requested     Clock        Clock                   Clock
+Level     Clock                                     Frequency     Period        Type         Group                   Load 
+--------------------------------------------------------------------------------------------------------------------------
+0 -       ipClk                                     50.0 MHz      20.000        declared     default_clkgroup        199  
+                                                                                                                          
+0 -       System                                    200.0 MHz     5.000         system       system_clkgroup         0    
+                                                                                                                          
+0 -       reveal_coretop|jtck_inferred_clock[0]     200.0 MHz     5.000         inferred     Inferred_clkgroup_0     166  
+==========================================================================================================================
+
+
+
+Clock Load Summary
+***********************
+
+                                          Clock     Source                                                             Clock Pin                                                            Non-clock Pin     Non-clock Pin                                                              
+Clock                                     Load      Pin                                                                Seq Example                                                          Seq Example       Comb Example                                                               
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ipClk                                     199       ipClk(port)                                                        opLed[7:0].C                                                         -                 -                                                                          
+                                                                                                                                                                                                                                                                                         
+System                                    0         -                                                                  -                                                                    -                 -                                                                          
+                                                                                                                                                                                                                                                                                         
+reveal_coretop|jtck_inferred_clock[0]     166       top_reveal_coretop_instance.jtagconn16_inst_0.jtck(jtagconn16)     top_reveal_coretop_instance.top_la0_inst_0.tm_u.tm_first_rd_d1.C     -                 top_reveal_coretop_instance.top_la0_inst_0.tm_u.genblk4\.un1_jtck.I[0](inv)
+=========================================================================================================================================================================================================================================================================================
+
+
+ICG Latch Removal Summary:
+Number of ICG latches removed: 0
+Number of ICG latches not removed:	0
+For details review file gcc_ICG_report.rpt
+
+
+@S |Clock Optimization Summary
+
+
+
+#### START OF PREMAP CLOCK OPTIMIZATION REPORT #####[
+
+2 non-gated/non-generated clock tree(s) driving 365 clock pin(s) of sequential element(s)
+0 gated/generated clock tree(s) driving 0 clock pin(s) of sequential element(s)
+0 instances converted, 0 sequential instances remain driven by gated/generated clocks
+
+============================================= Non-Gated/Non-Generated Clocks ==============================================
+Clock Tree ID     Driving Element                                        Drive Element Type     Fanout     Sample Instance 
+---------------------------------------------------------------------------------------------------------------------------
+@KP:ckid0_0       ipClk                                                  port                   199        UART_TxData[7:0]
+@KP:ckid0_1       top_reveal_coretop_instance.jtagconn16_inst_0.jtck     jtagconn16             166        ENCRYPTED       
+===========================================================================================================================
+
+
+##### END OF CLOCK OPTIMIZATION REPORT ######
+
+@N: FX1143 |Skipping assigning INTERNAL_VREF to iobanks, because the table of mapping from pin to iobank is not initialized.
+Finished Pre Mapping Phase.
+
+Starting constraint checker (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:02s; Memory used current: 176MB peak: 176MB)
+
+
+Finished constraint checker preprocessing (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:02s; Memory used current: 176MB peak: 177MB)
+
+@W: MF511 |Found issues with constraints. Please check constraint checker report "C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\UART_impl1_cck.rpt" .
+
+Finished constraint checker (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:02s; Memory used current: 177MB peak: 177MB)
+
+Pre-mapping successful!
+
+At Mapper Exit (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:02s; Memory used current: 96MB peak: 178MB)
+
+Process took 0h:00m:03s realtime, 0h:00m:03s cputime
+# Tue May  3 16:20:53 2022
+
+###########################################################]

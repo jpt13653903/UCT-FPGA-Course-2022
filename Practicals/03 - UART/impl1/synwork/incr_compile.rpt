@@ -1,0 +1,228 @@
+
+Copyright (C) 1994-2021 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: R-2021.03L-SP1
+Install: C:\lscc\diamond\3.12\synpbase
+OS: Windows 6.2
+
+Hostname: DESKTOP-MU9CKUT
+
+Implementation : impl1
+Synopsys HDL compiler and linker, Version comp202103synp2, Build 093R, Built Aug 10 2021 09:15:36, @
+
+Modified Files: 3
+FID:  path (prevtimestamp, timestamp)
+9        C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\reveal_workspace\tmpreveal\top_la0_gen.v (2022-05-03 16:12:36, 2022-05-03 16:20:38)
+10       C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\reveal_workspace\tmpreveal\top_la0_trig_gen.v (2022-05-03 16:12:36, 2022-05-03 16:20:38)
+11       C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\reveal_workspace\tmpreveal\top_rvl.v (2022-05-03 16:12:36, 2022-05-03 16:20:38)
+
+*******************************************************************
+Modules that may have changed as a result of file changes: 45
+MID:  lib.cell.view
+0        work.UART.verilog may have changed because the following files changed:
+                        C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\reveal_workspace\tmpreveal\top_rvl.v (2022-05-03 16:12:36, 2022-05-03 16:20:38) <-- (module definition)
+3        work.UART_uniq_1.verilog may have changed because the following files changed:
+                        C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\reveal_workspace\tmpreveal\top_rvl.v (2022-05-03 16:12:36, 2022-05-03 16:20:38) <-- (module definition)
+10       work.jtagconn16.verilog may have changed because the following files changed:
+                        C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\reveal_workspace\tmpreveal\top_la0_gen.v (2022-05-03 16:12:36, 2022-05-03 16:20:38) <-- (may instantiate this module)
+                        C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\reveal_workspace\tmpreveal\top_la0_trig_gen.v (2022-05-03 16:12:36, 2022-05-03 16:20:38) <-- (may instantiate this module)
+                        C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\reveal_workspace\tmpreveal\top_rvl.v (2022-05-03 16:12:36, 2022-05-03 16:20:38) <-- (may instantiate this module)
+13       work.pmi_add.verilog may have changed because the following files changed:
+                        C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\reveal_workspace\tmpreveal\top_la0_gen.v (2022-05-03 16:12:36, 2022-05-03 16:20:38) <-- (may instantiate this module)
+                        C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\reveal_workspace\tmpreveal\top_la0_trig_gen.v (2022-05-03 16:12:36, 2022-05-03 16:20:38) <-- (may instantiate this module)
+                        C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\reveal_workspace\tmpreveal\top_rvl.v (2022-05-03 16:12:36, 2022-05-03 16:20:38) <-- (may instantiate this module)
+14       work.pmi_addsub.verilog may have changed because the following files changed:
+                        C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\reveal_workspace\tmpreveal\top_la0_gen.v (2022-05-03 16:12:36, 2022-05-03 16:20:38) <-- (may instantiate this module)
+                        C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\reveal_workspace\tmpreveal\top_la0_trig_gen.v (2022-05-03 16:12:36, 2022-05-03 16:20:38) <-- (may instantiate this module)
+                        C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\reveal_workspace\tmpreveal\top_rvl.v (2022-05-03 16:12:36, 2022-05-03 16:20:38) <-- (may instantiate this module)
+15       work.pmi_complex_mult.verilog may have changed because the following files changed:
+                        C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\reveal_workspace\tmpreveal\top_la0_gen.v (2022-05-03 16:12:36, 2022-05-03 16:20:38) <-- (may instantiate this module)
+                        C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\reveal_workspace\tmpreveal\top_la0_trig_gen.v (2022-05-03 16:12:36, 2022-05-03 16:20:38) <-- (may instantiate this module)
+                        C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\reveal_workspace\tmpreveal\top_rvl.v (2022-05-03 16:12:36, 2022-05-03 16:20:38) <-- (may instantiate this module)
+16       work.pmi_constant_mult.verilog may have changed because the following files changed:
+                        C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\reveal_workspace\tmpreveal\top_la0_gen.v (2022-05-03 16:12:36, 2022-05-03 16:20:38) <-- (may instantiate this module)
+                        C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\reveal_workspace\tmpreveal\top_la0_trig_gen.v (2022-05-03 16:12:36, 2022-05-03 16:20:38) <-- (may instantiate this module)
+                        C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\reveal_workspace\tmpreveal\top_rvl.v (2022-05-03 16:12:36, 2022-05-03 16:20:38) <-- (may instantiate this module)
+17       work.pmi_counter.verilog may have changed because the following files changed:
+                        C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\reveal_workspace\tmpreveal\top_la0_gen.v (2022-05-03 16:12:36, 2022-05-03 16:20:38) <-- (may instantiate this module)
+                        C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\reveal_workspace\tmpreveal\top_la0_trig_gen.v (2022-05-03 16:12:36, 2022-05-03 16:20:38) <-- (may instantiate this module)
+                        C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\reveal_workspace\tmpreveal\top_rvl.v (2022-05-03 16:12:36, 2022-05-03 16:20:38) <-- (may instantiate this module)
+18       work.pmi_distributed_dpram.verilog may have changed because the following files changed:
+                        C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\reveal_workspace\tmpreveal\top_la0_gen.v (2022-05-03 16:12:36, 2022-05-03 16:20:38) <-- (may instantiate this module)
+                        C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\reveal_workspace\tmpreveal\top_la0_trig_gen.v (2022-05-03 16:12:36, 2022-05-03 16:20:38) <-- (may instantiate this module)
+                        C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\reveal_workspace\tmpreveal\top_rvl.v (2022-05-03 16:12:36, 2022-05-03 16:20:38) <-- (may instantiate this module)
+19       work.pmi_distributed_rom.verilog may have changed because the following files changed:
+                        C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\reveal_workspace\tmpreveal\top_la0_gen.v (2022-05-03 16:12:36, 2022-05-03 16:20:38) <-- (may instantiate this module)
+                        C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\reveal_workspace\tmpreveal\top_la0_trig_gen.v (2022-05-03 16:12:36, 2022-05-03 16:20:38) <-- (may instantiate this module)
+                        C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\reveal_workspace\tmpreveal\top_rvl.v (2022-05-03 16:12:36, 2022-05-03 16:20:38) <-- (may instantiate this module)
+20       work.pmi_distributed_shift_reg.verilog may have changed because the following files changed:
+                        C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\reveal_workspace\tmpreveal\top_la0_gen.v (2022-05-03 16:12:36, 2022-05-03 16:20:38) <-- (may instantiate this module)
+                        C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\reveal_workspace\tmpreveal\top_la0_trig_gen.v (2022-05-03 16:12:36, 2022-05-03 16:20:38) <-- (may instantiate this module)
+                        C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\reveal_workspace\tmpreveal\top_rvl.v (2022-05-03 16:12:36, 2022-05-03 16:20:38) <-- (may instantiate this module)
+21       work.pmi_distributed_spram.verilog may have changed because the following files changed:
+                        C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\reveal_workspace\tmpreveal\top_la0_gen.v (2022-05-03 16:12:36, 2022-05-03 16:20:38) <-- (may instantiate this module)
+                        C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\reveal_workspace\tmpreveal\top_la0_trig_gen.v (2022-05-03 16:12:36, 2022-05-03 16:20:38) <-- (may instantiate this module)
+                        C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\reveal_workspace\tmpreveal\top_rvl.v (2022-05-03 16:12:36, 2022-05-03 16:20:38) <-- (may instantiate this module)
+22       work.pmi_dsp_casmultaddsub.verilog may have changed because the following files changed:
+                        C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\reveal_workspace\tmpreveal\top_la0_gen.v (2022-05-03 16:12:36, 2022-05-03 16:20:38) <-- (may instantiate this module)
+                        C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\reveal_workspace\tmpreveal\top_la0_trig_gen.v (2022-05-03 16:12:36, 2022-05-03 16:20:38) <-- (may instantiate this module)
+                        C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\reveal_workspace\tmpreveal\top_rvl.v (2022-05-03 16:12:36, 2022-05-03 16:20:38) <-- (may instantiate this module)
+23       work.pmi_dsp_mac.verilog may have changed because the following files changed:
+                        C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\reveal_workspace\tmpreveal\top_la0_gen.v (2022-05-03 16:12:36, 2022-05-03 16:20:38) <-- (may instantiate this module)
+                        C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\reveal_workspace\tmpreveal\top_la0_trig_gen.v (2022-05-03 16:12:36, 2022-05-03 16:20:38) <-- (may instantiate this module)
+                        C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\reveal_workspace\tmpreveal\top_rvl.v (2022-05-03 16:12:36, 2022-05-03 16:20:38) <-- (may instantiate this module)
+24       work.pmi_dsp_mult.verilog may have changed because the following files changed:
+                        C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\reveal_workspace\tmpreveal\top_la0_gen.v (2022-05-03 16:12:36, 2022-05-03 16:20:38) <-- (may instantiate this module)
+                        C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\reveal_workspace\tmpreveal\top_la0_trig_gen.v (2022-05-03 16:12:36, 2022-05-03 16:20:38) <-- (may instantiate this module)
+                        C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\reveal_workspace\tmpreveal\top_rvl.v (2022-05-03 16:12:36, 2022-05-03 16:20:38) <-- (may instantiate this module)
+25       work.pmi_dsp_multaddsub.verilog may have changed because the following files changed:
+                        C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\reveal_workspace\tmpreveal\top_la0_gen.v (2022-05-03 16:12:36, 2022-05-03 16:20:38) <-- (may instantiate this module)
+                        C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\reveal_workspace\tmpreveal\top_la0_trig_gen.v (2022-05-03 16:12:36, 2022-05-03 16:20:38) <-- (may instantiate this module)
+                        C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\reveal_workspace\tmpreveal\top_rvl.v (2022-05-03 16:12:36, 2022-05-03 16:20:38) <-- (may instantiate this module)
+26       work.pmi_dsp_multaddsubsum.verilog may have changed because the following files changed:
+                        C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\reveal_workspace\tmpreveal\top_la0_gen.v (2022-05-03 16:12:36, 2022-05-03 16:20:38) <-- (may instantiate this module)
+                        C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\reveal_workspace\tmpreveal\top_la0_trig_gen.v (2022-05-03 16:12:36, 2022-05-03 16:20:38) <-- (may instantiate this module)
+                        C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\reveal_workspace\tmpreveal\top_rvl.v (2022-05-03 16:12:36, 2022-05-03 16:20:38) <-- (may instantiate this module)
+27       work.pmi_dsp_preadd_slice.verilog may have changed because the following files changed:
+                        C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\reveal_workspace\tmpreveal\top_la0_gen.v (2022-05-03 16:12:36, 2022-05-03 16:20:38) <-- (may instantiate this module)
+                        C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\reveal_workspace\tmpreveal\top_la0_trig_gen.v (2022-05-03 16:12:36, 2022-05-03 16:20:38) <-- (may instantiate this module)
+                        C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\reveal_workspace\tmpreveal\top_rvl.v (2022-05-03 16:12:36, 2022-05-03 16:20:38) <-- (may instantiate this module)
+28       work.pmi_fifo.verilog may have changed because the following files changed:
+                        C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\reveal_workspace\tmpreveal\top_la0_gen.v (2022-05-03 16:12:36, 2022-05-03 16:20:38) <-- (may instantiate this module)
+                        C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\reveal_workspace\tmpreveal\top_la0_trig_gen.v (2022-05-03 16:12:36, 2022-05-03 16:20:38) <-- (may instantiate this module)
+                        C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\reveal_workspace\tmpreveal\top_rvl.v (2022-05-03 16:12:36, 2022-05-03 16:20:38) <-- (may instantiate this module)
+29       work.pmi_fifo_dc.verilog may have changed because the following files changed:
+                        C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\reveal_workspace\tmpreveal\top_la0_gen.v (2022-05-03 16:12:36, 2022-05-03 16:20:38) <-- (may instantiate this module)
+                        C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\reveal_workspace\tmpreveal\top_la0_trig_gen.v (2022-05-03 16:12:36, 2022-05-03 16:20:38) <-- (may instantiate this module)
+                        C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\reveal_workspace\tmpreveal\top_rvl.v (2022-05-03 16:12:36, 2022-05-03 16:20:38) <-- (may instantiate this module)
+30       work.pmi_mac.verilog may have changed because the following files changed:
+                        C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\reveal_workspace\tmpreveal\top_la0_gen.v (2022-05-03 16:12:36, 2022-05-03 16:20:38) <-- (may instantiate this module)
+                        C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\reveal_workspace\tmpreveal\top_la0_trig_gen.v (2022-05-03 16:12:36, 2022-05-03 16:20:38) <-- (may instantiate this module)
+                        C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\reveal_workspace\tmpreveal\top_rvl.v (2022-05-03 16:12:36, 2022-05-03 16:20:38) <-- (may instantiate this module)
+31       work.pmi_mult.verilog may have changed because the following files changed:
+                        C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\reveal_workspace\tmpreveal\top_la0_gen.v (2022-05-03 16:12:36, 2022-05-03 16:20:38) <-- (may instantiate this module)
+                        C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\reveal_workspace\tmpreveal\top_la0_trig_gen.v (2022-05-03 16:12:36, 2022-05-03 16:20:38) <-- (may instantiate this module)
+                        C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\reveal_workspace\tmpreveal\top_rvl.v (2022-05-03 16:12:36, 2022-05-03 16:20:38) <-- (may instantiate this module)
+32       work.pmi_multaddsub.verilog may have changed because the following files changed:
+                        C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\reveal_workspace\tmpreveal\top_la0_gen.v (2022-05-03 16:12:36, 2022-05-03 16:20:38) <-- (may instantiate this module)
+                        C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\reveal_workspace\tmpreveal\top_la0_trig_gen.v (2022-05-03 16:12:36, 2022-05-03 16:20:38) <-- (may instantiate this module)
+                        C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\reveal_workspace\tmpreveal\top_rvl.v (2022-05-03 16:12:36, 2022-05-03 16:20:38) <-- (may instantiate this module)
+33       work.pmi_multaddsubsum.verilog may have changed because the following files changed:
+                        C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\reveal_workspace\tmpreveal\top_la0_gen.v (2022-05-03 16:12:36, 2022-05-03 16:20:38) <-- (may instantiate this module)
+                        C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\reveal_workspace\tmpreveal\top_la0_trig_gen.v (2022-05-03 16:12:36, 2022-05-03 16:20:38) <-- (may instantiate this module)
+                        C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\reveal_workspace\tmpreveal\top_rvl.v (2022-05-03 16:12:36, 2022-05-03 16:20:38) <-- (may instantiate this module)
+34       work.pmi_pll.verilog may have changed because the following files changed:
+                        C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\reveal_workspace\tmpreveal\top_la0_gen.v (2022-05-03 16:12:36, 2022-05-03 16:20:38) <-- (may instantiate this module)
+                        C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\reveal_workspace\tmpreveal\top_la0_trig_gen.v (2022-05-03 16:12:36, 2022-05-03 16:20:38) <-- (may instantiate this module)
+                        C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\reveal_workspace\tmpreveal\top_rvl.v (2022-05-03 16:12:36, 2022-05-03 16:20:38) <-- (may instantiate this module)
+35       work.pmi_pll_fp.verilog may have changed because the following files changed:
+                        C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\reveal_workspace\tmpreveal\top_la0_gen.v (2022-05-03 16:12:36, 2022-05-03 16:20:38) <-- (may instantiate this module)
+                        C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\reveal_workspace\tmpreveal\top_la0_trig_gen.v (2022-05-03 16:12:36, 2022-05-03 16:20:38) <-- (may instantiate this module)
+                        C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\reveal_workspace\tmpreveal\top_rvl.v (2022-05-03 16:12:36, 2022-05-03 16:20:38) <-- (may instantiate this module)
+36       work.pmi_ram_dp.verilog may have changed because the following files changed:
+                        C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\reveal_workspace\tmpreveal\top_la0_gen.v (2022-05-03 16:12:36, 2022-05-03 16:20:38) <-- (may instantiate this module)
+                        C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\reveal_workspace\tmpreveal\top_la0_trig_gen.v (2022-05-03 16:12:36, 2022-05-03 16:20:38) <-- (may instantiate this module)
+                        C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\reveal_workspace\tmpreveal\top_rvl.v (2022-05-03 16:12:36, 2022-05-03 16:20:38) <-- (may instantiate this module)
+37       work.pmi_ram_dp_be.verilog may have changed because the following files changed:
+                        C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\reveal_workspace\tmpreveal\top_la0_gen.v (2022-05-03 16:12:36, 2022-05-03 16:20:38) <-- (may instantiate this module)
+                        C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\reveal_workspace\tmpreveal\top_la0_trig_gen.v (2022-05-03 16:12:36, 2022-05-03 16:20:38) <-- (may instantiate this module)
+                        C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\reveal_workspace\tmpreveal\top_rvl.v (2022-05-03 16:12:36, 2022-05-03 16:20:38) <-- (may instantiate this module)
+38       work.pmi_ram_dp_true.verilog may have changed because the following files changed:
+                        C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\reveal_workspace\tmpreveal\top_la0_gen.v (2022-05-03 16:12:36, 2022-05-03 16:20:38) <-- (may instantiate this module)
+                        C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\reveal_workspace\tmpreveal\top_la0_trig_gen.v (2022-05-03 16:12:36, 2022-05-03 16:20:38) <-- (may instantiate this module)
+                        C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\reveal_workspace\tmpreveal\top_rvl.v (2022-05-03 16:12:36, 2022-05-03 16:20:38) <-- (may instantiate this module)
+39       work.pmi_ram_dp_true_be.verilog may have changed because the following files changed:
+                        C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\reveal_workspace\tmpreveal\top_la0_gen.v (2022-05-03 16:12:36, 2022-05-03 16:20:38) <-- (may instantiate this module)
+                        C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\reveal_workspace\tmpreveal\top_la0_trig_gen.v (2022-05-03 16:12:36, 2022-05-03 16:20:38) <-- (may instantiate this module)
+                        C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\reveal_workspace\tmpreveal\top_rvl.v (2022-05-03 16:12:36, 2022-05-03 16:20:38) <-- (may instantiate this module)
+40       work.pmi_ram_dq.verilog may have changed because the following files changed:
+                        C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\reveal_workspace\tmpreveal\top_la0_gen.v (2022-05-03 16:12:36, 2022-05-03 16:20:38) <-- (may instantiate this module)
+                        C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\reveal_workspace\tmpreveal\top_la0_trig_gen.v (2022-05-03 16:12:36, 2022-05-03 16:20:38) <-- (may instantiate this module)
+                        C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\reveal_workspace\tmpreveal\top_rvl.v (2022-05-03 16:12:36, 2022-05-03 16:20:38) <-- (may instantiate this module)
+41       work.pmi_ram_dq_be.verilog may have changed because the following files changed:
+                        C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\reveal_workspace\tmpreveal\top_la0_gen.v (2022-05-03 16:12:36, 2022-05-03 16:20:38) <-- (may instantiate this module)
+                        C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\reveal_workspace\tmpreveal\top_la0_trig_gen.v (2022-05-03 16:12:36, 2022-05-03 16:20:38) <-- (may instantiate this module)
+                        C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\reveal_workspace\tmpreveal\top_rvl.v (2022-05-03 16:12:36, 2022-05-03 16:20:38) <-- (may instantiate this module)
+42       work.pmi_rom.verilog may have changed because the following files changed:
+                        C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\reveal_workspace\tmpreveal\top_la0_gen.v (2022-05-03 16:12:36, 2022-05-03 16:20:38) <-- (may instantiate this module)
+                        C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\reveal_workspace\tmpreveal\top_la0_trig_gen.v (2022-05-03 16:12:36, 2022-05-03 16:20:38) <-- (may instantiate this module)
+                        C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\reveal_workspace\tmpreveal\top_rvl.v (2022-05-03 16:12:36, 2022-05-03 16:20:38) <-- (may instantiate this module)
+43       work.pmi_sub.verilog may have changed because the following files changed:
+                        C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\reveal_workspace\tmpreveal\top_la0_gen.v (2022-05-03 16:12:36, 2022-05-03 16:20:38) <-- (may instantiate this module)
+                        C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\reveal_workspace\tmpreveal\top_la0_trig_gen.v (2022-05-03 16:12:36, 2022-05-03 16:20:38) <-- (may instantiate this module)
+                        C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\reveal_workspace\tmpreveal\top_rvl.v (2022-05-03 16:12:36, 2022-05-03 16:20:38) <-- (may instantiate this module)
+44       work.reveal_coretop.verilog may have changed because the following files changed:
+                        C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\reveal_workspace\tmpreveal\top_rvl.v (2022-05-03 16:12:36, 2022-05-03 16:20:38) <-- (module definition)
+45       work.rvl_decode.verilog may have changed because the following files changed:
+                        C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\reveal_workspace\tmpreveal\top_la0_gen.v (2022-05-03 16:12:36, 2022-05-03 16:20:38) <-- (may instantiate this module)
+                        C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\reveal_workspace\tmpreveal\top_la0_trig_gen.v (2022-05-03 16:12:36, 2022-05-03 16:20:38) <-- (may instantiate this module)
+                        C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\reveal_workspace\tmpreveal\top_rvl.v (2022-05-03 16:12:36, 2022-05-03 16:20:38) <-- (may instantiate this module)
+48       work.rvl_jtag_int.verilog may have changed because the following files changed:
+                        C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\reveal_workspace\tmpreveal\top_la0_gen.v (2022-05-03 16:12:36, 2022-05-03 16:20:38) <-- (may instantiate this module)
+                        C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\reveal_workspace\tmpreveal\top_la0_trig_gen.v (2022-05-03 16:12:36, 2022-05-03 16:20:38) <-- (may instantiate this module)
+                        C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\reveal_workspace\tmpreveal\top_rvl.v (2022-05-03 16:12:36, 2022-05-03 16:20:38) <-- (may instantiate this module)
+49       work.rvl_serial_tu.verilog may have changed because the following files changed:
+                        C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\reveal_workspace\tmpreveal\top_la0_gen.v (2022-05-03 16:12:36, 2022-05-03 16:20:38) <-- (may instantiate this module)
+                        C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\reveal_workspace\tmpreveal\top_la0_trig_gen.v (2022-05-03 16:12:36, 2022-05-03 16:20:38) <-- (may instantiate this module)
+                        C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\reveal_workspace\tmpreveal\top_rvl.v (2022-05-03 16:12:36, 2022-05-03 16:20:38) <-- (may instantiate this module)
+50       work.rvl_tcnt.verilog may have changed because the following files changed:
+                        C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\reveal_workspace\tmpreveal\top_la0_gen.v (2022-05-03 16:12:36, 2022-05-03 16:20:38) <-- (may instantiate this module)
+                        C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\reveal_workspace\tmpreveal\top_la0_trig_gen.v (2022-05-03 16:12:36, 2022-05-03 16:20:38) <-- (may instantiate this module)
+                        C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\reveal_workspace\tmpreveal\top_rvl.v (2022-05-03 16:12:36, 2022-05-03 16:20:38) <-- (may instantiate this module)
+51       work.rvl_te.verilog may have changed because the following files changed:
+                        C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\reveal_workspace\tmpreveal\top_la0_gen.v (2022-05-03 16:12:36, 2022-05-03 16:20:38) <-- (may instantiate this module)
+                        C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\reveal_workspace\tmpreveal\top_la0_trig_gen.v (2022-05-03 16:12:36, 2022-05-03 16:20:38) <-- (may instantiate this module)
+                        C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\reveal_workspace\tmpreveal\top_rvl.v (2022-05-03 16:12:36, 2022-05-03 16:20:38) <-- (may instantiate this module)
+52       work.rvl_tm.verilog may have changed because the following files changed:
+                        C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\reveal_workspace\tmpreveal\top_la0_gen.v (2022-05-03 16:12:36, 2022-05-03 16:20:38) <-- (may instantiate this module)
+                        C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\reveal_workspace\tmpreveal\top_la0_trig_gen.v (2022-05-03 16:12:36, 2022-05-03 16:20:38) <-- (may instantiate this module)
+                        C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\reveal_workspace\tmpreveal\top_rvl.v (2022-05-03 16:12:36, 2022-05-03 16:20:38) <-- (may instantiate this module)
+53       work.rvl_tu.verilog may have changed because the following files changed:
+                        C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\reveal_workspace\tmpreveal\top_la0_gen.v (2022-05-03 16:12:36, 2022-05-03 16:20:38) <-- (may instantiate this module)
+                        C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\reveal_workspace\tmpreveal\top_la0_trig_gen.v (2022-05-03 16:12:36, 2022-05-03 16:20:38) <-- (may instantiate this module)
+                        C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\reveal_workspace\tmpreveal\top_rvl.v (2022-05-03 16:12:36, 2022-05-03 16:20:38) <-- (may instantiate this module)
+1        work.top.verilog may have changed because the following files changed:
+                        C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\reveal_workspace\tmpreveal\top_rvl.v (2022-05-03 16:12:36, 2022-05-03 16:20:38) <-- (module definition)
+54       work.top_la0.verilog may have changed because the following files changed:
+                        C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\reveal_workspace\tmpreveal\top_la0_gen.v (2022-05-03 16:12:36, 2022-05-03 16:20:38) <-- (module definition)
+                        C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\reveal_workspace\tmpreveal\top_rvl.v (2022-05-03 16:12:36, 2022-05-03 16:20:38) <-- (may instantiate this module)
+55       work.top_la0_trig.verilog may have changed because the following files changed:
+                        C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\reveal_workspace\tmpreveal\top_la0_gen.v (2022-05-03 16:12:36, 2022-05-03 16:20:38) <-- (may instantiate this module)
+                        C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\reveal_workspace\tmpreveal\top_la0_trig_gen.v (2022-05-03 16:12:36, 2022-05-03 16:20:38) <-- (module definition)
+                        C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\reveal_workspace\tmpreveal\top_rvl.v (2022-05-03 16:12:36, 2022-05-03 16:20:38) <-- (may instantiate this module)
+
+*******************************************************************
+Unmodified files: 11
+FID:  path (timestamp)
+12       C:\lscc\diamond\3.12\cae_library\synthesis\verilog\pmi_def.v (2020-11-25 16:53:48)
+13       C:\lscc\diamond\3.12\module\reveal\src\ertl\JTAG_SOFT.v (2016-03-30 23:25:00)
+14       C:\lscc\diamond\3.12\module\reveal\src\ertl\ertl.v (2017-04-26 21:34:32)
+15       C:\lscc\diamond\3.12\module\reveal\src\rvl_j2w_module\rvl_j2w_module.v (2013-11-26 02:02:34)
+16       C:\lscc\diamond\3.12\module\reveal\src\rvl_j2w_module\wb2sci.v (2013-11-12 02:19:06)
+1        C:\lscc\diamond\3.12\synpbase\lib\lucent\pmi_def.v (2021-08-10 18:11:08)
+2        C:\lscc\diamond\3.12\synpbase\lib\lucent\xp2.v (2021-08-10 18:11:08)
+3        C:\lscc\diamond\3.12\synpbase\lib\vlog\hypermods.v (2021-08-10 18:07:02)
+4        C:\lscc\diamond\3.12\synpbase\lib\vlog\scemi_objects.v (2021-08-10 18:07:02)
+5        C:\lscc\diamond\3.12\synpbase\lib\vlog\scemi_pipes.svh (2021-08-10 18:07:02)
+6        C:\lscc\diamond\3.12\synpbase\lib\vlog\umr_capim.v (2021-08-10 18:07:02)
+
+*******************************************************************
+Unchanged modules: 13
+MID:  lib.cell.view
+2        work.JTAG_SOFT.verilog
+4        work.idata.verilog
+5        work.jtag_cntl_soft.verilog
+6        work.jtag_inst_dec_soft.verilog
+7        work.jtag_logic_soft.verilog
+8        work.jtag_register_soft.verilog
+9        work.jtag_tap_cntl_soft.verilog
+11       work.jtaghub16.verilog
+12       work.jtaghub_if.verilog
+46       work.rvl_j2w.verilog
+47       work.rvl_jtag2wb.verilog
+56       work.wb2sci.verilog
+57       work.wb_control.verilog

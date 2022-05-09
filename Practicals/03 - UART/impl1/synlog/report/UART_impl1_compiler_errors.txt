@@ -1,0 +1,2 @@
+@E: CG1348 :"C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\reveal_workspace\tmpreveal\top_rvl.v":301:30:301:36|Incomplete array intialization
+

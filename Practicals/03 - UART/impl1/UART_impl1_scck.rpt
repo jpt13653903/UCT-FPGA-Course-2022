@@ -1,0 +1,55 @@
+
+Copyright (C) 1994-2021 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: R-2021.03L-SP1
+Install: C:\lscc\diamond\3.12\synpbase
+OS: Windows 6.2
+
+Hostname: DESKTOP-MU9CKUT
+
+Implementation : impl1
+
+# Written on Tue May  3 16:20:51 2022
+
+##### FILES SYNTAX CHECKED ##############################################
+Constraint File(s):      "C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\UART.fdc"
+
+#Run constraint checker to find more issues with constraints.
+#########################################################################
+
+
+
+No issues found in constraint syntax.
+
+
+
+Clock Summary
+*************
+
+          Start                                     Requested     Requested     Clock        Clock                   Clock
+Level     Clock                                     Frequency     Period        Type         Group                   Load 
+--------------------------------------------------------------------------------------------------------------------------
+0 -       ipClk                                     50.0 MHz      20.000        declared     default_clkgroup        199  
+                                                                                                                          
+0 -       System                                    200.0 MHz     5.000         system       system_clkgroup         0    
+                                                                                                                          
+0 -       reveal_coretop|jtck_inferred_clock[0]     200.0 MHz     5.000         inferred     Inferred_clkgroup_0     166  
+==========================================================================================================================
+
+
+Clock Load Summary
+******************
+
+                                          Clock     Source                                                             Clock Pin                                                            Non-clock Pin     Non-clock Pin                                                              
+Clock                                     Load      Pin                                                                Seq Example                                                          Seq Example       Comb Example                                                               
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ipClk                                     199       ipClk(port)                                                        opLed[7:0].C                                                         -                 -                                                                          
+                                                                                                                                                                                                                                                                                         
+System                                    0         -                                                                  -                                                                    -                 -                                                                          
+                                                                                                                                                                                                                                                                                         
+reveal_coretop|jtck_inferred_clock[0]     166       top_reveal_coretop_instance.jtagconn16_inst_0.jtck(jtagconn16)     top_reveal_coretop_instance.top_la0_inst_0.tm_u.tm_first_rd_d1.C     -                 top_reveal_coretop_instance.top_la0_inst_0.tm_u.genblk4\.un1_jtck.I[0](inv)
+=========================================================================================================================================================================================================================================================================================

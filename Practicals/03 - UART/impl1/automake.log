@@ -1,0 +1,2330 @@
+
+istflow -prj "C:/Users/user/Desktop/UCT-FPGA-Course-2022/Practicals/03 - UART/UART_RVL.rvl" -design "UART_impl1.rvp" 
+-- all messages logged in file C:/Users/user/Desktop/UCT-FPGA-Course-2022/Practicals/03 - UART/impl1/reveal_error.log
+-- Analyzing Verilog file 'C:/Users/user/Desktop/UCT-FPGA-Course-2022/Practicals/03 - UART/UART.v' (VERI-1482)
+-- Analyzing Verilog file 'C:/Users/user/Desktop/UCT-FPGA-Course-2022/Practicals/03 - UART/top.v' (VERI-1482)
+C:/Users/user/Desktop/UCT-FPGA-Course-2022/Practicals/03 - UART/top.v(1): INFO: compiling module 'top' (VERI-1018)
+C:/Users/user/Desktop/UCT-FPGA-Course-2022/Practicals/03 - UART/top.v(44): INFO: elaborating module 'top' (VERI-9000)
+C:/Users/user/Desktop/UCT-FPGA-Course-2022/Practicals/03 - UART/UART.v(126): INFO: elaborating module 'UART_uniq_1' (VERI-9000)
+Copyright (c) 2001-2013 Lattice Semiconductor Corporation. All rights reserved.
+Check Reveal Inserter settings...
+    <postMsg mid="2120344" type="Info"    dynamic="1" navigation="0" arg0="2"  />
+    <postMsg mid="2120346" type="Info"    dynamic="1" navigation="0" arg0="0"  />
+Design Rule Check PASSED.
+Finished checking Reveal Inserter settings.
+Generating core template(s)...
+Parameters loaded ok.
+No optional files required.
+IP template generation completed ok.
+
+Finished running Tcl command: "C:/lscc/diamond/3.12/tcltk/bin/tclsh" "C:/Users/user/Desktop/UCT-FPGA-Course-2022/Practicals/03 - UART/impl1/reveal_workspace/tmpreveal/UART_RVL_generate.tcl".
+all messages logged in file C:/Users/user/Desktop/UCT-FPGA-Course-2022/Practicals/03 - UART/impl1/reveal_error.log
+(VERI-1482) Analyzing Verilog file 'C:/Users/user/Desktop/UCT-FPGA-Course-2022/Practicals/03 - UART/impl1/reveal_workspace/UART_RVL/top_la0_bb.v'
+all messages logged in file C:/Users/user/Desktop/UCT-FPGA-Course-2022/Practicals/03 - UART/impl1/reveal_error.log
+(VERI-1482) Analyzing Verilog file 'C:/Users/user/Desktop/UCT-FPGA-Course-2022/Practicals/03 - UART/impl1/reveal_workspace/tmpreveal/top_reveal_coretop.v'
+(VERI-1482) Analyzing Verilog file 'C:/Users/user/Desktop/UCT-FPGA-Course-2022/Practicals/03 - UART/UART.v'
+(VERI-1482) Analyzing Verilog file 'C:/Users/user/Desktop/UCT-FPGA-Course-2022/Practicals/03 - UART/top.v'
+    <postMsg mid="2049992" type="Info"    dynamic="1" navigation="2" arg0="C:/Users/user/Desktop/UCT-FPGA-Course-2022/Practicals/03 - UART/top.v(1,8-1,11) (VERI-1018) compiling module &apos;top&apos;" arg1="C:/Users/user/Desktop/UCT-FPGA-Course-2022/Practicals/03 - UART/top.v" arg2="1"  />
+    <postMsg mid="2049992" type="Info"    dynamic="1" navigation="2" arg0="C:/Users/user/Desktop/UCT-FPGA-Course-2022/Practicals/03 - UART/top.v(1,1-44,10) (VERI-9000) elaborating module &apos;top&apos;" arg1="C:/Users/user/Desktop/UCT-FPGA-Course-2022/Practicals/03 - UART/top.v" arg2="1"  />
+    <postMsg mid="2049992" type="Info"    dynamic="1" navigation="2" arg0="C:/Users/user/Desktop/UCT-FPGA-Course-2022/Practicals/03 - UART/UART.v(19,1-126,10) (VERI-9000) elaborating module &apos;UART_uniq_1&apos;" arg1="C:/Users/user/Desktop/UCT-FPGA-Course-2022/Practicals/03 - UART/UART.v" arg2="19"  />
+(VERI-1491) Pretty printing all design elements in library 'work' to file 'C:/Users/user/Desktop/UCT-FPGA-Course-2022/Practicals/03 - UART/impl1/reveal_workspace/tmpreveal/top_rvl.v'
+Lpf file 'C:/Users/user/Desktop/UCT-FPGA-Course-2022/Practicals/03 - UART/UART.lpf' is updated.
+
+synpwrap -msg -prj "UART_impl1_synplify.tcl" -log "UART_impl1.srf"
+Copyright (C) 1992-2020 Lattice Semiconductor Corporation. All rights reserved.
+Lattice Diamond Version 3.12.1.454
+    <postMsg mid="2011000" type="Info"    dynamic="0" navigation="0"  />
+
+==contents of UART_impl1.srf
+#Build: Synplify Pro (R) R-2021.03L-SP1, Build 093R, Aug 10 2021
+#install: C:\lscc\diamond\3.12\synpbase
+#OS: Windows 8 6.2
+#Hostname: DESKTOP-MU9CKUT
+
+# Tue May  3 16:20:40 2022
+
+#Implementation: impl1
+
+
+Copyright (C) 1994-2021 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: R-2021.03L-SP1
+Install: C:\lscc\diamond\3.12\synpbase
+OS: Windows 6.2
+
+Hostname: DESKTOP-MU9CKUT
+
+Implementation : impl1
+Synopsys HDL Compiler, Version comp202103synp2, Build 093R, Built Aug 10 2021 09:15:36, @
+
+@N|Running in 64-bit mode
+###########################################################[
+
+Copyright (C) 1994-2021 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: R-2021.03L-SP1
+Install: C:\lscc\diamond\3.12\synpbase
+OS: Windows 6.2
+
+Hostname: DESKTOP-MU9CKUT
+
+Implementation : impl1
+Synopsys Verilog Compiler, Version comp202103synp2, Build 093R, Built Aug 10 2021 09:15:36, @
+
+@N|Running in 64-bit mode
+@N: CG1349 :	| Running Verilog Compiler in System Verilog mode
+
+@N: CG1350 :	| Running Verilog Compiler in Multiple File Compilation Unit mode
+
+@I::"C:\lscc\diamond\3.12\synpbase\lib\lucent\xp2.v" (library work)
+@I::"C:\lscc\diamond\3.12\synpbase\lib\lucent\pmi_def.v" (library work)
+@I::"C:\lscc\diamond\3.12\synpbase\lib\vlog\hypermods.v" (library __hyper__lib__)
+@I::"C:\lscc\diamond\3.12\synpbase\lib\vlog\umr_capim.v" (library snps_haps)
+@I::"C:\lscc\diamond\3.12\synpbase\lib\vlog\scemi_objects.v" (library snps_haps)
+@I::"C:\lscc\diamond\3.12\synpbase\lib\vlog\scemi_pipes.svh" (library snps_haps)
+@I::"C:\lscc\diamond\3.12\cae_library\synthesis\verilog\pmi_def.v" (library work)
+@W: CG100 :"C:\lscc\diamond\3.12\cae_library\synthesis\verilog\pmi_def.v":44:49:44:61|User defined pragma syn_black_box detected
+
+@W: CG100 :"C:\lscc\diamond\3.12\cae_library\synthesis\verilog\pmi_def.v":62:50:62:62|User defined pragma syn_black_box detected
+
+@W: CG100 :"C:\lscc\diamond\3.12\cae_library\synthesis\verilog\pmi_def.v":84:50:84:62|User defined pragma syn_black_box detected
+
+@W: CG100 :"C:\lscc\diamond\3.12\cae_library\synthesis\verilog\pmi_def.v":107:49:107:61|User defined pragma syn_black_box detected
+
+@W: CG100 :"C:\lscc\diamond\3.12\cae_library\synthesis\verilog\pmi_def.v":124:87:124:99|User defined pragma syn_black_box detected
+
+@W: CG100 :"C:\lscc\diamond\3.12\cae_library\synthesis\verilog\pmi_def.v":141:80:141:92|User defined pragma syn_black_box detected
+
+@W: CG100 :"C:\lscc\diamond\3.12\cae_library\synthesis\verilog\pmi_def.v":159:62:159:74|User defined pragma syn_black_box detected
+
+@W: CG100 :"C:\lscc\diamond\3.12\cae_library\synthesis\verilog\pmi_def.v":179:76:179:88|User defined pragma syn_black_box detected
+
+@W: CG100 :"C:\lscc\diamond\3.12\cae_library\synthesis\verilog\pmi_def.v":204:80:204:92|User defined pragma syn_black_box detected
+
+@W: CG100 :"C:\lscc\diamond\3.12\cae_library\synthesis\verilog\pmi_def.v":225:79:225:91|User defined pragma syn_black_box detected
+
+@W: CG100 :"C:\lscc\diamond\3.12\cae_library\synthesis\verilog\pmi_def.v":243:33:243:45|User defined pragma syn_black_box detected
+
+@W: CG100 :"C:\lscc\diamond\3.12\cae_library\synthesis\verilog\pmi_def.v":260:33:260:45|User defined pragma syn_black_box detected
+
+@W: CG100 :"C:\lscc\diamond\3.12\cae_library\synthesis\verilog\pmi_def.v":275:45:275:57|User defined pragma syn_black_box detected
+
+@W: CG100 :"C:\lscc\diamond\3.12\cae_library\synthesis\verilog\pmi_def.v":292:31:292:43|User defined pragma syn_black_box detected
+
+@W: CG100 :"C:\lscc\diamond\3.12\cae_library\synthesis\verilog\pmi_def.v":320:54:320:66|User defined pragma syn_black_box detected
+
+@W: CG100 :"C:\lscc\diamond\3.12\cae_library\synthesis\verilog\pmi_def.v":351:54:351:66|User defined pragma syn_black_box detected
+
+@W: CG100 :"C:\lscc\diamond\3.12\cae_library\synthesis\verilog\pmi_def.v":387:53:387:65|User defined pragma syn_black_box detected
+
+@W: CG100 :"C:\lscc\diamond\3.12\cae_library\synthesis\verilog\pmi_def.v":426:53:426:65|User defined pragma syn_black_box detected
+
+@W: CG100 :"C:\lscc\diamond\3.12\cae_library\synthesis\verilog\pmi_def.v":450:50:450:62|User defined pragma syn_black_box detected
+
+@W: CG100 :"C:\lscc\diamond\3.12\cae_library\synthesis\verilog\pmi_def.v":476:50:476:62|User defined pragma syn_black_box detected
+
+@W: CG100 :"C:\lscc\diamond\3.12\cae_library\synthesis\verilog\pmi_def.v":497:49:497:61|User defined pragma syn_black_box detected
+
+@W: CG100 :"C:\lscc\diamond\3.12\cae_library\synthesis\verilog\pmi_def.v":528:33:528:45|User defined pragma syn_black_box detected
+
+@W: CG100 :"C:\lscc\diamond\3.12\cae_library\synthesis\verilog\pmi_def.v":553:33:553:45|User defined pragma syn_black_box detected
+
+@W: CG100 :"C:\lscc\diamond\3.12\cae_library\synthesis\verilog\pmi_def.v":630:35:630:47|User defined pragma syn_black_box detected
+
+@W: CG100 :"C:\lscc\diamond\3.12\cae_library\synthesis\verilog\pmi_def.v":687:35:687:47|User defined pragma syn_black_box detected
+
+@W: CG100 :"C:\lscc\diamond\3.12\cae_library\synthesis\verilog\pmi_def.v":770:35:770:47|User defined pragma syn_black_box detected
+
+@W: CG100 :"C:\lscc\diamond\3.12\cae_library\synthesis\verilog\pmi_def.v":853:35:853:47|User defined pragma syn_black_box detected
+
+@W: CG100 :"C:\lscc\diamond\3.12\cae_library\synthesis\verilog\pmi_def.v":969:35:969:47|User defined pragma syn_black_box detected
+
+@W: CG100 :"C:\lscc\diamond\3.12\cae_library\synthesis\verilog\pmi_def.v":1073:40:1073:52|User defined pragma syn_black_box detected
+
+@W: CG100 :"C:\lscc\diamond\3.12\cae_library\synthesis\verilog\pmi_def.v":1098:32:1098:44|User defined pragma syn_black_box detected
+
+@W: CG100 :"C:\lscc\diamond\3.12\cae_library\synthesis\verilog\pmi_def.v":1122:32:1122:44|User defined pragma syn_black_box detected
+
+@W: CG100 :"C:\lscc\diamond\3.12\cae_library\synthesis\verilog\pmi_def.v":1159:15:1159:27|User defined pragma syn_black_box detected
+
+@W: CG100 :"C:\lscc\diamond\3.12\cae_library\synthesis\verilog\pmi_def.v":1162:94:1162:106|User defined pragma syn_black_box detected
+
+@I::"C:\lscc\diamond\3.12\module\reveal\src\ertl\ertl.v" (library work)
+@I::"C:\lscc\diamond\3.12\module\reveal\src\rvl_j2w_module\rvl_j2w_module.v" (library work)
+@I::"C:\lscc\diamond\3.12\module\reveal\src\rvl_j2w_module\wb2sci.v" (library work)
+@I::"C:\lscc\diamond\3.12\module\reveal\src\ertl\JTAG_SOFT.v" (library work)
+@I::"C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\reveal_workspace\tmpreveal\top_la0_trig_gen.v" (library work)
+@I::"C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\reveal_workspace\tmpreveal\top_la0_gen.v" (library work)
+@I::"C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\reveal_workspace\tmpreveal\top_rvl.v" (library work)
+Verilog syntax check successful!
+File C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\reveal_workspace\tmpreveal\top_la0_trig_gen.v changed - recompiling
+File C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\reveal_workspace\tmpreveal\top_la0_gen.v changed - recompiling
+File C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\reveal_workspace\tmpreveal\top_rvl.v changed - recompiling
+Selecting top level module top
+@N: CG364 :"C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\reveal_workspace\tmpreveal\top_rvl.v":284:7:284:17|Synthesizing module UART_uniq_1 in library work.
+Running optimization stage 1 on UART_uniq_1 .......
+Finished optimization stage 1 on UART_uniq_1 (CPU Time 0h:00m:00s, Memory Used current: 98MB peak: 99MB)
+@N: CG364 :"C:\lscc\diamond\3.12\synpbase\lib\lucent\xp2.v":1269:7:1269:9|Synthesizing module VHI in library work.
+Running optimization stage 1 on VHI .......
+Finished optimization stage 1 on VHI (CPU Time 0h:00m:00s, Memory Used current: 98MB peak: 99MB)
+Running optimization stage 1 on rvl_jtag_int_8s_1s_0s_0s_3s_8s_8s .......
+Finished optimization stage 1 on rvl_jtag_int_8s_1s_0s_0s_3s_8s_8s (CPU Time 0h:00m:00s, Memory Used current: 99MB peak: 100MB)
+Running optimization stage 1 on rvl_decode_1s_1s .......
+Finished optimization stage 1 on rvl_decode_1s_1s (CPU Time 0h:00m:00s, Memory Used current: 99MB peak: 100MB)
+Running optimization stage 1 on rvl_tu_1s_0s_0s_0s_1s .......
+Finished optimization stage 1 on rvl_tu_1s_0s_0s_0s_1s (CPU Time 0h:00m:00s, Memory Used current: 99MB peak: 100MB)
+Running optimization stage 1 on pmi_ram_dp_Z2 .......
+Finished optimization stage 1 on pmi_ram_dp_Z2 (CPU Time 0h:00m:00s, Memory Used current: 99MB peak: 100MB)
+Running optimization stage 1 on rvl_te_Z1 .......
+Finished optimization stage 1 on rvl_te_Z1 (CPU Time 0h:00m:00s, Memory Used current: 100MB peak: 100MB)
+Running optimization stage 1 on rvl_tcnt_1s_3s_1_0s .......
+Finished optimization stage 1 on rvl_tcnt_1s_3s_1_0s (CPU Time 0h:00m:00s, Memory Used current: 100MB peak: 100MB)
+@N: CG364 :"C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\reveal_workspace\tmpreveal\top_la0_trig_gen.v":11:7:11:18|Synthesizing module top_la0_trig in library work.
+Running optimization stage 1 on top_la0_trig .......
+Finished optimization stage 1 on top_la0_trig (CPU Time 0h:00m:00s, Memory Used current: 100MB peak: 100MB)
+Running optimization stage 1 on pmi_ram_dp_Z4 .......
+Finished optimization stage 1 on pmi_ram_dp_Z4 (CPU Time 0h:00m:00s, Memory Used current: 100MB peak: 100MB)
+Running optimization stage 1 on rvl_tm_Z3 .......
+Finished optimization stage 1 on rvl_tm_Z3 (CPU Time 0h:00m:00s, Memory Used current: 99MB peak: 100MB)
+@N: CG364 :"C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\reveal_workspace\tmpreveal\top_la0_gen.v":12:7:12:13|Synthesizing module top_la0 in library work.
+Running optimization stage 1 on top_la0 .......
+Finished optimization stage 1 on top_la0 (CPU Time 0h:00m:00s, Memory Used current: 99MB peak: 100MB)
+@N: CG364 :"C:\lscc\diamond\3.12\cae_library\synthesis\verilog\pmi_def.v":1162:7:1162:16|Synthesizing module jtagconn16 in library work.
+Running optimization stage 1 on jtagconn16 .......
+Finished optimization stage 1 on jtagconn16 (CPU Time 0h:00m:00s, Memory Used current: 99MB peak: 100MB)
+@N: CG364 :"C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\reveal_workspace\tmpreveal\top_rvl.v":2:7:2:20|Synthesizing module reveal_coretop in library work.
+@W: CG360 :"C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\reveal_workspace\tmpreveal\top_rvl.v":16:29:16:39|Removing wire trigger_out, as there is no assignment to it.
+Running optimization stage 1 on reveal_coretop .......
+Finished optimization stage 1 on reveal_coretop (CPU Time 0h:00m:00s, Memory Used current: 99MB peak: 100MB)
+@N: CG364 :"C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\reveal_workspace\tmpreveal\top_rvl.v":202:7:202:9|Synthesizing module top in library work.
+Running optimization stage 1 on top .......
+Finished optimization stage 1 on top (CPU Time 0h:00m:00s, Memory Used current: 100MB peak: 100MB)
+Running optimization stage 2 on top .......
+Finished optimization stage 2 on top (CPU Time 0h:00m:00s, Memory Used current: 99MB peak: 100MB)
+Running optimization stage 2 on reveal_coretop .......
+Finished optimization stage 2 on reveal_coretop (CPU Time 0h:00m:00s, Memory Used current: 99MB peak: 100MB)
+Running optimization stage 2 on jtagconn16 .......
+Finished optimization stage 2 on jtagconn16 (CPU Time 0h:00m:00s, Memory Used current: 99MB peak: 100MB)
+Running optimization stage 2 on top_la0 .......
+@N: CL159 :"C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\reveal_workspace\tmpreveal\top_la0_gen.v":52:7:52:13|Input reset_n is unused.
+@N: CL159 :"C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\reveal_workspace\tmpreveal\top_la0_gen.v":64:7:64:16|Input trigger_en is unused.
+Finished optimization stage 2 on top_la0 (CPU Time 0h:00m:00s, Memory Used current: 99MB peak: 100MB)
+Running optimization stage 2 on pmi_ram_dp_Z4 .......
+Finished optimization stage 2 on pmi_ram_dp_Z4 (CPU Time 0h:00m:00s, Memory Used current: 99MB peak: 100MB)
+Running optimization stage 2 on rvl_tm_Z3 .......
+Finished optimization stage 2 on rvl_tm_Z3 (CPU Time 0h:00m:00s, Memory Used current: 101MB peak: 103MB)
+Running optimization stage 2 on top_la0_trig .......
+Finished optimization stage 2 on top_la0_trig (CPU Time 0h:00m:00s, Memory Used current: 101MB peak: 103MB)
+Running optimization stage 2 on rvl_tcnt_1s_3s_1_0s .......
+Finished optimization stage 2 on rvl_tcnt_1s_3s_1_0s (CPU Time 0h:00m:00s, Memory Used current: 102MB peak: 103MB)
+Running optimization stage 2 on pmi_ram_dp_Z2 .......
+Finished optimization stage 2 on pmi_ram_dp_Z2 (CPU Time 0h:00m:00s, Memory Used current: 102MB peak: 103MB)
+Running optimization stage 2 on rvl_te_Z1 .......
+Finished optimization stage 2 on rvl_te_Z1 (CPU Time 0h:00m:00s, Memory Used current: 102MB peak: 112MB)
+Running optimization stage 2 on rvl_tu_1s_0s_0s_0s_1s .......
+Finished optimization stage 2 on rvl_tu_1s_0s_0s_0s_1s (CPU Time 0h:00m:00s, Memory Used current: 102MB peak: 112MB)
+Running optimization stage 2 on rvl_decode_1s_1s .......
+Finished optimization stage 2 on rvl_decode_1s_1s (CPU Time 0h:00m:00s, Memory Used current: 102MB peak: 112MB)
+Running optimization stage 2 on rvl_jtag_int_8s_1s_0s_0s_3s_8s_8s .......
+Finished optimization stage 2 on rvl_jtag_int_8s_1s_0s_0s_3s_8s_8s (CPU Time 0h:00m:00s, Memory Used current: 103MB peak: 112MB)
+Running optimization stage 2 on VHI .......
+Finished optimization stage 2 on VHI (CPU Time 0h:00m:00s, Memory Used current: 103MB peak: 112MB)
+Running optimization stage 2 on UART_uniq_1 .......
+@N: CL189 :"C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\reveal_workspace\tmpreveal\top_rvl.v":306:4:306:9|Register bit rxCounter[10] is always 0.
+@N: CL189 :"C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\reveal_workspace\tmpreveal\top_rvl.v":306:4:306:9|Register bit txCounter[10] is always 0.
+@W: CL260 :"C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\reveal_workspace\tmpreveal\top_rvl.v":306:4:306:9|Pruning register bit 10 of txCounter[10:0]. If this is not the intended behavior, drive the input with valid values, or an input from the top level.
+@W: CL260 :"C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\reveal_workspace\tmpreveal\top_rvl.v":306:4:306:9|Pruning register bit 10 of rxCounter[10:0]. If this is not the intended behavior, drive the input with valid values, or an input from the top level.
+@N: CL189 :"C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\reveal_workspace\tmpreveal\top_rvl.v":306:4:306:9|Register bit rxCounter[9] is always 0.
+@N: CL189 :"C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\reveal_workspace\tmpreveal\top_rvl.v":306:4:306:9|Register bit txCounter[9] is always 0.
+@W: CL260 :"C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\reveal_workspace\tmpreveal\top_rvl.v":306:4:306:9|Pruning register bit 9 of txCounter[9:0]. If this is not the intended behavior, drive the input with valid values, or an input from the top level.
+@W: CL260 :"C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\reveal_workspace\tmpreveal\top_rvl.v":306:4:306:9|Pruning register bit 9 of rxCounter[9:0]. If this is not the intended behavior, drive the input with valid values, or an input from the top level.
+@N: CL201 :"C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\reveal_workspace\tmpreveal\top_rvl.v":306:4:306:9|Trying to extract state machine for register txState.
+Extracted state machine for register txState
+State machine has 2 reachable states with original encodings of:
+   00000000000000000000000000000000
+   00000000000000000000000000000001
+Finished optimization stage 2 on UART_uniq_1 (CPU Time 0h:00m:00s, Memory Used current: 103MB peak: 112MB)
+
+For a summary of runtime and memory usage per design unit, please see file:
+==========================================================
+@L: C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\synwork\layer0.rt.csv
+
+
+At c_ver Exit (Real Time elapsed 0h:00m:06s; CPU Time elapsed 0h:00m:05s; Memory used current: 104MB peak: 112MB)
+
+Process took 0h:00m:06s realtime, 0h:00m:05s cputime
+
+Process completed successfully.
+# Tue May  3 16:20:47 2022
+
+###########################################################]
+###########################################################[
+
+Copyright (C) 1994-2021 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: R-2021.03L-SP1
+Install: C:\lscc\diamond\3.12\synpbase
+OS: Windows 6.2
+
+Hostname: DESKTOP-MU9CKUT
+
+Implementation : impl1
+Synopsys Synopsys Netlist Linker, Version comp202103synp2, Build 093R, Built Aug 10 2021 09:15:36, @
+
+@N|Running in 64-bit mode
+
+At syn_nfilter Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 92MB peak: 93MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+
+Process completed successfully.
+# Tue May  3 16:20:48 2022
+
+###########################################################]
+
+For a summary of runtime and memory usage for all design units, please see file:
+==========================================================
+@L: C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\synwork\UART_impl1_comp.rt.csv
+
+@END
+
+At c_hdl Exit (Real Time elapsed 0h:00m:07s; CPU Time elapsed 0h:00m:06s; Memory used current: 23MB peak: 23MB)
+
+Process took 0h:00m:07s realtime, 0h:00m:06s cputime
+
+Process completed successfully.
+# Tue May  3 16:20:48 2022
+
+###########################################################]
+###########################################################[
+
+Copyright (C) 1994-2021 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: R-2021.03L-SP1
+Install: C:\lscc\diamond\3.12\synpbase
+OS: Windows 6.2
+
+Hostname: DESKTOP-MU9CKUT
+
+Implementation : impl1
+Synopsys Synopsys Netlist Linker, Version comp202103synp2, Build 093R, Built Aug 10 2021 09:15:36, @
+
+@N|Running in 64-bit mode
+File C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\synwork\UART_impl1_comp.srs changed - recompiling
+
+At syn_nfilter Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 93MB peak: 93MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+
+Process completed successfully.
+# Tue May  3 16:20:49 2022
+
+###########################################################]
+# Tue May  3 16:20:50 2022
+
+
+Copyright (C) 1994-2021 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: R-2021.03L-SP1
+Install: C:\lscc\diamond\3.12\synpbase
+OS: Windows 6.2
+
+Hostname: DESKTOP-MU9CKUT
+
+Implementation : impl1
+Synopsys Lattice Technology Pre-mapping, Version map202103lat, Build 070R, Built Oct  6 2021 11:12:38, @
+
+
+Mapper Startup Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 118MB peak: 118MB)
+
+
+Done reading skeleton netlist (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 123MB peak: 130MB)
+
+Reading constraint file: C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\UART.fdc
+@W: derive_clock_uncertainty  not supported.
+@L: C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\UART_impl1_scck.rpt 
+See clock summary report "C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\UART_impl1_scck.rpt"
+@N: MF916 |Option synthesis_strategy=base is enabled. 
+@N: MF248 |Running in 64-bit mode.
+@N: MF666 |Clock conversion enabled. (Command "set_option -fix_gated_and_generated_clocks 1" in the project file.)
+
+Design Input Complete (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 129MB peak: 130MB)
+
+
+Mapper Initialization Complete (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 129MB peak: 130MB)
+
+
+Start loading timing files (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 141MB peak: 141MB)
+
+
+Finished loading timing files (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 142MB peak: 143MB)
+
+@N: FX493 |Applying initial value "00" on instance edgeDetector[1:0].
+@W: FX474 |User-specified initial value defined for some sequential elements which can prevent optimum synthesis results from being achieved. 
+@N: FX493 |Applying initial value "0" on instance clockEnable.
+@A: FX681 :"c:\users\user\desktop\uct-fpga-course-2022\practicals\03 - uart\impl1\reveal_workspace\tmpreveal\top_rvl.v":306:4:306:9|Initial value on register txBitCounter[4:0] is non-zero which can prevent the register from being packed into a block RAM or DSP.
+@N: FX493 |Applying initial value "01001" on instance txBitCounter[4:0].
+@A: FX681 :"c:\users\user\desktop\uct-fpga-course-2022\practicals\03 - uart\impl1\reveal_workspace\tmpreveal\top_rvl.v":306:4:306:9|Initial value on register txCounter[8:0] is non-zero which can prevent the register from being packed into a block RAM or DSP.
+@N: FX493 |Applying initial value "110110001" on instance txCounter[8:0].
+@A: FX681 :"c:\users\user\desktop\uct-fpga-course-2022\practicals\03 - uart\impl1\reveal_workspace\tmpreveal\top_rvl.v":306:4:306:9|Initial value on register rxCounter[8:0] is non-zero which can prevent the register from being packed into a block RAM or DSP.
+@N: FX493 |Applying initial value "110110001" on instance rxCounter[8:0].
+@W: BN117 :"c:\users\user\desktop\uct-fpga-course-2022\practicals\03 - uart\impl1\reveal_workspace\tmpreveal\top_la0_trig_gen.v":96:0:96:7|Instance decode_u of partition view:work.rvl_decode_1s_1s(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\user\desktop\uct-fpga-course-2022\practicals\03 - uart\impl1\reveal_workspace\tmpreveal\top_la0_trig_gen.v":110:0:110:3|Instance tu_0 of partition view:work.rvl_tu_1s_0s_0s_0s_1s(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\user\desktop\uct-fpga-course-2022\practicals\03 - uart\impl1\reveal_workspace\tmpreveal\top_la0_trig_gen.v":130:0:130:3|Instance te_0 of partition view:work.rvl_te_Z1(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\user\desktop\uct-fpga-course-2022\practicals\03 - uart\impl1\reveal_workspace\tmpreveal\top_la0_trig_gen.v":162:0:162:5|Instance tcnt_0 of partition view:work.rvl_tcnt_1s_3s_1_0s(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\user\desktop\uct-fpga-course-2022\practicals\03 - uart\impl1\reveal_workspace\tmpreveal\top_la0_trig_gen.v":96:0:96:7|Instance decode_u of partition view:work.rvl_decode_1s_1s(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\user\desktop\uct-fpga-course-2022\practicals\03 - uart\impl1\reveal_workspace\tmpreveal\top_la0_trig_gen.v":110:0:110:3|Instance tu_0 of partition view:work.rvl_tu_1s_0s_0s_0s_1s(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\user\desktop\uct-fpga-course-2022\practicals\03 - uart\impl1\reveal_workspace\tmpreveal\top_la0_trig_gen.v":130:0:130:3|Instance te_0 of partition view:work.rvl_te_Z1(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\user\desktop\uct-fpga-course-2022\practicals\03 - uart\impl1\reveal_workspace\tmpreveal\top_la0_trig_gen.v":162:0:162:5|Instance tcnt_0 of partition view:work.rvl_tcnt_1s_3s_1_0s(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\user\desktop\uct-fpga-course-2022\practicals\03 - uart\impl1\reveal_workspace\tmpreveal\top_la0_trig_gen.v":96:0:96:7|Instance decode_u of partition view:work.rvl_decode_1s_1s(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\user\desktop\uct-fpga-course-2022\practicals\03 - uart\impl1\reveal_workspace\tmpreveal\top_la0_trig_gen.v":110:0:110:3|Instance tu_0 of partition view:work.rvl_tu_1s_0s_0s_0s_1s(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\user\desktop\uct-fpga-course-2022\practicals\03 - uart\impl1\reveal_workspace\tmpreveal\top_la0_trig_gen.v":130:0:130:3|Instance te_0 of partition view:work.rvl_te_Z1(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\user\desktop\uct-fpga-course-2022\practicals\03 - uart\impl1\reveal_workspace\tmpreveal\top_la0_trig_gen.v":162:0:162:5|Instance tcnt_0 of partition view:work.rvl_tcnt_1s_3s_1_0s(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\user\desktop\uct-fpga-course-2022\practicals\03 - uart\impl1\reveal_workspace\tmpreveal\top_la0_gen.v":97:0:97:9|Instance jtag_int_u of partition view:work.rvl_jtag_int_8s_1s_0s_0s_3s_8s_8s(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\user\desktop\uct-fpga-course-2022\practicals\03 - uart\impl1\reveal_workspace\tmpreveal\top_la0_gen.v":174:0:174:3|Instance tm_u of partition view:work.rvl_tm_Z3(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\user\desktop\uct-fpga-course-2022\practicals\03 - uart\impl1\reveal_workspace\tmpreveal\top_la0_gen.v":97:0:97:9|Instance jtag_int_u of partition view:work.rvl_jtag_int_8s_1s_0s_0s_3s_8s_8s(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\user\desktop\uct-fpga-course-2022\practicals\03 - uart\impl1\reveal_workspace\tmpreveal\top_la0_gen.v":174:0:174:3|Instance tm_u of partition view:work.rvl_tm_Z3(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\user\desktop\uct-fpga-course-2022\practicals\03 - uart\impl1\reveal_workspace\tmpreveal\top_la0_gen.v":97:0:97:9|Instance jtag_int_u of partition view:work.rvl_jtag_int_8s_1s_0s_0s_3s_8s_8s(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\user\desktop\uct-fpga-course-2022\practicals\03 - uart\impl1\reveal_workspace\tmpreveal\top_la0_gen.v":174:0:174:3|Instance tm_u of partition view:work.rvl_tm_Z3(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\user\desktop\uct-fpga-course-2022\practicals\03 - uart\impl1\reveal_workspace\tmpreveal\top_la0_trig_gen.v":96:0:96:7|Instance decode_u of partition view:work.rvl_decode_1s_1s(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\user\desktop\uct-fpga-course-2022\practicals\03 - uart\impl1\reveal_workspace\tmpreveal\top_la0_trig_gen.v":110:0:110:3|Instance tu_0 of partition view:work.rvl_tu_1s_0s_0s_0s_1s(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\user\desktop\uct-fpga-course-2022\practicals\03 - uart\impl1\reveal_workspace\tmpreveal\top_la0_trig_gen.v":130:0:130:3|Instance te_0 of partition view:work.rvl_te_Z1(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\user\desktop\uct-fpga-course-2022\practicals\03 - uart\impl1\reveal_workspace\tmpreveal\top_la0_trig_gen.v":162:0:162:5|Instance tcnt_0 of partition view:work.rvl_tcnt_1s_3s_1_0s(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\user\desktop\uct-fpga-course-2022\practicals\03 - uart\impl1\reveal_workspace\tmpreveal\top_la0_trig_gen.v":96:0:96:7|Instance decode_u of partition view:work.rvl_decode_1s_1s(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\user\desktop\uct-fpga-course-2022\practicals\03 - uart\impl1\reveal_workspace\tmpreveal\top_la0_trig_gen.v":110:0:110:3|Instance tu_0 of partition view:work.rvl_tu_1s_0s_0s_0s_1s(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\user\desktop\uct-fpga-course-2022\practicals\03 - uart\impl1\reveal_workspace\tmpreveal\top_la0_trig_gen.v":130:0:130:3|Instance te_0 of partition view:work.rvl_te_Z1(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\user\desktop\uct-fpga-course-2022\practicals\03 - uart\impl1\reveal_workspace\tmpreveal\top_la0_trig_gen.v":162:0:162:5|Instance tcnt_0 of partition view:work.rvl_tcnt_1s_3s_1_0s(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\user\desktop\uct-fpga-course-2022\practicals\03 - uart\impl1\reveal_workspace\tmpreveal\top_la0_trig_gen.v":96:0:96:7|Instance decode_u of partition view:work.rvl_decode_1s_1s(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\user\desktop\uct-fpga-course-2022\practicals\03 - uart\impl1\reveal_workspace\tmpreveal\top_la0_trig_gen.v":110:0:110:3|Instance tu_0 of partition view:work.rvl_tu_1s_0s_0s_0s_1s(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\user\desktop\uct-fpga-course-2022\practicals\03 - uart\impl1\reveal_workspace\tmpreveal\top_la0_trig_gen.v":130:0:130:3|Instance te_0 of partition view:work.rvl_te_Z1(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\user\desktop\uct-fpga-course-2022\practicals\03 - uart\impl1\reveal_workspace\tmpreveal\top_la0_trig_gen.v":162:0:162:5|Instance tcnt_0 of partition view:work.rvl_tcnt_1s_3s_1_0s(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\user\desktop\uct-fpga-course-2022\practicals\03 - uart\impl1\reveal_workspace\tmpreveal\top_la0_trig_gen.v":96:0:96:7|Instance decode_u of partition view:work.rvl_decode_1s_1s(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\user\desktop\uct-fpga-course-2022\practicals\03 - uart\impl1\reveal_workspace\tmpreveal\top_la0_trig_gen.v":110:0:110:3|Instance tu_0 of partition view:work.rvl_tu_1s_0s_0s_0s_1s(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\user\desktop\uct-fpga-course-2022\practicals\03 - uart\impl1\reveal_workspace\tmpreveal\top_la0_trig_gen.v":130:0:130:3|Instance te_0 of partition view:work.rvl_te_Z1(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\user\desktop\uct-fpga-course-2022\practicals\03 - uart\impl1\reveal_workspace\tmpreveal\top_la0_trig_gen.v":162:0:162:5|Instance tcnt_0 of partition view:work.rvl_tcnt_1s_3s_1_0s(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\user\desktop\uct-fpga-course-2022\practicals\03 - uart\impl1\reveal_workspace\tmpreveal\top_la0_trig_gen.v":96:0:96:7|Instance decode_u of partition view:work.rvl_decode_1s_1s(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\user\desktop\uct-fpga-course-2022\practicals\03 - uart\impl1\reveal_workspace\tmpreveal\top_la0_trig_gen.v":110:0:110:3|Instance tu_0 of partition view:work.rvl_tu_1s_0s_0s_0s_1s(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\user\desktop\uct-fpga-course-2022\practicals\03 - uart\impl1\reveal_workspace\tmpreveal\top_la0_trig_gen.v":130:0:130:3|Instance te_0 of partition view:work.rvl_te_Z1(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\user\desktop\uct-fpga-course-2022\practicals\03 - uart\impl1\reveal_workspace\tmpreveal\top_la0_trig_gen.v":162:0:162:5|Instance tcnt_0 of partition view:work.rvl_tcnt_1s_3s_1_0s(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\user\desktop\uct-fpga-course-2022\practicals\03 - uart\impl1\reveal_workspace\tmpreveal\top_la0_gen.v":97:0:97:9|Instance jtag_int_u of partition view:work.rvl_jtag_int_8s_1s_0s_0s_3s_8s_8s(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\user\desktop\uct-fpga-course-2022\practicals\03 - uart\impl1\reveal_workspace\tmpreveal\top_la0_gen.v":174:0:174:3|Instance tm_u of partition view:work.rvl_tm_Z3(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\user\desktop\uct-fpga-course-2022\practicals\03 - uart\impl1\reveal_workspace\tmpreveal\top_la0_gen.v":97:0:97:9|Instance jtag_int_u of partition view:work.rvl_jtag_int_8s_1s_0s_0s_3s_8s_8s(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\user\desktop\uct-fpga-course-2022\practicals\03 - uart\impl1\reveal_workspace\tmpreveal\top_la0_gen.v":174:0:174:3|Instance tm_u of partition view:work.rvl_tm_Z3(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\user\desktop\uct-fpga-course-2022\practicals\03 - uart\impl1\reveal_workspace\tmpreveal\top_la0_gen.v":97:0:97:9|Instance jtag_int_u of partition view:work.rvl_jtag_int_8s_1s_0s_0s_3s_8s_8s(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\user\desktop\uct-fpga-course-2022\practicals\03 - uart\impl1\reveal_workspace\tmpreveal\top_la0_gen.v":174:0:174:3|Instance tm_u of partition view:work.rvl_tm_Z3(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\user\desktop\uct-fpga-course-2022\practicals\03 - uart\impl1\reveal_workspace\tmpreveal\top_la0_gen.v":97:0:97:9|Instance jtag_int_u of partition view:work.rvl_jtag_int_8s_1s_0s_0s_3s_8s_8s(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\user\desktop\uct-fpga-course-2022\practicals\03 - uart\impl1\reveal_workspace\tmpreveal\top_la0_gen.v":174:0:174:3|Instance tm_u of partition view:work.rvl_tm_Z3(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\user\desktop\uct-fpga-course-2022\practicals\03 - uart\impl1\reveal_workspace\tmpreveal\top_la0_gen.v":97:0:97:9|Instance jtag_int_u of partition view:work.rvl_jtag_int_8s_1s_0s_0s_3s_8s_8s(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\user\desktop\uct-fpga-course-2022\practicals\03 - uart\impl1\reveal_workspace\tmpreveal\top_la0_gen.v":174:0:174:3|Instance tm_u of partition view:work.rvl_tm_Z3(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\user\desktop\uct-fpga-course-2022\practicals\03 - uart\impl1\reveal_workspace\tmpreveal\top_la0_gen.v":97:0:97:9|Instance jtag_int_u of partition view:work.rvl_jtag_int_8s_1s_0s_0s_3s_8s_8s(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\user\desktop\uct-fpga-course-2022\practicals\03 - uart\impl1\reveal_workspace\tmpreveal\top_la0_gen.v":174:0:174:3|Instance tm_u of partition view:work.rvl_tm_Z3(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\user\desktop\uct-fpga-course-2022\practicals\03 - uart\impl1\reveal_workspace\tmpreveal\top_la0_trig_gen.v":96:0:96:7|Instance decode_u of partition view:work.rvl_decode_1s_1s(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\user\desktop\uct-fpga-course-2022\practicals\03 - uart\impl1\reveal_workspace\tmpreveal\top_la0_trig_gen.v":110:0:110:3|Instance tu_0 of partition view:work.rvl_tu_1s_0s_0s_0s_1s(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\user\desktop\uct-fpga-course-2022\practicals\03 - uart\impl1\reveal_workspace\tmpreveal\top_la0_trig_gen.v":130:0:130:3|Instance te_0 of partition view:work.rvl_te_Z1(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\user\desktop\uct-fpga-course-2022\practicals\03 - uart\impl1\reveal_workspace\tmpreveal\top_la0_trig_gen.v":162:0:162:5|Instance tcnt_0 of partition view:work.rvl_tcnt_1s_3s_1_0s(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\user\desktop\uct-fpga-course-2022\practicals\03 - uart\impl1\reveal_workspace\tmpreveal\top_la0_gen.v":97:0:97:9|Instance jtag_int_u of partition view:work.rvl_jtag_int_8s_1s_0s_0s_3s_8s_8s(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\user\desktop\uct-fpga-course-2022\practicals\03 - uart\impl1\reveal_workspace\tmpreveal\top_la0_gen.v":174:0:174:3|Instance tm_u of partition view:work.rvl_tm_Z3(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\user\desktop\uct-fpga-course-2022\practicals\03 - uart\impl1\reveal_workspace\tmpreveal\top_la0_trig_gen.v":96:0:96:7|Instance decode_u of partition view:work.rvl_decode_1s_1s(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\user\desktop\uct-fpga-course-2022\practicals\03 - uart\impl1\reveal_workspace\tmpreveal\top_la0_trig_gen.v":110:0:110:3|Instance tu_0 of partition view:work.rvl_tu_1s_0s_0s_0s_1s(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\user\desktop\uct-fpga-course-2022\practicals\03 - uart\impl1\reveal_workspace\tmpreveal\top_la0_trig_gen.v":130:0:130:3|Instance te_0 of partition view:work.rvl_te_Z1(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\user\desktop\uct-fpga-course-2022\practicals\03 - uart\impl1\reveal_workspace\tmpreveal\top_la0_trig_gen.v":162:0:162:5|Instance tcnt_0 of partition view:work.rvl_tcnt_1s_3s_1_0s(verilog) has no references to its outputs; instance not removed. 
+Encoding state machine txState[1:0] (in view: work.UART_uniq_1(verilog))
+original code -> new code
+   00000000000000000000000000000000 -> 0
+   00000000000000000000000000000001 -> 1
+@N: MO225 :"c:\users\user\desktop\uct-fpga-course-2022\practicals\03 - uart\impl1\reveal_workspace\tmpreveal\top_rvl.v":306:4:306:9|There are no possible illegal states for state machine txState[1:0] (in view: work.UART_uniq_1(verilog)); safe FSM implementation is not required.
+
+Starting clock optimization phase (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 175MB peak: 175MB)
+
+
+Finished clock optimization phase (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 175MB peak: 175MB)
+
+
+Starting clock optimization report phase (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:01s; Memory used current: 175MB peak: 175MB)
+
+@W: BN117 :"c:\users\user\desktop\uct-fpga-course-2022\practicals\03 - uart\impl1\reveal_workspace\tmpreveal\top_la0_gen.v":97:0:97:9|Instance jtag_int_u of partition view:work.rvl_jtag_int_8s_1s_0s_0s_3s_8s_8s(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\user\desktop\uct-fpga-course-2022\practicals\03 - uart\impl1\reveal_workspace\tmpreveal\top_la0_gen.v":174:0:174:3|Instance tm_u of partition view:work.rvl_tm_Z3(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\user\desktop\uct-fpga-course-2022\practicals\03 - uart\impl1\reveal_workspace\tmpreveal\top_la0_trig_gen.v":96:0:96:7|Instance decode_u of partition view:work.rvl_decode_1s_1s(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\user\desktop\uct-fpga-course-2022\practicals\03 - uart\impl1\reveal_workspace\tmpreveal\top_la0_trig_gen.v":110:0:110:3|Instance tu_0 of partition view:work.rvl_tu_1s_0s_0s_0s_1s(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\user\desktop\uct-fpga-course-2022\practicals\03 - uart\impl1\reveal_workspace\tmpreveal\top_la0_trig_gen.v":130:0:130:3|Instance te_0 of partition view:work.rvl_te_Z1(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\user\desktop\uct-fpga-course-2022\practicals\03 - uart\impl1\reveal_workspace\tmpreveal\top_la0_trig_gen.v":162:0:162:5|Instance tcnt_0 of partition view:work.rvl_tcnt_1s_3s_1_0s(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\user\desktop\uct-fpga-course-2022\practicals\03 - uart\impl1\reveal_workspace\tmpreveal\top_la0_gen.v":97:0:97:9|Instance jtag_int_u of partition view:work.rvl_jtag_int_8s_1s_0s_0s_3s_8s_8s(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\user\desktop\uct-fpga-course-2022\practicals\03 - uart\impl1\reveal_workspace\tmpreveal\top_la0_gen.v":174:0:174:3|Instance tm_u of partition view:work.rvl_tm_Z3(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\user\desktop\uct-fpga-course-2022\practicals\03 - uart\impl1\reveal_workspace\tmpreveal\top_la0_trig_gen.v":96:0:96:7|Instance decode_u of partition view:work.rvl_decode_1s_1s(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\user\desktop\uct-fpga-course-2022\practicals\03 - uart\impl1\reveal_workspace\tmpreveal\top_la0_trig_gen.v":110:0:110:3|Instance tu_0 of partition view:work.rvl_tu_1s_0s_0s_0s_1s(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\user\desktop\uct-fpga-course-2022\practicals\03 - uart\impl1\reveal_workspace\tmpreveal\top_la0_trig_gen.v":130:0:130:3|Instance te_0 of partition view:work.rvl_te_Z1(verilog) has no references to its outputs; instance not removed. 
+@W: BN117 :"c:\users\user\desktop\uct-fpga-course-2022\practicals\03 - uart\impl1\reveal_workspace\tmpreveal\top_la0_trig_gen.v":162:0:162:5|Instance tcnt_0 of partition view:work.rvl_tcnt_1s_3s_1_0s(verilog) has no references to its outputs; instance not removed. 
+
+Finished clock optimization report phase (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:01s; Memory used current: 175MB peak: 176MB)
+
+@N: FX1184 |Applying syn_allowed_resources blockrams=9 on top level netlist top 
+
+Finished netlist restructuring (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 175MB peak: 176MB)
+
+
+
+Clock Summary
+******************
+
+          Start                                     Requested     Requested     Clock        Clock                   Clock
+Level     Clock                                     Frequency     Period        Type         Group                   Load 
+--------------------------------------------------------------------------------------------------------------------------
+0 -       ipClk                                     50.0 MHz      20.000        declared     default_clkgroup        199  
+                                                                                                                          
+0 -       System                                    200.0 MHz     5.000         system       system_clkgroup         0    
+                                                                                                                          
+0 -       reveal_coretop|jtck_inferred_clock[0]     200.0 MHz     5.000         inferred     Inferred_clkgroup_0     166  
+==========================================================================================================================
+
+
+
+Clock Load Summary
+***********************
+
+                                          Clock     Source                                                             Clock Pin                                                            Non-clock Pin     Non-clock Pin                                                              
+Clock                                     Load      Pin                                                                Seq Example                                                          Seq Example       Comb Example                                                               
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ipClk                                     199       ipClk(port)                                                        opLed[7:0].C                                                         -                 -                                                                          
+                                                                                                                                                                                                                                                                                         
+System                                    0         -                                                                  -                                                                    -                 -                                                                          
+                                                                                                                                                                                                                                                                                         
+reveal_coretop|jtck_inferred_clock[0]     166       top_reveal_coretop_instance.jtagconn16_inst_0.jtck(jtagconn16)     top_reveal_coretop_instance.top_la0_inst_0.tm_u.tm_first_rd_d1.C     -                 top_reveal_coretop_instance.top_la0_inst_0.tm_u.genblk4\.un1_jtck.I[0](inv)
+=========================================================================================================================================================================================================================================================================================
+
+
+ICG Latch Removal Summary:
+Number of ICG latches removed: 0
+Number of ICG latches not removed:	0
+For details review file gcc_ICG_report.rpt
+
+
+@S |Clock Optimization Summary
+
+
+
+#### START OF PREMAP CLOCK OPTIMIZATION REPORT #####[
+
+2 non-gated/non-generated clock tree(s) driving 365 clock pin(s) of sequential element(s)
+0 gated/generated clock tree(s) driving 0 clock pin(s) of sequential element(s)
+0 instances converted, 0 sequential instances remain driven by gated/generated clocks
+
+============================================= Non-Gated/Non-Generated Clocks ==============================================
+Clock Tree ID     Driving Element                                        Drive Element Type     Fanout     Sample Instance 
+---------------------------------------------------------------------------------------------------------------------------
+@KP:ckid0_0       ipClk                                                  port                   199        UART_TxData[7:0]
+@KP:ckid0_1       top_reveal_coretop_instance.jtagconn16_inst_0.jtck     jtagconn16             166        ENCRYPTED       
+===========================================================================================================================
+
+
+##### END OF CLOCK OPTIMIZATION REPORT ######
+
+@N: FX1143 |Skipping assigning INTERNAL_VREF to iobanks, because the table of mapping from pin to iobank is not initialized.
+Finished Pre Mapping Phase.
+
+Starting constraint checker (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:02s; Memory used current: 176MB peak: 176MB)
+
+
+Finished constraint checker preprocessing (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:02s; Memory used current: 176MB peak: 177MB)
+
+@W: MF511 |Found issues with constraints. Please check constraint checker report "C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\UART_impl1_cck.rpt" .
+
+Finished constraint checker (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:02s; Memory used current: 177MB peak: 177MB)
+
+Pre-mapping successful!
+
+At Mapper Exit (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:02s; Memory used current: 96MB peak: 178MB)
+
+Process took 0h:00m:03s realtime, 0h:00m:03s cputime
+# Tue May  3 16:20:53 2022
+
+###########################################################]
+# Tue May  3 16:20:54 2022
+
+
+Copyright (C) 1994-2021 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: R-2021.03L-SP1
+Install: C:\lscc\diamond\3.12\synpbase
+OS: Windows 6.2
+
+Hostname: DESKTOP-MU9CKUT
+
+Implementation : impl1
+Synopsys Lattice Technology Mapper, Version map202103lat, Build 070R, Built Oct  6 2021 11:12:38, @
+
+
+Mapper Startup Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 118MB peak: 118MB)
+
+@N: MF916 |Option synthesis_strategy=base is enabled. 
+@N: MF248 |Running in 64-bit mode.
+@N: MF666 |Clock conversion enabled. (Command "set_option -fix_gated_and_generated_clocks 1" in the project file.)
+
+Design Input Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 119MB peak: 130MB)
+
+
+Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 119MB peak: 130MB)
+
+
+Start loading timing files (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 134MB peak: 134MB)
+
+
+Finished loading timing files (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 136MB peak: 137MB)
+
+
+
+Starting Optimization and Mapping (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 170MB peak: 170MB)
+
+
+Finished RTL optimizations (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 175MB peak: 175MB)
+
+
+Starting factoring (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:01s; Memory used current: 177MB peak: 177MB)
+
+
+Finished factoring (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 179MB peak: 179MB)
+
+
+Available hyper_sources - for debug and ip models
+	None Found
+
+
+Finished generic timing optimizations - Pass 1 (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 180MB peak: 180MB)
+
+@W: FX527 :"c:\users\user\desktop\uct-fpga-course-2022\practicals\03 - uart\impl1\reveal_workspace\tmpreveal\top_rvl.v":306:4:306:9|Found false-path constraint on register UART_Inst.txBitCounter[0] which prevents the register from being packed into DSP
+@W: FX527 :"c:\users\user\desktop\uct-fpga-course-2022\practicals\03 - uart\impl1\reveal_workspace\tmpreveal\top_rvl.v":306:4:306:9|Found false-path constraint on register UART_Inst.rxCounter[0] which prevents the register from being packed into DSP
+@W: FX527 :"c:\users\user\desktop\uct-fpga-course-2022\practicals\03 - uart\impl1\reveal_workspace\tmpreveal\top_rvl.v":306:4:306:9|Found false-path constraint on register UART_Inst.txCounter[0] which prevents the register from being packed into DSP
+
+Starting Early Timing Optimization (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 181MB peak: 181MB)
+
+
+Finished Early Timing Optimization (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:03s; Memory used current: 184MB peak: 184MB)
+
+
+Finished generic timing optimizations - Pass 2 (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:03s; Memory used current: 184MB peak: 184MB)
+
+
+Finished preparing to map (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:03s; Memory used current: 184MB peak: 184MB)
+
+
+Finished technology mapping (Real Time elapsed 0h:00m:04s; CPU Time elapsed 0h:00m:04s; Memory used current: 192MB peak: 192MB)
+
+Pass		 CPU time		Worst Slack		Luts / Registers
+------------------------------------------------------------
+   1		0h:00m:04s		    -1.06ns		 461 /       350
+   2		0h:00m:04s		    -1.06ns		 459 /       350
+   3		0h:00m:04s		    -1.06ns		 459 /       350
+Timing driven replication report
+Added 8 Registers via timing driven replication
+Added 0 LUTs via timing driven replication
+
+   4		0h:00m:05s		    -0.23ns		 497 /       358
+   5		0h:00m:05s		     0.04ns		 499 /       358
+   6		0h:00m:05s		     0.07ns		 500 /       358
+   7		0h:00m:05s		     0.07ns		 500 /       358
+
+Finished technology timing optimizations and critical path resynthesis (Real Time elapsed 0h:00m:05s; CPU Time elapsed 0h:00m:05s; Memory used current: 189MB peak: 194MB)
+
+@N: FX164 |The option to pack registers in the IOB has not been specified. Please set syn_useioff attribute.  
+@A: BN291 :"c:\users\user\desktop\uct-fpga-course-2022\practicals\03 - uart\impl1\reveal_workspace\tmpreveal\top_rvl.v":306:4:306:9|Boundary register UART_Inst.opTx.fb (in view: work.top(verilog)) is packed into a complex cell. To disable register packing, set syn_keep=1 on the net between the register and the complex cell. 
+
+Finished restoring hierarchy (Real Time elapsed 0h:00m:06s; CPU Time elapsed 0h:00m:06s; Memory used current: 189MB peak: 194MB)
+
+
+Start Writing Netlists (Real Time elapsed 0h:00m:06s; CPU Time elapsed 0h:00m:06s; Memory used current: 153MB peak: 194MB)
+
+Writing Analyst data base C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\synwork\UART_impl1_m.srm
+
+Finished Writing Netlist Databases (Real Time elapsed 0h:00m:07s; CPU Time elapsed 0h:00m:07s; Memory used current: 192MB peak: 194MB)
+
+Writing EDIF Netlist and constraint files
+@N: FX1056 |Writing EDF file: C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1\UART_impl1.edi
+@N: BW106 |Synplicity Constraint File capacitance units using default value of 1pF 
+
+Finished Writing EDIF Netlist and constraint files (Real Time elapsed 0h:00m:08s; CPU Time elapsed 0h:00m:08s; Memory used current: 196MB peak: 196MB)
+
+
+Finished Writing Netlists (Real Time elapsed 0h:00m:08s; CPU Time elapsed 0h:00m:08s; Memory used current: 196MB peak: 197MB)
+
+
+Start final timing analysis (Real Time elapsed 0h:00m:09s; CPU Time elapsed 0h:00m:08s; Memory used current: 192MB peak: 197MB)
+
+@W: MT246 :"c:\users\user\desktop\uct-fpga-course-2022\practicals\03 - uart\impl1\reveal_workspace\tmpreveal\top_rvl.v":52:15:52:31|Blackbox jtagconn16 is missing a user supplied timing model. This may have a negative effect on timing analysis and optimizations (Quality of Results)
+@W: MT246 :"c:\lscc\diamond\3.12\module\reveal\src\ertl\ertl.v":1192:8:1192:20|Blackbox pmi_ram_dp_Z2 is missing a user supplied timing model. This may have a negative effect on timing analysis and optimizations (Quality of Results)
+@W: MT246 :"c:\lscc\diamond\3.12\module\reveal\src\ertl\ertl.v":2162:8:2162:13|Blackbox pmi_ram_dp_Z4 is missing a user supplied timing model. This may have a negative effect on timing analysis and optimizations (Quality of Results)
+@N: MT615 |Found clock ipClk with period 20.00ns 
+@W: MT420 |Found inferred clock reveal_coretop|jtck_inferred_clock[0] with period 5.00ns. Please declare a user-defined clock on net top_reveal_coretop_instance.jtck[0].
+
+
+##### START OF TIMING REPORT #####[
+# Timing report written on Tue May  3 16:21:03 2022
+#
+
+
+Top view:               top
+Requested Frequency:    50.0 MHz
+Wire load mode:         top
+Paths requested:        5
+Constraint File(s):    C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\UART.fdc
+                       
+@N: MT320 |This timing report is an estimate of place and route data. For final timing results, use the FPGA vendor place and route report.
+
+@N: MT322 |Clock constraints include only register-to-register paths associated with each individual clock.
+
+
+
+Performance Summary
+*******************
+
+
+Worst slack in design: -1.518
+
+                                          Requested     Estimated     Requested     Estimated                Clock        Clock              
+Starting Clock                            Frequency     Frequency     Period        Period        Slack      Type         Group              
+---------------------------------------------------------------------------------------------------------------------------------------------
+ipClk                                     50.0 MHz      170.6 MHz     20.000        5.863         14.137     declared     default_clkgroup   
+reveal_coretop|jtck_inferred_clock[0]     200.0 MHz     153.4 MHz     5.000         6.518         -1.518     inferred     Inferred_clkgroup_0
+System                                    200.0 MHz     337.8 MHz     5.000         2.960         2.040      system       system_clkgroup    
+=============================================================================================================================================
+
+
+
+
+
+Clock Relationships
+*******************
+
+Clocks                                                                        |    rise  to  rise    |    fall  to  fall    |    rise  to  fall    |    fall  to  rise 
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Starting                               Ending                                 |  constraint  slack   |  constraint  slack   |  constraint  slack   |  constraint  slack
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+System                                 System                                 |  5.000       2.040   |  No paths    -       |  No paths    -       |  No paths    -    
+System                                 ipClk                                  |  20.000      18.147  |  No paths    -       |  No paths    -       |  No paths    -    
+System                                 reveal_coretop|jtck_inferred_clock[0]  |  No paths    -       |  No paths    -       |  5.000       -0.250  |  No paths    -    
+ipClk                                  System                                 |  20.000      16.197  |  No paths    -       |  No paths    -       |  No paths    -    
+ipClk                                  ipClk                                  |  20.000      14.137  |  No paths    -       |  No paths    -       |  No paths    -    
+ipClk                                  reveal_coretop|jtck_inferred_clock[0]  |  No paths    -       |  No paths    -       |  Diff grp    -       |  No paths    -    
+reveal_coretop|jtck_inferred_clock[0]  System                                 |  No paths    -       |  No paths    -       |  No paths    -       |  5.000       0.882
+reveal_coretop|jtck_inferred_clock[0]  ipClk                                  |  No paths    -       |  No paths    -       |  No paths    -       |  Diff grp    -    
+reveal_coretop|jtck_inferred_clock[0]  reveal_coretop|jtck_inferred_clock[0]  |  No paths    -       |  5.000       -1.518  |  No paths    -       |  No paths    -    
+=======================================================================================================================================================================
+ Note: 'No paths' indicates there are no paths in the design for that pair of clock edges.
+       'Diff grp' indicates that paths exist but the starting clock and ending clock are in different clock groups.
+
+
+
+Interface Information 
+*********************
+
+No IO constraint found
+
+
+
+====================================
+Detailed Report for Clock: ipClk
+====================================
+
+
+
+Starting Points with Worst Slack
+********************************
+
+                              Starting                                                Arrival           
+Instance                      Reference     Type        Pin     Net                   Time        Slack 
+                              Clock                                                                     
+--------------------------------------------------------------------------------------------------------
+b8dvsIedgk9mBmfHwv4HxcxrJ     ipClk         FD1P3DX     Q       post_trig_cntr[2]     0.929       14.137
+b8dvsIedgk9mBmfHwv4Hxcx23     ipClk         FD1P3DX     Q       post_trig_cntr[4]     0.929       14.137
+UART_Inst.reset               ipClk         FD1S3AX     Q       reset                 1.164       14.393
+UART_Inst.clockEnable         ipClk         FD1S3AX     Q       clockEnable           1.067       14.491
+b8dvsIedgk9mBmfHwv4Hxcxhn     ipClk         FD1P3DX     Q       post_trig_cntr[0]     0.929       14.891
+b8dvsIedgk9mBmfHwv4Hxcxm3     ipClk         FD1P3DX     Q       post_trig_cntr[1]     0.929       14.891
+b8dvsIedgk9mBmfHwv4Hxcxxn     ipClk         FD1P3DX     Q       post_trig_cntr[3]     0.929       14.891
+UART_Inst.rxCounter[0]        ipClk         FD1S3AY     Q       rxCounter[0]          0.994       15.239
+UART_Inst.rxCounter[3]        ipClk         FD1S3AX     Q       rxCounter[3]          0.929       15.304
+UART_Inst.rxCounter[4]        ipClk         FD1S3AY     Q       rxCounter[4]          0.929       15.304
+========================================================================================================
+
+
+Ending Points with Worst Slack
+******************************
+
+                               Starting                                                   Required           
+Instance                       Reference     Type        Pin     Net                      Time         Slack 
+                               Clock                                                                         
+-------------------------------------------------------------------------------------------------------------
+b8dvsIedgk9mBmfHwv4Hxcxxn      ipClk         FD1P3DX     D       post_trig_cntr_s[3]      20.069       14.137
+b8dvsIedgk9mBmfHwv4Hxcx23      ipClk         FD1P3DX     D       post_trig_cntr_s[4]      20.069       14.137
+ps846ma26kiJBxJsu98fv7J        ipClk         FD1P3DX     D       pre_trig_cntr_s[3]       20.069       14.137
+ps846ma26kiJBxJsu98fvDn        ipClk         FD1P3DX     D       pre_trig_cntr_s[4]       20.069       14.137
+jvmp36mE4syAtlAjv2ldfAemDn     ipClk         FD1P3DX     D       tm_wr_addr_cntr_s[3]     20.069       14.137
+jvmp36mE4syAtlAjv2ldfAemI3     ipClk         FD1P3DX     D       tm_wr_addr_cntr_s[4]     20.069       14.137
+b8dvsIedgk9mBmfHwv4Hxcxm3      ipClk         FD1P3DX     D       post_trig_cntr_s[1]      20.069       14.210
+b8dvsIedgk9mBmfHwv4HxcxrJ      ipClk         FD1P3DX     D       post_trig_cntr_s[2]      20.069       14.210
+ps846ma26kiJBxJsu98fvxn        ipClk         FD1P3DX     D       pre_trig_cntr_s[1]       20.069       14.210
+ps846ma26kiJBxJsu98fv23        ipClk         FD1P3DX     D       pre_trig_cntr_s[2]       20.069       14.210
+=============================================================================================================
+
+
+
+Worst Path Information
+***********************
+
+
+Path information for path number 1: 
+      Requested Period:                      20.000
+    - Setup time:                            -0.069
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         20.069
+
+    - Propagation time:                      5.932
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (non-critical) :                 14.137
+
+    Number of logic level(s):                6
+    Starting point:                          b8dvsIedgk9mBmfHwv4HxcxrJ / Q
+    Ending point:                            b8dvsIedgk9mBmfHwv4Hxcx23 / D
+    The start point is clocked by            ipClk [rising] (rise=0.000 fall=10.000 period=20.000) on pin CK
+    The end   point is clocked by            ipClk [rising] (rise=0.000 fall=10.000 period=20.000) on pin CK
+
+Instance / Net                                          Pin      Pin               Arrival     No. of    
+Name                                       Type         Name     Dir     Delay     Time        Fan Out(s)
+---------------------------------------------------------------------------------------------------------
+b8dvsIedgk9mBmfHwv4HxcxrJ                  FD1P3DX      Q        Out     0.929     0.929 r     -         
+post_trig_cntr[2]                          Net          -        -       -         -           2         
+kfCz2DsCaz4BGBvL3lg45fCfLlKzDjoK0B23       ORCALUT4     A        In      0.000     0.929 r     -         
+kfCz2DsCaz4BGBvL3lg45fCfLlKzDjoK0B23       ORCALUT4     Z        Out     0.754     1.684 r     -         
+un1_capture18_0_238_0_0_o2_0               Net          -        -       -         -           1         
+bfKJyz8ek8EAkehBnHHttvKHpHLn6AmpB3AEI3     ORCALUT4     D        In      0.000     1.684 r     -         
+bfKJyz8ek8EAkehBnHHttvKHpHLn6AmpB3AEI3     ORCALUT4     Z        Out     0.827     2.511 r     -         
+N_456                                      Net          -        -       -         -           2         
+pCxezgxDwjCw1crl7mgtAl8                    ORCALUT4     B        In      0.000     2.511 r     -         
+pCxezgxDwjCw1crl7mgtAl8                    ORCALUT4     Z        Out     1.058     3.569 f     -         
+pre_trig_cntr                              Net          -        -       -         -           18        
+rdCbj4w8gHmJJjkfqpCj8zirnf4wnrG7J          CCU2B        A1       In      0.000     3.569 f     -         
+rdCbj4w8gHmJJjkfqpCj8zirnf4wnrG7J          CCU2B        COUT     Out     1.056     4.625 r     -         
+post_trig_cntr_cry[0]                      Net          -        -       -         -           1         
+rdCbj4w8gHmJJjkfqpCj8zirnf4wnrGDn          CCU2B        CIN      In      0.000     4.625 r     -         
+rdCbj4w8gHmJJjkfqpCj8zirnf4wnrGDn          CCU2B        COUT     Out     0.073     4.698 r     -         
+post_trig_cntr_cry[2]                      Net          -        -       -         -           1         
+rdCbj4w8gHmJJjkfqpCj8zirnf4wnrHbJ          CCU2B        CIN      In      0.000     4.698 r     -         
+rdCbj4w8gHmJJjkfqpCj8zirnf4wnrHbJ          CCU2B        S1       Out     1.234     5.932 r     -         
+post_trig_cntr_s[4]                        Net          -        -       -         -           1         
+b8dvsIedgk9mBmfHwv4Hxcx23                  FD1P3DX      D        In      0.000     5.932 r     -         
+=========================================================================================================
+
+
+
+
+====================================
+Detailed Report for Clock: reveal_coretop|jtck_inferred_clock[0]
+====================================
+
+
+
+Starting Points with Worst Slack
+********************************
+
+                               Starting                                                                             Arrival           
+Instance                       Reference                                 Type        Pin     Net                    Time        Slack 
+                               Clock                                                                                                  
+--------------------------------------------------------------------------------------------------------------------------------------
+eLGADJzvI6lrAAobHrJ            reveal_coretop|jtck_inferred_clock[0]     FD1P3DX     Q       addr[0]                1.244       -1.518
+eLGADJzvI6lrAAocyhn            reveal_coretop|jtck_inferred_clock[0]     FD1P3DX     Q       addr[13]               1.156       -1.470
+eLGADJzvI6lrAAocybJ            reveal_coretop|jtck_inferred_clock[0]     FD1P3DX     Q       addr[12]               1.148       -1.461
+jrnEkbs4As6tkG0oLeB7pJwc7J     reveal_coretop|jtck_inferred_clock[0]     FD1P3DX     Q       shift_reg_fast[28]     1.067       -1.237
+jrnEkbs4As6tkG0oLeB7pJwcDn     reveal_coretop|jtck_inferred_clock[0]     FD1P3DX     Q       shift_reg_fast[29]     1.067       -1.237
+y2fBaocksFj8Ls4EpdJe           reveal_coretop|jtck_inferred_clock[0]     FD1P3DX     Q       jshift_d1_fast         0.929       -1.180
+eLGADJzvI6lrAAobHxn            reveal_coretop|jtck_inferred_clock[0]     FD1P3DX     Q       addr[1]                1.232       -1.175
+eLGADJzvI6lrAAobH23            reveal_coretop|jtck_inferred_clock[0]     FD1P3DX     Q       addr[2]                1.218       -1.161
+eLGADJzvI6lrAAocx7J            reveal_coretop|jtck_inferred_clock[0]     FD1P3DX     Q       addr[9]                1.164       -1.099
+eLGADJzvI6lrAAobH7J            reveal_coretop|jtck_inferred_clock[0]     FD1P3DX     Q       addr[3]                1.156       -1.091
+======================================================================================================================================
+
+
+Ending Points with Worst Slack
+******************************
+
+                      Starting                                                                        Required           
+Instance              Reference                                 Type        Pin     Net               Time         Slack 
+                      Clock                                                                                              
+-------------------------------------------------------------------------------------------------------------------------
+ikjxdeE9yeis2eI9      reveal_coretop|jtck_inferred_clock[0]     FD1P3DX     D       parity_calc_5     4.389        -1.518
+orh8KHqvnKqbJ         reveal_coretop|jtck_inferred_clock[0]     FD1P3BX     D       tm_crc_7[0]       4.389        -0.719
+ILaHxzBfscgpGC4m3     reveal_coretop|jtck_inferred_clock[0]     FD1P3DX     D       N_49_i            4.389        -0.639
+ILaHxzBfscgpGC4rJ     reveal_coretop|jtck_inferred_clock[0]     FD1P3DX     D       N_376_i           4.389        -0.639
+ILaHxzBfscgpGC4xn     reveal_coretop|jtck_inferred_clock[0]     FD1P3DX     D       N_375_i           4.389        -0.639
+ILaHxzBfscgpGC423     reveal_coretop|jtck_inferred_clock[0]     FD1P3DX     D       N_374_i           4.389        -0.639
+ILaHxzBfscgpGC4Dn     reveal_coretop|jtck_inferred_clock[0]     FD1P3DX     D       N_372_i           4.389        -0.639
+ILaHxzBfscgpGC4I3     reveal_coretop|jtck_inferred_clock[0]     FD1P3DX     D       N_371_i           4.389        -0.639
+ILaHxzBfscgpGC5hn     reveal_coretop|jtck_inferred_clock[0]     FD1P3DX     D       N_33_i            4.389        -0.639
+ILaHxzBfscgpGC5m3     reveal_coretop|jtck_inferred_clock[0]     FD1P3DX     D       N_369_i           4.389        -0.639
+=========================================================================================================================
+
+
+
+Worst Path Information
+***********************
+
+
+Path information for path number 1: 
+      Requested Period:                      5.000
+    - Setup time:                            0.611
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         4.389
+
+    - Propagation time:                      5.907
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (critical) :                     -1.518
+
+    Number of logic level(s):                9
+    Starting point:                          eLGADJzvI6lrAAobHrJ / Q
+    Ending point:                            ikjxdeE9yeis2eI9 / D
+    The start point is clocked by            reveal_coretop|jtck_inferred_clock[0] [falling] (rise=0.000 fall=2.500 period=5.000) on pin CK
+    The end   point is clocked by            reveal_coretop|jtck_inferred_clock[0] [falling] (rise=0.000 fall=2.500 period=5.000) on pin CK
+
+Instance / Net                                                                       Pin      Pin               Arrival     No. of    
+Name                                                                    Type         Name     Dir     Delay     Time        Fan Out(s)
+--------------------------------------------------------------------------------------------------------------------------------------
+eLGADJzvI6lrAAobHrJ                                                     FD1P3DX      Q        Out     1.244     1.244 r     -         
+addr[0]                                                                 Net          -        -       -         -           51        
+bbxfvH3dotu2vDtgogoxn447HKm3                                            ORCALUT4     A        In      0.000     1.244 r     -         
+bbxfvH3dotu2vDtgogoxn447HKm3                                            ORCALUT4     Z        Out     0.754     1.999 r     -         
+N_31                                                                    Net          -        -       -         -           1         
+b9yajK2c1oBAaDxn3E4vnKqbJ                                               ORCALUT4     A        In      0.000     1.999 r     -         
+b9yajK2c1oBAaDxn3E4vnKqbJ                                               ORCALUT4     Z        Out     0.179     2.178 r     -         
+rd_dout_tcnt[0]                                                         Net          -        -       -         -           1         
+top_reveal_coretop_instance.top_la0_inst_0.trig_u.rd_dout_trig_0[0]     ORCALUT4     A        In      0.000     2.178 r     -         
+top_reveal_coretop_instance.top_la0_inst_0.trig_u.rd_dout_trig_0[0]     ORCALUT4     Z        Out     0.754     2.933 r     -         
+N_5                                                                     Net          -        -       -         -           1         
+top_reveal_coretop_instance.top_la0_inst_0.trig_u.rd_dout_trig[0]       ORCALUT4     A        In      0.000     2.933 r     -         
+top_reveal_coretop_instance.top_la0_inst_0.trig_u.rd_dout_trig[0]       ORCALUT4     Z        Out     0.179     3.112 r     -         
+rd_dout_trig[0]                                                         Net          -        -       -         -           4         
+jfyhuHcfopfbALDIb0zB35tdCx                                              ORCALUT4     D        In      0.000     3.112 r     -         
+jfyhuHcfopfbALDIb0zB35tdCx                                              ORCALUT4     Z        Out     0.754     3.866 r     -         
+N_26_0_0                                                                Net          -        -       -         -           1         
+jfyhuHcfopfbALDIb0zB35tdCq                                              ORCALUT4     A        In      0.000     3.866 r     -         
+jfyhuHcfopfbALDIb0zB35tdCq                                              ORCALUT4     Z        Out     0.754     4.621 f     -         
+G_31_0_o4_2                                                             Net          -        -       -         -           1         
+b8bzsIdsL6DJpIKxmnKEc0G1E                                               ORCALUT4     A        In      0.000     4.621 f     -         
+b8bzsIdsL6DJpIKxmnKEc0G1E                                               ORCALUT4     Z        Out     0.754     5.375 f     -         
+parity_calc_RNO_8                                                       Net          -        -       -         -           1         
+b8bzsIdsL6DJpIKxmnKEc0G18                                               PFUMX        ALUT     In      0.000     5.375 f     -         
+b8bzsIdsL6DJpIKxmnKEc0G18                                               PFUMX        Z        Out     0.118     5.493 f     -         
+parity_calc_RNO_2                                                       Net          -        -       -         -           1         
+cGu1EIr9cwttxGGvl92b2p                                                  ORCALUT4     C        In      0.000     5.493 f     -         
+cGu1EIr9cwttxGGvl92b2p                                                  ORCALUT4     Z        Out     0.415     5.907 f     -         
+parity_calc_5                                                           Net          -        -       -         -           1         
+ikjxdeE9yeis2eI9                                                        FD1P3DX      D        In      0.000     5.907 f     -         
+======================================================================================================================================
+
+
+Path information for path number 2: 
+      Requested Period:                      5.000
+    - Setup time:                            0.611
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         4.389
+
+    - Propagation time:                      5.859
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (non-critical) :                 -1.470
+
+    Number of logic level(s):                8
+    Starting point:                          eLGADJzvI6lrAAocyhn / Q
+    Ending point:                            ikjxdeE9yeis2eI9 / D
+    The start point is clocked by            reveal_coretop|jtck_inferred_clock[0] [falling] (rise=0.000 fall=2.500 period=5.000) on pin CK
+    The end   point is clocked by            reveal_coretop|jtck_inferred_clock[0] [falling] (rise=0.000 fall=2.500 period=5.000) on pin CK
+
+Instance / Net                                                                       Pin      Pin               Arrival     No. of    
+Name                                                                    Type         Name     Dir     Delay     Time        Fan Out(s)
+--------------------------------------------------------------------------------------------------------------------------------------
+eLGADJzvI6lrAAocyhn                                                     FD1P3DX      Q        Out     1.156     1.156 r     -         
+addr[13]                                                                Net          -        -       -         -           16        
+EijdD3f                                                                 ORCALUT4     B        In      0.000     1.156 r     -         
+EijdD3f                                                                 ORCALUT4     Z        Out     0.973     2.129 f     -         
+rd_tu                                                                   Net          -        -       -         -           6         
+top_reveal_coretop_instance.top_la0_inst_0.trig_u.rd_dout_trig_0[0]     ORCALUT4     C        In      0.000     2.129 f     -         
+top_reveal_coretop_instance.top_la0_inst_0.trig_u.rd_dout_trig_0[0]     ORCALUT4     Z        Out     0.754     2.884 r     -         
+N_5                                                                     Net          -        -       -         -           1         
+top_reveal_coretop_instance.top_la0_inst_0.trig_u.rd_dout_trig[0]       ORCALUT4     A        In      0.000     2.884 r     -         
+top_reveal_coretop_instance.top_la0_inst_0.trig_u.rd_dout_trig[0]       ORCALUT4     Z        Out     0.179     3.063 r     -         
+rd_dout_trig[0]                                                         Net          -        -       -         -           4         
+jfyhuHcfopfbALDIb0zB35tdCx                                              ORCALUT4     D        In      0.000     3.063 r     -         
+jfyhuHcfopfbALDIb0zB35tdCx                                              ORCALUT4     Z        Out     0.754     3.817 r     -         
+N_26_0_0                                                                Net          -        -       -         -           1         
+jfyhuHcfopfbALDIb0zB35tdCq                                              ORCALUT4     A        In      0.000     3.817 r     -         
+jfyhuHcfopfbALDIb0zB35tdCq                                              ORCALUT4     Z        Out     0.754     4.572 f     -         
+G_31_0_o4_2                                                             Net          -        -       -         -           1         
+b8bzsIdsL6DJpIKxmnKEc0G1E                                               ORCALUT4     A        In      0.000     4.572 f     -         
+b8bzsIdsL6DJpIKxmnKEc0G1E                                               ORCALUT4     Z        Out     0.754     5.326 f     -         
+parity_calc_RNO_8                                                       Net          -        -       -         -           1         
+b8bzsIdsL6DJpIKxmnKEc0G18                                               PFUMX        ALUT     In      0.000     5.326 f     -         
+b8bzsIdsL6DJpIKxmnKEc0G18                                               PFUMX        Z        Out     0.118     5.444 f     -         
+parity_calc_RNO_2                                                       Net          -        -       -         -           1         
+cGu1EIr9cwttxGGvl92b2p                                                  ORCALUT4     C        In      0.000     5.444 f     -         
+cGu1EIr9cwttxGGvl92b2p                                                  ORCALUT4     Z        Out     0.415     5.859 f     -         
+parity_calc_5                                                           Net          -        -       -         -           1         
+ikjxdeE9yeis2eI9                                                        FD1P3DX      D        In      0.000     5.859 f     -         
+======================================================================================================================================
+
+
+Path information for path number 3: 
+      Requested Period:                      5.000
+    - Setup time:                            0.611
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         4.389
+
+    - Propagation time:                      5.851
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (non-critical) :                 -1.461
+
+    Number of logic level(s):                8
+    Starting point:                          eLGADJzvI6lrAAocybJ / Q
+    Ending point:                            ikjxdeE9yeis2eI9 / D
+    The start point is clocked by            reveal_coretop|jtck_inferred_clock[0] [falling] (rise=0.000 fall=2.500 period=5.000) on pin CK
+    The end   point is clocked by            reveal_coretop|jtck_inferred_clock[0] [falling] (rise=0.000 fall=2.500 period=5.000) on pin CK
+
+Instance / Net                                                                       Pin      Pin               Arrival     No. of    
+Name                                                                    Type         Name     Dir     Delay     Time        Fan Out(s)
+--------------------------------------------------------------------------------------------------------------------------------------
+eLGADJzvI6lrAAocybJ                                                     FD1P3DX      Q        Out     1.148     1.148 r     -         
+addr[12]                                                                Net          -        -       -         -           15        
+EijdD3f                                                                 ORCALUT4     A        In      0.000     1.148 r     -         
+EijdD3f                                                                 ORCALUT4     Z        Out     0.973     2.121 f     -         
+rd_tu                                                                   Net          -        -       -         -           6         
+top_reveal_coretop_instance.top_la0_inst_0.trig_u.rd_dout_trig_0[0]     ORCALUT4     C        In      0.000     2.121 f     -         
+top_reveal_coretop_instance.top_la0_inst_0.trig_u.rd_dout_trig_0[0]     ORCALUT4     Z        Out     0.754     2.876 r     -         
+N_5                                                                     Net          -        -       -         -           1         
+top_reveal_coretop_instance.top_la0_inst_0.trig_u.rd_dout_trig[0]       ORCALUT4     A        In      0.000     2.876 r     -         
+top_reveal_coretop_instance.top_la0_inst_0.trig_u.rd_dout_trig[0]       ORCALUT4     Z        Out     0.179     3.055 r     -         
+rd_dout_trig[0]                                                         Net          -        -       -         -           4         
+jfyhuHcfopfbALDIb0zB35tdCx                                              ORCALUT4     D        In      0.000     3.055 r     -         
+jfyhuHcfopfbALDIb0zB35tdCx                                              ORCALUT4     Z        Out     0.754     3.809 r     -         
+N_26_0_0                                                                Net          -        -       -         -           1         
+jfyhuHcfopfbALDIb0zB35tdCq                                              ORCALUT4     A        In      0.000     3.809 r     -         
+jfyhuHcfopfbALDIb0zB35tdCq                                              ORCALUT4     Z        Out     0.754     4.564 f     -         
+G_31_0_o4_2                                                             Net          -        -       -         -           1         
+b8bzsIdsL6DJpIKxmnKEc0G1E                                               ORCALUT4     A        In      0.000     4.564 f     -         
+b8bzsIdsL6DJpIKxmnKEc0G1E                                               ORCALUT4     Z        Out     0.754     5.318 f     -         
+parity_calc_RNO_8                                                       Net          -        -       -         -           1         
+b8bzsIdsL6DJpIKxmnKEc0G18                                               PFUMX        ALUT     In      0.000     5.318 f     -         
+b8bzsIdsL6DJpIKxmnKEc0G18                                               PFUMX        Z        Out     0.118     5.436 f     -         
+parity_calc_RNO_2                                                       Net          -        -       -         -           1         
+cGu1EIr9cwttxGGvl92b2p                                                  ORCALUT4     C        In      0.000     5.436 f     -         
+cGu1EIr9cwttxGGvl92b2p                                                  ORCALUT4     Z        Out     0.415     5.851 f     -         
+parity_calc_5                                                           Net          -        -       -         -           1         
+ikjxdeE9yeis2eI9                                                        FD1P3DX      D        In      0.000     5.851 f     -         
+======================================================================================================================================
+
+
+Path information for path number 4: 
+      Requested Period:                      5.000
+    - Setup time:                            0.611
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         4.389
+
+    - Propagation time:                      5.790
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (non-critical) :                 -1.401
+
+    Number of logic level(s):                8
+    Starting point:                          eLGADJzvI6lrAAobHrJ / Q
+    Ending point:                            ikjxdeE9yeis2eI9 / D
+    The start point is clocked by            reveal_coretop|jtck_inferred_clock[0] [falling] (rise=0.000 fall=2.500 period=5.000) on pin CK
+    The end   point is clocked by            reveal_coretop|jtck_inferred_clock[0] [falling] (rise=0.000 fall=2.500 period=5.000) on pin CK
+
+Instance / Net                                                                       Pin      Pin               Arrival     No. of    
+Name                                                                    Type         Name     Dir     Delay     Time        Fan Out(s)
+--------------------------------------------------------------------------------------------------------------------------------------
+eLGADJzvI6lrAAobHrJ                                                     FD1P3DX      Q        Out     1.244     1.244 r     -         
+addr[0]                                                                 Net          -        -       -         -           51        
+bbxfvH3dotu2vDtgogoxn447HKm3                                            ORCALUT4     A        In      0.000     1.244 r     -         
+bbxfvH3dotu2vDtgogoxn447HKm3                                            ORCALUT4     Z        Out     0.754     1.999 r     -         
+N_31                                                                    Net          -        -       -         -           1         
+b9yajK2c1oBAaDxn3E4vnKqbJ                                               ORCALUT4     A        In      0.000     1.999 r     -         
+b9yajK2c1oBAaDxn3E4vnKqbJ                                               ORCALUT4     Z        Out     0.179     2.178 r     -         
+rd_dout_tcnt[0]                                                         Net          -        -       -         -           1         
+top_reveal_coretop_instance.top_la0_inst_0.trig_u.rd_dout_trig_0[0]     ORCALUT4     A        In      0.000     2.178 r     -         
+top_reveal_coretop_instance.top_la0_inst_0.trig_u.rd_dout_trig_0[0]     ORCALUT4     Z        Out     0.754     2.933 r     -         
+N_5                                                                     Net          -        -       -         -           1         
+top_reveal_coretop_instance.top_la0_inst_0.trig_u.rd_dout_trig[0]       ORCALUT4     A        In      0.000     2.933 r     -         
+top_reveal_coretop_instance.top_la0_inst_0.trig_u.rd_dout_trig[0]       ORCALUT4     Z        Out     0.179     3.112 r     -         
+rd_dout_trig[0]                                                         Net          -        -       -         -           4         
+jfyhuHcfopfbALDIb0zB35td7h                                              ORCALUT4     D        In      0.000     3.112 r     -         
+jfyhuHcfopfbALDIb0zB35td7h                                              ORCALUT4     Z        Out     0.754     3.866 f     -         
+parity_calc_RNO_17                                                      Net          -        -       -         -           1         
+b8bzsIdsL6DJpIKxmnKEc0G1D                                               ORCALUT4     B        In      0.000     3.866 f     -         
+b8bzsIdsL6DJpIKxmnKEc0G1D                                               ORCALUT4     Z        Out     0.754     4.621 r     -         
+g2_1_1_0_0                                                              Net          -        -       -         -           1         
+b8bzsIdsL6DJpIKxmnKEc0G17                                               ORCALUT4     D        In      0.000     4.621 r     -         
+b8bzsIdsL6DJpIKxmnKEc0G17                                               ORCALUT4     Z        Out     0.754     5.375 f     -         
+parity_calc_RNO_1                                                       Net          -        -       -         -           1         
+cGu1EIr9cwttxGGvl92b2p                                                  ORCALUT4     B        In      0.000     5.375 f     -         
+cGu1EIr9cwttxGGvl92b2p                                                  ORCALUT4     Z        Out     0.415     5.790 r     -         
+parity_calc_5                                                           Net          -        -       -         -           1         
+ikjxdeE9yeis2eI9                                                        FD1P3DX      D        In      0.000     5.790 r     -         
+======================================================================================================================================
+
+
+Path information for path number 5: 
+      Requested Period:                      5.000
+    - Setup time:                            0.611
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         4.389
+
+    - Propagation time:                      5.741
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (non-critical) :                 -1.352
+
+    Number of logic level(s):                7
+    Starting point:                          eLGADJzvI6lrAAocyhn / Q
+    Ending point:                            ikjxdeE9yeis2eI9 / D
+    The start point is clocked by            reveal_coretop|jtck_inferred_clock[0] [falling] (rise=0.000 fall=2.500 period=5.000) on pin CK
+    The end   point is clocked by            reveal_coretop|jtck_inferred_clock[0] [falling] (rise=0.000 fall=2.500 period=5.000) on pin CK
+
+Instance / Net                                                                       Pin      Pin               Arrival     No. of    
+Name                                                                    Type         Name     Dir     Delay     Time        Fan Out(s)
+--------------------------------------------------------------------------------------------------------------------------------------
+eLGADJzvI6lrAAocyhn                                                     FD1P3DX      Q        Out     1.156     1.156 r     -         
+addr[13]                                                                Net          -        -       -         -           16        
+EijdD3f                                                                 ORCALUT4     B        In      0.000     1.156 r     -         
+EijdD3f                                                                 ORCALUT4     Z        Out     0.973     2.129 f     -         
+rd_tu                                                                   Net          -        -       -         -           6         
+top_reveal_coretop_instance.top_la0_inst_0.trig_u.rd_dout_trig_0[0]     ORCALUT4     C        In      0.000     2.129 f     -         
+top_reveal_coretop_instance.top_la0_inst_0.trig_u.rd_dout_trig_0[0]     ORCALUT4     Z        Out     0.754     2.884 r     -         
+N_5                                                                     Net          -        -       -         -           1         
+top_reveal_coretop_instance.top_la0_inst_0.trig_u.rd_dout_trig[0]       ORCALUT4     A        In      0.000     2.884 r     -         
+top_reveal_coretop_instance.top_la0_inst_0.trig_u.rd_dout_trig[0]       ORCALUT4     Z        Out     0.179     3.063 r     -         
+rd_dout_trig[0]                                                         Net          -        -       -         -           4         
+jfyhuHcfopfbALDIb0zB35td7h                                              ORCALUT4     D        In      0.000     3.063 r     -         
+jfyhuHcfopfbALDIb0zB35td7h                                              ORCALUT4     Z        Out     0.754     3.817 f     -         
+parity_calc_RNO_17                                                      Net          -        -       -         -           1         
+b8bzsIdsL6DJpIKxmnKEc0G1D                                               ORCALUT4     B        In      0.000     3.817 f     -         
+b8bzsIdsL6DJpIKxmnKEc0G1D                                               ORCALUT4     Z        Out     0.754     4.572 r     -         
+g2_1_1_0_0                                                              Net          -        -       -         -           1         
+b8bzsIdsL6DJpIKxmnKEc0G17                                               ORCALUT4     D        In      0.000     4.572 r     -         
+b8bzsIdsL6DJpIKxmnKEc0G17                                               ORCALUT4     Z        Out     0.754     5.326 f     -         
+parity_calc_RNO_1                                                       Net          -        -       -         -           1         
+cGu1EIr9cwttxGGvl92b2p                                                  ORCALUT4     B        In      0.000     5.326 f     -         
+cGu1EIr9cwttxGGvl92b2p                                                  ORCALUT4     Z        Out     0.415     5.741 r     -         
+parity_calc_5                                                           Net          -        -       -         -           1         
+ikjxdeE9yeis2eI9                                                        FD1P3DX      D        In      0.000     5.741 r     -         
+======================================================================================================================================
+
+
+
+
+====================================
+Detailed Report for Clock: System
+====================================
+
+
+
+Starting Points with Worst Slack
+********************************
+
+                                                  Starting                                                            Arrival           
+Instance                                          Reference     Type              Pin           Net                   Time        Slack 
+                                                  Clock                                                                                 
+----------------------------------------------------------------------------------------------------------------------------------------
+top_reveal_coretop_instance.jtagconn16_inst_0     System        jtagconn16        jce2          jce2[0]               0.000       -0.250
+top_reveal_coretop_instance.jtagconn16_inst_0     System        jtagconn16        jshift        jshift[0]             0.000       -0.250
+top_reveal_coretop_instance.jtagconn16_inst_0     System        jtagconn16        ip_enable     ip_enable[0]          0.000       1.711 
+top_reveal_coretop_instance.jtagconn16_inst_0     System        jtagconn16        jtdi          jtdi[0]               0.000       3.220 
+top_reveal_coretop_instance.jtagconn16_inst_0     System        jtagconn16        jrstn         jrstn[0]              0.000       3.874 
+xGmp4v571xtocbczv1mJ                              System        pmi_ram_dp_Z4     Q[0]          trace_dout_int[0]     0.000       4.908 
+xGmp4v571xtocbczv1mJ                              System        pmi_ram_dp_Z4     Q[1]          trace_dout_int[1]     0.000       4.908 
+xGmp4v571xtocbczv1mJ                              System        pmi_ram_dp_Z4     Q[2]          trace_dout_int[2]     0.000       4.908 
+xGmp4v571xtocbczv1mJ                              System        pmi_ram_dp_Z4     Q[3]          trace_dout_int[3]     0.000       4.908 
+xGmp4v571xtocbczv1mJ                              System        pmi_ram_dp_Z4     Q[4]          trace_dout_int[4]     0.000       4.908 
+========================================================================================================================================
+
+
+Ending Points with Worst Slack
+******************************
+
+                      Starting                                            Required           
+Instance              Reference     Type        Pin     Net               Time         Slack 
+                      Clock                                                                  
+---------------------------------------------------------------------------------------------
+ikjxdeE9yeis2eI9      System        FD1P3DX     D       parity_calc_5     4.389        -0.250
+orh8KHqvnKqbJ         System        FD1P3BX     D       tm_crc_7[0]       4.389        0.439 
+ILaHxzBfscgpGC4m3     System        FD1P3DX     D       N_49_i            4.389        1.040 
+ILaHxzBfscgpGC4rJ     System        FD1P3DX     D       N_376_i           4.389        1.040 
+ILaHxzBfscgpGC4xn     System        FD1P3DX     D       N_375_i           4.389        1.040 
+ILaHxzBfscgpGC423     System        FD1P3DX     D       N_374_i           4.389        1.040 
+ILaHxzBfscgpGC47J     System        FD1P3DX     D       N_373_i           4.389        1.040 
+ILaHxzBfscgpGC4Dn     System        FD1P3DX     D       N_372_i           4.389        1.040 
+ILaHxzBfscgpGC4I3     System        FD1P3DX     D       N_371_i           4.389        1.040 
+ILaHxzBfscgpGC5bJ     System        FD1P3DX     D       N_370_i           4.389        1.040 
+=============================================================================================
+
+
+
+Worst Path Information
+***********************
+
+
+Path information for path number 1: 
+      Requested Period:                      5.000
+    - Setup time:                            0.611
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         4.389
+
+    - Propagation time:                      4.639
+    - Clock delay at starting point:         0.000 (ideal)
+    - Estimated clock delay at start point:  -0.000
+    = Slack (non-critical) :                 -0.250
+
+    Number of logic level(s):                6
+    Starting point:                          top_reveal_coretop_instance.jtagconn16_inst_0 / jce2
+    Ending point:                            ikjxdeE9yeis2eI9 / D
+    The start point is clocked by            System [rising]
+    The end   point is clocked by            reveal_coretop|jtck_inferred_clock[0] [falling] (rise=0.000 fall=2.500 period=5.000) on pin CK
+
+Instance / Net                                                   Pin      Pin               Arrival     No. of    
+Name                                              Type           Name     Dir     Delay     Time        Fan Out(s)
+------------------------------------------------------------------------------------------------------------------
+top_reveal_coretop_instance.jtagconn16_inst_0     jtagconn16     jce2     Out     0.000     0.000 r     -         
+jce2[0]                                           Net            -        -       -         -           12        
+dbzubEEmlubohglHcb0uAmJnGwncAF75                  ORCALUT4       A        In      0.000     0.000 r     -         
+dbzubEEmlubohglHcb0uAmJnGwncAF75                  ORCALUT4       Z        Out     1.134     1.134 r     -         
+capture_dr                                        Net            -        -       -         -           46        
+ftmz9x9brrEpnb60ewEidfo75Fcgt                     ORCALUT4       A        In      0.000     1.134 r     -         
+ftmz9x9brrEpnb60ewEidfo75Fcgt                     ORCALUT4       Z        Out     0.827     1.962 f     -         
+g1_1_0                                            Net            -        -       -         -           2         
+jfyhuHcfopfbALDIb0zB35td7j                        ORCALUT4       C        In      0.000     1.962 f     -         
+jfyhuHcfopfbALDIb0zB35td7j                        ORCALUT4       Z        Out     0.754     2.716 f     -         
+g2_0_3                                            Net            -        -       -         -           1         
+b8bzsIdsL6DJpIKxmnKEc0G1D                         ORCALUT4       D        In      0.000     2.716 f     -         
+b8bzsIdsL6DJpIKxmnKEc0G1D                         ORCALUT4       Z        Out     0.754     3.470 r     -         
+g2_1_1_0_0                                        Net            -        -       -         -           1         
+b8bzsIdsL6DJpIKxmnKEc0G17                         ORCALUT4       D        In      0.000     3.470 r     -         
+b8bzsIdsL6DJpIKxmnKEc0G17                         ORCALUT4       Z        Out     0.754     4.225 f     -         
+parity_calc_RNO_1                                 Net            -        -       -         -           1         
+cGu1EIr9cwttxGGvl92b2p                            ORCALUT4       B        In      0.000     4.225 f     -         
+cGu1EIr9cwttxGGvl92b2p                            ORCALUT4       Z        Out     0.415     4.639 r     -         
+parity_calc_5                                     Net            -        -       -         -           1         
+ikjxdeE9yeis2eI9                                  FD1P3DX        D        In      0.000     4.639 r     -         
+==================================================================================================================
+
+
+Path information for path number 2: 
+      Requested Period:                      5.000
+    - Setup time:                            0.611
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         4.389
+
+    - Propagation time:                      4.639
+    - Clock delay at starting point:         0.000 (ideal)
+    - Estimated clock delay at start point:  -0.000
+    = Slack (non-critical) :                 -0.250
+
+    Number of logic level(s):                6
+    Starting point:                          top_reveal_coretop_instance.jtagconn16_inst_0 / jshift
+    Ending point:                            ikjxdeE9yeis2eI9 / D
+    The start point is clocked by            System [rising]
+    The end   point is clocked by            reveal_coretop|jtck_inferred_clock[0] [falling] (rise=0.000 fall=2.500 period=5.000) on pin CK
+
+Instance / Net                                                   Pin        Pin               Arrival     No. of    
+Name                                              Type           Name       Dir     Delay     Time        Fan Out(s)
+--------------------------------------------------------------------------------------------------------------------
+top_reveal_coretop_instance.jtagconn16_inst_0     jtagconn16     jshift     Out     0.000     0.000 r     -         
+jshift[0]                                         Net            -          -       -         -           31        
+dbzubEEmlubohglHcb0uAmJnGwncAF75                  ORCALUT4       B          In      0.000     0.000 r     -         
+dbzubEEmlubohglHcb0uAmJnGwncAF75                  ORCALUT4       Z          Out     1.134     1.134 r     -         
+capture_dr                                        Net            -          -       -         -           46        
+ftmz9x9brrEpnb60ewEidfo75Fcgt                     ORCALUT4       A          In      0.000     1.134 r     -         
+ftmz9x9brrEpnb60ewEidfo75Fcgt                     ORCALUT4       Z          Out     0.827     1.962 f     -         
+g1_1_0                                            Net            -          -       -         -           2         
+jfyhuHcfopfbALDIb0zB35td7j                        ORCALUT4       C          In      0.000     1.962 f     -         
+jfyhuHcfopfbALDIb0zB35td7j                        ORCALUT4       Z          Out     0.754     2.716 f     -         
+g2_0_3                                            Net            -          -       -         -           1         
+b8bzsIdsL6DJpIKxmnKEc0G1D                         ORCALUT4       D          In      0.000     2.716 f     -         
+b8bzsIdsL6DJpIKxmnKEc0G1D                         ORCALUT4       Z          Out     0.754     3.470 r     -         
+g2_1_1_0_0                                        Net            -          -       -         -           1         
+b8bzsIdsL6DJpIKxmnKEc0G17                         ORCALUT4       D          In      0.000     3.470 r     -         
+b8bzsIdsL6DJpIKxmnKEc0G17                         ORCALUT4       Z          Out     0.754     4.225 f     -         
+parity_calc_RNO_1                                 Net            -          -       -         -           1         
+cGu1EIr9cwttxGGvl92b2p                            ORCALUT4       B          In      0.000     4.225 f     -         
+cGu1EIr9cwttxGGvl92b2p                            ORCALUT4       Z          Out     0.415     4.639 r     -         
+parity_calc_5                                     Net            -          -       -         -           1         
+ikjxdeE9yeis2eI9                                  FD1P3DX        D          In      0.000     4.639 r     -         
+====================================================================================================================
+
+
+Path information for path number 3: 
+      Requested Period:                      5.000
+    - Setup time:                            0.611
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         4.389
+
+    - Propagation time:                      4.639
+    - Clock delay at starting point:         0.000 (ideal)
+    - Estimated clock delay at start point:  -0.000
+    = Slack (non-critical) :                 -0.250
+
+    Number of logic level(s):                6
+    Starting point:                          top_reveal_coretop_instance.jtagconn16_inst_0 / jce2
+    Ending point:                            ikjxdeE9yeis2eI9 / D
+    The start point is clocked by            System [rising]
+    The end   point is clocked by            reveal_coretop|jtck_inferred_clock[0] [falling] (rise=0.000 fall=2.500 period=5.000) on pin CK
+
+Instance / Net                                                      Pin      Pin               Arrival     No. of    
+Name                                                 Type           Name     Dir     Delay     Time        Fan Out(s)
+---------------------------------------------------------------------------------------------------------------------
+top_reveal_coretop_instance.jtagconn16_inst_0        jtagconn16     jce2     Out     0.000     0.000 r     -         
+jce2[0]                                              Net            -        -       -         -           12        
+dbzubEEmlubohglHcb0uAmJnGwncAF75                     ORCALUT4       A        In      0.000     0.000 r     -         
+dbzubEEmlubohglHcb0uAmJnGwncAF75                     ORCALUT4       Z        Out     1.134     1.134 r     -         
+capture_dr                                           Net            -        -       -         -           46        
+bo1qgyKHvEtLdaGlnAcrLEexoyoxjbser6vbzI3KGIc1Kul8     ORCALUT4       B        In      0.000     1.134 r     -         
+bo1qgyKHvEtLdaGlnAcrLEexoyoxjbser6vbzI3KGIc1Kul8     ORCALUT4       Z        Out     0.827     1.962 r     -         
+N_4_0                                                Net            -        -       -         -           2         
+jfyhuHcfopfbALDIb0zB35td7j                           ORCALUT4       A        In      0.000     1.962 r     -         
+jfyhuHcfopfbALDIb0zB35td7j                           ORCALUT4       Z        Out     0.754     2.716 r     -         
+g2_0_3                                               Net            -        -       -         -           1         
+b8bzsIdsL6DJpIKxmnKEc0G1D                            ORCALUT4       D        In      0.000     2.716 r     -         
+b8bzsIdsL6DJpIKxmnKEc0G1D                            ORCALUT4       Z        Out     0.754     3.470 r     -         
+g2_1_1_0_0                                           Net            -        -       -         -           1         
+b8bzsIdsL6DJpIKxmnKEc0G17                            ORCALUT4       D        In      0.000     3.470 r     -         
+b8bzsIdsL6DJpIKxmnKEc0G17                            ORCALUT4       Z        Out     0.754     4.225 f     -         
+parity_calc_RNO_1                                    Net            -        -       -         -           1         
+cGu1EIr9cwttxGGvl92b2p                               ORCALUT4       B        In      0.000     4.225 f     -         
+cGu1EIr9cwttxGGvl92b2p                               ORCALUT4       Z        Out     0.415     4.639 r     -         
+parity_calc_5                                        Net            -        -       -         -           1         
+ikjxdeE9yeis2eI9                                     FD1P3DX        D        In      0.000     4.639 r     -         
+=====================================================================================================================
+
+
+Path information for path number 4: 
+      Requested Period:                      5.000
+    - Setup time:                            0.611
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         4.389
+
+    - Propagation time:                      4.639
+    - Clock delay at starting point:         0.000 (ideal)
+    - Estimated clock delay at start point:  -0.000
+    = Slack (non-critical) :                 -0.250
+
+    Number of logic level(s):                6
+    Starting point:                          top_reveal_coretop_instance.jtagconn16_inst_0 / jshift
+    Ending point:                            ikjxdeE9yeis2eI9 / D
+    The start point is clocked by            System [rising]
+    The end   point is clocked by            reveal_coretop|jtck_inferred_clock[0] [falling] (rise=0.000 fall=2.500 period=5.000) on pin CK
+
+Instance / Net                                                      Pin        Pin               Arrival     No. of    
+Name                                                 Type           Name       Dir     Delay     Time        Fan Out(s)
+-----------------------------------------------------------------------------------------------------------------------
+top_reveal_coretop_instance.jtagconn16_inst_0        jtagconn16     jshift     Out     0.000     0.000 r     -         
+jshift[0]                                            Net            -          -       -         -           31        
+dbzubEEmlubohglHcb0uAmJnGwncAF75                     ORCALUT4       B          In      0.000     0.000 r     -         
+dbzubEEmlubohglHcb0uAmJnGwncAF75                     ORCALUT4       Z          Out     1.134     1.134 r     -         
+capture_dr                                           Net            -          -       -         -           46        
+bo1qgyKHvEtLdaGlnAcrLEexoyoxjbser6vbzI3KGIc1Kul8     ORCALUT4       B          In      0.000     1.134 r     -         
+bo1qgyKHvEtLdaGlnAcrLEexoyoxjbser6vbzI3KGIc1Kul8     ORCALUT4       Z          Out     0.827     1.962 r     -         
+N_4_0                                                Net            -          -       -         -           2         
+jfyhuHcfopfbALDIb0zB35td7j                           ORCALUT4       A          In      0.000     1.962 r     -         
+jfyhuHcfopfbALDIb0zB35td7j                           ORCALUT4       Z          Out     0.754     2.716 r     -         
+g2_0_3                                               Net            -          -       -         -           1         
+b8bzsIdsL6DJpIKxmnKEc0G1D                            ORCALUT4       D          In      0.000     2.716 r     -         
+b8bzsIdsL6DJpIKxmnKEc0G1D                            ORCALUT4       Z          Out     0.754     3.470 r     -         
+g2_1_1_0_0                                           Net            -          -       -         -           1         
+b8bzsIdsL6DJpIKxmnKEc0G17                            ORCALUT4       D          In      0.000     3.470 r     -         
+b8bzsIdsL6DJpIKxmnKEc0G17                            ORCALUT4       Z          Out     0.754     4.225 f     -         
+parity_calc_RNO_1                                    Net            -          -       -         -           1         
+cGu1EIr9cwttxGGvl92b2p                               ORCALUT4       B          In      0.000     4.225 f     -         
+cGu1EIr9cwttxGGvl92b2p                               ORCALUT4       Z          Out     0.415     4.639 r     -         
+parity_calc_5                                        Net            -          -       -         -           1         
+ikjxdeE9yeis2eI9                                     FD1P3DX        D          In      0.000     4.639 r     -         
+=======================================================================================================================
+
+
+Path information for path number 5: 
+      Requested Period:                      5.000
+    - Setup time:                            0.611
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         4.389
+
+    - Propagation time:                      4.566
+    - Clock delay at starting point:         0.000 (ideal)
+    - Estimated clock delay at start point:  -0.000
+    = Slack (non-critical) :                 -0.177
+
+    Number of logic level(s):                6
+    Starting point:                          top_reveal_coretop_instance.jtagconn16_inst_0 / jce2
+    Ending point:                            ikjxdeE9yeis2eI9 / D
+    The start point is clocked by            System [rising]
+    The end   point is clocked by            reveal_coretop|jtck_inferred_clock[0] [falling] (rise=0.000 fall=2.500 period=5.000) on pin CK
+
+Instance / Net                                                   Pin      Pin               Arrival     No. of    
+Name                                              Type           Name     Dir     Delay     Time        Fan Out(s)
+------------------------------------------------------------------------------------------------------------------
+top_reveal_coretop_instance.jtagconn16_inst_0     jtagconn16     jce2     Out     0.000     0.000 r     -         
+jce2[0]                                           Net            -        -       -         -           12        
+dbzubEEmlubohglHcb0uAmJnGwncAF75                  ORCALUT4       A        In      0.000     0.000 r     -         
+dbzubEEmlubohglHcb0uAmJnGwncAF75                  ORCALUT4       Z        Out     1.134     1.134 r     -         
+capture_dr                                        Net            -        -       -         -           46        
+jfyhuHcfopfbALDIb0zB35tdCv                        ORCALUT4       A        In      0.000     1.134 r     -         
+jfyhuHcfopfbALDIb0zB35tdCv                        ORCALUT4       Z        Out     0.754     1.889 r     -         
+parity_calc_RNO_25                                Net            -        -       -         -           1         
+jfyhuHcfopfbALDIb0zB35td7h                        ORCALUT4       A        In      0.000     1.889 r     -         
+jfyhuHcfopfbALDIb0zB35td7h                        ORCALUT4       Z        Out     0.754     2.643 r     -         
+parity_calc_RNO_17                                Net            -        -       -         -           1         
+b8bzsIdsL6DJpIKxmnKEc0G1D                         ORCALUT4       B        In      0.000     2.643 r     -         
+b8bzsIdsL6DJpIKxmnKEc0G1D                         ORCALUT4       Z        Out     0.754     3.397 r     -         
+g2_1_1_0_0                                        Net            -        -       -         -           1         
+b8bzsIdsL6DJpIKxmnKEc0G17                         ORCALUT4       D        In      0.000     3.397 r     -         
+b8bzsIdsL6DJpIKxmnKEc0G17                         ORCALUT4       Z        Out     0.754     4.152 f     -         
+parity_calc_RNO_1                                 Net            -        -       -         -           1         
+cGu1EIr9cwttxGGvl92b2p                            ORCALUT4       B        In      0.000     4.152 f     -         
+cGu1EIr9cwttxGGvl92b2p                            ORCALUT4       Z        Out     0.415     4.566 r     -         
+parity_calc_5                                     Net            -        -       -         -           1         
+ikjxdeE9yeis2eI9                                  FD1P3DX        D        In      0.000     4.566 r     -         
+==================================================================================================================
+
+
+
+##### END OF TIMING REPORT #####]
+
+Timing exceptions that could not be applied
+@W: MT447 :"c:/users/user/desktop/uct-fpga-course-2022/practicals/03 - uart/uart.fdc":10:0:10:0|Timing constraint (from [get_registers *] to [get_ports bp*]) (false path) was not applied to the design because none of the '-to' objects specified by the constraint exist in the design 
+@W: MT447 :"c:/users/user/desktop/uct-fpga-course-2022/practicals/03 - uart/uart.fdc":11:0:11:0|Timing constraint (from [get_ports bp*] to [get_registers *]) (false path) was not applied to the design because none of the '-from' objects specified by the constraint exist in the design 
+None
+
+Finished final timing analysis (Real Time elapsed 0h:00m:09s; CPU Time elapsed 0h:00m:09s; Memory used current: 193MB peak: 197MB)
+
+
+Finished timing report (Real Time elapsed 0h:00m:09s; CPU Time elapsed 0h:00m:09s; Memory used current: 193MB peak: 197MB)
+
+---------------------------------------
+Resource Usage Report
+Part: lfxp2_5e-6
+
+Register bits: 358 of 4752 (8%)
+PIC Latch:       0
+I/O cells:       12
+
+
+Details:
+CCU2B:          38
+FD1P3AX:        48
+FD1P3BX:        33
+FD1P3DX:        192
+FD1P3JX:        10
+FD1S3AX:        14
+FD1S3AY:        12
+FD1S3BX:        1
+FD1S3DX:        38
+GSR:            1
+IB:             3
+IFS1P3DX:       1
+INV:            13
+L6MUX21:        1
+OB:             9
+OFS1P3DX:       8
+OFS1P3JX:       1
+ORCALUT4:       482
+PFUMX:          4
+PUR:            1
+VHI:            11
+VLO:            11
+Mapper successful!
+
+At Mapper Exit (Real Time elapsed 0h:00m:09s; CPU Time elapsed 0h:00m:09s; Memory used current: 73MB peak: 197MB)
+
+Process took 0h:00m:09s realtime, 0h:00m:09s cputime
+# Tue May  3 16:21:04 2022
+
+###########################################################]
+
+
+Synthesis exit by 0.
+
+edif2ngd -ip "C:/lscc/diamond/3.12/module" -ic reveal -nopropwarn -l "LatticeXP2" -d LFXP2-5E -path "C:/Users/user/Desktop/UCT-FPGA-Course-2022/Practicals/03 - UART/impl1" -path "C:/Users/user/Desktop/UCT-FPGA-Course-2022/Practicals/03 - UART"   "C:/Users/user/Desktop/UCT-FPGA-Course-2022/Practicals/03 - UART/impl1/UART_impl1.edi" "UART_impl1.ngo"   
+edif2ngd:  version Diamond (64-bit) 3.12.1.454
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
+Writing the design to UART_impl1.ngo...
+
+Generating edif netlist for IP cell pmi_ram_dpxbnonesadr112112p12e1ac7f.edn
+
+
+C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1>"C:/lscc/diamond/3.12/ispfpga/bin/nt64/scuba" -w -bus_exp 7 -bb -arch mg5a00 -type bram -wp 10 -rp 0011 -data_width 1 -num_rows 2 -rdata_width 1 -read_reg1 outreg -gsr DISABLED   -memformat bin -cascade -1 -n pmi_ram_dpXbnonesadr112112p12e1ac7f -pmi 
+SCUBA, Version Diamond (64-bit) 3.12.1.454
+Tue May 03 16:21:07 2022
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
+
+BEGIN SCUBA Module Synthesis
+
+    Issued command   : C:/lscc/diamond/3.12/ispfpga/bin/nt64/scuba -w -bus_exp 7 -bb -arch mg5a00 -type bram -wp 10 -rp 0011 -data_width 1 -num_rows 2 -rdata_width 1 -read_reg1 outreg -gsr DISABLED -memformat bin -cascade -1 -n pmi_ram_dpXbnonesadr112112p12e1ac7f -pmi 
+    Circuit name     : pmi_ram_dpXbnonesadr112112p12e1ac7f
+    Module type      : RAM_DP
+    Module Version   : 6.5
+    Ports            : 
+	Inputs       : WrAddress[0:0], RdAddress[0:0], Data[0:0], WE, RdClock, RdClockEn, Reset, WrClock, WrClockEn
+	Outputs      : Q[0:0]
+    I/O buffer       : not inserted
+    EDIF output      : pmi_ram_dpXbnonesadr112112p12e1ac7f.edn
+    Bus notation     : big endian
+    Report output    : pmi_ram_dpXbnonesadr112112p12e1ac7f.srp
+    Estimated Resource Usage:
+            EBR : 1
+
+END   SCUBA Module Synthesis
+Writing the design to pmi_ram_dpXbnonesadr112112p12e1ac7f.ngo...
+
+Generating edif netlist for IP cell pmi_ram_dpxbnonesadr85328532p13060cf5.edn
+
+
+C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\03 - UART\impl1>"C:/lscc/diamond/3.12/ispfpga/bin/nt64/scuba" -w -bus_exp 7 -bb -arch mg5a00 -type bram -wp 10 -rp 0011 -data_width 8 -num_rows 32 -rdata_width 8 -read_reg1 outreg -gsr DISABLED   -memformat bin -cascade -1 -n pmi_ram_dpXbnonesadr85328532p13060cf5 -pmi 
+SCUBA, Version Diamond (64-bit) 3.12.1.454
+Tue May 03 16:21:08 2022
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
+
+BEGIN SCUBA Module Synthesis
+
+    Issued command   : C:/lscc/diamond/3.12/ispfpga/bin/nt64/scuba -w -bus_exp 7 -bb -arch mg5a00 -type bram -wp 10 -rp 0011 -data_width 8 -num_rows 32 -rdata_width 8 -read_reg1 outreg -gsr DISABLED -memformat bin -cascade -1 -n pmi_ram_dpXbnonesadr85328532p13060cf5 -pmi 
+    Circuit name     : pmi_ram_dpXbnonesadr85328532p13060cf5
+    Module type      : RAM_DP
+    Module Version   : 6.5
+    Ports            : 
+	Inputs       : WrAddress[4:0], RdAddress[4:0], Data[7:0], WE, RdClock, RdClockEn, Reset, WrClock, WrClockEn
+	Outputs      : Q[7:0]
+    I/O buffer       : not inserted
+    EDIF output      : pmi_ram_dpXbnonesadr85328532p13060cf5.edn
+    Bus notation     : big endian
+    Report output    : pmi_ram_dpXbnonesadr85328532p13060cf5.srp
+    Estimated Resource Usage:
+            EBR : 1
+
+END   SCUBA Module Synthesis
+Writing the design to pmi_ram_dpXbnonesadr85328532p13060cf5.ngo...
+
+Total CPU Time: 0 secs  
+Total REAL Time: 0 secs  
+Peak Memory Usage: 13 MB
+
+
+ngdbuild  -a "LatticeXP2" -d LFXP2-5E  -p "C:/lscc/diamond/3.12/ispfpga/mg5a00/data"  -p "C:/Users/user/Desktop/UCT-FPGA-Course-2022/Practicals/03 - UART/impl1" -p "C:/Users/user/Desktop/UCT-FPGA-Course-2022/Practicals/03 - UART" -p "C:/Users/user/Desktop/UCT-FPGA-Course-2022/Practicals/03 - UART/impl1/reveal_workspace/UART_RVL"  "UART_impl1.ngo" "UART_impl1.ngd"  	
+ngdbuild:  version Diamond (64-bit) 3.12.1.454
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
+Reading 'UART_impl1.ngo' ...
+Loading NGL library 'C:/lscc/diamond/3.12/ispfpga/mg5a00/data/mg5alib.ngl'...
+Loading NGL library 'C:/lscc/diamond/3.12/ispfpga/ep5a00/data/ep5alib.ngl'...
+Loading NGL library 'C:/lscc/diamond/3.12/ispfpga/ep5g00/data/ep5glib.ngl'...
+Loading NGL library 'C:/lscc/diamond/3.12/ispfpga/or5g00/data/orc5glib.ngl'...
+Loading NGO design 'C:/Users/user/Desktop/UCT-FPGA-Course-2022/Practicals/03 - UART/impl1/pmi_ram_dpxbnonesadr112112p12e1ac7f.ngo'...
+Loading NGO design 'C:/Users/user/Desktop/UCT-FPGA-Course-2022/Practicals/03 - UART/impl1/pmi_ram_dpxbnonesadr85328532p13060cf5.ngo'...
+Loading NGL library 'C:/lscc/diamond/3.12/ispfpga/data/neoprims.ngl'...
+Loading NGL library 'C:/lscc/diamond/3.12/ispfpga/data/neomacro.ngl'...
+Logic has been added to the IP to support JTAG capability.
+Loading NGO design 'C:/lscc/diamond/3.12/ispfpga/mg5a00/data/mg5ahub.ngl'...
+
+
+Running DRC...
+
+    <postMsg mid="1166052" type="Warning" dynamic="2" navigation="1" arg0="logical" arg1="top_reveal_coretop_instance/top_la0_inst_0/trig_u/GND" arg2="top_reveal_coretop_instance/top_la0_inst_0/trig_u/GND"  />
+    <postMsg mid="1166052" type="Warning" dynamic="2" navigation="1" arg0="logical" arg1="top_reveal_coretop_instance/top_la0_inst_0/trig_u/rd_dout_tcnt[4]" arg2="top_reveal_coretop_instance/top_la0_inst_0/trig_u/rd_dout_tcnt[4]"  />
+    <postMsg mid="1166052" type="Warning" dynamic="2" navigation="1" arg0="logical" arg1="top_reveal_coretop_instance/top_la0_inst_0/trig_u/VCC" arg2="top_reveal_coretop_instance/top_la0_inst_0/trig_u/VCC"  />
+    <postMsg mid="1166052" type="Warning" dynamic="2" navigation="1" arg0="logical" arg1="top_reveal_coretop_instance/top_la0_inst_0/trig_u/rd_dout_tu[3]" arg2="top_reveal_coretop_instance/top_la0_inst_0/trig_u/rd_dout_tu[3]"  />
+    <postMsg mid="1166052" type="Warning" dynamic="2" navigation="1" arg0="logical" arg1="top_reveal_coretop_instance/top_la0_inst_0/GND" arg2="top_reveal_coretop_instance/top_la0_inst_0/GND"  />
+    <postMsg mid="1166052" type="Warning" dynamic="2" navigation="1" arg0="logical" arg1="mg5ahub/tdoa" arg2="mg5ahub/tdoa"  />
+    <postMsg mid="1166052" type="Warning" dynamic="2" navigation="1" arg0="logical" arg1="mg5ahub/cdn" arg2="mg5ahub/cdn"  />
+    <postMsg mid="1166052" type="Warning" dynamic="2" navigation="1" arg0="logical" arg1="mg5ahub/ip_enable_15" arg2="mg5ahub/ip_enable_15"  />
+    <postMsg mid="1166052" type="Warning" dynamic="2" navigation="1" arg0="logical" arg1="mg5ahub/genblk0_genblk5_un1_jtage_u_1" arg2="mg5ahub/genblk0_genblk5_un1_jtage_u_1"  />
+    <postMsg mid="1166052" type="Warning" dynamic="2" navigation="1" arg0="logical" arg1="mg5ahub/genblk0_genblk5_un1_jtage_u" arg2="mg5ahub/genblk0_genblk5_un1_jtage_u"  />
+    <postMsg mid="1163101" type="Warning" dynamic="1" navigation="0" arg0="10"  />
+
+Design Results:
+   1032 blocks expanded
+Complete the first expansion.
+Writing 'UART_impl1.ngd' ...
+Total CPU Time: 0 secs 
+Total REAL Time: 0 secs 
+Peak Memory Usage: 22 MB
+
+
+map -a "LatticeXP2" -p LFXP2-5E -t TQFP144 -s 6 -oc Industrial   "UART_impl1.ngd" -o "UART_impl1_map.ncd" -pr "UART_impl1.prf" -mp "UART_impl1.mrp" -lpf "C:/Users/user/Desktop/UCT-FPGA-Course-2022/Practicals/03 - UART/impl1/UART_impl1_synplify.lpf" -lpf "C:/Users/user/Desktop/UCT-FPGA-Course-2022/Practicals/03 - UART/UART.lpf"             
+map:  version Diamond (64-bit) 3.12.1.454
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
+   Process the file: UART_impl1.ngd
+   Picdevice="LFXP2-5E"
+
+   Pictype="TQFP144"
+
+   Picspeed=6
+
+   Remove unused logic
+
+   Do not produce over sized NCDs.
+
+Part used: LFXP2-5ETQFP144, Performance used: 6.
+
+Loading device for application map from file 'mg5a26x29.nph' in environment: C:/lscc/diamond/3.12/ispfpga.
+Package Status:                     Final          Version 1.42.
+
+Running general design DRC...
+
+Removing unused logic...
+
+Optimizing...
+
+150 CCU2 constant inputs absorbed.
+
+
+
+
+Design Summary:
+   Number of registers:    399 out of  3864 (10%)
+      PFU registers:          389 out of  3564 (11%)
+      PIO registers:           10 out of   300 (3%)
+   Number of SLICEs:       415 out of  2376 (17%)
+      SLICEs as Logic/ROM:    415 out of  2376 (17%)
+      SLICEs as RAM:            0 out of   405 (0%)
+      SLICEs as Carry:         43 out of  2376 (2%)
+   Number of LUT4s:        596 out of  4752 (13%)
+      Number used as logic LUTs:        510
+      Number used as distributed RAM:     0
+      Number used as ripple logic:       86
+      Number used as shift registers:     0
+   Number of PIO sites used: 12 out of 100 (12%)
+   Number of PIO FIXEDDELAY:    0
+   Number of DQSDLLs:  0 out of 2 (0%)
+   Number of PLLs:  0 out of 2 (0%)
+   Number of block RAMs:  2 out of 9 (22%)
+   Number of CLKDIVs:  0 out of 2 (0%)
+   Number of GSRs:  0 out of 1 (0%)
+   JTAG used :      Yes
+   Readback used :  No
+   Oscillator used :  No
+   Startup used :   No
+   Notes:-
+      1. Total number of LUT4s = (Number of logic LUT4s) + 2*(Number of distributed RAMs) + 2*(Number of ripple logic)
+      2. Number of logic LUT4s does not include count of distributed RAM and ripple logic.
+
+   Number Of Mapped DSP Components:
+   --------------------------------
+   MULT36X36B          0
+   MULT18X18B          0
+   MULT18X18MACB       0
+   MULT18X18ADDSUBB    0
+   MULT18X18ADDSUBSUMB 0
+   MULT9X9B            0
+   MULT9X9ADDSUBB      0
+   MULT9X9ADDSUBSUMB   0
+   --------------------------------
+   Number of Used DSP Sites:  0 out of 24 (0 %)
+   Number of clocks:  2
+     Net ipClk_c: 136 loads, 136 rising, 0 falling (Driver: PIO ipClk )
+     Net jtaghub16_jtck: 122 loads, 0 rising, 122 falling (Driver: mg5ahub/genblk0_genblk5_jtage_u )
+   Number of Clock Enables:  49
+     Net UART_Inst.txBitCounter_2_sqmuxa: 1 loads, 0 LSLICEs
+     Net UART_Inst.reset: 4 loads, 3 LSLICEs
+     Net UART_TxData19: 4 loads, 4 LSLICEs
+     Net UART_Inst/N_34: 6 loads, 6 LSLICEs
+     Net UART_Inst/un1_reset_3_0_a2_0_a2: 6 loads, 6 LSLICEs
+     Net UART_Inst/opRxData_1_sqmuxa: 5 loads, 5 LSLICEs
+     Net N_38_i_i: 1 loads, 1 LSLICEs
+     Net top_reveal_coretop_instance/top_la0_inst_0/trig_u/tu_0/op_code8: 2 loads, 2 LSLICEs
+     Net top_reveal_coretop_instance/top_la0_inst_0/trig_u/tu_0/mask_reg[0]_0_sqmuxa: 1 loads, 1 LSLICEs
+     Net top_reveal_coretop_instance/top_la0_inst_0/trig_u/tu_0/compare_reg[0]_0_sqmuxa: 1 loads, 1 LSLICEs
+     Net top_reveal_coretop_instance/top_la0_inst_0/trig_u/te_0/tt_wr_addr_cntr_1_sqmuxa_i_0: 1 loads, 1 LSLICEs
+     Net top_reveal_coretop_instance/top_la0_inst_0/trig_u/te_0/un1_tt_end_1_0: 1 loads, 1 LSLICEs
+     Net top_reveal_coretop_instance/top_la0_inst_0/trig_u/te_0/tt_prog_active_1_sqmuxa_1_i_0: 1 loads, 1 LSLICEs
+     Net top_reveal_coretop_instance/top_la0_inst_0/trig_u/te_0/te_precnte: 8 loads, 8 LSLICEs
+     Net top_reveal_coretop_instance/top_la0_inst_0/trig_u/te_0/te_precnt_val_0_sqmuxa: 8 loads, 8 LSLICEs
+     Net top_reveal_coretop_instance/top_la0_inst_0/trig_u/te_0/cnt_contig_reg_wen_1: 1 loads, 1 LSLICEs
+     Net top_reveal_coretop_instance/top_la0_inst_0/trig_u/te_0/num_then_wen_1: 1 loads, 1 LSLICEs
+     Net top_reveal_coretop_instance/top_la0_inst_0/trig_u/te_0/next_then_reg_wen_1: 1 loads, 1 LSLICEs
+     Net jtaghub16_ip_enable0: 26 loads, 26 LSLICEs
+     Net top_reveal_coretop_instance/top_la0_inst_0/trig_u/tcnt_0/reg2_0_sqmuxa: 1 loads, 1 LSLICEs
+     Net top_reveal_coretop_instance/top_la0_inst_0/trig_u/tcnt_0/reg1_0_sqmuxa: 2 loads, 2 LSLICEs
+     Net top_reveal_coretop_instance/top_la0_inst_0/trig_u/tcnt_0/reg0_read11: 1 loads, 1 LSLICEs
+     Net top_reveal_coretop_instance/top_la0_inst_0/trig_u/tcnt_0/reg0_0_sqmuxa: 2 loads, 2 LSLICEs
+     Net top_reveal_coretop_instance/top_la0_inst_0/jtag_int_u/un1_jtdo_4_i: 8 loads, 8 LSLICEs
+     Net top_reveal_coretop_instance/top_la0_inst_0/jtag_int_u/tr_dout_bit_cnt_0_sqmuxa: 1 loads, 1 LSLICEs
+     Net top_reveal_coretop_instance/top_la0_inst_0/jtag_int_u/addr_15_0_sqmuxa: 6 loads, 6 LSLICEs
+     Net top_reveal_coretop_instance/top_la0_inst_0/jtag_int_u/un1_jtdo_1_i: 8 loads, 8 LSLICEs
+     Net top_reveal_coretop_instance/top_la0_inst_0/jtag_int_u/bit_cnte: 9 loads, 9 LSLICEs
+     Net top_reveal_coretop_instance/top_la0_inst_0/jtag_int_u/shift_regce[15]: 12 loads, 12 LSLICEs
+     Net top_reveal_coretop_instance/top_la0_inst_0/jtag_int_u/parity_err_lat_0_sqmuxa: 1 loads, 1 LSLICEs
+     Net top_reveal_coretop_instance/top_la0_inst_0/jtag_int_u/cmd_block_extend_1_sqmuxa_i: 1 loads, 1 LSLICEs
+     Net top_reveal_coretop_instance/top_la0_inst_0/jtag_int_u/capture_dr_d4_0_sqmuxa: 1 loads, 1 LSLICEs
+     Net top_reveal_coretop_instance/top_la0_inst_0/tm_u/sample_en_d: 11 loads, 11 LSLICEs
+     Net top_reveal_coretop_instance/top_la0_inst_0/tm_u/N_414_i: 3 loads, 3 LSLICEs
+     Net top_reveal_coretop_instance/top_la0_inst_0/tm_u/start_d_RNITT1M: 3 loads, 3 LSLICEs
+     Net top_reveal_coretop_instance/top_la0_inst_0/tm_u/N_326_i: 3 loads, 3 LSLICEs
+     Net top_reveal_coretop_instance/top_la0_inst_0/tm_u/trig_enbl_0_sqmuxa: 1 loads, 1 LSLICEs
+     Net top_reveal_coretop_instance/top_la0_inst_0/tm_u/trace_dout_1_sqmuxa_i: 4 loads, 4 LSLICEs
+     Net top_reveal_coretop_instance/top_la0_inst_0/tm_u/N_377_i: 3 loads, 3 LSLICEs
+     Net top_reveal_coretop_instance/top_la0_inst_0/tm_u/force_trig_0_sqmuxa_1: 1 loads, 1 LSLICEs
+     Net top_reveal_coretop_instance/top_la0_inst_0/tm_u/un1_rd_dout_tm55_i: 6 loads, 6 LSLICEs
+     Net top_reveal_coretop_instance/top_la0_inst_0/tm_u/pre_trig_cntre: 3 loads, 3 LSLICEs
+     Net top_reveal_coretop_instance/top_la0_inst_0/tm_u/capture_6_f0_i_0_o4_RNIQ65D1: 3 loads, 3 LSLICEs
+     Net top_reveal_coretop_instance/top_la0_inst_0/tm_u/num_pre_trig_frm_0_sqmuxa: 3 loads, 3 LSLICEs
+     Net top_reveal_coretop_instance/top_la0_inst_0/tm_u/num_post_trig_frm_0_sqmuxa: 3 loads, 3 LSLICEs
+     Net top_reveal_coretop_instance/top_la0_inst_0/tm_u/force_trig_2_sqmuxa_i_0_0: 1 loads, 1 LSLICEs
+     Net jtaghub16_jupdate: 3 loads, 3 LSLICEs
+     Net mg5ahub/id_enable_0_sqmuxa: 1 loads, 1 LSLICEs
+     Net mg5ahub/N_45_i: 10 loads, 10 LSLICEs
+   Number of LSRs:  4
+     Net UART_Inst.reset: 2 loads, 1 LSLICEs
+     Net UART_Inst/localRxData_RNILT6O[0]: 5 loads, 5 LSLICEs
+     Net top_reveal_coretop_instance/top_la0_inst_0/reset_rvl_n: 76 loads, 74 LSLICEs
+     Net jtaghub16_jrstn: 119 loads, 119 LSLICEs
+   Number of nets driven by tri-state buffers:  0
+   Top 10 highest fanout non-clock nets:
+     Net jtaghub16_jrstn: 123 loads
+     Net top_reveal_coretop_instance/top_la0_inst_0/reset_rvl_n: 76 loads
+     Net top_reveal_coretop_instance/top_la0_inst_0/addr[0]: 51 loads
+     Net jtaghub16_ip_enable0: 48 loads
+     Net top_reveal_coretop_instance/top_la0_inst_0/capture_dr: 46 loads
+     Net jtaghub16_jshift: 45 loads
+     Net top_reveal_coretop_instance/top_la0_inst_0/addr[1]: 43 loads
+     Net top_reveal_coretop_instance/top_la0_inst_0/addr[2]: 36 loads
+     Net top_reveal_coretop_instance/top_la0_inst_0/tm_u/VCC: 23 loads
+     Net top_reveal_coretop_instance/top_la0_inst_0/jshift_d1: 22 loads
+ 
+
+   Number of warnings:  0
+   Number of errors:    0
+
+
+
+INFO: Design contains EBR with ASYNC Reset Mode that has a limitation:
+The use of the EBR block asynchronous reset requires that certain timing
+be met between the clock and the reset within the memory block. 
+See the device specific data sheet for additional details.
+
+
+Total CPU Time: 1 secs  
+Total REAL Time: 2 secs  
+Peak Memory Usage: 65 MB
+
+Dumping design to file UART_impl1_map.ncd.
+
+trce -f "UART_impl1.mt" -o "UART_impl1.tw1" "UART_impl1_map.ncd" "UART_impl1.prf"
+trce:  version Diamond (64-bit) 3.12.1.454
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
+
+Loading design for application trce from file uart_impl1_map.ncd.
+Design name: top
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LFXP2-5E
+Package:     TQFP144
+Performance: 6
+Loading device for application trce from file 'mg5a26x29.nph' in environment: C:/lscc/diamond/3.12/ispfpga.
+Package Status:                     Final          Version 1.42.
+Performance Hardware Data Status:   Final          Version 11.5.
+Setup and Hold Report
+
+--------------------------------------------------------------------------------
+Lattice TRACE Report - Setup, Version Diamond (64-bit) 3.12.1.454
+Tue May 03 16:21:13 2022
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
+
+Report Information
+------------------
+Command line:    trce -v 1 -u 0 -gt -mapchkpnt 0 -sethld -o UART_impl1.tw1 -gui -msgset C:/Users/user/Desktop/UCT-FPGA-Course-2022/Practicals/03 - UART/promote.xml UART_impl1_map.ncd UART_impl1.prf 
+Design file:     uart_impl1_map.ncd
+Preference file: uart_impl1.prf
+Device,speed:    LFXP2-5E,6
+Report level:    verbose report, limited to 1 item per preference
+--------------------------------------------------------------------------------
+
+BLOCK ASYNCPATHS
+BLOCK RESETPATHS
+BLOCK JTAG PATHS
+--------------------------------------------------------------------------------
+
+
+
+Timing summary (Setup):
+---------------
+
+Timing errors: 0  Score: 0
+Cumulative negative slack: 0
+
+Constraints cover 1832 paths, 1 nets, and 2890 connections (94.54% coverage)
+
+--------------------------------------------------------------------------------
+Lattice TRACE Report - Hold, Version Diamond (64-bit) 3.12.1.454
+Tue May 03 16:21:14 2022
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
+
+Report Information
+------------------
+Command line:    trce -v 1 -u 0 -gt -mapchkpnt 0 -sethld -o UART_impl1.tw1 -gui -msgset C:/Users/user/Desktop/UCT-FPGA-Course-2022/Practicals/03 - UART/promote.xml UART_impl1_map.ncd UART_impl1.prf 
+Design file:     uart_impl1_map.ncd
+Preference file: uart_impl1.prf
+Device,speed:    LFXP2-5E,M
+Report level:    verbose report, limited to 1 item per preference
+--------------------------------------------------------------------------------
+
+BLOCK ASYNCPATHS
+BLOCK RESETPATHS
+BLOCK JTAG PATHS
+--------------------------------------------------------------------------------
+
+
+
+Timing summary (Hold):
+---------------
+
+Timing errors: 0  Score: 0
+Cumulative negative slack: 0
+
+Constraints cover 1832 paths, 1 nets, and 2890 connections (94.54% coverage)
+
+
+
+Timing summary (Setup and Hold):
+---------------
+
+Timing errors: 0 (setup), 0 (hold)
+Score: 0 (setup), 0 (hold)
+Cumulative negative slack: 0 (0+0)
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+
+Total CPU Time: 4 secs 
+Total REAL Time: 5 secs 
+Peak Memory Usage: 176 MB
+
+
+mpartrce -p "UART_impl1.p2t" -f "UART_impl1.p3t" -tf "UART_impl1.pt" "UART_impl1_map.ncd" "UART_impl1.ncd"
+
+---- MParTrce Tool ----
+Removing old design directory at request of -rem command line option to this program.
+Running par. Please wait . . .
+
+Lattice Place and Route Report for Design "UART_impl1_map.ncd"
+Tue May 03 16:21:16 2022
+
+PAR: Place And Route Diamond (64-bit) 3.12.1.454.
+Command Line: par -w -l 5 -i 6 -t 1 -c 0 -e 0 -gui -msgset "C:/Users/user/Desktop/UCT-FPGA-Course-2022/Practicals/03 - UART/promote.xml" -exp parUseNBR=1:parCDP=auto:parCDR=1:parPathBased=OFF:parASE=1 UART_impl1_map.ncd UART_impl1.dir/5_1.ncd UART_impl1.prf
+Preference file: UART_impl1.prf.
+Placement level-cost: 5-1.
+Routing Iterations: 6
+
+Loading design for application par from file UART_impl1_map.ncd.
+Design name: top
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LFXP2-5E
+Package:     TQFP144
+Performance: 6
+Loading device for application par from file 'mg5a26x29.nph' in environment: C:/lscc/diamond/3.12/ispfpga.
+Package Status:                     Final          Version 1.42.
+Performance Hardware Data Status:   Final          Version 11.5.
+License checked out.
+
+
+Ignore Preference Error(s):  True
+Device utilization summary:
+
+   IOLOGIC           10/196           5% used
+   PIO (prelim)      12/174           6% used
+                     12/100          12% bonded
+   JTAG               1/1           100% used
+   EBR                2/9            22% used
+   SLICE            415/2376         17% used
+
+
+
+chipcheck: INFO: Design contains EBR with ASYNC Reset Mode that has a limitation: The use of the EBR block asynchronous reset requires that certain timing be met between the clock and the reset within the memory block. See the device specific datasheet for additional details.
+Number of Signals: 1032
+Number of Connections: 3057
+
+Pin Constraint Summary:
+   12 out of 12 pins locked (100% locked).
+
+The following 2 signals are selected to use the primary clock routing resources:
+    ipClk_c (driver: ipClk, clk load #: 139)
+    jtaghub16_jtck (driver: mg5ahub/genblk0_genblk5_jtage_u, clk load #: 123)
+
+No signal is selected as DCS clock.
+
+The following 3 signals are selected to use the secondary clock routing resources:
+    jtaghub16_jrstn (driver: mg5ahub/genblk0_genblk5_jtage_u, clk load #: 0, sr load #: 119, ce load #: 0)
+    top_reveal_coretop_instance/top_la0_inst_0/reset_rvl_n (driver: top_reveal_coretop_instance/top_la0_inst_0/SLICE_447, clk load #: 0, sr load #: 76, ce load #: 0)
+    jtaghub16_ip_enable0 (driver: SLICE_451, clk load #: 0, sr load #: 0, ce load #: 26)
+
+No signal is selected as Global Set/Reset.
+Starting Placer Phase 0.
+...........
+Finished Placer Phase 0.  REAL time: 3 secs 
+
+Starting Placer Phase 1.
+.....................
+Placer score = 120263.
+Finished Placer Phase 1.  REAL time: 13 secs 
+
+Starting Placer Phase 2.
+.
+Placer score =  119191
+Finished Placer Phase 2.  REAL time: 13 secs 
+
+
+------------------ Clock Report ------------------
+
+Global Clock Resources:
+  CLK_PIN    : 1 out of 8 (12%)
+  PLL        : 0 out of 2 (0%)
+  CLKDIV     : 0 out of 2 (0%)
+
+Global Clocks:
+  PRIMARY "ipClk_c" from comp "ipClk" on CLK_PIN site "21 (PL12A)", clk load = 139
+  PRIMARY "jtaghub16_jtck" from JTCK on comp "mg5ahub/genblk0_genblk5_jtage_u" on site "JTAG", clk load = 123
+  SECONDARY "jtaghub16_jrstn" from JRSTN on comp "mg5ahub/genblk0_genblk5_jtage_u" on site "JTAG", clk load = 0, ce load = 0, sr load = 119
+  SECONDARY "top_reveal_coretop_instance/top_la0_inst_0/reset_rvl_n" from F0 on comp "top_reveal_coretop_instance/top_la0_inst_0/SLICE_447" on site "R12C28A", clk load = 0, ce load = 0, sr load = 76
+  SECONDARY "jtaghub16_ip_enable0" from Q0 on comp "SLICE_451" on site "R2C20A", clk load = 0, ce load = 26, sr load = 0
+
+  PRIMARY  : 2 out of 8 (25%)
+     DCS   : 0 out of 2 (0%)
+  SECONDARY: 3 out of 4 (75%)
+
+Edge Clocks:
+  No edge clock selected
+
+--------------- End of Clock Report ---------------
+
+
+I/O Usage Summary (final):
+   12 out of 174 (6.9%) PIO sites used.
+   12 out of 100 (12.0%) bonded PIO sites used.
+   Number of PIO comps: 12; differential: 0.
+   Number of Vref pins used: 0.
+
+I/O Bank Usage Summary:
++----------+---------------+------------+------------+------------+
+| I/O Bank | Usage         | Bank Vccio | Bank Vref1 | Bank Vref2 |
++----------+---------------+------------+------------+------------+
+| 0        | 0 / 20 (  0%) | -          | -          | -          |
+| 1        | 2 / 6 ( 33%)  | 3.3V       | -          | -          |
+| 2        | 0 / 18 (  0%) | -          | -          | -          |
+| 3        | 0 / 4 (  0%)  | -          | -          | -          |
+| 4        | 0 / 8 (  0%)  | -          | -          | -          |
+| 5        | 8 / 18 ( 44%) | 3.3V       | -          | -          |
+| 6        | 0 / 8 (  0%)  | -          | -          | -          |
+| 7        | 2 / 18 ( 11%) | -          | -          | -          |
++----------+---------------+------------+------------+------------+
+
+
+DSP Utilization Summary:
+-------------------------------------
+DSP Block #:              1 2 3
+# of MULT36X36B                
+# of MULT18X18B                
+# of MULT18X18MACB             
+# of MULT18X18ADDSUBB          
+# of MULT18X18ADDSUBSUMB       
+# of MULT9X9B                  
+# of MULT9X9ADDSUBB            
+# of MULT9X9ADDSUBSUMB         
+
+Total placer CPU time: 12 secs 
+
+Dumping design to file UART_impl1.dir/5_1.ncd.
+
+0 connections routed; 3057 unrouted.
+Starting router resource preassignment
+
+Completed router resource preassignment. Real time: 15 secs 
+
+Start NBR router at 16:21:32 05/03/22
+
+*****************************************************************
+Info: NBR allows conflicts(one node used by more than one signal)
+      in the earlier iterations. In each iteration, it tries to  
+      solve the conflicts while keeping the critical connections 
+      routed as short as possible. The routing process is said to
+      be completed when no conflicts exist and all connections   
+      are routed.                                                
+Note: NBR uses a different method to calculate timing slacks. The
+      worst slack and total negative slack may not be the same as
+      that in TRCE report. You should always run TRCE to verify  
+      your design.                                               
+*****************************************************************
+
+Start NBR special constraint process at 16:21:32 05/03/22
+
+Start NBR section for initial routing at 16:21:32 05/03/22
+Level 4, iteration 1
+144(0.06%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 11.299ns/0.000ns; real time: 17 secs 
+
+Info: Initial congestion level at 75% usage is 0
+Info: Initial congestion area  at 75% usage is 0 (0.00%)
+
+Start NBR section for normal routing at 16:21:33 05/03/22
+Level 4, iteration 1
+49(0.02%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 10.783ns/0.000ns; real time: 17 secs 
+Level 4, iteration 2
+13(0.01%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 10.783ns/0.000ns; real time: 17 secs 
+Level 4, iteration 3
+14(0.01%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 10.783ns/0.000ns; real time: 17 secs 
+Level 4, iteration 4
+2(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 10.783ns/0.000ns; real time: 17 secs 
+Level 4, iteration 5
+0(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 10.783ns/0.000ns; real time: 18 secs 
+
+Start NBR section for setup/hold timing optimization with effort level 3 at 16:21:34 05/03/22
+
+Start NBR section for re-routing at 16:21:35 05/03/22
+Level 4, iteration 1
+0(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 10.783ns/0.000ns; real time: 19 secs 
+
+Start NBR section for post-routing at 16:21:35 05/03/22
+
+End NBR router with 0 unrouted connection
+
+NBR Summary
+-----------
+  Number of unrouted connections : 0 (0.00%)
+  Number of connections with timing violations : 0 (0.00%)
+  Estimated worst slack<setup> : 10.783ns
+  Timing score<setup> : 0
+-----------
+Notes: The timing info is calculated for SETUP only and all PAR_ADJs are ignored.
+
+
+
+Total CPU time 21 secs 
+Total REAL time: 22 secs 
+Completely routed.
+End of route.  3057 routed (100.00%); 0 unrouted.
+
+Hold time timing score: 0, hold timing errors: 0
+
+Timing score: 0 
+
+Dumping design to file UART_impl1.dir/5_1.ncd.
+
+
+PAR_SUMMARY::Run status = Completed
+PAR_SUMMARY::Number of unrouted conns = 0
+PAR_SUMMARY::Worst  slack<setup/<ns>> = 10.783
+PAR_SUMMARY::Timing score<setup/<ns>> = 0.000
+PAR_SUMMARY::Worst  slack<hold /<ns>> = 0.175
+PAR_SUMMARY::Timing score<hold /<ns>> = 0.000
+PAR_SUMMARY::Number of errors = 0
+
+Total CPU  time to completion: 21 secs 
+Total REAL time to completion: 22 secs 
+
+par done!
+
+Note: user must run 'Trace' for timing closure signoff.
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
+Exiting par with exit code 0
+Exiting mpartrce with exit code 0
+
+trce -f "UART_impl1.pt" -o "UART_impl1.twr" "UART_impl1.ncd" "UART_impl1.prf"
+trce:  version Diamond (64-bit) 3.12.1.454
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
+
+Loading design for application trce from file uart_impl1.ncd.
+Design name: top
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LFXP2-5E
+Package:     TQFP144
+Performance: 6
+Loading device for application trce from file 'mg5a26x29.nph' in environment: C:/lscc/diamond/3.12/ispfpga.
+Package Status:                     Final          Version 1.42.
+Performance Hardware Data Status:   Final          Version 11.5.
+Setup and Hold Report
+
+--------------------------------------------------------------------------------
+Lattice TRACE Report - Setup, Version Diamond (64-bit) 3.12.1.454
+Tue May 03 16:21:41 2022
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
+
+Report Information
+------------------
+Command line:    trce -v 10 -gt -sethld -sp 6 -sphld m -o UART_impl1.twr -gui -msgset C:/Users/user/Desktop/UCT-FPGA-Course-2022/Practicals/03 - UART/promote.xml UART_impl1.ncd UART_impl1.prf 
+Design file:     uart_impl1.ncd
+Preference file: uart_impl1.prf
+Device,speed:    LFXP2-5E,6
+Report level:    verbose report, limited to 10 items per preference
+--------------------------------------------------------------------------------
+
+BLOCK ASYNCPATHS
+BLOCK RESETPATHS
+BLOCK JTAG PATHS
+--------------------------------------------------------------------------------
+
+
+
+Timing summary (Setup):
+---------------
+
+Timing errors: 0  Score: 0
+Cumulative negative slack: 0
+
+Constraints cover 1832 paths, 1 nets, and 2891 connections (94.57% coverage)
+
+--------------------------------------------------------------------------------
+Lattice TRACE Report - Hold, Version Diamond (64-bit) 3.12.1.454
+Tue May 03 16:21:41 2022
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
+
+Report Information
+------------------
+Command line:    trce -v 10 -gt -sethld -sp 6 -sphld m -o UART_impl1.twr -gui -msgset C:/Users/user/Desktop/UCT-FPGA-Course-2022/Practicals/03 - UART/promote.xml UART_impl1.ncd UART_impl1.prf 
+Design file:     uart_impl1.ncd
+Preference file: uart_impl1.prf
+Device,speed:    LFXP2-5E,m
+Report level:    verbose report, limited to 10 items per preference
+--------------------------------------------------------------------------------
+
+BLOCK ASYNCPATHS
+BLOCK RESETPATHS
+BLOCK JTAG PATHS
+--------------------------------------------------------------------------------
+
+
+
+Timing summary (Hold):
+---------------
+
+Timing errors: 0  Score: 0
+Cumulative negative slack: 0
+
+Constraints cover 1832 paths, 1 nets, and 2891 connections (94.57% coverage)
+
+
+
+Timing summary (Setup and Hold):
+---------------
+
+Timing errors: 0 (setup), 0 (hold)
+Score: 0 (setup), 0 (hold)
+Cumulative negative slack: 0 (0+0)
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+
+Total CPU Time: 3 secs 
+Total REAL Time: 3 secs 
+Peak Memory Usage: 169 MB
+
+
+iotiming  "UART_impl1.ncd" "UART_impl1.prf"
+I/O Timing Report:
+:  version Diamond (64-bit) 3.12.1.454
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
+
+Loading design for application iotiming from file uart_impl1.ncd.
+Design name: top
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LFXP2-5E
+Package:     TQFP144
+Performance: 6
+Loading device for application iotiming from file 'mg5a26x29.nph' in environment: C:/lscc/diamond/3.12/ispfpga.
+Package Status:                     Final          Version 1.42.
+Performance Hardware Data Status:   Final          Version 11.5.
+Running Performance Grade: 6
+Computing Setup Time ...
+Computing Max Clock to Output Delay ...
+Computing Hold Time ...
+Computing Min Clock to Output Delay ...
+
+Loading design for application iotiming from file uart_impl1.ncd.
+Design name: top
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LFXP2-5E
+Package:     TQFP144
+Performance: 7
+Package Status:                     Final          Version 1.42.
+Performance Hardware Data Status:   Final          Version 11.5.
+Running Performance Grade: 7
+Computing Setup Time ...
+Computing Max Clock to Output Delay ...
+Computing Hold Time ...
+Computing Min Clock to Output Delay ...
+
+Loading design for application iotiming from file uart_impl1.ncd.
+Design name: top
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LFXP2-5E
+Package:     TQFP144
+Performance: M
+Package Status:                     Final          Version 1.42.
+Performance Hardware Data Status:   Final          Version 11.5.
+Running Performance Grade: M
+Computing Setup Time ...
+Computing Max Clock to Output Delay ...
+Computing Hold Time ...
+Computing Min Clock to Output Delay ...
+Done.
+
+tmcheck -par "UART_impl1.par" 
+
+bitgen -f "UART_impl1.t2b" -w "UART_impl1.ncd" -jedec -e -s "C:/Users/user/Desktop/UCT-FPGA-Course-2022/Practicals/03 - UART/UART.sec" -k "C:/Users/user/Desktop/UCT-FPGA-Course-2022/Practicals/03 - UART/UART.bek" "UART_impl1.prf"
+
+
+BITGEN: Bitstream Generator Diamond (64-bit) 3.12.1.454
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
+
+
+Loading design for application Bitgen from file UART_impl1.ncd.
+Design name: top
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LFXP2-5E
+Package:     TQFP144
+Performance: 6
+Loading device for application Bitgen from file 'mg5a26x29.nph' in environment: C:/lscc/diamond/3.12/ispfpga.
+Package Status:                     Final          Version 1.42.
+Performance Hardware Data Status:   Final          Version 11.5.
+
+Running DRC.
+chipcheck: INFO: Design contains EBR with ASYNC Reset Mode that has a limitation: The use of the EBR block asynchronous reset requires that certain timing be met between the clock and the reset within the memory block. See the device specific datasheet for additional details.
+DRC detected 0 errors and 0 warnings.
+Reading Preference File from UART_impl1.prf.
+
+Preference Summary:
++---------------------------------+---------------------------------+
+|  Preference                     |  Current Setting                |
++---------------------------------+---------------------------------+
+|                         RamCfg  |                        Reset**  |
++---------------------------------+---------------------------------+
+|                        DONE_EX  |                          OFF**  |
++---------------------------------+---------------------------------+
+|                        DONE_OD  |                           ON**  |
++---------------------------------+---------------------------------+
+|                  CONFIG_SECURE  |                          OFF**  |
++---------------------------------+---------------------------------+
+|                        WAKE_UP  |                           21**  |
++---------------------------------+---------------------------------+
+|                   WAKE_ON_LOCK  |                          OFF**  |
++---------------------------------+---------------------------------+
+|                          INBUF  |                           ON**  |
++---------------------------------+---------------------------------+
+|                     TAG_MEMORY  |                       NORMAL**  |
++---------------------------------+---------------------------------+
+|                        MY_ASSP  |                          OFF**  |
++---------------------------------+---------------------------------+
+|               ONE_TIME_PROGRAM  |                          OFF**  |
++---------------------------------+---------------------------------+
+|                 SLAVE_SPI_PORT  |                      DISABLE**  |
++---------------------------------+---------------------------------+
+|                MASTER_SPI_PORT  |                      DISABLE**  |
++---------------------------------+---------------------------------+
+|                     DisableUES  |                        FALSE**  |
++---------------------------------+---------------------------------+
+ *  Default setting.
+ ** The specified setting matches the default setting.
+
+
+Creating bit map...
+Saving bit stream in "UART_impl1.jed".
+Total CPU Time: 3 secs 
+Total REAL Time: 4 secs 
+Peak Memory Usage: 279 MB

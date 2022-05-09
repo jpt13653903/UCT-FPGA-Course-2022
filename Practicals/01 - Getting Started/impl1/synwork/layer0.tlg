@@ -1,0 +1,9 @@
+Selecting top level module Counter
+@N: CG364 :"C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\01 - Getting Started\Counter.v":1:7:1:13|Synthesizing module Counter in library work.
+Running optimization stage 1 on Counter .......
+Running optimization stage 2 on Counter .......
+
+For a summary of runtime and memory usage per design unit, please see file:
+==========================================================
+@L: C:\Users\user\Desktop\UCT-FPGA-Course-2022\Practicals\01 - Getting Started\impl1\synwork\layer0.rt.csv
+

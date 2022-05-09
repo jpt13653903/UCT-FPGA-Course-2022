@@ -1,0 +1,6 @@
+#Start recording tcl command: 4/29/2022 05:18:24
+#Project Location: C:/Users/user/Desktop/UCT-FPGA-Course-2022/Practicals/03 - UART; Project name: UART
+prj_project new -name "UART" -impl "impl1" -dev LFXP2-5E-6TN144I -synthesis "synplify"
+prj_project save
+prj_project close
+#Stop recording: 5/3/2022 08:55:18

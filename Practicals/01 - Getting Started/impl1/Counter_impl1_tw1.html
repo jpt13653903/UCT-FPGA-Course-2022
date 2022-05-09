@@ -1,0 +1,438 @@
+<HTML>
+<HEAD><TITLE>Lattice Map TRACE Report</TITLE>
+<STYLE TYPE="text/css">
+<!--
+ body,pre{    font-family:'Courier New', monospace;    color: #000000;    font-size:88%;    background-color: #ffffff;}h1 {    font-weight: bold;    margin-top: 24px;    margin-bottom: 10px;    border-bottom: 3px solid #000;    font-size: 1em;}h2 {    font-weight: bold;    margin-top: 18px;    margin-bottom: 5px;    font-size: 0.90em;}h3 {    font-weight: bold;    margin-top: 12px;    margin-bottom: 5px;    font-size: 0.80em;}p {    font-size:78%;}P.Table {    margin-top: 4px;    margin-bottom: 4px;    margin-right: 4px;    margin-left: 4px;}table{    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    border-collapse: collapse;}th {    font-weight:bold;    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    text-align:left;    font-size:78%;}td {    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    font-size:78%;}a {    color:#013C9A;    text-decoration:none;}a:visited {    color:#013C9A;}a:hover, a:active {    text-decoration:underline;    color:#5BAFD4;}.pass{background-color: #00ff00;}.fail{background-color: #ff0000;}.comment{    font-size: 90%;    font-style: italic;}
+-->
+</STYLE>
+</HEAD>
+<PRE><A name="Map_Twr"></A><B><U><big>Map TRACE Report</big></U></B>
+
+Loading design for application trce from file counter_impl1_map.ncd.
+Design name: Counter
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LFXP2-5E
+Package:     TQFP144
+Performance: 6
+Loading device for application trce from file 'mg5a26x29.nph' in environment: C:/lscc/diamond/3.12/ispfpga.
+Package Status:                     Final          Version 1.42.
+Performance Hardware Data Status:   Final          Version 11.5.
+Setup and Hold Report
+
+--------------------------------------------------------------------------------
+<A name="Map_Twr_setup"></A><B><U><big>Lattice TRACE Report - Setup, Version Diamond (64-bit) 3.12.0.240.2</big></U></B>
+Thu Apr 28 08:17:50 2022
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
+
+<A name="mtw1_set_ri"></A><B><U><big>Report Information</big></U></B>
+------------------
+Command line:    trce -v 1 -u 0 -gt -mapchkpnt 0 -sethld -o Counter_impl1.tw1 -gui Counter_impl1_map.ncd Counter_impl1.prf 
+Design file:     counter_impl1_map.ncd
+Preference file: counter_impl1.prf
+Device,speed:    LFXP2-5E,6
+Report level:    verbose report, limited to 1 item per preference
+--------------------------------------------------------------------------------
+
+<A name="mtw1_set_ps"></A><B><U><big>Preference Summary</big></U></B>
+
+<LI><A href='#map_twr_pref_0_0' Target='right'>FREQUENCY NET "ipClk_c" 277.008000 MHz (0 errors)</A></LI>            496 items scored, 0 timing errors detected.
+Report:  413.565MHz is the maximum frequency for this preference.
+
+<LI><A href='#map_twr_pref_0_1' Target='right'>Unconstrained: CLOCK_DOMAIN</A></LI>            0 unconstrained paths found
+
+<LI><A href='#map_twr_pref_0_2' Target='right'>Unconstrained: INPUT_SETUP</A></LI>            0 unconstrained paths found
+
+<LI><A href='#map_twr_pref_0_3' Target='right'>Unconstrained: CLOCK_TO_OUT</A></LI>            8 unconstrained paths found
+
+<LI><A href='#map_twr_pref_0_4' Target='right'>Unconstrained: MAXDELAY</A></LI>            0 unconstrained paths found
+
+Report Type:     based on TRACE automatically generated preferences
+BLOCK ASYNCPATHS
+BLOCK RESETPATHS
+--------------------------------------------------------------------------------
+
+
+
+================================================================================
+<A name="map_twr_pref_0_0"></A>Preference: FREQUENCY NET "ipClk_c" 277.008000 MHz ;
+            496 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed: The following path meets requirements by 1.192ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              counter[1]  (from ipClk_c +)
+   Destination:    FF         Data in        counter[30]  (to ipClk_c +)
+
+   Delay:               2.341ns  (89.4% logic, 10.6% route), 16 logic levels.
+
+ Constraint Details:
+
+      2.341ns physical path delay SLICE_15 to SLICE_1 meets
+      3.610ns delay constraint less
+      0.077ns DIN_SET requirement (totaling 3.533ns) by 1.192ns
+
+ Physical Path Details:
+
+      Data path SLICE_15 to SLICE_1:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.363   SLICE_15.CLK to    SLICE_15.Q0 SLICE_15 (from ipClk_c)
+ROUTE         1   e 0.232    SLICE_15.Q0 to    SLICE_15.A0 counter[1]
+C0TOFCO_DE  ---     0.550    SLICE_15.A0 to   SLICE_15.FCO SLICE_15
+ROUTE         1   e 0.001   SLICE_15.FCO to   SLICE_14.FCI counter_cry[2]
+FCITOFCO_D  ---     0.067   SLICE_14.FCI to   SLICE_14.FCO SLICE_14
+ROUTE         1   e 0.001   SLICE_14.FCO to   SLICE_13.FCI counter_cry[4]
+FCITOFCO_D  ---     0.067   SLICE_13.FCI to   SLICE_13.FCO SLICE_13
+ROUTE         1   e 0.001   SLICE_13.FCO to   SLICE_12.FCI counter_cry[6]
+FCITOFCO_D  ---     0.067   SLICE_12.FCI to   SLICE_12.FCO SLICE_12
+ROUTE         1   e 0.001   SLICE_12.FCO to   SLICE_11.FCI counter_cry[8]
+FCITOFCO_D  ---     0.067   SLICE_11.FCI to   SLICE_11.FCO SLICE_11
+ROUTE         1   e 0.001   SLICE_11.FCO to   SLICE_10.FCI counter_cry[10]
+FCITOFCO_D  ---     0.067   SLICE_10.FCI to   SLICE_10.FCO SLICE_10
+ROUTE         1   e 0.001   SLICE_10.FCO to    SLICE_9.FCI counter_cry[12]
+FCITOFCO_D  ---     0.067    SLICE_9.FCI to    SLICE_9.FCO SLICE_9
+ROUTE         1   e 0.001    SLICE_9.FCO to    SLICE_8.FCI counter_cry[14]
+FCITOFCO_D  ---     0.067    SLICE_8.FCI to    SLICE_8.FCO SLICE_8
+ROUTE         1   e 0.001    SLICE_8.FCO to    SLICE_7.FCI counter_cry[16]
+FCITOFCO_D  ---     0.067    SLICE_7.FCI to    SLICE_7.FCO SLICE_7
+ROUTE         1   e 0.001    SLICE_7.FCO to    SLICE_6.FCI counter_cry[18]
+FCITOFCO_D  ---     0.067    SLICE_6.FCI to    SLICE_6.FCO SLICE_6
+ROUTE         1   e 0.001    SLICE_6.FCO to    SLICE_5.FCI counter_cry[20]
+FCITOFCO_D  ---     0.067    SLICE_5.FCI to    SLICE_5.FCO SLICE_5
+ROUTE         1   e 0.001    SLICE_5.FCO to    SLICE_4.FCI counter_cry[22]
+FCITOFCO_D  ---     0.067    SLICE_4.FCI to    SLICE_4.FCO SLICE_4
+ROUTE         1   e 0.001    SLICE_4.FCO to    SLICE_3.FCI counter_cry[24]
+FCITOFCO_D  ---     0.067    SLICE_3.FCI to    SLICE_3.FCO SLICE_3
+ROUTE         1   e 0.001    SLICE_3.FCO to    SLICE_2.FCI counter_cry[26]
+FCITOFCO_D  ---     0.067    SLICE_2.FCI to    SLICE_2.FCO SLICE_2
+ROUTE         1   e 0.001    SLICE_2.FCO to    SLICE_1.FCI counter_cry[28]
+FCITOF1_DE  ---     0.310    SLICE_1.FCI to     SLICE_1.F1 SLICE_1
+ROUTE         1   e 0.001     SLICE_1.F1 to    SLICE_1.DI1 counter_s[30] (to ipClk_c)
+                  --------
+                    2.341   (89.4% logic, 10.6% route), 16 logic levels.
+
+Report:  413.565MHz is the maximum frequency for this preference.
+
+
+================================================================================
+<A name="map_twr_pref_0_1"></A>Preference: Unconstrained: CLOCK_DOMAIN
+            0 unconstrained paths found
+--------------------------------------------------------------------------------
+
+
+================================================================================
+<A name="map_twr_pref_0_2"></A>Preference: Unconstrained: INPUT_SETUP
+            0 unconstrained paths found
+--------------------------------------------------------------------------------
+
+
+================================================================================
+<A name="map_twr_pref_0_3"></A>Preference: Unconstrained: CLOCK_TO_OUT
+            8 unconstrained paths found
+--------------------------------------------------------------------------------
+
+Unconstrained Preference:
+   CLOCK_TO_OUT PORT "opLed[6]" CLKPORT "ipClk" 
+
+Report:    2.388ns delay SLICE_1 to opLed[6]
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.363    SLICE_1.CLK to     SLICE_1.Q0 SLICE_1 (from ipClk_c)
+ROUTE         2   e 0.908     SLICE_1.Q0 to       38.PADDO opLed_c[6]
+DOPAD_DEL   ---     1.117       38.PADDO to         38.PAD opLed[6]
+                  --------
+                    2.388   (62.0% logic, 38.0% route), 2 logic levels.
+
+Unconstrained Preference:
+   CLOCK_TO_OUT PORT "opLed[7]" CLKPORT "ipClk" 
+
+Report:    2.388ns delay SLICE_1 to opLed[7]
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.363    SLICE_1.CLK to     SLICE_1.Q1 SLICE_1 (from ipClk_c)
+ROUTE         2   e 0.908     SLICE_1.Q1 to       37.PADDO opLed_c[7]
+DOPAD_DEL   ---     1.117       37.PADDO to         37.PAD opLed[7]
+                  --------
+                    2.388   (62.0% logic, 38.0% route), 2 logic levels.
+
+Unconstrained Preference:
+   CLOCK_TO_OUT PORT "opLed[4]" CLKPORT "ipClk" 
+
+Report:    2.388ns delay SLICE_2 to opLed[4]
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.363    SLICE_2.CLK to     SLICE_2.Q0 SLICE_2 (from ipClk_c)
+ROUTE         2   e 0.908     SLICE_2.Q0 to       40.PADDO opLed_c[4]
+DOPAD_DEL   ---     1.117       40.PADDO to         40.PAD opLed[4]
+                  --------
+                    2.388   (62.0% logic, 38.0% route), 2 logic levels.
+
+Unconstrained Preference:
+   CLOCK_TO_OUT PORT "opLed[5]" CLKPORT "ipClk" 
+
+Report:    2.388ns delay SLICE_2 to opLed[5]
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.363    SLICE_2.CLK to     SLICE_2.Q1 SLICE_2 (from ipClk_c)
+ROUTE         2   e 0.908     SLICE_2.Q1 to       39.PADDO opLed_c[5]
+DOPAD_DEL   ---     1.117       39.PADDO to         39.PAD opLed[5]
+                  --------
+                    2.388   (62.0% logic, 38.0% route), 2 logic levels.
+
+Unconstrained Preference:
+   CLOCK_TO_OUT PORT "opLed[2]" CLKPORT "ipClk" 
+
+Report:    2.388ns delay SLICE_3 to opLed[2]
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.363    SLICE_3.CLK to     SLICE_3.Q0 SLICE_3 (from ipClk_c)
+ROUTE         2   e 0.908     SLICE_3.Q0 to       44.PADDO opLed_c[2]
+DOPAD_DEL   ---     1.117       44.PADDO to         44.PAD opLed[2]
+                  --------
+                    2.388   (62.0% logic, 38.0% route), 2 logic levels.
+
+Unconstrained Preference:
+   CLOCK_TO_OUT PORT "opLed[3]" CLKPORT "ipClk" 
+
+Report:    2.388ns delay SLICE_3 to opLed[3]
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.363    SLICE_3.CLK to     SLICE_3.Q1 SLICE_3 (from ipClk_c)
+ROUTE         2   e 0.908     SLICE_3.Q1 to       43.PADDO opLed_c[3]
+DOPAD_DEL   ---     1.117       43.PADDO to         43.PAD opLed[3]
+                  --------
+                    2.388   (62.0% logic, 38.0% route), 2 logic levels.
+
+Unconstrained Preference:
+   CLOCK_TO_OUT PORT "opLed[0]" CLKPORT "ipClk" 
+
+Report:    2.388ns delay SLICE_4 to opLed[0]
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.363    SLICE_4.CLK to     SLICE_4.Q0 SLICE_4 (from ipClk_c)
+ROUTE         2   e 0.908     SLICE_4.Q0 to       46.PADDO opLed_c[0]
+DOPAD_DEL   ---     1.117       46.PADDO to         46.PAD opLed[0]
+                  --------
+                    2.388   (62.0% logic, 38.0% route), 2 logic levels.
+
+Unconstrained Preference:
+   CLOCK_TO_OUT PORT "opLed[1]" CLKPORT "ipClk" 
+
+Report:    2.388ns delay SLICE_4 to opLed[1]
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.363    SLICE_4.CLK to     SLICE_4.Q1 SLICE_4 (from ipClk_c)
+ROUTE         2   e 0.908     SLICE_4.Q1 to       45.PADDO opLed_c[1]
+DOPAD_DEL   ---     1.117       45.PADDO to         45.PAD opLed[1]
+                  --------
+                    2.388   (62.0% logic, 38.0% route), 2 logic levels.
+
+
+================================================================================
+<A name="map_twr_pref_0_4"></A>Preference: Unconstrained: MAXDELAY
+            0 unconstrained paths found
+--------------------------------------------------------------------------------
+
+<A name="mtw1_set_rs"></A><B><U><big>Report Summary</big></U></B>
+--------------
+----------------------------------------------------------------------------
+Preference                              |   Constraint|       Actual|Levels
+----------------------------------------------------------------------------
+                                        |             |             |
+FREQUENCY NET "ipClk_c" 277.008000 MHz  |             |             |
+;                                       |  277.008 MHz|  413.565 MHz|  16  
+                                        |             |             |
+----------------------------------------------------------------------------
+
+
+All preferences were met.
+
+
+<A name="mtw1_set_clkda"></A><B><U><big>Clock Domains Analysis</big></U></B>
+------------------------
+
+Found 1 clocks:
+
+Clock Domain: ipClk_c   Source: ipClk.PAD   Loads: 16
+   Covered under: FREQUENCY NET "ipClk_c" 277.008000 MHz ;
+
+
+<A name="mtw1_set_ts"></A><B><U><big>Timing summary (Setup):</big></U></B>
+---------------
+
+Timing errors: 0  Score: 0
+Cumulative negative slack: 0
+
+Constraints cover 496 paths, 1 nets, and 124 connections (93.94% coverage)
+
+--------------------------------------------------------------------------------
+<A name="Map_Twr_hold"></A><B><U><big>Lattice TRACE Report - Hold, Version Diamond (64-bit) 3.12.0.240.2</big></U></B>
+Thu Apr 28 08:17:50 2022
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
+
+<A name="mtw1_hold_ri"></A><B><U><big>Report Information</big></U></B>
+------------------
+Command line:    trce -v 1 -u 0 -gt -mapchkpnt 0 -sethld -o Counter_impl1.tw1 -gui Counter_impl1_map.ncd Counter_impl1.prf 
+Design file:     counter_impl1_map.ncd
+Preference file: counter_impl1.prf
+Device,speed:    LFXP2-5E,M
+Report level:    verbose report, limited to 1 item per preference
+--------------------------------------------------------------------------------
+
+<A name="mtw1_hold_ps"></A><B><U><big>Preference Summary</big></U></B>
+
+<LI><A href='#map_twr_pref_1_0' Target='right'>FREQUENCY NET "ipClk_c" 277.008000 MHz (0 errors)</A></LI>            496 items scored, 0 timing errors detected.
+
+BLOCK ASYNCPATHS
+BLOCK RESETPATHS
+--------------------------------------------------------------------------------
+
+
+
+================================================================================
+<A name="map_twr_pref_1_0"></A>Preference: FREQUENCY NET "ipClk_c" 277.008000 MHz ;
+            496 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed: The following path meets requirements by 0.282ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              counter[0]  (from ipClk_c +)
+   Destination:    FF         Data in        counter[0]  (to ipClk_c +)
+
+   Delay:               0.283ns  (63.3% logic, 36.7% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.283ns physical path delay SLICE_0 to SLICE_0 meets
+      0.001ns DIN_HLD and
+      0.000ns delay constraint requirement (totaling 0.001ns) by 0.282ns
+
+ Physical Path Details:
+
+      Data path SLICE_0 to SLICE_0:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.120    SLICE_0.CLK to     SLICE_0.Q1 SLICE_0 (from ipClk_c)
+ROUTE         1   e 0.103     SLICE_0.Q1 to     SLICE_0.A1 counter[0]
+CTOF_DEL    ---     0.059     SLICE_0.A1 to     SLICE_0.F1 SLICE_0
+ROUTE         1   e 0.001     SLICE_0.F1 to    SLICE_0.DI1 counter_s[0] (to ipClk_c)
+                  --------
+                    0.283   (63.3% logic, 36.7% route), 2 logic levels.
+
+<A name="mtw1_hold_rs"></A><B><U><big>Report Summary</big></U></B>
+--------------
+----------------------------------------------------------------------------
+Preference(MIN Delays)                  |   Constraint|       Actual|Levels
+----------------------------------------------------------------------------
+                                        |             |             |
+FREQUENCY NET "ipClk_c" 277.008000 MHz  |             |             |
+;                                       |     0.000 ns|     0.282 ns|   2  
+                                        |             |             |
+----------------------------------------------------------------------------
+
+
+All preferences were met.
+
+
+<A name="mtw1_hold_clkda"></A><B><U><big>Clock Domains Analysis</big></U></B>
+------------------------
+
+Found 1 clocks:
+
+Clock Domain: ipClk_c   Source: ipClk.PAD   Loads: 16
+   Covered under: FREQUENCY NET "ipClk_c" 277.008000 MHz ;
+
+
+<A name="mtw1_hold_ts"></A><B><U><big>Timing summary (Hold):</big></U></B>
+---------------
+
+Timing errors: 0  Score: 0
+Cumulative negative slack: 0
+
+Constraints cover 496 paths, 1 nets, and 124 connections (93.94% coverage)
+
+
+
+<A name="mtw1_ts"></A><B><U><big>Timing summary (Setup and Hold):</big></U></B>
+---------------
+
+Timing errors: 0 (setup), 0 (hold)
+Score: 0 (setup), 0 (hold)
+Cumulative negative slack: 0 (0+0)
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+
+
+
+
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+</PRE></FONT>
+</BODY>
+</HTML>

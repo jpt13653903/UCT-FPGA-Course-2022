@@ -1,0 +1,12 @@
+#Start recording tcl command: 5/3/2022 10:47:29
+#Project Location: C:/Users/user/Desktop/UCT-FPGA-Course-2022/Practicals/03 - UART; Project name: UART
+prj_project open "C:/Users/user/Desktop/UCT-FPGA-Course-2022/Practicals/03 - UART/UART.ldf"
+rvl_project new
+rvl_project new
+prj_strgy set_value -strategy Strategy1 syn_vhdl2008=True
+prj_run Map -impl impl1 -task MapTrace
+prj_strgy set_value -strategy Strategy1 maptrce_check_unconstrained_paths=True
+prj_run Export -impl impl1 -task Bitgen
+prj_run Export -impl impl1 -task Bitgen -forceAll
+rvl_project new
+#Stop recording: 5/3/2022 11:17:16

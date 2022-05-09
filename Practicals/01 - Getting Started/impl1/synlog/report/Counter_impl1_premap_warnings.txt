@@ -1,0 +1,1 @@
+@W: MT529 :"c:\users\user\desktop\uct-fpga-course-2022\practicals\01 - getting started\counter.v":6:2:6:7|Found inferred clock Counter|ipClk which controls 31 sequential elements including counter[30:0]. This clock has no specified timing constraint which may prevent conversion of gated or generated clocks and may adversely impact design performance. 

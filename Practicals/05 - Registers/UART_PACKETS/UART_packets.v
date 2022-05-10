@@ -53,7 +53,7 @@ module UART_Packets(
 		.opTxBusy ( UART_TxBusy 	),
 		.opTx     ( opTx  			),
 		.ipRx     ( ipRx  			),
-		.opRxData ( opRxStream.Data ),
+		.opRxData ( UART_RX_DATA 	),
 		.opRxValid( UART_RxValid 	)
 	)
 

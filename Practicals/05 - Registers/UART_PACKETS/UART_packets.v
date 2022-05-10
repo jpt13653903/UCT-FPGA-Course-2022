@@ -46,15 +46,15 @@ module UART_Packets(
 	reg [7:0] receiveDataLength  = 0;
 	reg [8:0] transmitDataLength = 0;
 	UART UART_INST(
-		.ipClk    ( ipClk   ),
-		.ipReset  ( reset ),
+		.ipClk    ( ipClk   		),
+		.ipReset  ( reset 			),
 		.ipTxData ( ipTxStream.Data ),
-		.ipTxSend ( UART_TxSend ),
-		.opTxBusy ( UART_TxBusy ),
-		.opTx     ( opTx  ),
-		.ipRx     ( ipTx  ),
+		.ipTxSend ( UART_TxSend 	),
+		.opTxBusy ( UART_TxBusy 	),
+		.opTx     ( opTx  			),
+		.ipRx     ( ipRx  			),
 		.opRxData ( opRxStream.Data ),
-		.opRxValid( UART_RxValid )
+		.opRxValid( UART_RxValid 	)
 	)
 
 	always @(posedge ipClk) begin

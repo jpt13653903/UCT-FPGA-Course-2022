@@ -16,7 +16,7 @@ https://youtu.be/I6eZ4ZyI1Zg
 - https://www.youtube.com/watch?v=HUYF20AGSOg
 - Phase-Locked Loops Design, Simulation, and Applications (Text book)
 
-## Numerically Controlled Oscillators
+## Numerically Controlled Oscillators (Direct digital synthesis)
 
 - https://www.youtube.com/watch?v=wWadNvkdLqY
 - https://youtu.be/MKiP-4o3cFI?t=500

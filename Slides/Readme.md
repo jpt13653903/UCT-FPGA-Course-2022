@@ -19,3 +19,4 @@ https://youtu.be/I6eZ4ZyI1Zg
 ## Numerically Controlled Oscillators
 
 - https://www.youtube.com/watch?v=wWadNvkdLqY
+- https://youtu.be/MKiP-4o3cFI?t=500

@@ -5,12 +5,15 @@ module UART_Packets_TB;
 	reg ipClk = 0;
 	reg ipRx;
 	reg ipReset = 1;
-	logic  opTxReady = 0;
+	logic  opTxReady = 1;
 	wire opTx;
 
 	UART_PACKET ipTxStream;
 	UART_PACKET opRxStream;
-
+	initial begin
+		@(posedge ipClk);
+		ipReset <= 0;
+	end
 
 
 	always #10 begin
@@ -25,7 +28,6 @@ module UART_Packets_TB;
 		ipTxStream.EoP <= 1;
 		ipTxStream.Data <= 20;
 		ipTxStream.Valid <= 1;
-		ipReset <=0;
 	end
 
 	UART_Packets DUT(

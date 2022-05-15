@@ -66,27 +66,27 @@ n@u@a@r@t
 vUART_Packets
 R1
 Z8 DXx4 work 10 Structures 0 22 62W4NQ;>gZ<G20dX?B0nh2
-DXx4 work 19 UART_Packets_v_unit 0 22 bjn`Q9lP3kP0oK5]bEBAj1
-Z9 !s110 1652621258
+DXx4 work 19 UART_Packets_v_unit 0 22 ]A`]SC^QLO`1z<R]BC9b92
+Z9 !s110 1652629267
 R7
 r1
 !s85 0
 !i10b 1
-!s100 D9dQTNl]zhO869W49F8=f3
-I7@N1lbd`<U>Kk>HbQmJTi3
+!s100 27W4]M_m9_8O`AJ4o[M833
+In:gl2YM^AlBa;S:z48[n03
 !s105 UART_Packets_v_unit
 S1
 R0
-Z10 w1652620700
+Z10 w1652628907
 Z11 8C:/Users/user/Desktop/UCT-FPGA-Course-2022/Practicals/05 - Registers/UART_PACKETS/UART_Packets.v
 Z12 FC:/Users/user/Desktop/UCT-FPGA-Course-2022/Practicals/05 - Registers/UART_PACKETS/UART_Packets.v
-!i122 11
-L0 4 184
+!i122 21
+L0 4 186
 R4
 31
-Z13 !s108 1652621258.000000
-Z14 !s107 C:/Users/user/Desktop/UCT-FPGA-Course-2022/Practicals/05 - Registers/UART_PACKETS/UART_Packets.v|
-Z15 !s90 -F=C:/Users/user/Desktop/UCT-FPGA-Course-2022/Practicals/01 - Getting Started/vlog.opt|-F=|-reportprogress|300|-work|work|-O0|C:/Users/user/Desktop/UCT-FPGA-Course-2022/Practicals/05 - Registers/UART_PACKETS/UART_Packets.v|
+Z13 !s108 1652629267.000000
+!s107 C:/Users/user/Desktop/UCT-FPGA-Course-2022/Practicals/05 - Registers/UART_PACKETS/UART_Packets.v|
+Z14 !s90 -F=C:/Users/user/Desktop/UCT-FPGA-Course-2022/Practicals/01 - Getting Started/vlog.opt|-F=|-reportprogress|300|-work|work|-O0|C:/Users/user/Desktop/UCT-FPGA-Course-2022/Practicals/05 - Registers/UART_PACKETS/UART_Packets.v|
 !s101 -O0
 !i113 1
 R5
@@ -96,7 +96,7 @@ vUART_Packets_TB
 R1
 R8
 DXx4 work 22 UART_Packets_TB_v_unit 0 22 6kd^>6;IRPD_XKGG95T490
-Z16 !s110 1652622028
+Z15 !s110 1652628490
 R7
 r1
 !s85 0
@@ -106,15 +106,15 @@ I`F^CjULYbEGa88^WU;7I00
 !s105 UART_Packets_TB_v_unit
 S1
 R0
-Z17 w1652622015
-Z18 8C:/Users/user/Desktop/UCT-FPGA-Course-2022/Practicals/05 - Registers/UART_PACKETS/UART_Packets_TB.v
-Z19 FC:/Users/user/Desktop/UCT-FPGA-Course-2022/Practicals/05 - Registers/UART_PACKETS/UART_Packets_TB.v
-!i122 16
+Z16 w1652622015
+Z17 8C:/Users/user/Desktop/UCT-FPGA-Course-2022/Practicals/05 - Registers/UART_PACKETS/UART_Packets_TB.v
+Z18 FC:/Users/user/Desktop/UCT-FPGA-Course-2022/Practicals/05 - Registers/UART_PACKETS/UART_Packets_TB.v
+!i122 18
 L0 4 37
 R4
 31
-Z20 !s108 1652622028.000000
-!s107 C:/Users/user/Desktop/UCT-FPGA-Course-2022/Practicals/05 - Registers/UART_PACKETS/UART_Packets_TB.v|
+Z19 !s108 1652628490.000000
+Z20 !s107 C:/Users/user/Desktop/UCT-FPGA-Course-2022/Practicals/05 - Registers/UART_PACKETS/UART_Packets_TB.v|
 Z21 !s90 -F=C:/Users/user/Desktop/UCT-FPGA-Course-2022/Practicals/01 - Getting Started/vlog.opt|-F=|-reportprogress|300|-work|work|-O0|C:/Users/user/Desktop/UCT-FPGA-Course-2022/Practicals/05 - Registers/UART_PACKETS/UART_Packets_TB.v|
 !s101 -O0
 !i113 1
@@ -124,7 +124,7 @@ n@u@a@r@t_@packets_@t@b
 XUART_Packets_TB_v_unit
 R1
 R8
-R16
+R15
 V6kd^>6;IRPD_XKGG95T490
 r1
 !s85 0
@@ -134,15 +134,15 @@ I6kd^>6;IRPD_XKGG95T490
 !i103 1
 S1
 R0
+R16
 R17
 R18
-R19
-!i122 16
+!i122 18
 R3
 R4
 31
+R19
 R20
-Z22 !s107 C:/Users/user/Desktop/UCT-FPGA-Course-2022/Practicals/05 - Registers/UART_PACKETS/UART_Packets_TB.v|
 R21
 !s101 -O0
 !i113 1
@@ -153,25 +153,25 @@ XUART_Packets_v_unit
 R1
 R8
 R9
-Vbjn`Q9lP3kP0oK5]bEBAj1
+V]A`]SC^QLO`1z<R]BC9b92
 r1
 !s85 0
 !i10b 1
-!s100 ijX4hc<PYicIMb<LXCO:n3
-Ibjn`Q9lP3kP0oK5]bEBAj1
+!s100 P7nJk4SZ0:Ngj4_fa<RPT0
+I]A`]SC^QLO`1z<R]BC9b92
 !i103 1
 S1
 R0
 R10
 R11
 R12
-!i122 11
+!i122 21
 R3
 R4
 31
 R13
+Z22 !s107 C:/Users/user/Desktop/UCT-FPGA-Course-2022/Practicals/05 - Registers/UART_PACKETS/UART_Packets.v|
 R14
-R15
 !s101 -O0
 !i113 1
 R5

@@ -5,19 +5,12 @@ module UART_Packets_TB;
 	reg ipClk = 0;
 	reg ipRx;
 	reg ipReset = 1;
-	wire opTxReady;
+	logic  opTxReady = 0;
 	wire opTx;
 
 	UART_PACKET ipTxStream;
 	UART_PACKET opRxStream;
 
-	ipTxStream.Source = 100;
-	ipTxStream.Destination = 200;
-	ipTxStream.Length = 1;
-	ipTxStream.SoP = 1;
-	ipTxStream.EoP = 1;
-	ipTxSend.Data = 8'b20;
-	ipTxStream.Valid = 1;
 
 
 	always #10 begin
@@ -25,17 +18,23 @@ module UART_Packets_TB;
 	end
 
 	initial begin
+		ipTxStream.Source <= 100;
+		ipTxStream.Destination <= 200;
+		ipTxStream.Length <= 1;
+		ipTxStream.SoP <= 1;
+		ipTxStream.EoP <= 1;
+		ipTxStream.Data <= 20;
+		ipTxStream.Valid <= 1;
 		ipReset <=0;
 	end
 
-	UART DUT(
-		.ipClk(ipClk)
-		.ipRx(ipRx)
-		.ipReset(ipReset)
-		.ipTxStream(ipTxStream)
-		.opTxReady(opTxReady)
-		.opTx(opTx)
-		.ipRx(ipRx)
+	UART_Packets DUT(
+		.ipClk(ipClk),
+		.ipRx(ipRx),
+		.ipReset(ipReset),
+		.opTxReady(opTxReady),
+		.opTx(opTx),
+		.ipTxStream(ipTxStream),
 		.opRxStream(opRxStream)
-	)
+	);
 endmodule //UART_Packets_TB

@@ -125,7 +125,7 @@ module UART_Packets(
 				end
 			end
 			TX_SEND_DATA: begin
-				if (transmitDataLength == 1 !UART_TxBusy && opTxReady && ipTxStream.Valid) begin
+				if (transmitDataLength == 1 && !UART_TxBusy && opTxReady && ipTxStream.Valid && ipTxStream.EoP) begin
 					txState <= TX_IDLE;
 					opTxReady <= 1;
 					UART_TxData <= ipTxStream.Data;
@@ -134,9 +134,10 @@ module UART_Packets(
 					transmitDataLength <= transmitDataLength - 1;
 					UART_TxSend <= 1;
 					UART_TxData <= ipTxStream.Data;
-					opTxReady <= 0;
-				end else begin
 					opTxReady <= 1;
+				end else begin
+					opTxReady <= 0;
+					UART_TxSend <= 0;
 				end
 			end
 		endcase

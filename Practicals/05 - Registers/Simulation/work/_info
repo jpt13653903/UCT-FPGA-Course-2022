@@ -1,0 +1,65 @@
+m255
+K4
+z2
+!s11f vlog 2020.3 2020.10, Oct 14 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/user/Desktop/UCT-FPGA-Course-2022/Practicals/05 - Registers/Simulation
+XStructures
+Z1 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
+!s110 1652615992
+!i10b 1
+!s100 jIPdSfX[;W?FFWYjnbdgj2
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+I62W4NQ;>gZ<G20dX?B0nh2
+S1
+R0
+w1652615961
+8C:/Users/user/Desktop/UCT-FPGA-Course-2022/Practicals/05 - Registers/Structures/Structures.v
+FC:/Users/user/Desktop/UCT-FPGA-Course-2022/Practicals/05 - Registers/Structures/Structures.v
+!i122 5
+L0 1 0
+V62W4NQ;>gZ<G20dX?B0nh2
+Z3 OT;L;2020.3;71
+r1
+!s85 0
+31
+!s108 1652615992.000000
+!s107 C:/Users/user/Desktop/UCT-FPGA-Course-2022/Practicals/05 - Registers/Structures/Structures.v|
+!s90 -F=C:/Users/user/Desktop/UCT-FPGA-Course-2022/Practicals/01 - Getting Started/vlog.opt|-F=|-reportprogress|300|-work|work|-O0|C:/Users/user/Desktop/UCT-FPGA-Course-2022/Practicals/05 - Registers/Structures/Structures.v|
+!s101 -O0
+!i113 1
+Z4 o-work work -O0
+Z5 tSvlog 1 CvgOpt 0
+n@structures
+vUART
+R1
+!s110 1652615156
+!i10b 1
+!s100 GYTnmZI7A4MaKNGHHWfT33
+R2
+IEbIC:S3SmTomei?AML6VT2
+S1
+R0
+w1652128066
+8C:/Users/user/Desktop/UCT-FPGA-Course-2022/Practicals/05 - Registers/UART/UART.v
+FC:/Users/user/Desktop/UCT-FPGA-Course-2022/Practicals/05 - Registers/UART/UART.v
+!i122 1
+L0 19 107
+VDg1SIo80bB@j0V0VzS_@n1
+R3
+r1
+!s85 0
+31
+!s108 1652615156.000000
+!s107 C:/Users/user/Desktop/UCT-FPGA-Course-2022/Practicals/05 - Registers/UART/UART.v|
+!s90 -F=C:/Users/user/Desktop/UCT-FPGA-Course-2022/Practicals/01 - Getting Started/vlog.opt|-F=|-reportprogress|300|-work|work|C:/Users/user/Desktop/UCT-FPGA-Course-2022/Practicals/05 - Registers/UART/UART.v|
+!s101 -O0
+!i113 1
+R4
+R5
+n@u@a@r@t

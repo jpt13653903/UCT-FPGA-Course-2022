@@ -44,7 +44,7 @@ module UART_Packets(
 	RxState rxState;
 	TxState txState;
 	reg [7:0] receiveDataLength  = 0;
-	reg [8:0] transmitDataLength = 0;
+	reg [7:0] transmitDataLength = 0;
 	UART UART_INST(
 		.ipClk    ( ipClk   		),
 		.ipReset  ( reset 			),
@@ -117,6 +117,7 @@ module UART_Packets(
 				if(!UART_TxBusy && opTxReady && ipTxStream.Valid) begin
 					UART_TxSend <= 1;
 					UART_TxData <= ipTxStream.Length;
+					transmitDataLength <= ipTxStream.Length;
 					opTxReady <= 0;
 					txState <= TX_SEND_DATA;
 				end else begin
@@ -124,12 +125,13 @@ module UART_Packets(
 				end
 			end
 			TX_SEND_DATA: begin
-				if (ipTxStream.EoP && !UART_TxBusy && opTxReady && ipTxStream.Valid) begin
+				if (transmitDataLength == 1 !UART_TxBusy && opTxReady && ipTxStream.Valid) begin
 					txState <= TX_IDLE;
 					opTxReady <= 1;
 					UART_TxData <= ipTxStream.Data;
 					UART_TxSend <= 1;
 				end else if(!UART_TxBusy && opTxReady && ipTxStream.Valid) begin
+					transmitDataLength <= transmitDataLength - 1;
 					UART_TxSend <= 1;
 					UART_TxData <= ipTxStream.Data;
 					opTxReady <= 0;

@@ -11,15 +11,21 @@ module UART_Packets_TB;
 	UART_PACKET ipTxStream;
 	UART_PACKET opRxStream;
 
+	ipTxStream.Source = 100;
+	ipTxStream.Destination = 200;
+	ipTxStream.Length = 1;
+	ipTxStream.SoP = 1;
+	ipTxStream.EoP = 1;
+	ipTxSend.Data = 8'b20;
+	ipTxStream.Valid = 1;
+
+
 	always #10 begin
 		ipClk <= ~ipClk;
 	end
 
 	initial begin
 		ipReset <=0;
-		
-
-
 	end
 
 	UART DUT(

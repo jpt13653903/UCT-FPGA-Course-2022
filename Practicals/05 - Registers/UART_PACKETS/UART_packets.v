@@ -76,16 +76,11 @@ module UART_Packets(
 		case(txState)
 			TX_IDLE: begin
 				$display("Got here");
-				$display("opTxReady %d", opTxReady);
-				$display("Start off packet %d", ipTxStream.SoP);
-				$display("ipTx valid %d", ipTxStream.Valid);
 				localTxData <= ipTxStream.Data;
 				if (ipTxStream.Valid && ipTxStream.SoP && opTxReady) begin
-					$display("WE ARE NOT GETTING HERE");
 					opTxReady <= 0;
 					txState <= TX_SEND_SYNC;
 				end else begin
-					$display("OR HERE");
 					if(!UART_TxBusy) begin
 						opTxReady <= 1;
 						UART_TxSend <= 0;
@@ -93,13 +88,17 @@ module UART_Packets(
 				end
 			end
 			TX_SEND_SYNC: begin
+
+				$display("WE ARE SENDING THE SYNC");
 				if(!UART_TxBusy && opTxReady && ipTxStream.Valid) begin
+					$display("HERE IS TO THE SYNC");
 					UART_TxSend <= 1;
 					UART_TxData <= 8'h55;
 					opTxReady <= 0;
 					txState <= TX_SEND_DESTINATION;
 				end else begin
 					if(!UART_TxBusy) begin
+						
 						opTxReady <= 1;
 						UART_TxSend <= 0;
 					end
@@ -107,6 +106,7 @@ module UART_Packets(
 			end
 			TX_SEND_DESTINATION: begin
 				if(!UART_TxBusy && opTxReady && ipTxStream.Valid) begin
+					$display("HERE IS TO THE DATA");
 					UART_TxSend <= 1;
 					UART_TxData <= ipTxStream.Destination;
 					opTxReady <= 0;
@@ -120,6 +120,7 @@ module UART_Packets(
 			end
 			TX_SEND_SOURCE: begin
 				if(!UART_TxBusy && opTxReady && ipTxStream.Valid) begin
+					$display("HERE IS TO THE SOURCE");
 					UART_TxSend <= 1;
 					UART_TxData <= ipTxStream.Source;
 					opTxReady <= 0;

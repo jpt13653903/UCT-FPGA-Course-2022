@@ -85,8 +85,9 @@ module UART #(parameter WIDTH =8, parameter CLOCK_DIV = 434) (
 					SENDING:begin
 							{localTxData, opTx} <= localTxData;
 							txBitCounter <= txBitCounter - 1;
+							$display("HERE IS THE BIT WE ARE SENDING, %d", opTx);
+
 							if(txBitCounter == 0)begin
-							
 								txState <= IDLE;
 								opTxBusy <= 0;
 							end

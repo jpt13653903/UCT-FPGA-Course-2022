@@ -5,7 +5,7 @@ module UART_Packets_TB;
 	reg ipClk = 0;
 	reg ipRx;
 	reg ipReset = 1;
-	logic  opTxReady = 1;
+	reg  opTxReady = 1;
 	wire opTx;
 
 	UART_PACKET ipTxStream;

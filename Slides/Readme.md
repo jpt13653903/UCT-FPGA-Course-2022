@@ -23,3 +23,8 @@ https://youtu.be/I6eZ4ZyI1Zg
 - https://www.youtube.com/watch?v=wWadNvkdLqY
 - https://youtu.be/MKiP-4o3cFI?t=500
 - `https://www.youtube.com/watch?v=YDC5zaEZGhM`
+
+## Practical useful links 
+
+### UART
+https://www.youtube.com/playlist?list=PL9K1-gZiaFsM7kZuaGGR5rDH2TbMJ56Mh

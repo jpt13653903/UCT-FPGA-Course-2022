@@ -72,55 +72,73 @@ module UART_Packets(
 			rxState <= RX_IDLE;
 			txState <= TX_IDLE;
 		end
-
+		
 		case(txState)
 			TX_IDLE: begin
-				$display("Got here");
-				localTxData <= ipTxStream.Data;
 				if (ipTxStream.Valid && ipTxStream.SoP && opTxReady) begin
+					
 					opTxReady <= 0;
 					txState <= TX_SEND_SYNC;
 				end else begin
 					if(!UART_TxBusy) begin
 						opTxReady <= 1;
-						UART_TxSend <= 0;
 					end
 				end
 			end
 			TX_SEND_SYNC: begin
+				
+				UART_TxData <= 8'h55;
 
-				$display("WE ARE SENDING THE SYNC");
-				if(!UART_TxBusy && opTxReady && ipTxStream.Valid) begin
-					$display("HERE IS TO THE SYNC");
+				if (ipTxStream.Valid && !UART_TxBusy) begin
 					UART_TxSend <= 1;
-					UART_TxData <= 8'h55;
-					opTxReady <= 0;
-					txState <= TX_SEND_DESTINATION;
-				end else begin
-					if(!UART_TxBusy) begin
-						
-						opTxReady <= 1;
-						UART_TxSend <= 0;
-					end
-				end
+					opTxReady <=0;
+				end else if(UART_TxBusy)begin
+					UART_TxSend <= 0;
+					opTxReady <=1;
+					// txState <= TX_SEND_DESTINATION;
+				end 
+				// if(!UART_TxBusy && opTxReady && ipTxStream.Valid) begin
+				// 	UART_TxSend <= 1;
+				// 	$display("BUSY STATE %d",  UART_TxBusy );
+				// 	opTxReady <= 0;
+				// 	// txState <= TX_SEND_DESTINATION;
+				// end else begin
+				// 	if(!UART_TxBusy) begin
+				// 		$display("I AM HERE %d",  UART_TxBusy );
+				// 		opTxReady <= 1;
+				// 		UART_TxSend <= 0;
+				// 	end
+				// end
 			end
 			TX_SEND_DESTINATION: begin
-				if(!UART_TxBusy && opTxReady && ipTxStream.Valid) begin
-					$display("HERE IS TO THE DATA");
+
+
+				UART_TxData <= ipTxStream.Destination;
+
+				if (ipTxStream.Valid && !UART_TxBusy) begin
+					$display("WE ARE SENDING THE DESTINATION NOW");
 					UART_TxSend <= 1;
-					UART_TxData <= ipTxStream.Destination;
-					opTxReady <= 0;
-					txState <= TX_SEND_SOURCE;
-				end else begin
-					if(!UART_TxBusy) begin	
-						opTxReady <= 1;
-						UART_TxSend <= 0;
-					end
-				end
+					opTxReady <=0;
+				end else if(UART_TxBusy)begin
+					$display("WAH WAH WAH");
+					UART_TxSend <= 0;
+					opTxReady <=1;
+					// txState <= TX_SEND_DESTINATION;
+				end 
+				// if(!UART_TxBusy && opTxReady && ipTxStream.Valid && !UART_TxSend) begin
+				// 	UART_TxSend <= 1;
+				// 	UART_TxData <= ipTxStream.Destination;
+				// 	opTxReady <= 0;
+				// 	// txState <= TX_SEND_SOURCE;
+				// end else begin
+				// 	if(!UART_TxBusy) begin	
+				// 		// opTxReady <= 1;
+				// 		UART_TxSend <= 0;
+				// 	end
+				// end
 			end
 			TX_SEND_SOURCE: begin
 				if(!UART_TxBusy && opTxReady && ipTxStream.Valid) begin
-					$display("HERE IS TO THE SOURCE");
 					UART_TxSend <= 1;
 					UART_TxData <= ipTxStream.Source;
 					opTxReady <= 0;
@@ -166,6 +184,7 @@ module UART_Packets(
 			end
 		endcase
 		
+
 
 		//------------------------------------------------------------------------------
 		// TODO: Implement the Rx stream

@@ -74,7 +74,7 @@ module UART #(parameter WIDTH =8, parameter CLOCK_DIV = 434) (
 			if(clockEnable == 1) begin
 				case(txState)
 					IDLE:begin
-						
+
 						localTxData <=  {1'b1, ipTxData, 1'b0};
 						if(ipTxSend == 1)begin
 							txState <= SENDING;

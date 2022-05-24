@@ -32,7 +32,7 @@ module UART_Packets_TB;
 
 	UART_Packets DUT(
 		.ipClk(ipClk),
-		.ipRx(ipRx),
+		.ipRx(opTx),
 		.ipReset(ipReset),
 		.opTxReady(opTxReady),
 		.opTx(opTx),

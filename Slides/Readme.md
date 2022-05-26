@@ -10,6 +10,10 @@ https://www.youtube.com/watch?v=8_cfnDGtIhU
 
 https://youtu.be/I6eZ4ZyI1Zg
 
+### Wishbone interface
+
+https://www.youtube.com/watch?v=r0nv-kQ-G9k
+
 ## Day 4
 
 ### Phase locked loops

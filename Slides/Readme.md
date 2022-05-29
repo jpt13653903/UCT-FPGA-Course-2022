@@ -14,6 +14,10 @@ https://youtu.be/I6eZ4ZyI1Zg
 
 https://www.youtube.com/watch?v=r0nv-kQ-G9k
 
+### AXI interface
+
+https://www.youtube.com/watch?v=j50D5rek1sU
+
 ## Day 4
 
 ### Phase locked loops

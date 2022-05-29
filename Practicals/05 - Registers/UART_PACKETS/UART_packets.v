@@ -5,7 +5,7 @@ module UART_Packets(
   input              ipClk,
   input              ipReset,
 
-  input  UART_PACKET ipTxStream,
+  input var  UART_PACKET ipTxStream,
   output logic       opTxReady,
   output logic       opTx,
 
@@ -15,11 +15,11 @@ module UART_Packets(
 	//------------------------------------------------------------------------------
 	// TODO: Instantiate the UART module here
 	//------------------------------------------------------------------------------
-	reg      	UART_TxSend;
-	reg 		reset = 0;
-	reg      	UART_TxBusy;
-	reg      	UART_RxValid;
-	reg  [7:0] 	UART_RX_DATA;
+	reg					UART_TxSend;
+	reg 				reset = 0;
+	reg					UART_TxBusy;
+	reg					UART_RxValid;
+	reg  [7:0]	UART_RX_DATA;
 	reg  [7:0]	localTxData;
 	reg  [7:0]	UART_TxData;
 
@@ -47,15 +47,15 @@ module UART_Packets(
 	reg [7:0] receiveDataLength  = 0;
 	reg [7:0] transmitDataLength = 0;
 	UART UART_INST(
-		.ipClk    ( ipClk   		),
-		.ipReset  ( reset 			),
+		.ipClk    ( ipClk   				),
+		.ipReset  ( reset 					),
 		.ipTxData ( UART_TxData	    ),
-		.ipTxSend ( UART_TxSend 	),
-		.opTxBusy ( UART_TxBusy 	),
-		.opTx     ( opTx  			),
-		.ipRx     ( ipRx  			),
-		.opRxData ( UART_RX_DATA 	),
-		.opRxValid( UART_RxValid 	)
+		.ipTxSend ( UART_TxSend 		),
+		.opTxBusy ( UART_TxBusy 		),
+		.opTx     ( opTx  					),
+		.ipRx     ( ipRx  					),
+		.opRxData ( UART_RX_DATA 		),
+		.opRxValid( UART_RxValid 		)
 	);
 
 	always @(posedge ipClk) begin
@@ -71,98 +71,95 @@ module UART_Packets(
 			opTxReady <= 1;
 			rxState <= RX_IDLE;
 			txState <= TX_IDLE;
+			UART_RxValid <= 0;
+			UART_RX_DATA <= 8'bz;
+			UART_TxData <= 8'bz;
+			UART_TxSend <= 0;
 		end
 		
 		case(txState)
 			TX_IDLE: begin
-				if (ipTxStream.Valid && ipTxStream.SoP && !UART_TxBusy && opTxReady) begin
+				if(!UART_TxBusy && !UART_TxSend) begin
+					opTxReady <= 1;
+				end
+
+				if (ipTxStream.Valid && ipTxStream.SoP && !UART_TxBusy && !UART_TxSend) begin
 					UART_TxSend <= 1;
 					opTxReady <= 0;
 					txState <= TX_SEND_SYNC;
 				end else begin
 					if(UART_TxBusy) begin
-						opTxReady <= 1;
 						UART_TxSend <= 0;
 					end
 				end
 			end
-			TX_SEND_SYNC: begin
-				
-				UART_TxData <= 8'h55;
 
-				if (ipTxStream.Valid && !UART_TxBusy && opTxReady) begin
+			TX_SEND_SYNC: begin
+				UART_TxData <= 8'h55;
+				if ( !UART_TxBusy && !UART_TxSend) begin
 					UART_TxSend <= 1;
+				end else if(UART_TxSend && UART_TxBusy) begin
 					opTxReady <=0;
 					txState <= TX_SEND_DESTINATION;
-				end else if(UART_TxBusy)begin
 					UART_TxSend <= 0;
-					opTxReady <=1;
-				end
+				end 
 			end
+
 			TX_SEND_DESTINATION: begin
 				UART_TxData <= ipTxStream.Destination;
-				if (ipTxStream.Valid && !UART_TxBusy && opTxReady) begin
+				if ( !UART_TxBusy && !UART_TxSend) begin
 					UART_TxSend <= 1;
-					opTxReady <=0;
+				end else if(UART_TxBusy && UART_TxSend)begin
 					txState <= TX_SEND_SOURCE;
-				end else if(UART_TxBusy)begin
 					UART_TxSend <= 0;
-					opTxReady <=1;
 				end 
-				
 			end
+
 			TX_SEND_SOURCE: begin
-				
 				UART_TxData <= ipTxStream.Source;
-				if (ipTxStream.Valid && !UART_TxBusy && opTxReady) begin
+				if (!UART_TxBusy && !UART_TxSend) begin
 					UART_TxSend <= 1;
-					opTxReady <=0;
+				end else if(UART_TxBusy && UART_TxSend)begin
 					txState <= TX_SEND_LENGTH;
-				end else if(UART_TxBusy)begin
 					UART_TxSend <= 0;
-					opTxReady <=1;
 				end 
 			end
+
 			TX_SEND_LENGTH: begin
 				
 				UART_TxData <= ipTxStream.Length;
 				transmitDataLength <= ipTxStream.Length;
-				if (ipTxStream.Valid && !UART_TxBusy && opTxReady) begin
+				if (!UART_TxBusy && !UART_TxSend) begin
 					UART_TxSend <= 1;
-					opTxReady <=0;
+					opTxReady <= 0;
+				end else if(UART_TxBusy && UART_TxSend)begin
 					txState <= TX_SEND_DATA;
-				end else if(UART_TxBusy)begin
 					UART_TxSend <= 0;
-					opTxReady <=1;
 				end
 			end
-			TX_SEND_DATA: begin
-				$display("WE ARE SENDING DATA");
-				 UART_TxData <= ipTxStream.Data;
-				if(!UART_TxBusy && opTxReady && ipTxStream.Valid) begin
 
-					if (transmitDataLength == 1) begin
-						UART_TxSend <= 1;
-						opTxReady <=0;
-						txState <= TX_FINISHED;
+			TX_SEND_DATA: begin
+				 UART_TxData <= ipTxStream.Data;
+				if(!UART_TxBusy && !UART_TxSend) begin
+					// check length
+					$display("DATA IS, %d", UART_TxData);
+					$display("TRANSMIT DATA LENGTH, %d", transmitDataLength);
+					UART_TxSend <= 1;
+					opTxReady <=0;
+					if (transmitDataLength == 1 || ipTxStream.EoP ) begin
+						txState <= TX_IDLE;
+						UART_TxSend <= 0;
 					end else begin
 						transmitDataLength <= transmitDataLength - 1;
-					end
-					UART_TxSend <= 1;
-					
-					opTxReady <= 0;
+					end 
 				end else begin
-					if(!UART_TxBusy) begin
-						opTxReady <= 1;
+					if(UART_TxBusy && UART_TxSend) begin
+						 txState <= TX_IDLE;
 						UART_TxSend <= 0;
 					end
 				end
 			end
-
-		
-			TX_FINISHED: begin
-				UART_TxData <= 0;
-			end
+			default: txState <= TX_IDLE;
 		endcase
 		
 
@@ -195,6 +192,7 @@ module UART_Packets(
 				RX_GET_DATA: begin
 					opRxStream.Data <= UART_RX_DATA;
 					opRxStream.Valid <= 1;
+					//check length
 					if (receiveDataLength == 1) begin
 						opRxStream.EoP <= 1;	
 						rxState <= RX_IDLE;	
@@ -202,10 +200,10 @@ module UART_Packets(
 					receiveDataLength <= receiveDataLength - 1;
 				end
 			endcase
-		end else 
-			if(opRxStream.Valid)begin
-				opRxStream.SoP <= 0;
+		end else if(opRxStream.Valid)begin
+			opRxStream.SoP <= 0;
 			opRxStream.Valid <= 0;
 		end
 	end
-endmodule
+endmodule   
+ 

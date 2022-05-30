@@ -20,7 +20,7 @@ module UART_Packets_TB;
 		ipClk <= ~ipClk;
 	end
 
-	integer i = 5;
+	integer i = 10;
 	initial begin
 		ipTxStream.Source <= 100;
 		ipTxStream.Destination <= 200;
@@ -42,7 +42,6 @@ module UART_Packets_TB;
 
 	always @(negedge ipTxStream.Valid) begin
 			if(!opTxReady) begin
-				
 				i<= i-1;
 			end
 	end

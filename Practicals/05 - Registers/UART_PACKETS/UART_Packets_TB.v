@@ -43,6 +43,15 @@ module UART_Packets_TB;
 	always @(negedge ipTxStream.Valid) begin
 			if(!opTxReady) begin
 				i<= i-1;
+				ipTxStream.SoP <= 0;
+			end
+
+			if (opTxReady) begin
+				ipTxStream.SoP <= 0;
+			end
+
+			if(i == 3 ) begin
+				ipTxStream.EoP = 1;
 			end
 	end
 

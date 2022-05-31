@@ -20,7 +20,6 @@ module UART_Packets(
 	reg					UART_TxBusy;
 	reg					UART_RxValid;
 	reg  [7:0]	UART_RX_DATA;
-	reg  [7:0]	localTxData;
 	reg  [7:0]	UART_TxData;
 
 	//Variables to store local values;
@@ -150,18 +149,19 @@ module UART_Packets(
 				 UART_TxData <= localTxData;
 				if(!UART_TxBusy && !UART_TxSend) begin
 					// check length
-					$display("DATA IS, %d", UART_TxData);
-					$display("TRANSMIT DATA LENGTH, %d", localTxLength);
+					opTxReady <= 0;
+					localTxData <= ipTxStream.Data;
+					$display("TRANSMIT DATA LENGTH, %d", transmitDataLength);
 					UART_TxSend <= 1;
-					opTxReady <=0;
-					if (localTxLength == 1) begin
+				end else if(UART_TxBusy && UART_TxSend) begin
+					UART_TxSend <= 0;
+					opTxReady <= 0;
+					if (transmitDataLength == 1 || ipTxStream.EoP) begin
 						txState <= TX_IDLE;
 					end else begin
 						localTxLength <= localTxLength - 1;
-					end 
-				end else if(UART_TxBusy && UART_TxSend) begin
-						txState <= TX_IDLE;
-						UART_TxSend <= 0;
+						opTxReady <=1;
+					end
 				end
 			end
 			default: txState <= TX_IDLE;

@@ -32,6 +32,10 @@ https://www.youtube.com/watch?v=j50D5rek1sU
 - https://youtu.be/MKiP-4o3cFI?t=500
 - `https://www.youtube.com/watch?v=YDC5zaEZGhM`
 
+### Gray code and ambiguity
+
+https://www.youtube.com/watch?v=HlYLhsK7eOA&list=WL&index=1
+
 ## Practical useful links 
 
 ### UART

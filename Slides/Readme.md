@@ -12,12 +12,12 @@ https://youtu.be/I6eZ4ZyI1Zg
 
 ### Wishbone interface
 
-https://www.youtube.com/watch?v=r0nv-kQ-G9k
+- https://www.youtube.com/watch?v=r0nv-kQ-G9k
 
 ### AXI interface
 
-https://www.youtube.com/watch?v=j50D5rek1sU
-https://support.xilinx.com/s/article/1053914?language=en_US
+- https://www.youtube.com/watch?v=j50D5rek1sU
+- https://support.xilinx.com/s/article/1053914?language=en_US
 
 ## Day 4
 

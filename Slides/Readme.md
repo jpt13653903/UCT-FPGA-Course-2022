@@ -1,5 +1,9 @@
 # Useful resources
 
+## Swansea course
+
+https://github.com/STFleming/EmSys
+
 ## Day 3
 
 ### FPGA pipelines

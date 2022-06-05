@@ -27,7 +27,6 @@ module UART_Packets(
 	reg [7:0] localTxSource;
 	reg [7:0] localTxLength;
 	reg [7:0] localTxData;
-	reg localTxValid;
 
 	typedef enum { 
 		TX_IDLE, 
@@ -94,7 +93,6 @@ module UART_Packets(
 					localTxLength <= ipTxStream.Length;
 					localTxSource <= ipTxStream.Source;
 					localTxData <= ipTxStream.Data;
-					localTxValid <= ipTxStream.Valid;
 
 					UART_TxSend <= 1;
 					opTxReady <= 0;
@@ -148,15 +146,11 @@ module UART_Packets(
 			end
 
 			TX_SEND_DATA: begin
-				if(localTxValid) begin
-					UART_TxData <= localTxData;
-				end
-				 
+				 UART_TxData <= localTxData;
 				if(!UART_TxBusy && !UART_TxSend) begin
 					// check length
 					opTxReady <= 0;
 					localTxData <= ipTxStream.Data;
-					localTxValid <= ipTxStream.Valid;
 					$display("TRANSMIT DATA LENGTH, %d", transmitDataLength);
 					UART_TxSend <= 1;
 				end else if(UART_TxBusy && UART_TxSend) begin

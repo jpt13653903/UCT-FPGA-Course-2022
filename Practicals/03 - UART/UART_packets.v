@@ -20,8 +20,14 @@ module UART_Packets(
 	reg					UART_TxBusy;
 	reg					UART_RxValid;
 	reg  [7:0]	UART_RX_DATA;
-	reg  [7:0]	localTxData;
 	reg  [7:0]	UART_TxData;
+
+	//Variables to store local values;
+	reg [7:0] locaTxDestination;
+	reg [7:0] localTxSource;
+	reg [7:0] localTxLength;
+	reg [7:0] localTxData;
+	reg localTxValid;
 
 	typedef enum { 
 		TX_IDLE, 
@@ -84,6 +90,12 @@ module UART_Packets(
 				end
 
 				if (ipTxStream.Valid && ipTxStream.SoP && !UART_TxBusy && !UART_TxSend) begin
+					locaTxDestination <= ipTxStream.Destination;
+					localTxLength <= ipTxStream.Length;
+					localTxSource <= ipTxStream.Source;
+					localTxData <= ipTxStream.Data;
+					localTxValid <= ipTxStream.Valid;
+
 					UART_TxSend <= 1;
 					opTxReady <= 0;
 					txState <= TX_SEND_SYNC;
@@ -105,7 +117,7 @@ module UART_Packets(
 			end
 
 			TX_SEND_DESTINATION: begin
-				UART_TxData <= ipTxStream.Destination;
+				UART_TxData <= locaTxDestination;
 				if ( !UART_TxBusy && !UART_TxSend) begin
 					UART_TxSend <= 1;
 				end else if(UART_TxBusy && UART_TxSend)begin
@@ -115,7 +127,7 @@ module UART_Packets(
 			end
 
 			TX_SEND_SOURCE: begin
-				UART_TxData <= ipTxStream.Source;
+				UART_TxData <= localTxSource;
 				if (!UART_TxBusy && !UART_TxSend) begin
 					UART_TxSend <= 1;
 				end else if(UART_TxBusy && UART_TxSend)begin
@@ -126,8 +138,7 @@ module UART_Packets(
 
 			TX_SEND_LENGTH: begin
 				
-				UART_TxData <= ipTxStream.Length;
-				transmitDataLength <= ipTxStream.Length;
+				UART_TxData <= localTxLength;
 				if (!UART_TxBusy && !UART_TxSend) begin
 					UART_TxSend <= 1;
 				end else if(UART_TxBusy && UART_TxSend)begin
@@ -137,19 +148,24 @@ module UART_Packets(
 			end
 
 			TX_SEND_DATA: begin
-				 UART_TxData <= ipTxStream.Data;
+				if(localTxValid) begin
+					UART_TxData <= localTxData;
+				end
+				 
 				if(!UART_TxBusy && !UART_TxSend) begin
 					// check length
 					opTxReady <= 0;
+					localTxData <= ipTxStream.Data;
+					localTxValid <= ipTxStream.Valid;
 					$display("TRANSMIT DATA LENGTH, %d", transmitDataLength);
 					UART_TxSend <= 1;
 				end else if(UART_TxBusy && UART_TxSend) begin
 					UART_TxSend <= 0;
 					opTxReady <= 0;
-					if (transmitDataLength == 1) begin
+					if (transmitDataLength == 1 || ipTxStream.EoP) begin
 						txState <= TX_IDLE;
 					end else begin
-						transmitDataLength <= transmitDataLength - 1;
+						localTxLength <= localTxLength - 1;
 						opTxReady <=1;
 					end
 				end

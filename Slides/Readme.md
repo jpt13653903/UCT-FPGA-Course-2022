@@ -4,6 +4,10 @@
 
 https://github.com/STFleming/EmSys
 
+## Cornell course
+
+https://www.youtube.com/playlist?list=PLDqMkB5cbBA4OW0fDTu1FY6aw4uBWOpBa
+
 ## Day 3
 
 ### FPGA pipelines

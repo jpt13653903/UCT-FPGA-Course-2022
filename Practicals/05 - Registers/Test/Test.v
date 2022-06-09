@@ -1,30 +1,32 @@
-module Test (
+module Test #(parameter BLOCK_WIDTH = 32) (
   input ipClk,
   input ipReset,
   input ipRx,
   output opTx
 );
 
-  reg opTxReady; 
+  reg opTxReady = 0;
+  reg [7:0] operationAddress; 
   UART_PACKET opRxStream;
   UART_PACKET ipTxStream;
 
   RD_REGISTERS readRegisters;
   WR_REGISTERS writeRegisters;
 
-  // need to generate input and output addresses between 2 interfaces
-  //need to generate input and output registers for 2 interfaces
-
+  //need memory to communicate read and write
+  reg [BLOCK_WIDTH -1:0] localWriteMemory;
+  reg [BLOCK_WIDTH -1:0] localReadMemory;
+  reg ipWrEnable
 
   Registers registers(
     .ipClk(ipClk),
     .ipReset(ipReset),
     .ipRdRegisters(readRegisters),
     .opWrRegisters(writeRegisters),
-    .ipAddress(ipTxStream.Destination),
-    .ipWrData(ipTxStream.Data),
-    .ipWrEnable(opTxReady && ipTxStream.Valid),
-    .opRdData(opRxStream.Data)
+    .ipAddress(operationAddress),
+    .ipWrData(localWriteMemory),
+    .ipWrEnable(ipWrEnable),
+    .opRdData(localReadMemory)
   );
 
   UART_Packets uartPackets(

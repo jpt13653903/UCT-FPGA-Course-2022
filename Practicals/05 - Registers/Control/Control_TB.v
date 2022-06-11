@@ -1,11 +1,12 @@
 module Control_TB;
 
 reg [31:0] opWriteMemory;
-reg ipClk = 0;
+reg ipClk;
 reg opTx;
 UART_PACKET ipTxStream;
 
 initial begin
+  opWriteMemory <=31'bz;
   ipClk <= 0;
   ipTxPacket.Valid <=1;
   ipTxStream.SoP <= 1;

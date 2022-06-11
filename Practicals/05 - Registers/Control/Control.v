@@ -58,15 +58,25 @@ module Control #(param DATA_LENGTH = 4, param BIT_WIDTH = 8) (
 				dataLength <= DATA_LENGTH;
 				if (localTxPacket.Valid && localTxPacket.Source == 0'x00 ) begin
 					controlState <= CONTROL_READ_DATA;
-				end else if(localTxPacket.Valid && localTxPacket.Source == 0'x01) begin
+				end else if(localTxPacket.Source == 0'x01) begin
 					controlState <= CONTROL_WRITE_DATA;
 				end
 			end
 			CONTROL_READ_DATA: begin
 				//use address to write to this location
 				// during this state we want to send whatever data we have
-				if(dataLength != 0) begin
+				if(dataLength > 0 && opRxPacket.Valid) begin
+					dataLength <= dataLength - 1;
 					opRxPacket.Data <= ipReadMemory[(BIT_WIDTH*dataLength) - 1:BIT_WIDTH  * (dataLength - 1)]
+					
+					if (dataLength == DATA_LENGTH) begin
+						opRxPacket.SoP <= 1;
+					end else if(dataLength == 1)  begin
+						opRxPacket.Eop <= 1;
+					end
+					opRxPacket.Valid <= 1;
+				end else begin
+					opRxPacket.Valid <= 0;
 				end
 
 			end
@@ -77,7 +87,7 @@ module Control #(param DATA_LENGTH = 4, param BIT_WIDTH = 8) (
 				if(ipTxPacket.Valid && ipWrEnable) begin	// only enable write on valid and enable
 					// shift the bits in 
 					opWriteMemory <= { localTxData, opWriteMemory[31:8]};
-					if(txLength > 1 ) begin
+					if(txLength !=0) begin
 						txLength <= txLength -1;
 					end else begin
 						controlState <= CONTROL_IDLE;

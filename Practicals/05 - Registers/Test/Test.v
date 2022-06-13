@@ -5,8 +5,9 @@ module Test #(parameter BLOCK_WIDTH = 32) (
   output opTx
 );
 
-  reg opTxReady = 0;
+  reg opTxReady;
   reg [7:0] ipAddress; 
+  reg opTxWrEnable;
   UART_PACKET opRxStream;
   UART_PACKET ipTxStream;
 
@@ -16,7 +17,7 @@ module Test #(parameter BLOCK_WIDTH = 32) (
   //need memory to communicate read and write
   reg [BLOCK_WIDTH -1:0] ipWrData;
   reg [BLOCK_WIDTH -1:0] localReadMemory;
-  reg ipWrEnable
+  reg opTxWrEnable;
 
 
   TransmitController txController(
@@ -25,8 +26,9 @@ module Test #(parameter BLOCK_WIDTH = 32) (
     .opWrRegisters(opWrRegisters),
     .opAddress(ipAddress), // this will be input to the Registers module, taken from incoming stream
     .opWrData(ipWrData),// data from the packet that will be input to the registers module
-    .ipWrEnable(opTxReady),
-    .ipTxStream(ipTxStream)
+    .ipTxReady(opTxReady), // will use this to gate on the ready of the packet module
+    .ipTxStream(ipTxStream),
+    .opTxWrEnable(opTxWrEnable)
   )
   
 
@@ -37,7 +39,7 @@ module Test #(parameter BLOCK_WIDTH = 32) (
     .opWrRegisters(opWrRegisters),
     .ipAddress(ipAddress), 
     .ipWrData(ipWrData),
-    .ipWrEnable(opTxReady),
+    .ipWrEnable(opTxWrEnable),
     .opRdData(localReadMemory)
   );
 

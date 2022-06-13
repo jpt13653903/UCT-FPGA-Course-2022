@@ -10,11 +10,11 @@ module TxController #(DATA_LENGTH = 4) (
   output reg [7:0]      opAddress,
   output reg [31:0]     opWrData
 );
-  typedef enum type { 
+  typedef enum { 
     IDLE,
     GET_ADDRESS,
     GET_OPERATION, 
-    GET_DATA,
+    GET_DATA
   } State;
   //local reset
   reg reset;
@@ -26,7 +26,7 @@ module TxController #(DATA_LENGTH = 4) (
     if (reset) begin
       opWrData <= 32'bz;
       opAddress <= 8'bz;  
-      State <= IDLE;
+      state <= IDLE;
       opTxWrEnable <= 0;
     end
 

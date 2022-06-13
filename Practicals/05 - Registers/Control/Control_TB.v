@@ -1,30 +1,51 @@
+import Structures::*;
+`timescale 1ns/1ns;
 module Control_TB;
-
 reg [31:0] opWriteMemory;
+reg [31:0] ipReadMemory;
 reg ipClk;
 reg opTx;
-UART_PACKET ipTxStream;
+reg ipReset;
+UART_PACKET ipTxPacket;
+UART_PACKET opRxPacket;
+reg ipWrEnable;
 
 initial begin
   opWriteMemory <=31'bz;
   ipClk <= 0;
   ipTxPacket.Valid <=1;
-  ipTxStream.SoP <= 1;
-  ipTxStream.Eop <= 0;
-  ipTxStream.Data <= 8'h55;
+  ipTxPacket.SoP <= 1;
+  ipTxPacket.EoP <= 0;
+  ipTxPacket.Length <=4;
+  ipTxPacket.Data <= 8'h55;
+  ipTxPacket.Source <= 8'h01;
+  ipTxPacket.Destination <= 8'h00;
+  ipWrEnable <= 1;
+  ipReset <= 1;
+end
+
+initial #5 begin
+  ipReset <=0;
 end
 
 always #10 ipClk = ~ipClk;
 
 always @(negedge ipClk) begin
-  ipTxStream.Valid <= 0;
+  
+  // ipWrEnable <= 0;
 end
 
-always @(posedge) begin
+always @(posedge ipClk) begin
   //create 4 packets that will test the input
   for (int i=0; i<4; i++) begin
-    ipTxStream.Data <= i;
-    ipTxStream.Valid <= 1;
+    if(i == 0 ) begin
+      ipWrEnable <= 1;
+    end else begin
+      ipWrEnable <=0;
+    end
+    ipTxPacket.Data <= i + 1;
+    ipTxPacket.Valid <= 1;
+    
   end
 
 end
@@ -32,8 +53,11 @@ end
 Control DUT(
   .ipClk(ipClk),
   .opWriteMemory(opWriteMemory),
-  .opTx(opTx),
-  .ipTxStream(ipTxStream)
+  .ipTxPacket(ipTxPacket),
+  .ipWrEnable(ipWrEnable),
+  .ipReadMemory(ipReadMemory),
+  .ipReset(ipReset),
+  .opRxPacket(opRxPacket)
 );
 
 endmodule //Control_TB

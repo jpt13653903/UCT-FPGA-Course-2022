@@ -23,8 +23,8 @@ module Test #(parameter BLOCK_WIDTH = 32) (
     .ipClk(ipClk),
     .ipReset(ipReset),
     .opWrRegisters(opWrRegisters),
-    .ipAddress(ipAddress),
-    .ipWrData(ipWrData),
+    .opAddress(ipAddress), // this will be input to the Registers module, taken from incoming stream
+    .opWrData(ipWrData),// data from the packet that will be input to the registers module
     .ipWrEnable(opTxReady),
     .ipTxStream(ipTxStream)
   )
@@ -35,7 +35,7 @@ module Test #(parameter BLOCK_WIDTH = 32) (
     .ipReset(ipReset),
     .ipRdRegisters(readRegisters),
     .opWrRegisters(opWrRegisters),
-    .ipAddress(ipAddress),
+    .ipAddress(ipAddress), 
     .ipWrData(ipWrData),
     .ipWrEnable(opTxReady),
     .opRdData(localReadMemory)

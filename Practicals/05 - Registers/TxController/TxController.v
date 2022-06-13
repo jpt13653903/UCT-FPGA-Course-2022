@@ -39,6 +39,7 @@ module TxController #(DATA_LENGTH = 4) (
      case (state)
       IDLE: begin
         dataLength <= DATA_LENGTH;
+        $display("We got here");
         opTxWrEnable <= 0;
         if(ipTxStream.Source == 8'h01 && ipTxStream.SoP == 1) begin
           state <= GET_ADDRESS;

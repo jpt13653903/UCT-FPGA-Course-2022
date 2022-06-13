@@ -1,17 +1,19 @@
 `timescale 1ns/1ns
 
 import Structures::*;
+
 module TxController_TB;
   reg ipClk = 0;
   reg ipReset = 1;
-  reg opTxReady = 0;
-  integer count = 6;
+  reg opTxReady = 1;
+  reg [4:0] count = 4'd8;
   reg opTxWrEnable = 0;
+  reg [7:0] ipAddress;
   reg [31:0] ipWrData;
   UART_PACKET ipTxPacket;
   
   always #10 begin
-    ipClk ~= ipClk;
+    ipClk = ~ipClk;
   end
 
   initial begin
@@ -31,15 +33,25 @@ module TxController_TB;
 
   always @(negedge ipClk) begin
     ipTxPacket.Valid <= 0;
-    ipTxReady <= 0
+    opTxReady <= 0;
+    if (count == 0) begin
+      $stop;
+    end
   end
 
-  while (count > 0) begin
-    if(opTxWrEnable && !ipTxPacket.Valid && !ipTxReady) begin
-      count <= count - 1;
-      ipTxPacket.Valid <= 1;
-      ipTxReady <= 1;
-    end    
+always @(posedge opTxWrEnable) begin
+  count <= count - 1;
+end
+  
+  initial begin
+    
+    while (count>0) begin
+      if(opTxWrEnable && !ipTxPacket.Valid && !opTxReady) begin
+        
+        ipTxPacket.Valid <= 1;
+        opTxReady <= 1;
+      end    
+    end
   end
 
   TxController DUT(
@@ -50,7 +62,6 @@ module TxController_TB;
     .ipTxReady(opTxReady),
     .ipTxStream(ipTxPacket),
     .opTxWrEnable(opTxWrEnable)
-  )
-
+  );
 
 endmodule //TxController_TB

@@ -6,26 +6,38 @@ module Test #(parameter BLOCK_WIDTH = 32) (
 );
 
   reg opTxReady = 0;
-  reg [7:0] operationAddress; 
+  reg [7:0] ipAddress; 
   UART_PACKET opRxStream;
   UART_PACKET ipTxStream;
 
   RD_REGISTERS readRegisters;
-  WR_REGISTERS writeRegisters;
+  WR_REGISTERS opWrRegisters;
 
   //need memory to communicate read and write
-  reg [BLOCK_WIDTH -1:0] localWriteMemory;
+  reg [BLOCK_WIDTH -1:0] ipWrData;
   reg [BLOCK_WIDTH -1:0] localReadMemory;
   reg ipWrEnable
+
+
+  TransmitController txController(
+    .ipClk(ipClk),
+    .ipReset(ipReset),
+    .opWrRegisters(opWrRegisters),
+    .ipAddress(ipAddress),
+    .ipWrData(ipWrData),
+    .ipWrEnable(opTxReady),
+    .ipTxStream(ipTxStream)
+  )
+  
 
   Registers registers(
     .ipClk(ipClk),
     .ipReset(ipReset),
     .ipRdRegisters(readRegisters),
-    .opWrRegisters(writeRegisters),
-    .ipAddress(operationAddress),
-    .ipWrData(localWriteMemory),
-    .ipWrEnable(ipWrEnable),
+    .opWrRegisters(opWrRegisters),
+    .ipAddress(ipAddress),
+    .ipWrData(ipWrData),
+    .ipWrEnable(opTxReady),
     .opRdData(localReadMemory)
   );
 

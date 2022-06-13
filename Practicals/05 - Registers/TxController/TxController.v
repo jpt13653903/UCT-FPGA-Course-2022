@@ -6,10 +6,10 @@ module TxController #(DATA_LENGTH = 4) (
   input                 ipTxReady,
   input UART_PACKET     ipTxStream,
 
-  output reg            opTxWrEnable
+  output reg            opTxWrEnable,
   output WR_REGISTERS   opWrRegisters,
   output reg [7:0]      opAddress,
-  output reg [31:0]     opWrData,
+  output reg [31:0]     opWrData
 );
   typedef enum type { 
     IDLE,
@@ -47,7 +47,7 @@ module TxController #(DATA_LENGTH = 4) (
       end
       GET_ADDRESS: begin
         opAddress <= ipTxStream.Data;
-        state <= 
+        state <= GET_DATA;
       end
       GET_DATA: begin
         if(dataLength > 0) begin

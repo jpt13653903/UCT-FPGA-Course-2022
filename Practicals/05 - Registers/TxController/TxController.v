@@ -7,7 +7,6 @@ module TxController #(DATA_LENGTH = 4) (
   input UART_PACKET     ipTxStream,
 
   output reg            opTxWrEnable,
-  output WR_REGISTERS   opWrRegisters,
   output reg [7:0]      opAddress,
   output reg [31:0]     opWrData
 );
@@ -41,7 +40,7 @@ module TxController #(DATA_LENGTH = 4) (
       IDLE: begin
         dataLength <= DATA_LENGTH;
         opTxWrEnable <= 0;
-        if(ipTxStream.Source == 8'h01) begin
+        if(ipTxStream.Source == 8'h01 && ipTxStream.SoP == 1) begin
           state <= GET_ADDRESS;
         end
       end
@@ -50,9 +49,9 @@ module TxController #(DATA_LENGTH = 4) (
         state <= GET_DATA;
       end
       GET_DATA: begin
-        if(dataLength > 0) begin
+        if(dataLength > 0 && !ipTxStream.EoP) begin
           dataLength <= dataLength -1;
-          opWrData <= {opWrData, ipTxStream.Data}
+          opWrData <= {opWrData, ipTxStream.Data};
         end else begin
           opTxWrEnable <= 1;
           state <= IDLE;

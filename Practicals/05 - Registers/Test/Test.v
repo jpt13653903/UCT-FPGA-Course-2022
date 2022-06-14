@@ -6,7 +6,8 @@ module Test #(parameter BLOCK_WIDTH = 32) (
 );
 
   reg opTxReady;
-  reg [7:0] ipAddress; 
+  reg [7:0] ipTxAddress; 
+  reg [7:0] ipRxAddress;
   reg opTxWrEnable;
   UART_PACKET opRxStream;
   UART_PACKET ipTxStream;
@@ -24,12 +25,21 @@ module Test #(parameter BLOCK_WIDTH = 32) (
     .ipClk(ipClk),
     .ipReset(ipReset),
     .opWrRegisters(opWrRegisters),
-    .opAddress(ipAddress), // this will be input to the Registers module, taken from incoming stream
+    .opAddress(ipTxAddress), // this will be input to the Registers module, taken from incoming stream
     .opWrData(ipWrData),// data from the packet that will be input to the registers module
     .ipTxReady(opTxReady), // will use this to gate on the ready of the packet module
     .ipTxStream(ipTxStream),
     .opTxWrEnable(opTxWrEnable)
-  )
+  );
+
+  RxController rxController(
+    .ipClk(ipClk),
+    .ipReset(ipReset),
+    .ipRdRegisters(ipRdRegisters),
+    .opRdData(opRdData),
+    .ipAddress(ipRxAddress),
+    .opRxStream(opRxStream),
+  );
   
 
   Registers registers(

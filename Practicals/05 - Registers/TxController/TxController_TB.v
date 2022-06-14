@@ -4,10 +4,10 @@ import Structures::*;
 
 module TxController_TB;
   reg ipClk = 0;
-  reg ipReset = 1;
-  reg opTxReady = 1;
+  reg ipReset = 1'b1;
+  reg opTxReady = 1'b1;
   reg [4:0] count = 4'd8;
-  reg opTxWrEnable = 0;
+  reg opTxWrEnable = 1;
   reg [7:0] ipAddress;
   reg [31:0] ipWrData;
   UART_PACKET ipTxPacket;
@@ -18,8 +18,10 @@ module TxController_TB;
 
   initial begin
     #20 ipReset <= 0;
-    ipTxPacket.Valid <=1;
-    ipTxPacket.SoP <= 1;
+    #25 opTxWrEnable <= 1;
+    ipTxPacket.Valid <= 1'b1;
+     opTxReady = 1'b1;
+    ipTxPacket.SoP <= 1'b1;
     ipTxPacket.EoP <= 0;
     ipTxPacket.Length <= 4;
     ipTxPacket.Data <= count;
@@ -29,9 +31,20 @@ module TxController_TB;
 
   always @(posedge ipClk) begin
     ipTxPacket.Data <= count;
+    if (count>0) begin
+    
+      if(count > 0 && !ipTxPacket.Valid && !opTxReady) begin
+        $display("VALID? %d", ipTxPacket.Valid);
+        ipTxPacket.Valid <= 1'b1;
+        opTxReady <= 1'b1;
+      end else if(count === 0) begin
+        $stop;
+      end    
+    end
   end
 
-  always @(negedge ipClk) begin
+  always @(negedge opTxWrEnable) begin
+    $display("WHY ARE WE DOING THIS");
     ipTxPacket.Valid <= 0;
     opTxReady <= 0;
     if (count == 0) begin
@@ -39,20 +52,13 @@ module TxController_TB;
     end
   end
 
-always @(posedge opTxWrEnable) begin
-  count <= count - 1;
-end
-  
-  initial begin
-    
-    while (count>0) begin
-      if(opTxWrEnable && !ipTxPacket.Valid && !opTxReady) begin
-        
-        ipTxPacket.Valid <= 1;
-        opTxReady <= 1;
-      end    
-    end
+  always @(posedge opTxWrEnable) begin
+    count <= count - 1;
   end
+  
+
+    
+   
 
   TxController DUT(
     .ipClk(ipClk),

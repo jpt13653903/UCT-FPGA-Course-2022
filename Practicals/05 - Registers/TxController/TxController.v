@@ -23,19 +23,19 @@ module TxController #(DATA_LENGTH = 4) (
  
   always @(posedge ipClk) begin
     reset <= ipReset;
-    if (reset) begin
-      opWrData <= 32'bz;
-      opAddress <= 8'bz;  
-      state <= IDLE;
-      opTxWrEnable <= 0;
-    end
-
     /******************************************************************************************************
     * PROCEDURE TO TRANSMIT INVOLVES COLLECTING 4 PACKETS AND STORING THEIR DATA IN THE WRITE REGISTERS. *
     * THE FIRST DATA ON SYNC WILL BE THE ADDRESS. EVERYTHING WILL BE DONE ON VALID AND READY.            *
     ******************************************************************************************************/
 
-    if (ipTxStream.Valid && ipTxReady) begin
+    $display("ipTxStreamValid, %d", ipTxStream.Valid);
+    $display("ipTxReady %d", ipTxReady);
+    if (reset) begin
+      opWrData <= 32'bz;
+      opAddress <= 8'bz;  
+      state <= IDLE;
+      opTxWrEnable <= 0;
+    end else if (ipTxStream.Valid && ipTxReady) begin
      case (state)
       IDLE: begin
         dataLength <= DATA_LENGTH;

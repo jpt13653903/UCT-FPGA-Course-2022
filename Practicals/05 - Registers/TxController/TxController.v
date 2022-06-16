@@ -35,26 +35,28 @@ module TxController #(DATA_LENGTH = 4) (
       opAddress <= 8'bz;  
       state <= IDLE;
       opTxWrEnable <= 0;
-    end else if (ipTxStream.Valid && ipTxReady) begin
+    end else if (ipTxStream.Valid) begin
      case (state)
       IDLE: begin
         dataLength <= DATA_LENGTH;
         $display("We got here");
-        opTxWrEnable <= 0;
+        opTxWrEnable <= 1;
         if(ipTxStream.Source == 8'h01 && ipTxStream.SoP == 1) begin
           state <= GET_ADDRESS;
+          opTxWrEnable <= 0;
         end
       end
       GET_ADDRESS: begin
         opAddress <= ipTxStream.Data;
-        state <= GET_DATA;
+        state <= GET_DATA; 
       end
       GET_DATA: begin
-        if(dataLength > 0 && !ipTxStream.EoP) begin
+        opTxWrEnable <=0;
+        if(dataLength > 0) begin
           dataLength <= dataLength -1;
           opWrData <= {opWrData, ipTxStream.Data};
-        end else begin
           opTxWrEnable <= 1;
+        end else begin
           state <= IDLE;
         end
       end

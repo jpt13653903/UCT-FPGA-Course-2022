@@ -28,20 +28,27 @@ module RxController #(
       dataLength <= 4;
       state <= IDLE;
     end else begin
-      case (state)
-        IDLE: begin
-          
-        end
-        GET_ADDRESS: begin
-          
-        end
-        SET_DATA: begin
-          
-        end
-        default: begin
-          state <= IDLE;
-        end
-      endcase
+      if (ipRxStream.Valid) begin
+         case (state)
+          IDLE: begin
+            //Check for the sync bit
+
+
+          end
+          GET_ADDRESS: begin
+            
+          end
+          SET_DATA: begin
+            
+          end
+          default: begin
+            state <= IDLE;
+          end
+        endcase
+      end
+
+
+     
     end
   end
 

@@ -3,7 +3,6 @@ import Structures::*;
 module TxController #(DATA_LENGTH = 4) (
   input                 ipClk,
   input                 ipReset,
-  input                 ipTxReady,
   input UART_PACKET     ipTxStream,
 
   output reg            opTxWrEnable,
@@ -29,7 +28,6 @@ module TxController #(DATA_LENGTH = 4) (
     ******************************************************************************************************/
 
     $display("ipTxStreamValid, %d", ipTxStream.Valid);
-    $display("ipTxReady %d", ipTxReady);
     if (reset) begin
       opWrData <= 32'bz;
       opAddress <= 8'bz;  
@@ -40,23 +38,24 @@ module TxController #(DATA_LENGTH = 4) (
       IDLE: begin
         dataLength <= DATA_LENGTH;
         $display("We got here");
-        opTxWrEnable <= 1;
         if(ipTxStream.Source == 8'h01 && ipTxStream.SoP == 1) begin
-          state <= GET_ADDRESS;
           opTxWrEnable <= 0;
+          state <= GET_ADDRESS;
         end
       end
       GET_ADDRESS: begin
         opAddress <= ipTxStream.Data;
-        state <= GET_DATA; 
+        state <= GET_DATA;
       end
       GET_DATA: begin
-        opTxWrEnable <=0;
         if(dataLength > 0) begin
           dataLength <= dataLength -1;
           opWrData <= {opWrData, ipTxStream.Data};
-          opTxWrEnable <= 1;
+          if(ipTxStream.EoP) begin
+             state <= IDLE;
+          end
         end else begin
+          opTxWrEnable <= 1;
           state <= IDLE;
         end
       end

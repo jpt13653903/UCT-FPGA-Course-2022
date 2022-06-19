@@ -2,7 +2,7 @@
 
 import Structures::*;
 
-module TxController_TB;
+module WriteController_TB;
   reg ipClk = 0;
   reg ipReset = 1'b1;
   reg [4:0] count = 4'd8;
@@ -56,7 +56,7 @@ module TxController_TB;
     
    
 
-  TxController DUT(
+  WriteController DUT(
     .ipClk(ipClk),
     .ipReset(ipReset),
     .opAddress(ipAddress),

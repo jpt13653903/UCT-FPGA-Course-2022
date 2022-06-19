@@ -1,6 +1,6 @@
 import Structures::*;
 
-module TxController #(DATA_LENGTH = 4) (
+module WriteController #(DATA_LENGTH = 4) (
   input                 ipClk,
   input                 ipReset,
   input UART_PACKET     ipTxStream,

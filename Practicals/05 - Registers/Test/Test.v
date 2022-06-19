@@ -20,7 +20,7 @@ module Test #(parameter BLOCK_WIDTH = 32) (
   reg opTxWrEnable;
 
 
-  TransmitController txController(
+  WriteController txController(
     .ipClk(ipClk),
     .ipReset(ipReset),
     .opWrRegisters(opWrRegisters),

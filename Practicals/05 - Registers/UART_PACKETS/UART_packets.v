@@ -151,6 +151,7 @@ module UART_Packets(
 					// check length
 					opTxReady <= 0;
 					localTxData <= ipTxStream.Data;
+					
 					$display("TRANSMIT DATA LENGTH, %d", transmitDataLength);
 					UART_TxSend <= 1;
 				end else if(UART_TxBusy && UART_TxSend) begin

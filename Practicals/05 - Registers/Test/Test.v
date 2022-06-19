@@ -16,7 +16,7 @@ module Test #(parameter BLOCK_WIDTH = 32) (
   WR_REGISTERS opWrRegisters;
 
   //need memory to communicate read and write
-  reg [BLOCK_WIDTH -1:0] ipWrData;
+  reg [BLOCK_WIDTH -1:0] localWriteMemory;
   reg [BLOCK_WIDTH -1:0] localReadMemory;
   reg opTxWrEnable;
 
@@ -26,7 +26,7 @@ module Test #(parameter BLOCK_WIDTH = 32) (
     .ipReset(ipReset),
     .opWrRegisters(opWrRegisters),
     .opAddress(ipAddress), // this will be input to the Registers module, taken from incoming stream
-    .opWrData(ipWrData),// data from the packet that will be input to the registers module
+    .opWrData(localWriteMemory),// data from the packet that will be input to the registers module
     .ipTxReady(opTxReady), // will use this to gate on the ready of the packet module
     .ipTxStream(ipTxStream),
     .opTxWrEnable(opTxWrEnable)
@@ -48,7 +48,7 @@ module Test #(parameter BLOCK_WIDTH = 32) (
     .ipRdRegisters(readRegisters),
     .opWrRegisters(opWrRegisters),
     .ipAddress(ipAddress), 
-    .ipWrData(ipWrData),
+    .ipWrData(localWriteMemory),
     .ipWrEnable(opTxWrEnable),
     .opRdData(localReadMemory)
   );
